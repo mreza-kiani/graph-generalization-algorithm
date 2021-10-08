@@ -1,6 +1,6 @@
 package ca.ucalgary.cs.graph
 
-class Node(val name: String) {
+open class Node(val name: String) : EdgeVariableLeg {
     override fun equals(other: Any?): Boolean {
         if (other !is Node)
             return false
