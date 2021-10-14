@@ -34,26 +34,17 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             val commonEdges = mutableMapOf<Node, List<Node>>()
             var totalSimilarityScore = 0.0
 
-            val edgeVariables = mutableListOf<EdgeVariable>()
+            val commonNodesEdgeVariables = mutableListOf<EdgeVariable>()
             commonNodes.forEach { commonNode ->
                 val g1Edges = graph1.edgesOf(commonNode)
                 val g2Edges = graph2.edgesOf(commonNode)
 
                 val commonNeighbors = g2Edges.filter { it in g1Edges }
-                val g1UncommonNeighbors = g1Edges.filter { it in commonNodes }.filter { it !in g2Edges }
-                val g2UncommonNeighbors = g2Edges.filter { it in commonNodes }.filter { it !in g1Edges }
-
                 commonEdges[commonNode] = commonNeighbors
-                g1UncommonNeighbors.forEach { uncommonNeighbor ->
-                    val edgeVariable = edgeVariables.firstOrNull { it.has(commonNode, uncommonNeighbor) }
-                        ?: EdgeVariable(name = EdgeVariable.getUniqueName(), leg1 = commonNode, leg2 = uncommonNeighbor)
-                    edgeVariable.addEdge(tail = commonNode, head = uncommonNeighbor, graphNumber = 1)
-                }
-                g2UncommonNeighbors.forEach { uncommonNeighbor ->
-                    val edgeVariable = edgeVariables.firstOrNull { it.has(commonNode, uncommonNeighbor) }
-                        ?: EdgeVariable(name = EdgeVariable.getUniqueName(), leg1 = commonNode, leg2 = uncommonNeighbor)
-                    edgeVariable.addEdge(tail = commonNode, head = uncommonNeighbor, graphNumber = 2)
-                }
+
+                commonNodesEdgeVariables.addAll(
+                    extractEdgeVariablesBetweenCommonNodes(commonNode, commonNodes, g1Edges, g2Edges)
+                )
 
                 val all = (g2Edges.size + g1Edges.size).toDouble() / 2
                 val nodeSimilarity = if (all != 0.0) commonNeighbors.size.toDouble() / all else 1.0
@@ -72,56 +63,70 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             println("############################")
 
             val commonGraph = Graph(nodes = commonNodes, edges = commonEdges)
-            commonGraph.edgeVariables.addAll(edgeVariables)
-            edgeVariables.clear()
+            commonGraph.edgeVariables.addAll(commonNodesEdgeVariables)
+            commonNodesEdgeVariables.clear()
 
-            val nodeVariablesMap = graph1.nodes
-                .filter { it !in commonNodes }
-                .associateWith { NodeVariable(name = "V-${it.name}", node = it, graphNumber = 1) }
-                .toMutableMap()
+            val graph1EdgeVariables = graph1.extractNodeAndEdgeVariablesForSingleGraph(commonNodes, graphNumber = 1)
+            val graph2EdgeVariables = graph2.extractNodeAndEdgeVariablesForSingleGraph(commonNodes, graphNumber = 2)
 
-            graph1.edges.forEach { (node, edges) ->
-                edges.forEach { neighbor ->
-                    if (node in commonNodes && neighbor in commonNodes) {
-                        // Do nothing
-                    } else if (node in commonNodes || neighbor in commonNodes) {
-                        val (n, nv) = if (node in commonNodes)
-                            node to (nodeVariablesMap[neighbor] ?: error("WTF!"))
-                        else
-                            neighbor to (nodeVariablesMap[node] ?: error("WTF!"))
+            val mergedEdgeVariables = mergeNodeAndEdgeVariables(graph1EdgeVariables, graph2EdgeVariables)
 
-                        val edgeVariable = EdgeVariable(EdgeVariable.getUniqueName(), n, nv)
-                        edgeVariable.addEdge(tail = node, head = neighbor, graphNumber = 1)
-
-                        edgeVariables.add(edgeVariable)
-                    } else {
-                        val nodeVariable1 = nodeVariablesMap[node] ?: error("WTF!")
-                        val nodeVariable2 = nodeVariablesMap[neighbor] ?: error("WTF!")
-
-                        val mergedNodeVariable = nodeVariable1.merge(nodeVariable2)
-                        mergedNodeVariable.addEdge(tail = node, head = neighbor, graphNumber = 1)
-
-                        nodeVariablesMap[node] = mergedNodeVariable
-                        nodeVariablesMap[neighbor] = mergedNodeVariable
-                    }
-                }
-            }
-
-            commonNodes.forEach { commonNode ->
-                val shouldBeMergedEdgeVariables = edgeVariables.filter { it.has(commonNode) }
-
-                if (shouldBeMergedEdgeVariables.size >= 2) {
-                    val mergedEdgeVariable = EdgeVariable.merge(shouldBeMergedEdgeVariables, commonNode)
-
-                    edgeVariables.removeAll(shouldBeMergedEdgeVariables)
-                    edgeVariables.add(mergedEdgeVariable)
-                }
-            }
+            commonGraph.edgeVariables.addAll(mergedEdgeVariables)
+            commonGraph.nodeVariables.addAll(commonNodesEdgeVariables.map { it.nodeVariableLeg() })
 
             val g1Diff = graph1 - commonGraph
             val g2Diff = graph2 - commonGraph
 
             return Triple(commonGraph, g1Diff, g2Diff)
+        }
+
+        private fun extractEdgeVariablesBetweenCommonNodes(
+            commonNode: Node,
+            commonNodes: List<Node>,
+            g1Edges: List<Node>,
+            g2Edges: List<Node>,
+        ): List<EdgeVariable> {
+            val edgeVariables = mutableListOf<EdgeVariable>()
+
+            val g1UncommonNeighbors = g1Edges.filter { it in commonNodes }.filter { it !in g2Edges }
+            val g2UncommonNeighbors = g2Edges.filter { it in commonNodes }.filter { it !in g1Edges }
+
+            g1UncommonNeighbors.forEach { uncommonNeighbor ->
+                val edgeVariable = edgeVariables.firstOrNull { it.has(commonNode, uncommonNeighbor) }
+                    ?: EdgeVariable(name = EdgeVariable.getUniqueName(), leg1 = commonNode, leg2 = uncommonNeighbor)
+                edgeVariable.addEdge(tail = commonNode, head = uncommonNeighbor, graphNumber = 1)
+            }
+            g2UncommonNeighbors.forEach { uncommonNeighbor ->
+                val edgeVariable = edgeVariables.firstOrNull { it.has(commonNode, uncommonNeighbor) }
+                    ?: EdgeVariable(name = EdgeVariable.getUniqueName(), leg1 = commonNode, leg2 = uncommonNeighbor)
+                edgeVariable.addEdge(tail = commonNode, head = uncommonNeighbor, graphNumber = 2)
+            }
+
+            return edgeVariables
+        }
+
+        private fun mergeNodeAndEdgeVariables(
+            graph1EdgeVariables: MutableList<EdgeVariable>,
+            graph2EdgeVariables: MutableList<EdgeVariable>
+        ): MutableList<EdgeVariable> {
+            val edgeVariables = mutableListOf<EdgeVariable>()
+
+            graph1EdgeVariables.forEach { graph1EdgeVariable ->
+                val commonNode = graph1EdgeVariable.simpleNodeLeg()
+
+                if (graph2EdgeVariables.any { it.simpleNodeLeg() == commonNode }) {
+                    val graph2EdgeVariable = graph2EdgeVariables.first { it.simpleNodeLeg() == commonNode }
+                    val newEdgeVariable = EdgeVariable.merge(listOf(graph1EdgeVariable, graph2EdgeVariable), commonNode)
+
+                    graph2EdgeVariables.remove(graph2EdgeVariable)
+                    edgeVariables.add(newEdgeVariable)
+                } else {
+                    edgeVariables.add(graph1EdgeVariable)
+                }
+            }
+
+            edgeVariables.addAll(graph2EdgeVariables)
+            return edgeVariables
         }
 
         fun reconstruct(commonGraph: Graph, diffGraph: Graph): Graph {
@@ -137,6 +142,58 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
 
             return Graph(nodes, edges)
         }
+    }
+
+    private fun extractNodeAndEdgeVariablesForSingleGraph(
+        commonNodes: List<Node>,
+        graphNumber: Int
+    ): MutableList<EdgeVariable> {
+        val edgeVariables = mutableListOf<EdgeVariable>()
+
+        val nodeVariablesMap = nodes
+            .filter { it !in commonNodes }
+            .associateWith { NodeVariable(name = "V-${it.name}", node = it, graphNumber = graphNumber) }
+            .toMutableMap()
+
+        edges.forEach { (node, edges) ->
+            edges.forEach { neighbor ->
+                if (node in commonNodes && neighbor in commonNodes) {
+                    // Do nothing
+                } else if (node in commonNodes || neighbor in commonNodes) {
+                    val (n, nv) = if (node in commonNodes)
+                        node to (nodeVariablesMap[neighbor] ?: error("There is no NodeVariable for $neighbor!"))
+                    else
+                        neighbor to (nodeVariablesMap[node] ?: error("There is no NodeVariable for $node!"))
+
+                    val edgeVariable = EdgeVariable(EdgeVariable.getUniqueName(), n, nv)
+                    edgeVariable.addEdge(tail = node, head = neighbor, graphNumber = graphNumber)
+
+                    edgeVariables.add(edgeVariable)
+                } else {
+                    val nodeVariable1 = nodeVariablesMap[node] ?: error("There is no NodeVariable for $node!")
+                    val nodeVariable2 = nodeVariablesMap[neighbor] ?: error("There is no NodeVariable for $neighbor!")
+
+                    val mergedNodeVariable = nodeVariable1.merge(nodeVariable2)
+                    mergedNodeVariable.addEdge(tail = node, head = neighbor, graphNumber = graphNumber)
+
+                    nodeVariablesMap[node] = mergedNodeVariable
+                    nodeVariablesMap[neighbor] = mergedNodeVariable
+                }
+            }
+        }
+
+        commonNodes.forEach { commonNode ->
+            val shouldBeMergedEdgeVariables = edgeVariables.filter { it.has(commonNode) }
+
+            if (shouldBeMergedEdgeVariables.size >= 2) {
+                val mergedEdgeVariable = EdgeVariable.merge(shouldBeMergedEdgeVariables, commonNode)
+
+                edgeVariables.removeAll(shouldBeMergedEdgeVariables)
+                edgeVariables.add(mergedEdgeVariable)
+            }
+        }
+
+        return edgeVariables
     }
 
     private operator fun minus(otherGraph: Graph): Graph {

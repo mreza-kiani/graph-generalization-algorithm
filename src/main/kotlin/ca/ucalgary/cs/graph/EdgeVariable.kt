@@ -26,9 +26,18 @@ class EdgeVariable(
 
     fun nodeVariableLeg(): NodeVariable {
         return when {
+            leg1 is NodeVariable && leg2 is NodeVariable -> error("Two NodeVariables detected as two legs!")
             leg1 is NodeVariable -> leg1
             leg2 is NodeVariable -> leg2
             else -> error("Couldn't find node variable as a leg in $name edge variable!")
+        }
+    }
+
+    fun simpleNodeLeg(): Node {
+        return when {
+            leg1 is Node && leg1 !is NodeVariable -> leg1
+            leg2 is Node && leg2 !is NodeVariable -> leg2
+            else -> error("Couldn't find simple node as a leg in $name edge variable!")
         }
     }
 
@@ -41,7 +50,7 @@ class EdgeVariable(
                 error("Can not merge edge variables without common leg!")
 
             val mergedVariable = edgeVariables.map { it.nodeVariableLeg() }
-                .fold(NodeVariable(name = "Merged:")) { a, b -> a.merge(b) }
+                .fold(NodeVariable(name = "Merged")) { a, b -> a.merge(b) }
 
             return EdgeVariable(
                 name = edgeVariables.joinToString { it.name },
