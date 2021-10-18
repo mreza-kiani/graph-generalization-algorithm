@@ -2,8 +2,8 @@ package ca.ucalgary.cs.graph
 
 class EdgeVariable(
     val name: String,
-    val leg1: EdgeVariableLeg,
-    val leg2: EdgeVariableLeg,
+    var leg1: EdgeVariableLeg,
+    var leg2: EdgeVariableLeg,
     val graph1Edges: MutableMap<Node, MutableList<Node>> = mutableMapOf(),
     val graph2Edges: MutableMap<Node, MutableList<Node>> = mutableMapOf()
 ) {
@@ -27,17 +27,24 @@ class EdgeVariable(
     fun nodeVariableLeg(): NodeVariable {
         return when {
             leg1 is NodeVariable && leg2 is NodeVariable -> error("Two NodeVariables detected as two legs!")
-            leg1 is NodeVariable -> leg1
-            leg2 is NodeVariable -> leg2
+            leg1 is NodeVariable -> leg1 as NodeVariable
+            leg2 is NodeVariable -> leg2 as NodeVariable
             else -> error("Couldn't find node variable as a leg in $name edge variable!")
         }
     }
 
     fun simpleNodeLeg(): Node {
         return when {
-            leg1 is Node && leg1 !is NodeVariable -> leg1
-            leg2 is Node && leg2 !is NodeVariable -> leg2
+            leg1 is Node && leg1 !is NodeVariable -> leg1 as Node
+            leg2 is Node && leg2 !is NodeVariable -> leg2 as Node
             else -> error("Couldn't find simple node as a leg in $name edge variable!")
+        }
+    }
+
+    fun updateNodeVariable(newNodeVariable: NodeVariable) {
+        when {
+            leg1 is NodeVariable -> leg1 = newNodeVariable
+            leg2 is NodeVariable -> leg2 = newNodeVariable
         }
     }
 

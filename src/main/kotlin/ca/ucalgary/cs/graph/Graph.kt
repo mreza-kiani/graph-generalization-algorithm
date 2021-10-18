@@ -72,7 +72,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             val mergedLonelyNodeVariable = mergeLonelyNodeVariable(graph1LonelyNodeVariable, graph2LonelyNodeVariable)
 
             commonGraph.edgeVariables.addAll(mergedEdgeVariables)
-            commonGraph.nodeVariables.addAll(mergedEdgeVariables.map { it.nodeVariableLeg() })
+            commonGraph.nodeVariables.addAll(mergedEdgeVariables.map { it.nodeVariableLeg() }.distinct())
             if (mergedLonelyNodeVariable != null)
                 commonGraph.nodeVariables.add(mergedLonelyNodeVariable)
 
@@ -189,6 +189,12 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
 
                     nodeVariablesMap[node] = mergedNodeVariable
                     nodeVariablesMap[neighbor] = mergedNodeVariable
+
+                    updateNodeOfEdgeVariables(
+                        edgeVariables,
+                        previousVariables = listOf(nodeVariable1, nodeVariable2),
+                        newVariable = mergedNodeVariable
+                    )
                 }
             }
         }
@@ -208,10 +214,26 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
 
                 edgeVariables.removeAll(shouldBeMergedEdgeVariables)
                 edgeVariables.add(mergedEdgeVariable)
+
+                updateNodeOfEdgeVariables(
+                    edgeVariables,
+                    previousVariables = shouldBeMergedEdgeVariables.map { it.nodeVariableLeg() },
+                    newVariable = mergedEdgeVariable.nodeVariableLeg()
+                )
             }
         }
 
         return edgeVariables to lonelyNodeVariable
+    }
+
+    private fun updateNodeOfEdgeVariables(
+        edgeVariables: MutableList<EdgeVariable>,
+        previousVariables: List<NodeVariable>,
+        newVariable: NodeVariable
+    ) {
+        edgeVariables
+            .filter { it.nodeVariableLeg() in previousVariables }
+            .forEach { it.updateNodeVariable(newVariable) }
     }
 
     private operator fun minus(otherGraph: Graph): Graph {

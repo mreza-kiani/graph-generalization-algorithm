@@ -2,6 +2,7 @@ package ca.ucalgary.cs.comparison
 
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
+import kotlin.test.assertEquals
 
 class E2: BaseCompareGraphTest() {
     override fun initializeGraphs() {
@@ -37,10 +38,16 @@ class E2: BaseCompareGraphTest() {
         val c = Node("C")
         val d = Node("D")
         val e = Node("E")
+        val f = Node("F")
 
         checkListsEquality(commonGraph.nodes, listOf(a, b, c, d, e))
         checkListsEquality(commonGraph.edges[a], listOf(c))
         checkListsEquality(commonGraph.edges[e], listOf(d))
+
+        assertEquals(commonGraph.nodeVariables.size, 1)
+        assertEquals(commonGraph.edgeVariables.size, 3)
+        checkListsEquality(commonGraph.nodeVariables.first().graph1.nodes, listOf(f))
+        checkListsEquality(commonGraph.nodeVariables.first().graph2.nodes, emptyList())
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
