@@ -2,6 +2,7 @@ package ca.ucalgary.cs.graph
 
 import ca.ucalgary.cs.exceptions.IllegalEdgeException
 import ca.ucalgary.cs.utils.areListsEqual
+import ca.ucalgary.cs.utils.areListsSubset
 
 open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : EdgeVariableLeg {
     val edgeVariables = mutableListOf<EdgeVariable>()
@@ -122,6 +123,32 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
         ): MutableList<EdgeVariable> {
             val edgeVariables = mutableListOf<EdgeVariable>()
 
+            val graph1NeighborsMap = NodeVariable.extractNeighborsMap(graph1EdgeVariables)
+            val graph2NeighborsMap = NodeVariable.extractNeighborsMap(graph2EdgeVariables)
+
+            graph1NeighborsMap.forEach { (nodeVariable, neighbors) ->
+                val graph2NodeVariable = graph2NeighborsMap.filter { (_, graph2Neighbors) ->
+                    areListsSubset(neighbors, graph2Neighbors)
+                }.keys.firstOrNull()
+                if (graph2NodeVariable != null) {
+                    val mergedNodeVariable = nodeVariable.merge(graph2NodeVariable)
+                    EdgeVariable.updateNodeVariablesOf(graph1EdgeVariables, listOf(nodeVariable), mergedNodeVariable)
+                    EdgeVariable.updateNodeVariablesOf(graph2EdgeVariables, listOf(graph2NodeVariable), mergedNodeVariable)
+
+                    graph2NeighborsMap.remove(graph2NodeVariable)
+
+                    // TODO: merge edge variables
+                    EdgeVariable.merge(
+                        graph1EdgeVariables = graph1EdgeVariables.filter { it.has(mergedNodeVariable) },
+                        graph2EdgeVariables = graph2EdgeVariables.filter { it.has(mergedNodeVariable) },
+                        commonNodeVariable = mergedNodeVariable
+                    )
+                } else {
+                    // TODO: add edge variables with $nodeVariable to final list
+                }
+            }
+            // TODO: add remaining g2 edge variables to final list
+
             graph1EdgeVariables.forEach { graph1EdgeVariable ->
                 val commonNode = graph1EdgeVariable.simpleNodeLeg()
 
@@ -190,7 +217,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
                     nodeVariablesMap[node] = mergedNodeVariable
                     nodeVariablesMap[neighbor] = mergedNodeVariable
 
-                    updateNodeOfEdgeVariables(
+                    EdgeVariable.updateNodeVariablesOf(
                         edgeVariables,
                         previousVariables = listOf(nodeVariable1, nodeVariable2),
                         newVariable = mergedNodeVariable
@@ -206,6 +233,25 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
         else
             null
 
+
+        val nodeVariablesNeighborMap = NodeVariable.extractNeighborsMap(edgeVariables)
+
+        nodeVariablesNeighborMap.forEach { (node, neighbors) ->
+            val similarNeighbors = nodeVariablesNeighborMap
+                .filter { (key, _) -> key != node }
+                .filter { (_, list) -> areListsEqual(list, neighbors) }
+                .keys
+
+            if (similarNeighbors.isNotEmpty()) {
+                val toBeMergedList = (similarNeighbors + node).toList()
+                val mergedNodeVariable =
+                    toBeMergedList.fold(NodeVariable("Merged")) { acc, nv -> acc.merge(nv) }
+
+                EdgeVariable.updateNodeVariablesOf(edgeVariables, toBeMergedList, mergedNodeVariable)
+            }
+        }
+
+        /*
         commonNodes.forEach { commonNode ->
             val shouldBeMergedEdgeVariables = edgeVariables.filter { it.has(commonNode) }
 
@@ -215,25 +261,16 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
                 edgeVariables.removeAll(shouldBeMergedEdgeVariables)
                 edgeVariables.add(mergedEdgeVariable)
 
-                updateNodeOfEdgeVariables(
+                EdgeVariable.updateNodeVariablesOf(
                     edgeVariables,
                     previousVariables = shouldBeMergedEdgeVariables.map { it.nodeVariableLeg() },
                     newVariable = mergedEdgeVariable.nodeVariableLeg()
                 )
             }
         }
+        */
 
         return edgeVariables to lonelyNodeVariable
-    }
-
-    private fun updateNodeOfEdgeVariables(
-        edgeVariables: MutableList<EdgeVariable>,
-        previousVariables: List<NodeVariable>,
-        newVariable: NodeVariable
-    ) {
-        edgeVariables
-            .filter { it.nodeVariableLeg() in previousVariables }
-            .forEach { it.updateNodeVariable(newVariable) }
     }
 
     private operator fun minus(otherGraph: Graph): Graph {

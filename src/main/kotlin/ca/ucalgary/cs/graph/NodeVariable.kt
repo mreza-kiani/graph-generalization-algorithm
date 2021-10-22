@@ -46,4 +46,18 @@ class NodeVariable(name: String) : Node(name) {
         merged.graph2 = Graph(nodes = graph2.nodes + other.graph2.nodes, edges = graph2.edges + other.graph2.edges)
         return merged
     }
+
+    private fun neighborsOf(edgeVariables: List<EdgeVariable>) =
+        edgeVariables.filter { it.has(this) }.map { it.otherLegThan(this) }
+
+    companion object {
+        fun extractNeighborsMap(edgeVariables: MutableList<EdgeVariable>) =
+            edgeVariables
+                .map { it.nodeVariableLeg() }
+                .distinct()
+                .map { it to it.neighborsOf(edgeVariables) }
+                .sortedByDescending { (_, neighbors) -> neighbors.size }
+                .toMap()
+                .toMutableMap()
+    }
 }

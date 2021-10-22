@@ -48,6 +48,14 @@ class EdgeVariable(
         }
     }
 
+    fun otherLegThan(leg: NodeVariable): EdgeVariableLeg {
+        return when (leg) {
+            leg1 -> leg2
+            leg2 -> leg1
+            else -> error("Couldn't find the leg argument in the edge variable")
+        }
+    }
+
     companion object {
         var counter = 1
         fun getUniqueName() = "E${counter++}"
@@ -68,6 +76,17 @@ class EdgeVariable(
             )
         }
 
+        fun merge(
+            graph1EdgeVariables: List<EdgeVariable>,
+            graph2EdgeVariables: List<EdgeVariable>,
+            commonNodeVariable: NodeVariable
+        ): List<EdgeVariable> {
+            if (graph1EdgeVariables.any { !it.has(commonNodeVariable) } || graph2EdgeVariables.any { !it.has(commonNodeVariable) })
+                error("Con not merge edge variables without common node variable leg!")
+
+            TODO("merging")
+        }
+
         private fun mergeGraphEdges(edgeVariables: List<EdgeVariable>, graphNumber: Int) = edgeVariables
             .map { it.graphOf(graphNumber) }
             .flatMap { it.keys }
@@ -75,5 +94,15 @@ class EdgeVariable(
             .associateWith { node ->
                 edgeVariables.map { it.graphOf(graphNumber)[node] ?: emptyList() }.flatten().toMutableList()
             }.toMutableMap()
+
+        fun updateNodeVariablesOf(
+            edgeVariables: MutableList<EdgeVariable>,
+            previousVariables: List<NodeVariable>,
+            newVariable: NodeVariable
+        ) {
+            edgeVariables
+                .filter { it.nodeVariableLeg() in previousVariables }
+                .forEach { it.updateNodeVariable(newVariable) }
+        }
     }
 }
