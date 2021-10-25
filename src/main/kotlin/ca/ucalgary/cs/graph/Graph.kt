@@ -263,7 +263,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
         if (!areListsEqual(nodes, other.nodes))
             return false
 
-        if (nodes.any { !areListsEqual(first = edgesOf(it), second = other.edgesOf(it)) })
+        if ((nodes + other.nodes).distinct().any { !areListsEqual(first = edgesOf(it), second = other.edgesOf(it)) })
             return false
 
         return true

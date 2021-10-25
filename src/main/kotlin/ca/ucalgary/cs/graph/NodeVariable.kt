@@ -29,7 +29,7 @@ class NodeVariable(name: String) : Node(name) {
     override fun equals(other: Any?): Boolean {
         if (other !is NodeVariable)
             return false
-        return name == other.name
+        return name == other.name || (graph1 == other.graph1 && graph2 == other.graph2)
     }
 
     override fun hashCode(): Int {
@@ -41,7 +41,10 @@ class NodeVariable(name: String) : Node(name) {
     }
 
     fun merge(other: NodeVariable): NodeVariable {
-        val merged = NodeVariable(name = "$name&${other.name}")
+        if (this == other)
+            return other
+
+        val merged = NodeVariable(name = "{$name&${other.name}}")
         merged.graph1 = Graph(nodes = graph1.nodes + other.graph1.nodes, edges = graph1.edges + other.graph1.edges)
         merged.graph2 = Graph(nodes = graph2.nodes + other.graph2.nodes, edges = graph2.edges + other.graph2.edges)
         return merged

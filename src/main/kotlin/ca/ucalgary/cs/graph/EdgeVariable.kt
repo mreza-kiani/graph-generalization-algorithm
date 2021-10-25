@@ -85,7 +85,7 @@ class EdgeVariable(
 
             if (graph1EdgeVariables.any { !it.has(commonNodeVariable) }
                 || graph2EdgeVariables.any { !it.has(commonNodeVariable) })
-                error("Con not merge edge variables without common node variable leg!")
+                error("Can not merge edge variables without common node variable leg!")
 
             graph1EdgeVariables.forEach { graph1EdgeVariable ->
                 val nodeLeg = graph1EdgeVariable.simpleNodeLeg()
