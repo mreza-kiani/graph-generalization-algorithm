@@ -137,18 +137,23 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
 
                     graph2NeighborsMap.remove(graph2NodeVariable)
 
-                    // TODO: merge edge variables
-                    EdgeVariable.merge(
-                        graph1EdgeVariables = graph1EdgeVariables.filter { it.has(mergedNodeVariable) },
-                        graph2EdgeVariables = graph2EdgeVariables.filter { it.has(mergedNodeVariable) },
-                        commonNodeVariable = mergedNodeVariable
+                    edgeVariables.addAll(
+                        EdgeVariable.merge(
+                            graph1EdgeVariables = graph1EdgeVariables.filter { it.has(mergedNodeVariable) }.toMutableList(),
+                            graph2EdgeVariables = graph2EdgeVariables.filter { it.has(mergedNodeVariable) }.toMutableList(),
+                            commonNodeVariable = mergedNodeVariable
+                        )
                     )
                 } else {
-                    // TODO: add edge variables with $nodeVariable to final list
+                    edgeVariables.addAll(graph1EdgeVariables.filter { it.has(nodeVariable) })
                 }
             }
-            // TODO: add remaining g2 edge variables to final list
 
+            graph2NeighborsMap.forEach { (nodeVariable, _) ->
+                edgeVariables.addAll(graph2EdgeVariables.filter { it.has(nodeVariable) })
+            }
+
+            /*
             graph1EdgeVariables.forEach { graph1EdgeVariable ->
                 val commonNode = graph1EdgeVariable.simpleNodeLeg()
 
@@ -164,6 +169,8 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             }
 
             edgeVariables.addAll(graph2EdgeVariables)
+             */
+
             return edgeVariables
         }
 

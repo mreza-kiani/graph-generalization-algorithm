@@ -57,7 +57,7 @@ class EdgeVariable(
     }
 
     companion object {
-        var counter = 1
+        private var counter = 1
         fun getUniqueName() = "E${counter++}"
 
         fun merge(edgeVariables: List<EdgeVariable>, commonLeg: EdgeVariableLeg): EdgeVariable {
@@ -77,14 +77,27 @@ class EdgeVariable(
         }
 
         fun merge(
-            graph1EdgeVariables: List<EdgeVariable>,
-            graph2EdgeVariables: List<EdgeVariable>,
+            graph1EdgeVariables: MutableList<EdgeVariable>,
+            graph2EdgeVariables: MutableList<EdgeVariable>,
             commonNodeVariable: NodeVariable
         ): List<EdgeVariable> {
-            if (graph1EdgeVariables.any { !it.has(commonNodeVariable) } || graph2EdgeVariables.any { !it.has(commonNodeVariable) })
+            val mergedEdgeVariables = mutableListOf<EdgeVariable>()
+
+            if (graph1EdgeVariables.any { !it.has(commonNodeVariable) }
+                || graph2EdgeVariables.any { !it.has(commonNodeVariable) })
                 error("Con not merge edge variables without common node variable leg!")
 
-            TODO("merging")
+            graph1EdgeVariables.forEach { graph1EdgeVariable ->
+                val nodeLeg = graph1EdgeVariable.simpleNodeLeg()
+
+                graph2EdgeVariables.firstOrNull { it.has(nodeLeg) }?.also { graph2EdgeVariable ->
+                    graph2EdgeVariables.remove(graph2EdgeVariable)
+                    mergedEdgeVariables.add(merge(listOf(graph1EdgeVariable, graph2EdgeVariable), nodeLeg))
+                } ?: run { mergedEdgeVariables.add(graph1EdgeVariable) }
+            }
+            mergedEdgeVariables.addAll(graph2EdgeVariables)
+
+            return mergedEdgeVariables
         }
 
         private fun mergeGraphEdges(edgeVariables: List<EdgeVariable>, graphNumber: Int) = edgeVariables
