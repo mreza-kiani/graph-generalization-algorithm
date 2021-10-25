@@ -153,24 +153,6 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
                 edgeVariables.addAll(graph2EdgeVariables.filter { it.has(nodeVariable) })
             }
 
-            /*
-            graph1EdgeVariables.forEach { graph1EdgeVariable ->
-                val commonNode = graph1EdgeVariable.simpleNodeLeg()
-
-                if (graph2EdgeVariables.any { it.simpleNodeLeg() == commonNode }) {
-                    val graph2EdgeVariable = graph2EdgeVariables.first { it.simpleNodeLeg() == commonNode }
-                    val newEdgeVariable = EdgeVariable.merge(listOf(graph1EdgeVariable, graph2EdgeVariable), commonNode)
-
-                    graph2EdgeVariables.remove(graph2EdgeVariable)
-                    edgeVariables.add(newEdgeVariable)
-                } else {
-                    edgeVariables.add(graph1EdgeVariable)
-                }
-            }
-
-            edgeVariables.addAll(graph2EdgeVariables)
-             */
-
             return edgeVariables
         }
 
@@ -257,25 +239,6 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
                 EdgeVariable.updateNodeVariablesOf(edgeVariables, toBeMergedList, mergedNodeVariable)
             }
         }
-
-        /*
-        commonNodes.forEach { commonNode ->
-            val shouldBeMergedEdgeVariables = edgeVariables.filter { it.has(commonNode) }
-
-            if (shouldBeMergedEdgeVariables.size >= 2) {
-                val mergedEdgeVariable = EdgeVariable.merge(shouldBeMergedEdgeVariables, commonNode)
-
-                edgeVariables.removeAll(shouldBeMergedEdgeVariables)
-                edgeVariables.add(mergedEdgeVariable)
-
-                EdgeVariable.updateNodeVariablesOf(
-                    edgeVariables,
-                    previousVariables = shouldBeMergedEdgeVariables.map { it.nodeVariableLeg() },
-                    newVariable = mergedEdgeVariable.nodeVariableLeg()
-                )
-            }
-        }
-        */
 
         return edgeVariables to lonelyNodeVariable
     }
