@@ -56,6 +56,10 @@ class EdgeVariable(
         }
     }
 
+    override fun toString(): String {
+        return "($name) : [ $leg1 ----- $leg2 ]"
+    }
+
     companion object {
         private var counter = 1
         fun getUniqueName() = "E${counter++}"
