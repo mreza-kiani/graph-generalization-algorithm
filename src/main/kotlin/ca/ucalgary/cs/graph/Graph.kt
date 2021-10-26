@@ -240,6 +240,14 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             }
         }
 
+        edgeVariables.groupBy { it.simpleNodeLeg() to it.nodeVariableLeg() }
+            .map { (_, list) -> list }
+            .filter { list -> list.size > 1 }
+            .forEach { list ->
+                edgeVariables.removeAll(list)
+                edgeVariables.add(EdgeVariable.mergeSimilarLegs(list))
+            }
+
         return edgeVariables to lonelyNodeVariable
     }
 

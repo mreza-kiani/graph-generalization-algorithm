@@ -121,5 +121,21 @@ class EdgeVariable(
                 .filter { it.nodeVariableLeg() in previousVariables }
                 .forEach { it.updateNodeVariable(newVariable) }
         }
+
+        fun mergeSimilarLegs(edgeVariables: List<EdgeVariable>): EdgeVariable {
+            val nodeVariable = edgeVariables.first().nodeVariableLeg()
+            val simpleNode = edgeVariables.first().simpleNodeLeg()
+
+            if (edgeVariables.any { !it.has(nodeVariable, simpleNode) })
+                error("The received edge variable list don't have similar legs!")
+
+            return EdgeVariable(
+                name = edgeVariables.joinToString { it.name },
+                leg1 = simpleNode,
+                leg2 = nodeVariable,
+                graph1Edges = mergeGraphEdges(edgeVariables, graphNumber = 1),
+                graph2Edges = mergeGraphEdges(edgeVariables, graphNumber = 2)
+            )
+        }
     }
 }
