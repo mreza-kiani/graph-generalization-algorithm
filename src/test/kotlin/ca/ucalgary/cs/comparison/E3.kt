@@ -38,17 +38,8 @@ class E3 : BaseCompareGraphTest() {
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        val b = Node("B")
-        val c = Node("C")
-        val f = Node("F")
-        val g = Node("G")
-        val h = Node("H")
-        val i = Node("I")
-
-        assertEquals(commonGraph.nodeVariables.size, 1)
-        assertEquals(commonGraph.edgeVariables.size, 3)
-        checkListsEquality(commonGraph.nodeVariables.first().graph1.nodes, listOf(b, c))
-        checkListsEquality(commonGraph.nodeVariables.first().graph2.nodes, listOf(f, g, h, i))
+        assertEquals(commonGraph.nodeVariables.size, 3)
+        assertEquals(commonGraph.edgeVariables.size, 5)
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {}

@@ -32,6 +32,10 @@ class NodeVariable(name: String) : Node(name) {
         return name == other.name || (graph1 == other.graph1 && graph2 == other.graph2)
     }
 
+    private fun isSubGraphOf(other: NodeVariable) : Boolean {
+        return graph1.isSubGraphOf(other.graph1) && graph2.isSubGraphOf(other.graph2)
+    }
+
     override fun hashCode(): Int {
         return name.hashCode()
     }
@@ -41,8 +45,10 @@ class NodeVariable(name: String) : Node(name) {
     }
 
     fun merge(other: NodeVariable): NodeVariable {
-        if (this == other)
+        if (this.isSubGraphOf(other))
             return other
+        if (other.isSubGraphOf(this))
+            return this
 
         val merged = NodeVariable(name = "{$name&${other.name}}")
         merged.graph1 = Graph(nodes = graph1.nodes + other.graph1.nodes, edges = graph1.edges + other.graph1.edges)
@@ -51,7 +57,7 @@ class NodeVariable(name: String) : Node(name) {
     }
 
     private fun neighborsOf(edgeVariables: List<EdgeVariable>) =
-        edgeVariables.filter { it.has(this) }.map { it.otherLegThan(this) }
+        edgeVariables.filter { it.has(this) }.map { it.otherLegThan(this) }.distinct()
 
     companion object {
         fun extractNeighborsMap(edgeVariables: MutableList<EdgeVariable>) =

@@ -215,7 +215,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             }
         }
 
-        val nodeVariablesInEdgeVariables = edgeVariables.map { it.nodeVariableLeg() }
+        val nodeVariablesInEdgeVariables = edgeVariables.map { it.nodeVariableLeg() }.distinct()
         val lonelyNodeVariables = nodeVariablesMap.values.filter { it !in nodeVariablesInEdgeVariables }
         val lonelyNodeVariable = if (lonelyNodeVariables.isNotEmpty())
             lonelyNodeVariables.fold(NodeVariable("Lonely")) { acc, new -> acc.merge(new) }
@@ -285,5 +285,17 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             .map { (node, neighbors) -> 31 * node.hashCode() + neighbors.sumOf { it.hashCode() } }
             .sum()
         return result
+    }
+
+    fun isSubGraphOf(other: Graph): Boolean {
+        if (!nodes.all { it in other.nodes })
+            return false
+
+        edges.forEach { (node, neighbors) ->
+            if (!neighbors.all { it in other.edgesOf(node) })
+                return false
+        }
+
+        return true
     }
 }
