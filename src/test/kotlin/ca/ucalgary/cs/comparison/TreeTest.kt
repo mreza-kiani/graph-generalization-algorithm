@@ -65,7 +65,7 @@ class TreeTest : BaseCompareGraphTest() {
         val g2childB = Node("G2ChildB")
         val g2subChildB = Node("G2SubChildB")
 
-        assertEquals(commonGraph.nodeVariables.size, 3)
+        assertEquals(commonGraph.nodeVariables.size, 4)
         assertEquals(commonGraph.edgeVariables.size, 6)
 
         //TODO: add assertions
