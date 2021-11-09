@@ -9,6 +9,7 @@ class EdgeVariable(
 ) {
     fun has(l1: EdgeVariableLeg, l2: EdgeVariableLeg) = (leg1 == l1 && leg2 == l2) || (leg1 == l2 && leg2 == l1)
     fun has(leg: EdgeVariableLeg) = leg1 == leg || leg2 == leg
+    fun getGraphEdges(graphNumber: Int) = if (graphNumber == 1) graph1Edges else graph2Edges
 
     fun addEdge(tail: Node, head: Node, graphNumber: Int) = addEdgeTo(graphOf(graphNumber), tail, head)
 

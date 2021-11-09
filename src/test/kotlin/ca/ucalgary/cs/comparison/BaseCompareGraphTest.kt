@@ -41,6 +41,9 @@ abstract class BaseCompareGraphTest {
 
         assertEquals(graph1, Graph.reconstruct(commonGraph, graph1Diff))
         assertEquals(graph2, Graph.reconstruct(commonGraph, graph2Diff))
+
+        assertEquals(graph1, Graph.reconstruct(commonGraph, graphNumber = 1))
+        assertEquals(graph2, Graph.reconstruct(commonGraph, graphNumber = 2))
     }
 
     abstract fun checkCommonGraph(commonGraph: Graph)

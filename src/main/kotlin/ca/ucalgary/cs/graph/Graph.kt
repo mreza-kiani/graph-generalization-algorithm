@@ -169,6 +169,28 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
 
             return Graph(nodes, edges)
         }
+
+        fun reconstruct(generalizedGraph: Graph, graphNumber: Int): Graph {
+            val nodes = (generalizedGraph.nodes + generalizedGraph.nodeVariables.flatMap { it.getNodes(graphNumber) })
+                .distinct()
+                .toMutableList()
+
+            val edges = nodes.associateWith { mutableListOf<Node>() }.toMutableMap()
+            generalizedGraph.edges.forEach { (node, neighbors) -> edges[node]?.addAll(neighbors) }
+            generalizedGraph.nodeVariables.forEach { nodeVariable ->
+                nodeVariable.getGraph(graphNumber).edges.forEach { (node, neighbors) ->
+                    edges[node]?.addAll(neighbors)
+                }
+            }
+
+            generalizedGraph.edgeVariables.forEach { edgeVariable ->
+                edgeVariable.getGraphEdges(graphNumber).forEach { (node, neighbors) ->
+                    edges[node]?.addAll(neighbors)
+                }
+            }
+
+            return Graph(nodes, edges)
+        }
     }
 
     private fun extractNodeAndEdgeVariablesForSingleGraph(

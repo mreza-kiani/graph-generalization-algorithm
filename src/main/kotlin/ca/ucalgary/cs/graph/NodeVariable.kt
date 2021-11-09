@@ -8,7 +8,10 @@ class NodeVariable(name: String) : Node(name) {
         addNode(node, graphNumber)
     }
 
-    fun addNode(node: Node, graphNumber: Int) {
+    fun getGraph(graphNumber: Int) = if (graphNumber == 1) graph1 else graph2
+    fun getNodes(graphNumber: Int) = getGraph(graphNumber).nodes
+
+    private fun addNode(node: Node, graphNumber: Int) {
         if (graphNumber == 1) {
             graph1 = Graph(nodes = (graph1.nodes + node).distinct(), edges = graph1.edges)
         } else {
