@@ -123,7 +123,16 @@ class EdgeVariable(
                 .forEach { it.updateNodeVariable(newVariable) }
         }
 
-        fun mergeSimilarLegs(edgeVariables: List<EdgeVariable>): EdgeVariable {
+        fun removeDuplicates(edgeVariables: MutableList<EdgeVariable>) =
+            edgeVariables.groupBy { it.simpleNodeLeg() to it.nodeVariableLeg() }
+                .map { (_, list) -> list }
+                .filter { list -> list.size > 1 }
+                .forEach { list ->
+                    edgeVariables.removeAll(list)
+                    edgeVariables.add(mergeSimilarLegs(list))
+                }
+
+        private fun mergeSimilarLegs(edgeVariables: List<EdgeVariable>): EdgeVariable {
             val nodeVariable = edgeVariables.first().nodeVariableLeg()
             val simpleNode = edgeVariables.first().simpleNodeLeg()
 

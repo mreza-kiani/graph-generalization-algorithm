@@ -214,10 +214,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
                     else
                         neighbor to (nodeVariablesMap[node] ?: error("There is no NodeVariable for $node!"))
 
-                    val edgeVariable = EdgeVariable(EdgeVariable.getUniqueName(), n, nv)
+                    val edgeVariable = edgeVariables.find { it.has(n, nv) }
+                        ?: EdgeVariable(EdgeVariable.getUniqueName(), n, nv).also { edgeVariables.add(it) }
                     edgeVariable.addEdge(tail = node, head = neighbor, graphNumber = graphNumber)
-
-                    edgeVariables.add(edgeVariable)
                 } else {
                     val nodeVariable1 = nodeVariablesMap[node] ?: error("There is no NodeVariable for $node!")
                     val nodeVariable2 = nodeVariablesMap[neighbor] ?: error("There is no NodeVariable for $neighbor!")
@@ -244,9 +243,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
         else
             null
 
-
         val nodeVariablesNeighborMap = NodeVariable.extractNeighborsMap(edgeVariables)
-
         nodeVariablesNeighborMap.forEach { (node, neighbors) ->
             val similarNeighbors = nodeVariablesNeighborMap
                 .filter { (key, _) -> key != node }
@@ -262,13 +259,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
             }
         }
 
-        edgeVariables.groupBy { it.simpleNodeLeg() to it.nodeVariableLeg() }
-            .map { (_, list) -> list }
-            .filter { list -> list.size > 1 }
-            .forEach { list ->
-                edgeVariables.removeAll(list)
-                edgeVariables.add(EdgeVariable.mergeSimilarLegs(list))
-            }
+        EdgeVariable.removeDuplicates(edgeVariables)
 
         return edgeVariables to lonelyNodeVariable
     }

@@ -53,13 +53,16 @@ class NodeVariable(name: String) : Node(name) {
         if (other.isSubGraphOf(this))
             return this
 
-        val merged = NodeVariable(name = "{$name&${other.name}}")
-        merged.graph1 = Graph(nodes = graph1.nodes + other.graph1.nodes, edges = graph1.edges + other.graph1.edges)
-        merged.graph2 = Graph(nodes = graph2.nodes + other.graph2.nodes, edges = graph2.edges + other.graph2.edges)
+        val parts = name.replace("{", "").replace("}", "").split("&")
+        val otherParts = other.name.replace("{", "").replace("}", "").split("&")
+
+        val merged = NodeVariable(name = "{${(parts + otherParts).distinct().joinToString("&")}}")
+        merged.graph1 = Graph(nodes = (graph1.nodes + other.graph1.nodes).distinct(), edges = graph1.edges + other.graph1.edges)
+        merged.graph2 = Graph(nodes = (graph2.nodes + other.graph2.nodes).distinct(), edges = graph2.edges + other.graph2.edges)
         return merged
     }
 
-    private fun neighborsOf(edgeVariables: List<EdgeVariable>) =
+    private fun neighborsIn(edgeVariables: List<EdgeVariable>) =
         edgeVariables.filter { it.has(this) }.map { it.otherLegThan(this) }.distinct()
 
     companion object {
@@ -67,7 +70,7 @@ class NodeVariable(name: String) : Node(name) {
             edgeVariables
                 .map { it.nodeVariableLeg() }
                 .distinct()
-                .map { it to it.neighborsOf(edgeVariables) }
+                .map { it to it.neighborsIn(edgeVariables) }
                 .sortedByDescending { (_, neighbors) -> neighbors.size }
                 .toMap()
                 .toMutableMap()
