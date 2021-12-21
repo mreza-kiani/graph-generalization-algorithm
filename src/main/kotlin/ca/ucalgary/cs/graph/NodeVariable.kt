@@ -56,7 +56,7 @@ class NodeVariable(name: String) : Node(name) {
         val parts = name.replace("{", "").replace("}", "").split("&")
         val otherParts = other.name.replace("{", "").replace("}", "").split("&")
 
-        val merged = NodeVariable(name = "{${(parts + otherParts).distinct().joinToString("&")}}")
+        val merged = NodeVariable(name = "{${(parts + otherParts).sorted().distinct().joinToString("&")}}")
         merged.graph1 = Graph(nodes = (graph1.nodes + other.graph1.nodes).distinct(), edges = graph1.edges + other.graph1.edges)
         merged.graph2 = Graph(nodes = (graph2.nodes + other.graph2.nodes).distinct(), edges = graph2.edges + other.graph2.edges)
         return merged

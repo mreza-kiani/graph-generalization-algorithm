@@ -224,8 +224,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
                     val mergedNodeVariable = nodeVariable1.merge(nodeVariable2)
                     mergedNodeVariable.addEdge(tail = node, head = neighbor, graphNumber = graphNumber)
 
-                    nodeVariablesMap[node] = mergedNodeVariable
-                    nodeVariablesMap[neighbor] = mergedNodeVariable
+                    (nodeVariable1.getGraph(graphNumber).nodes + nodeVariable2.getGraph(graphNumber).nodes)
+                        .distinct()
+                        .forEach { nodeVariablesMap[it] = mergedNodeVariable }
 
                     EdgeVariable.updateNodeVariablesOf(
                         edgeVariables,
@@ -266,7 +267,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
 
     private operator fun minus(otherGraph: Graph): Graph {
         val uncommonEdges = edges.map { (node, neighbors) ->
-            node to (neighbors - otherGraph.edgesOf(node))
+            node to (neighbors - otherGraph.edgesOf(node).toSet())
         }.toMap()
         val heads = uncommonEdges.values.flatten().distinct()
         val tails = uncommonEdges.filter { (node, neighbors) ->
