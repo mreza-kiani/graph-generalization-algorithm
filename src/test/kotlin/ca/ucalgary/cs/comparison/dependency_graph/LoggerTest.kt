@@ -3,7 +3,7 @@ package ca.ucalgary.cs.comparison.dependency_graph
 import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.io.GraphScanner
-import ca.ucalgary.cs.io.createClassFile
+import ca.ucalgary.cs.io.visualize
 
 class LoggerTest : BaseCompareGraphTest() {
     override fun initializeGraphs() {
@@ -12,7 +12,9 @@ class LoggerTest : BaseCompareGraphTest() {
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        commonGraph.createClassFile("log4j vs logback")
+//        graph1.visualize("log4j")
+        graph2.visualize("logback")
+        commonGraph.visualize("log4j vs logback")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {}

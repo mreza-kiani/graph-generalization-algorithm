@@ -34,6 +34,8 @@ class EdgeVariable(
         }
     }
 
+    private fun hasNodeVariableLeg() = leg1 is NodeVariable || leg2 is NodeVariable
+
     fun simpleNodeLeg(): Node {
         return when {
             leg1 is Node && leg1 !is NodeVariable -> leg1 as Node
@@ -119,6 +121,7 @@ class EdgeVariable(
             newVariable: NodeVariable
         ) {
             edgeVariables
+                .filter { it.hasNodeVariableLeg() }
                 .filter { it.nodeVariableLeg() in previousVariables }
                 .forEach { it.updateNodeVariable(newVariable) }
         }

@@ -3,6 +3,7 @@ package ca.ucalgary.cs.comparison.dependency_graph
 import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
+import ca.ucalgary.cs.io.visualize
 
 class JoboonjaTest : BaseCompareGraphTest() {
     override fun initializeGraphs() {
@@ -535,8 +536,7 @@ class JoboonjaTest : BaseCompareGraphTest() {
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-
-//        commonGraph.createClassFile("joboonja")
+        commonGraph.visualize("joboonja")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {}

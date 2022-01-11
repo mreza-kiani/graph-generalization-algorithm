@@ -312,4 +312,16 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Node>>) : Edge
 
         return true
     }
+
+    fun simplifyNodeVariableNames() {
+        for (i: Int in 0 until nodeVariables.size) {
+            val nv = nodeVariables[i]
+            val simplifiedNodeVariable = NodeVariable(name = NodeVariable.getUniqueName()).also {
+                it.graph1 = nv.graph1
+                it.graph2 = nv.graph2
+            }
+            EdgeVariable.updateNodeVariablesOf(edgeVariables, listOf(nv), simplifiedNodeVariable)
+            nodeVariables[i] = simplifiedNodeVariable
+        }
+    }
 }

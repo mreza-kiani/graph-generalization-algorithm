@@ -66,6 +66,9 @@ class NodeVariable(name: String) : Node(name) {
         edgeVariables.filter { it.has(this) }.map { it.otherLegThan(this) }.distinct()
 
     companion object {
+        private var counter = 1
+        fun getUniqueName() = "E${counter++}"
+
         fun extractNeighborsMap(edgeVariables: MutableList<EdgeVariable>) =
             edgeVariables
                 .map { it.nodeVariableLeg() }
