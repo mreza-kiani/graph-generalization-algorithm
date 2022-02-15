@@ -16,7 +16,7 @@ class E3 : BaseCompareGraphTest() {
         val h = Node("H")
         val i = Node("I")
 
-        graph1 = Graph(
+        graph1 = Graph.from(
             nodes = listOf(a, b, c, d, e),
             edges = mapOf(
                 b to listOf(a, d),
@@ -25,7 +25,7 @@ class E3 : BaseCompareGraphTest() {
             )
         )
 
-        graph2 = Graph(
+        graph2 = Graph.from(
             nodes = listOf(a, d, e, f, g, h, i),
             edges = mapOf(
                 f to listOf(a),

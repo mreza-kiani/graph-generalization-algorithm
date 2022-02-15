@@ -19,13 +19,13 @@ class NodeVariable(name: String) : Node(name) {
         }
     }
 
-    fun addEdge(tail: Node, head: Node, graphNumber: Int) {
-        addNode(tail, graphNumber)
-        addNode(head, graphNumber)
+    fun addEdge(edge: Edge, graphNumber: Int) {
+        addNode(edge.from, graphNumber)
+        addNode(edge.to, graphNumber)
         if (graphNumber == 1) {
-            graph1 = Graph(nodes = graph1.nodes, edges = graph1.edges + (tail to graph1.edgesOf(tail) + listOf(head)))
+            graph1 = Graph(nodes = graph1.nodes, edges = graph1.edges + (edge.from to graph1.edgesOf(edge.from) + listOf(edge)))
         } else {
-            graph2 = Graph(nodes = graph2.nodes, edges = graph2.edges + (tail to graph2.edgesOf(tail) + listOf(head)))
+            graph2 = Graph(nodes = graph2.nodes, edges = graph2.edges + (edge.from to graph2.edgesOf(edge.from) + listOf(edge)))
         }
     }
 

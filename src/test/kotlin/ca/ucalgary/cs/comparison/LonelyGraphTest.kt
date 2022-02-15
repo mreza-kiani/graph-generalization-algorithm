@@ -17,14 +17,14 @@ class LonelyGraphTest : BaseCompareGraphTest() {
         val g2d = Node("G2D")
         val g2e = Node("G2E")
 
-        graph1 = Graph(
+        graph1 = Graph.from(
             nodes = listOf(a, b, c, g1d, g1e, g1f),
             edges = mapOf(
                 g1d to listOf(g1e),
             )
         )
 
-        graph2 = Graph(
+        graph2 = Graph.from(
             nodes = listOf(a, b, c, g2d, g2e),
             edges = mapOf()
         )
@@ -42,12 +42,7 @@ class LonelyGraphTest : BaseCompareGraphTest() {
         assertEquals(commonGraph.edgeVariables.size, 0)
 
         val nv1 = commonGraph.nodeVariables.first {
-            it.graph1 == Graph(
-                nodes = listOf(g1d, g1e, g1f),
-                edges = mapOf(
-                    g1d to listOf(g1e),
-                )
-            )
+            it.graph1 == Graph.from(nodes = listOf(g1d, g1e, g1f), edges = mapOf(g1d to listOf(g1e)))
         }
         assertEquals(nv1.graph2, Graph(nodes = listOf(g2d, g2e), edges = mapOf()))
     }

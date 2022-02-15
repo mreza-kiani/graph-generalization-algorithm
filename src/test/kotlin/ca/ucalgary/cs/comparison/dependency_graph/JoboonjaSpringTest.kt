@@ -153,7 +153,7 @@ class JoboonjaSpringTest : BaseCompareGraphTest() {
         val objectConverter = Node("ObjectConverter")
 
 
-        graph1 = Graph(
+        graph1 = Graph.from(
             nodes = listOf(authService, endorseRepositoryInMemoryImpl, deserializer, jDBCRepository, auctionRepositoryImpl, endorseRepository, resourcePool, forbiddenException, skillService, projectController, badRequestAdvice, cORSFilter, authFilter, application, auctionService, skillRepositoryImpl, userController, user, httpClient, endorseService, serializer, skill, endorseRepositoryImpl, schemaManager, forbiddenFoundAdvice, jWTUtils, token, projectRepositoryInMemoryImpl, endorsableSkill, notFoundAdvice, endorse, projectService, preparedQuery, bidAmount, auctionRepositoryInMemoryImpl, notFoundException, projectRepositoryImpl, projectTitle, memoryDataBase, endorseRequest, project, serializeException, auctionRepository, skillRepositoryInMemoryImpl, httpResponse, userRepository, userRepositoryInMemoryImpl, skillRepository, auction, badRequestException, bid, skillController, authController, userService, projectRepository, userRepositoryImpl),
             edges = mapOf(
                 authService to listOf(notFoundException, user, userService, jWTUtils),
@@ -215,7 +215,7 @@ class JoboonjaSpringTest : BaseCompareGraphTest() {
             )
         )
 
-        graph2 = Graph(
+        graph2 = Graph.from(
             nodes = listOf(page, bidControllerAdvice, dispatcher, endorsementController, objectConverter, budgetOverflow, userSkillDto, skillController, restControllerAdvice, duplicateItemMessage, user, userRepository, id, entityNotFoundDto, joinColumn, unauthorizedDto, pathVariable, controllerParameterResolver, illegalFormat, project, pathVariableResolverManager, manyToOne, userDto, entity, schedulable, hikariCPDataSource, restController, demoServlet, httpGetClient, solutionsApplication, requestBody, persistenceSet, applicationRunner, restControllerAdviceManager, insufficientSkill, initializer, valueTypePersistenceSet, main, applicationDataBaseConnectionProvider, entityObjectIdResolver, defaultUserSeed, projectAuctioneer, scheduleManager, modelProxyFactory, projectSkill, forbidden, authenticationFilter, authenticationService, requestAttribute, modelProxyFieldAccessors, missingParameter, illegalBidException, persistenceProxy, userSkill, entityRepository, projectRepository, userController, projectService, modelProxy, userService, restControllerAdviceHandlerData, persistenceUtils, commonControllerAdvice, getterInterceptor, requestParam, requestMethod, oneToMany, entityNotFound, pageable, integerControllerParameterResolver, noSuchEndPointDto, bid, endPoint, collectionTable, projectController, cascadeType, entityManager, dataMapper, restControllerAdviceHandler, applicationProperties, javaTypesControllerParameterResolver, beanMapper, cache, reflectionUtil, illegalBidExceptionDto, corsFilter, stringControllerParameterResolver, autoIncrement, projectSeed, noSuchEndPoint, duplicateItemException, projectDto, requestMapping, oneToManyPersistenceSet, knowledge, knowledgeSeed, endorsement, auction, entityControllerParameterResolver),
             edges = mapOf(
                 page to listOf(pageable),

@@ -19,7 +19,7 @@ class CompleteGraphTest : BaseCompareGraphTest() {
         val g2f = Node("G2F")
         val g2g = Node("G2G")
 
-        graph1 = Graph(
+        graph1 = Graph.from(
             nodes = listOf(a, b, c, g1d, g1e, g1f),
             edges = mapOf(
                 a to listOf(b, c, g1d, g1e, g1f),
@@ -31,7 +31,7 @@ class CompleteGraphTest : BaseCompareGraphTest() {
             )
         )
 
-        graph2 = Graph(
+        graph2 = Graph.from(
             nodes = listOf(a, b, c, g2d, g2e, g2f, g2g),
             edges = mapOf(
                 a to listOf(b, c, g2d, g2e, g2f, g2g),
@@ -59,7 +59,7 @@ class CompleteGraphTest : BaseCompareGraphTest() {
         assertEquals(commonGraph.edgeVariables.size, 3)
 
         val nv1 = commonGraph.nodeVariables.first {
-            it.graph1 == Graph(
+            it.graph1 == Graph.from(
                 nodes = listOf(g1d, g1e, g1f),
                 edges = mapOf(
                     g1d to listOf(g1e, g1f),
@@ -69,7 +69,7 @@ class CompleteGraphTest : BaseCompareGraphTest() {
             )
         }
         assertEquals(
-            nv1.graph2, Graph(
+            nv1.graph2, Graph.from(
                 nodes = listOf(g2d, g2e, g2f, g2g),
                 edges = mapOf(
                     g2d to listOf(g2e, g2f, g2g),

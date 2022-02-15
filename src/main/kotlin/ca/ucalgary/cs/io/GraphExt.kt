@@ -20,10 +20,10 @@ fun Graph.visualize(name: String) {
 
     nodes
         .associateWith { edgesOf(it) }
-        .map { (node, neighbors) ->
+        .map { (node, edges) ->
             g.add(getMutNode(node))
-            neighbors.forEach { neighbor ->
-                g.add(getMutNode(node).addLink(getMutNode(neighbor)))
+            edges.forEach { edge ->
+                g.add(getMutNode(node).addLink(getMutNode(edge.to)))
             }
         }
 

@@ -1,5 +1,6 @@
 package ca.ucalgary.cs.comparison
 
+import ca.ucalgary.cs.graph.Edge
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 
@@ -12,7 +13,7 @@ class E1: BaseCompareGraphTest() {
         val e = Node("E")
         val f = Node("F")
 
-        graph1 = Graph(
+        graph1 = Graph.from(
             nodes = listOf(a, b, c, d, e, f),
             edges = mapOf(
                 a to listOf(b, c),
@@ -20,7 +21,7 @@ class E1: BaseCompareGraphTest() {
             )
         )
 
-        graph2 = Graph(
+        graph2 = Graph.from(
             nodes = listOf(a, b, c, d, e),
             edges = mapOf(
                 a to listOf(c),
@@ -38,8 +39,8 @@ class E1: BaseCompareGraphTest() {
         val e = Node("E")
 
         checkListsEquality(commonGraph.nodes, listOf(a, b, c, d, e))
-        checkListsEquality(commonGraph.edges[a], listOf(c))
-        checkListsEquality(commonGraph.edges[e], listOf(d))
+        checkListsEquality(commonGraph.edges[a], Edge.from(a, listOf(c)))
+        checkListsEquality(commonGraph.edges[e], Edge.from(e, listOf(d)))
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
@@ -48,7 +49,7 @@ class E1: BaseCompareGraphTest() {
         val f = Node("F")
 
         checkListsEquality(graph1Diff.nodes, listOf(a, b, f))
-        checkListsEquality(graph1Diff.edges[a], listOf(b))
+        checkListsEquality(graph1Diff.edges[a], Edge.from(a, listOf(b)))
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
@@ -57,6 +58,6 @@ class E1: BaseCompareGraphTest() {
         val d = Node("D")
 
         checkListsEquality(graph2Diff.nodes, listOf(a, b, d))
-        checkListsEquality(graph2Diff.edges[b], listOf(a, d))
+        checkListsEquality(graph2Diff.edges[b], Edge.from(b, listOf(a, d)))
     }
 }

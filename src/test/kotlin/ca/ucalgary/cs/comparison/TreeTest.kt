@@ -23,7 +23,7 @@ class TreeTest : BaseCompareGraphTest() {
         val g2child1B = Node("G2Child1B")
         val g2Child2B = Node("G2Child2B")
 
-        graph1 = Graph(
+        graph1 = Graph.from(
             nodes = listOf(a, b, c, d, g1root, g1subRoot, g1child1A, g1child2A, g1subChild1A),
             edges = mapOf(
                 g1subRoot to listOf(g1root),
@@ -37,7 +37,7 @@ class TreeTest : BaseCompareGraphTest() {
             )
         )
 
-        graph2 = Graph(
+        graph2 = Graph.from(
             nodes = listOf(a, b, c, d, g2root, g2child1A, g2child2A, g2child1B, g2Child2B),
             edges = mapOf(
                 a to listOf(g2root),

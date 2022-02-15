@@ -139,7 +139,7 @@ class JoboonjaTest : BaseCompareGraphTest() {
         val projectRepositoryImpl = Node("ProjectRepositoryImpl")
         val httpStatus = Node("HttpStatus")
 
-        graph1 = Graph(
+        graph1 = Graph.from(
             nodes = listOf(
                 bidMapper,
                 apiError,
@@ -312,7 +312,7 @@ class JoboonjaTest : BaseCompareGraphTest() {
                 signup to listOf(userService, signupRequest),
             )
         )
-        graph2 = Graph(
+        graph2 = Graph.from(
             nodes = listOf(
                 userSearchServlet,
                 userServlet,

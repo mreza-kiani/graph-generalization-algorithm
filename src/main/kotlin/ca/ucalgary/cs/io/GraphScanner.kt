@@ -10,7 +10,7 @@ object GraphScanner {
         val nodes = extractNodes(lines[1])
         val edges = extractEdges(lines.subList(fromIndex = 3, toIndex = lines.size - 2))
 
-        return Graph(nodes, edges)
+        return Graph.from(nodes, edges)
     }
 
     private fun extractEdges(lines: List<String>): Map<Node, List<Node>> {

@@ -4,14 +4,14 @@ class EdgeVariable(
     val name: String,
     var leg1: EdgeVariableLeg,
     var leg2: EdgeVariableLeg,
-    val graph1Edges: MutableMap<Node, MutableList<Node>> = mutableMapOf(),
-    val graph2Edges: MutableMap<Node, MutableList<Node>> = mutableMapOf()
+    val graph1Edges: MutableMap<Node, MutableList<Edge>> = mutableMapOf(),
+    val graph2Edges: MutableMap<Node, MutableList<Edge>> = mutableMapOf()
 ) {
     fun has(l1: EdgeVariableLeg, l2: EdgeVariableLeg) = (leg1 == l1 && leg2 == l2) || (leg1 == l2 && leg2 == l1)
     fun has(leg: EdgeVariableLeg) = leg1 == leg || leg2 == leg
     fun getGraphEdges(graphNumber: Int) = if (graphNumber == 1) graph1Edges else graph2Edges
 
-    fun addEdge(tail: Node, head: Node, graphNumber: Int) = addEdgeTo(graphOf(graphNumber), tail, head)
+    fun addEdge(edge: Edge, graphNumber: Int) = addEdgeTo(graphOf(graphNumber), edge)
 
     private fun graphOf(graphNumber: Int) = when (graphNumber) {
         1 -> graph1Edges
@@ -19,10 +19,10 @@ class EdgeVariable(
         else -> error("graphNumber should be 1 or 2")
     }
 
-    private fun addEdgeTo(edges: MutableMap<Node, MutableList<Node>>, tail: Node, head: Node) {
-        if (edges[tail] == null)
-            edges[tail] = mutableListOf()
-        edges[tail]?.add(head)
+    private fun addEdgeTo(edges: MutableMap<Node, MutableList<Edge>>, edge: Edge) {
+        if (edges[edge.from] == null)
+            edges[edge.from] = mutableListOf()
+        edges[edge.from]?.add(edge)
     }
 
     fun nodeVariableLeg(): NodeVariable {
