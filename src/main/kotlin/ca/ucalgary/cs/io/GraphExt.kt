@@ -56,5 +56,7 @@ fun getMutNode(node: Node): MutableNode {
     val mutNode = mutNode(node.name)
     if (node is NodeVariable)
         mutNode.attrs().add(Shape.RECTANGLE, Style.FILLED, Color.hsv(.7, .3, 1.0))
+    else if (node.isCommon)
+        mutNode.attrs().add(Style.FILLED, Color.hsv(.3, .75, 0.63))
     return mutNode
 }

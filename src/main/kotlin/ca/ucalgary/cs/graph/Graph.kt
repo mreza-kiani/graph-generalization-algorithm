@@ -289,7 +289,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         }.keys
         val cleanedUncommonEdges = uncommonEdges.filter { (node, _) -> node in (heads + tails) }
         val lonelyNodes = nodes.filter { edgesOf(it).isEmpty() }.filter { it !in otherGraph.nodes }
-        return Graph(nodes = (tails + heads + lonelyNodes).toList(), edges = cleanedUncommonEdges)
+        val diffGraph = Graph(nodes = (tails + heads + lonelyNodes).toList(), edges = cleanedUncommonEdges)
+        diffGraph.nodes.filter { it in otherGraph.nodes }.forEach { it.isCommon = true }
+        return diffGraph
     }
 
     override fun equals(other: Any?): Boolean {
