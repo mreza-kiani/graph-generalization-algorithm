@@ -7,8 +7,9 @@ import ca.ucalgary.cs.io.visualize
 
 class JUnitTest : BaseCompareGraphTest() {
     override fun initializeGraphs() {
-        graph1 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/junit/junit4.txt")
-        graph2 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/junit/junit5.txt")
+        graph1 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/junit/junit4.12.txt")
+        graph2 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/junit/junit4.13.txt")
+//        graph2 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/junit/junit5.txt")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
