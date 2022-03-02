@@ -207,6 +207,15 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         }
     }
 
+    fun extractNodeCentrality(): Map<Node, Double> {
+        val totalEdges = edgeCounts() + edgeVariables.size
+        return (nodes.map { node ->
+            node to (edgesOf(node).size + edgeVariables.filter { it.has(node) }.size).toDouble() / totalEdges
+        } + nodeVariables.map { nodeVariable ->
+            nodeVariable to edgeVariables.filter { it.has(nodeVariable) }.size.toDouble() / totalEdges
+        }).sortedByDescending { (_, centrality) -> centrality }.toMap()
+    }
+
     private fun extractNodeAndEdgeVariablesForSingleGraph(
         commonNodes: List<Node>,
         graphNumber: Int
