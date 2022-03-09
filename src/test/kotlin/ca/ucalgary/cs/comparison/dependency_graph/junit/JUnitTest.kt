@@ -15,15 +15,15 @@ class JUnitTest : BaseCompareGraphTest() {
     override fun checkCommonGraph(commonGraph: Graph) {
 //        graph1.visualize("junit4")
 //        graph2.visualize("junit5")
-        commonGraph.visualize("junit-commonalities")
+        //commonGraph.visualize("junit-commonalities")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
-        graph1Diff.visualize("junit-4-differences")
+        graph1Diff.visualize("junit-4.12-differences")
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        graph2Diff.visualize("junit-5-differences")
+        graph2Diff.visualize("junit-4.13-differences")
     }
 }
 
