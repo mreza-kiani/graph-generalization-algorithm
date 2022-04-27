@@ -24,7 +24,13 @@ abstract class BaseCompareGraphTest {
 
     @Test
     fun compareGraphs() {
+        val startTime = System.currentTimeMillis()
         val (commonGraph, graph1Diff, graph2Diff) = Graph.compare(graph1, graph2)
+        val endTime = System.currentTimeMillis()
+
+        println("---------------------------------------------")
+        println("Comparing took ${endTime - startTime} millis")
+        println("---------------------------------------------")
 
         println("Common Graph:")
         println(commonGraph)
