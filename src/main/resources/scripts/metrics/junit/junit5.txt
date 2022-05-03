@@ -1,0 +1,2135 @@
+org.junit.jupiter.api.Assertions	1.0	1.0	291.0
+org.junit.platform.commons.util.ReflectionUtils	1.6770833333333333	8.0	161.0
+org.junit.platform.commons.util.ReflectionUtilsTests	1.0236220472440944	1.0	130.0
+org.junit.jupiter.api.AssertArrayEqualsAssertionsTests	1.0	1.0	122.0
+org.junit.jupiter.api.AssertArrayEquals	1.9423076923076923	13.0	101.0
+org.junit.platform.commons.util.AnnotationUtilsTests	1.0	1.0	74.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests	1.0	1.0	73.0
+org.junit.platform.console.options.CommandLineOptions	1.0	1.0	60.0
+org.junit.jupiter.engine.discovery.DiscoverySelectorResolverTests	1.0	1.0	57.0
+org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor	1.6470588235294117	7.0	56.0
+org.junit.platform.commons.util.AnnotationUtils	2.5	11.0	55.0
+org.junit.platform.console.options.PicocliCommandLineOptionsParserTests	1.0	1.0	55.0
+org.junit.jupiter.api.AssertNotEquals	1.625	2.0	52.0
+org.junit.jupiter.api.AssertEquals	1.6451612903225807	2.0	51.0
+org.junit.jupiter.api.AssertEqualsAssertionsTests	1.0	1.0	49.0
+org.junit.platform.reporting.legacy.xml.XmlReportWriter	1.5806451612903225	1.0	49.0
+org.junit.vintage.engine.VintageTestEngineDiscoveryTests	1.0	1.0	49.0
+org.junit.platform.launcher.core.DefaultLauncherTests	1.0	1.0	47.0
+org.junit.jupiter.api.AssertionUtils	1.6071428571428572	4.0	45.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests	1.0	1.0	44.0
+org.junit.jupiter.params.provider.CsvFileArgumentsProviderTests	1.0	1.0	41.0
+org.junit.platform.engine.support.descriptor.MethodSourceTests	1.0	1.0	40.0
+org.junit.platform.testkit.engine.Events	1.1470588235294117	2.0	39.0
+org.junit.jupiter.params.provider.CsvArgumentsProviderTests	1.0277777777777777	2.0	37.0
+org.junit.platform.commons.util.ClasspathScannerTests	1.15625	1.0	37.0
+org.junit.platform.launcher.listeners.MutableTestExecutionSummary	1.3703703703703705	3.0	37.0
+org.junit.vintage.engine.execution.RunListenerAdapter	1.3214285714285714	4.0	37.0
+example.ParameterizedTestDemo	1.0303030303030303	1.0	34.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests	1.0303030303030303	1.0	34.0
+org.junit.platform.testkit.engine.EventConditions	1.0303030303030303	2.0	34.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests	1.1379310344827587	1.0	33.0
+org.junit.platform.engine.discovery.DiscoverySelectors	1.0	1.0	33.0
+org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor	1.4545454545454546	5.0	32.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.MethodSourceTestCase	1.0	1.0	32.0
+org.junit.platform.console.tasks.TreePrinter	2.909090909090909	6.0	32.0
+org.junit.jupiter.api.AssertTimeoutAssertionsTests	1.0689655172413792	2.0	31.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests	1.0333333333333334	1.0	31.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests	1.0333333333333334	2.0	31.0
+org.junit.jupiter.api.AssertIterableEqualsAssertionsTests	1.0	1.0	30.0
+org.junit.platform.launcher.core.LauncherConfigurationParameters	1.0714285714285714	3.0	30.0
+org.junit.platform.launcher.tagexpression.ShuntingYard	2.4166666666666665	4.0	29.0
+org.junit.jupiter.engine.extension.TimeoutExtension	1.3333333333333333	5.0	28.0
+org.junit.platform.commons.util.PreconditionsTests	1.0	1.0	28.0
+org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutorTests	1.0	1.0	28.0
+org.junit.platform.suite.commons.SuiteLauncherDiscoveryRequestBuilderTests	1.0	1.0	28.0
+org.junit.platform.testkit.engine.Executions	1.2727272727272727	7.0	28.0
+org.junit.jupiter.api.AssumptionsTests	1.08	2.0	27.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests	1.0384615384615385	1.0	27.0
+org.junit.platform.commons.util.StringUtils	2.25	13.0	27.0
+org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution	3.375	1.0	27.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests	1.0384615384615385	2.0	27.0
+org.junit.vintage.engine.execution.TestRun	1.35	3.0	27.0
+org.junit.jupiter.api.condition.EnabledOnJreIntegrationTests	1.0	1.0	26.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptor	1.7333333333333334	5.0	26.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests.TestCase	1.0	1.0	26.0
+org.junit.platform.commons.support.ReflectionSupportTests	1.0833333333333333	1.0	26.0
+org.junit.platform.commons.util.ClasspathScanner	1.368421052631579	2.0	26.0
+org.junit.platform.commons.support.ModifierSupportTests	1.0	1.0	25.0
+org.junit.platform.engine.UniqueId	1.3888888888888888	3.0	25.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.Discovery	1.0	1.0	25.0
+org.junit.jupiter.api.extension.KitchenSinkExtension	1.0	1.0	24.0
+org.junit.jupiter.engine.execution.ExtensionValuesStoreTests.StoringValuesTests	1.0	1.0	24.0
+org.junit.platform.console.tasks.DiscoveryRequestCreatorTests	1.0	1.0	24.0
+org.junit.platform.engine.support.descriptor.MethodSource	1.263157894736842	3.0	24.0
+org.junit.platform.runner.JUnitPlatformTestTree	1.411764705882353	5.0	24.0
+org.junit.jupiter.api.AssertLinesMatchAssertionsTests	1.0	1.0	23.0
+org.junit.jupiter.api.AssertionTestUtils	1.7692307692307692	3.0	23.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests	1.0454545454545454	1.0	23.0
+org.junit.platform.console.tasks.VerboseTreePrintingListener	1.6428571428571428	5.0	23.0
+org.junit.platform.launcher.TestIdentifier	1.2105263157894737	1.0	23.0
+org.junit.jupiter.api.AssertDoesNotThrowAssertionsTests	1.0	1.0	22.0
+org.junit.jupiter.api.AssertLinesMatch.LinesMatcher	4.4	14.0	22.0
+org.junit.jupiter.api.Assumptions	1.375	2.0	22.0
+org.junit.jupiter.engine.extension.MutableExtensionRegistry	1.375	4.0	22.0
+org.junit.jupiter.engine.extension.OrderedMethodTests	1.1578947368421053	1.0	22.0
+org.junit.jupiter.params.ParameterizedTestNameFormatterTests	1.0	1.0	22.0
+org.junit.platform.commons.logging.LoggerFactory.DelegatingLogger	1.375	4.0	22.0
+org.junit.platform.commons.util.Preconditions	1.375	2.0	22.0
+org.junit.platform.console.ConsoleLauncherWrapperResult	1.0476190476190477	2.0	22.0
+org.junit.platform.launcher.tagexpression.Operator	1.8333333333333333	6.0	22.0
+org.junit.platform.testkit.engine.EventsTests	1.0	1.0	22.0
+org.junit.vintage.engine.descriptor.RunnerTestDescriptor	1.6923076923076923	2.0	22.0
+org.junit.jupiter.params.ParameterizedTestMethodContext	1.9090909090909092	2.0	21.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests	1.105263157894737	1.0	21.0
+org.junit.jupiter.params.aggregator.DefaultArgumentsAccessorTests	1.0	1.0	21.0
+org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder	1.4	4.0	21.0
+org.junit.platform.launcher.listeners.SummaryGeneratingListener	3.0	11.0	21.0
+org.junit.platform.reporting.legacy.xml.XmlReportData	1.4	3.0	21.0
+example.ConditionalTestExecutionDemo	1.0	1.0	20.0
+example.SlowTests	1.0	1.0	20.0
+example.domain.Person	2.2222222222222223	10.0	20.0
+org.junit.jupiter.api.AssertThrowsExactlyAssertionsTests	1.0	1.0	20.0
+org.junit.jupiter.engine.TestTemplateInvocationTests	1.0	1.0	20.0
+org.junit.jupiter.engine.execution.ExecutableInvoker	2.2222222222222223	5.0	20.0
+org.junit.jupiter.engine.execution.ExtensionValuesStore	1.6666666666666667	4.0	20.0
+org.junit.jupiter.engine.extension.RepeatedTestTests	1.1111111111111112	1.0	20.0
+org.junit.jupiter.engine.extension.TempDirectory	1.3333333333333333	1.0	20.0
+org.junit.jupiter.engine.extension.TempDirectory.CloseablePath	1.4285714285714286	3.0	20.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests	1.0	1.0	20.0
+org.junit.platform.engine.discovery.FilePosition	2.0	9.0	20.0
+org.junit.platform.engine.discovery.MethodSelector	1.3333333333333333	3.0	20.0
+org.junit.platform.engine.support.descriptor.FilePosition	2.0	9.0	20.0
+org.junit.platform.engine.support.hierarchical.NodeTestTask	1.5384615384615385	3.0	20.0
+org.junit.platform.launcher.core.LauncherConfigurationParametersTests	1.0	1.0	20.0
+org.junit.platform.launcher.listeners.UniqueIdTrackingListener	2.0	5.0	20.0
+org.junit.platform.launcher.listeners.UniqueIdTrackingListenerIntegrationTests	1.1764705882352942	1.0	20.0
+org.junit.platform.reporting.legacy.xml.LegacyXmlReportGeneratingListenerTests	1.0	1.0	20.0
+org.junit.vintage.engine.descriptor.VintageTestDescriptor	1.5384615384615385	3.0	20.0
+org.junit.jupiter.api.AssertAllAssertionsTests	1.0555555555555556	2.0	19.0
+org.junit.jupiter.api.AssertIterableEquals	1.7272727272727273	4.0	19.0
+org.junit.jupiter.api.condition.DisabledOnJreConditionTests	1.0555555555555556	2.0	19.0
+org.junit.jupiter.api.condition.EnabledOnJreConditionTests	1.0555555555555556	2.0	19.0
+org.junit.jupiter.engine.descriptor.AbstractExtensionContext	1.2666666666666666	3.0	19.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests	1.0555555555555556	1.0	19.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests	1.0	1.0	19.0
+org.junit.jupiter.params.converter.DefaultArgumentConverterTests	1.0	1.0	19.0
+org.junit.platform.commons.support.AnnotationSupportTests	1.0	1.0	19.0
+org.junit.platform.commons.util.CollectionUtils	3.8	13.0	19.0
+org.junit.platform.commons.util.CollectionUtilsTests	1.0555555555555556	2.0	19.0
+org.junit.platform.console.tasks.DiscoveryRequestCreator	3.1666666666666665	8.0	19.0
+org.junit.platform.engine.support.descriptor.AbstractTestDescriptor	1.1875	3.0	19.0
+org.junit.platform.engine.support.descriptor.ClassSource	1.2666666666666666	3.0	19.0
+org.junit.platform.launcher.core.CompositeTestExecutionListenerTests	1.0	1.0	19.0
+org.junit.platform.suite.commons.SuiteLauncherDiscoveryRequestBuilder	1.1875	3.0	19.0
+org.junit.jupiter.api.DynamicTestTests	1.0588235294117647	2.0	18.0
+org.junit.jupiter.api.condition.EnabledIfEnvironmentVariableConditionTests	1.2857142857142858	3.0	18.0
+org.junit.jupiter.engine.DynamicNodeGenerationTests	1.0	1.0	18.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests	1.0	1.0	18.0
+org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor	1.6363636363636365	4.0	18.0
+org.junit.jupiter.engine.discovery.ClassSelectorResolver	2.0	4.0	18.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests	1.0588235294117647	1.0	18.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.MethodSourceIntegrationTests	1.0	1.0	18.0
+org.junit.platform.commons.util.ReflectionUtilsWithGenericTypeHierarchiesTests	1.0	1.0	18.0
+org.junit.platform.commons.util.ToStringBuilderTests	1.0	1.0	18.0
+org.junit.platform.console.options.Theme	1.3846153846153846	5.0	18.0
+org.junit.platform.console.tasks.ConsoleTestExecutor	1.8	6.0	18.0
+org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService	1.6363636363636365	1.0	18.0
+org.junit.platform.launcher.core.EngineDiscoveryOrchestrator	1.2	1.0	18.0
+org.junit.platform.launcher.tagexpression.TagExpressions	1.0	1.0	18.0
+org.junit.jupiter.api.AssertThrowsAssertionsTests	1.0	1.0	17.0
+org.junit.jupiter.api.AssertTimeout	1.1333333333333333	2.0	17.0
+org.junit.jupiter.api.condition.JRE	4.25	14.0	17.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverterTests	1.0	1.0	17.0
+org.junit.jupiter.params.provider.CsvArgumentsProvider	2.4285714285714284	5.0	17.0
+org.junit.platform.commons.support.ModifierSupport	1.0	1.0	17.0
+org.junit.platform.engine.discovery.NestedMethodSelector	1.1333333333333333	3.0	17.0
+org.junit.platform.launcher.TagFilterTests	1.0	1.0	17.0
+org.junit.platform.launcher.core.LauncherFactory	1.4166666666666667	2.0	17.0
+org.junit.vintage.engine.discovery.MethodSelectorResolver	1.5454545454545454	4.0	17.0
+platform.tooling.support.Helper	1.7	4.0	17.0
+org.junit.jupiter.engine.discovery.MethodSelectorResolver	2.2857142857142856	2.0	16.0
+org.junit.jupiter.engine.extension.ParameterResolverTests	1.0	1.0	16.0
+org.junit.jupiter.params.aggregator.DefaultArgumentsAccessor	1.0666666666666667	2.0	16.0
+org.junit.platform.commons.support.AnnotationSupport	1.0	1.0	16.0
+org.junit.platform.launcher.TestPlan	1.2307692307692308	2.0	16.0
+org.junit.platform.launcher.listeners.discovery.LoggingLauncherDiscoveryListener	2.2857142857142856	6.0	16.0
+org.junit.platform.reporting.legacy.xml.XmlReportWriterTests	1.0	1.0	16.0
+org.junit.platform.testkit.engine.Event	1.0	1.0	16.0
+org.junit.vintage.engine.VintageLauncherIntegrationTests	1.0	1.0	16.0
+example.DynamicTestsDemo	1.0	1.0	15.0
+org.junit.jupiter.api.AssertNullAssertionsTests	1.3636363636363635	1.0	15.0
+org.junit.jupiter.api.condition.DisabledOnJreIntegrationTests	1.0	1.0	15.0
+org.junit.jupiter.api.condition.MethodBasedCondition	1.875	4.0	15.0
+org.junit.jupiter.engine.descriptor.LifecycleMethodUtils	1.3636363636363635	2.0	15.0
+org.junit.jupiter.engine.execution.JupiterEngineExecutionContext	1.0714285714285714	1.0	15.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests	1.0	1.0	15.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.EmptySourceTestCase	1.0	1.0	15.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.TestCase	1.0	1.0	15.0
+org.junit.jupiter.params.ParameterizedTestNameFormatter	1.6666666666666667	3.0	15.0
+org.junit.platform.commons.function.Try.Failure	1.1538461538461537	3.0	15.0
+org.junit.platform.console.tasks.FlatPrintingListener	1.0714285714285714	2.0	15.0
+org.junit.platform.engine.UniqueIdFormat	1.25	3.0	15.0
+org.junit.platform.engine.support.descriptor.ClassSourceTests	1.0	1.0	15.0
+org.junit.platform.engine.support.hierarchical.ThrowableCollector	1.6666666666666667	4.0	15.0
+org.junit.platform.launcher.core.InternalTestPlan	1.0714285714285714	2.0	15.0
+org.junit.platform.launcher.listeners.SummaryGenerationTests	1.0	1.0	15.0
+org.junit.platform.launcher.tagexpression.ParseStatus	1.0714285714285714	2.0	15.0
+org.junit.jupiter.api.DisplayNameGenerationTests	1.0	1.0	14.0
+org.junit.jupiter.api.DisplayNameGenerator.IndicativeSentences	1.4	5.0	14.0
+org.junit.jupiter.api.condition.DisabledIfEnvironmentVariableConditionTests	1.1666666666666667	2.0	14.0
+org.junit.jupiter.engine.ExceptionHandlingTests	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.DisplayNameTestCase	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase.NonExecutable	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase.NonReadable	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase.NonWritable	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase.NonExecutable	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase.NonReadable	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase.NonWritable	1.0	1.0	14.0
+org.junit.jupiter.engine.extension.TimeoutConfiguration	1.0769230769230769	2.0	14.0
+org.junit.jupiter.params.ParameterizedTestExtension	1.75	3.0	14.0
+org.junit.jupiter.params.provider.ValueArgumentsProviderTests	1.0	1.0	14.0
+org.junit.platform.commons.function.Try.Success	1.1666666666666667	3.0	14.0
+org.junit.platform.commons.support.ReflectionSupport	1.0	1.0	14.0
+org.junit.platform.engine.support.hierarchical.DefaultParallelExecutionConfigurationStrategyTests	1.0	1.0	14.0
+org.junit.platform.launcher.TagFilter	1.0	1.0	14.0
+org.junit.platform.launcher.core.LauncherFactoryTests	1.0	1.0	14.0
+org.junit.platform.launcher.core.StreamInterceptor	1.4	3.0	14.0
+org.junit.platform.reporting.legacy.xml.LegacyXmlReportGeneratingListener	1.0769230769230769	2.0	14.0
+org.junit.platform.runner.JUnitPlatformRunnerListener	1.5555555555555556	4.0	14.0
+org.junit.platform.suite.engine.SuiteEngineTests	1.0	1.0	14.0
+org.junit.platform.testkit.engine.EngineTestKit	1.0769230769230769	1.0	14.0
+org.junit.jupiter.api.AssertInstanceOfAssertionsTests	1.0833333333333333	2.0	13.0
+org.junit.jupiter.api.AssertLinesMatch	1.3	2.0	13.0
+org.junit.jupiter.api.condition.DisabledOnOsConditionTests	1.0833333333333333	2.0	13.0
+org.junit.jupiter.api.condition.EnabledIfSystemPropertyConditionTests	1.0	1.0	13.0
+org.junit.jupiter.api.condition.EnabledOnOsConditionTests	1.0833333333333333	2.0	13.0
+org.junit.jupiter.api.condition.EnabledOnOsIntegrationTests	1.0	1.0	13.0
+org.junit.jupiter.engine.ExceptionHandlingTests.FailureTestCase	1.4444444444444444	2.0	13.0
+org.junit.jupiter.engine.config.CachingJupiterConfiguration	1.0	1.0	13.0
+org.junit.jupiter.engine.config.DefaultJupiterConfiguration	1.0	1.0	13.0
+org.junit.jupiter.engine.descriptor.ExtensionUtils	1.625	6.0	13.0
+org.junit.jupiter.engine.descriptor.LifecycleMethodUtilsTests	1.0	1.0	13.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests	1.0	1.0	13.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests	1.0	1.0	13.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.NonMintPermissionContentInTempDirectoryDoesNotCauseFailureTestCase	1.0	1.0	13.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.NonMintPermissionContentInTempDirectoryDoesNotCauseFailureTestCase	1.0	1.0	13.0
+org.junit.jupiter.params.converter.JavaTimeArgumentConverterTests	1.0	1.0	13.0
+org.junit.platform.console.options.SelectorConverter.Iteration	4.333333333333333	10.0	13.0
+org.junit.platform.engine.support.descriptor.ClasspathResourceSource	1.3	3.0	13.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalker	1.625	6.0	13.0
+org.junit.platform.launcher.core.OutcomeDelayingEngineExecutionListener	2.1666666666666665	3.0	13.0
+org.junit.platform.launcher.tagexpression.TokenizerTests	1.0	1.0	13.0
+platform.tooling.support.Request	1.3	4.0	13.0
+org.junit.api.tools.AbstractApiReportWriter	1.7142857142857142	4.0	12.0
+org.junit.jupiter.api.AssertDoesNotThrow	1.0909090909090908	2.0	12.0
+org.junit.jupiter.api.condition.DisabledForJreRangeConditionTests	1.0909090909090908	2.0	12.0
+org.junit.jupiter.api.condition.DisabledIfSystemPropertyConditionTests	1.0	1.0	12.0
+org.junit.jupiter.api.condition.EnabledForJreRangeConditionTests	1.0909090909090908	2.0	12.0
+org.junit.jupiter.engine.DefaultExecutionModeTests	1.0909090909090908	1.0	12.0
+org.junit.jupiter.engine.DefaultMethodTests	1.0	1.0	12.0
+org.junit.jupiter.engine.DynamicNodeGenerationTests.MyDynamicTestCase	1.0	1.0	12.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.MyTestTemplateTestCase	1.0	1.0	12.0
+org.junit.jupiter.engine.descriptor.ExtensionContextTests	1.0909090909090908	1.0	12.0
+org.junit.jupiter.engine.descriptor.MethodBasedTestDescriptor	1.2	2.0	12.0
+org.junit.jupiter.engine.discovery.MethodSelectorResolver.MethodType	1.5	3.0	12.0
+org.junit.jupiter.engine.discovery.predicates.IsTestMethodTests	1.0	1.0	12.0
+org.junit.jupiter.engine.extension.ExecutionConditionTests	1.0	1.0	12.0
+org.junit.jupiter.migrationsupport.rules.TestRuleSupport	1.2	2.0	12.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.EmptySourceIntegrationTests	1.0	1.0	12.0
+org.junit.jupiter.params.provider.MockCsvAnnotationBuilder	1.0	1.0	12.0
+org.junit.platform.commons.util.StringUtilsTests	1.0	1.0	12.0
+org.junit.platform.console.options.AvailableOptions	1.5	3.0	12.0
+org.junit.platform.console.tasks.ConsoleTestExecutorTests	1.0	1.0	12.0
+org.junit.platform.console.tasks.TreeNode	1.0909090909090908	2.0	12.0
+org.junit.platform.engine.support.descriptor.FileSource	1.2	3.0	12.0
+org.junit.platform.engine.support.hierarchical.DemoHierarchicalTestEngine	1.0	1.0	12.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests	1.0	1.0	12.0
+org.junit.platform.launcher.core.EngineIdValidator	3.0	5.0	12.0
+org.junit.platform.launcher.core.LauncherConfig.Builder	1.0	1.0	12.0
+org.junit.platform.launcher.core.ListenerRegistry	1.0909090909090908	2.0	12.0
+org.junit.platform.launcher.core.StreamInterceptingTestExecutionListener	2.4	5.0	12.0
+org.junit.platform.launcher.listeners.LoggingListener	1.0	1.0	12.0
+org.junit.platform.launcher.tagexpression.TagExpressionsTests	1.0	1.0	12.0
+org.junit.platform.suite.commons.AdditionalDiscoverySelectors	1.5	3.0	12.0
+org.junit.platform.testkit.engine.TerminationInfo	1.3333333333333333	2.0	12.0
+org.junit.vintage.engine.descriptor.TestSourceProvider	3.0	4.0	12.0
+platform.tooling.support.Request.Builder	1.2	3.0	12.0
+org.junit.jupiter.api.FailAssertionsTests	1.1	2.0	11.0
+org.junit.jupiter.api.condition.EnabledIfSystemPropertyIntegrationTests	1.0	1.0	11.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.InstanceTrackingExtension	1.1	2.0	11.0
+org.junit.jupiter.engine.descriptor.ClassExtensionContext	1.0	1.0	11.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtils	2.2	5.0	11.0
+org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor	1.1	2.0	11.0
+org.junit.jupiter.engine.discovery.DiscoveryTests	1.0	1.0	11.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests	1.0	1.0	11.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests	1.1	1.0	11.0
+org.junit.jupiter.engine.extension.ExtensionRegistryTests	1.0	1.0	11.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.ReportingInvocationInterceptor	1.0	1.0	11.0
+org.junit.jupiter.params.converter.DefaultArgumentConverter	2.75	2.0	11.0
+org.junit.jupiter.params.provider.EnumArgumentsProviderTests	1.0	1.0	11.0
+org.junit.jupiter.params.provider.MethodArgumentsProvider	1.8333333333333333	4.0	11.0
+org.junit.platform.commons.util.ModuleUtils	1.375	2.0	11.0
+org.junit.platform.engine.discovery.NestedClassSelector	1.2222222222222223	3.0	11.0
+org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.DefaultContext	2.2	3.0	11.0
+org.junit.platform.engine.support.hierarchical.LockManager	1.8333333333333333	4.0	11.0
+org.junit.platform.launcher.core.CompositeTestExecutionListener	1.0	1.0	11.0
+org.junit.platform.launcher.core.DefaultLauncherConfig	1.0	1.0	11.0
+org.junit.platform.runner.JUnitPlatform	1.2222222222222223	2.0	11.0
+org.junit.platform.testkit.engine.TestExecutionResultConditions	1.0	1.0	11.0
+org.junit.vintage.engine.execution.TestRun.VintageDescriptors	1.375	3.0	11.0
+example.AssertionsDemo	1.0	1.0	10.0
+org.junit.jupiter.api.condition.AbstractExecutionConditionTests	1.1111111111111112	2.0	10.0
+org.junit.jupiter.api.condition.DisabledIfSystemPropertyIntegrationTests	1.0	1.0	10.0
+org.junit.jupiter.api.condition.OS	2.5	7.0	10.0
+org.junit.jupiter.engine.NestedTestClassesTests	1.0	1.0	10.0
+org.junit.jupiter.engine.TestInstanceLifecycleConfigurationTests	1.0	1.0	10.0
+org.junit.jupiter.engine.descriptor.DynamicDescendantFilter	1.25	1.0	10.0
+org.junit.jupiter.engine.descriptor.MethodExtensionContext	1.0	1.0	10.0
+org.junit.jupiter.engine.extension.OrderedClassTests	1.0	1.0	10.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.AlphanumericTestCase	1.0	1.0	10.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.MethodNameTestCase	1.0	1.0	10.0
+org.junit.jupiter.engine.extension.TimeoutDuration	1.4285714285714286	3.0	10.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportForMultipleMethodRulesTests	1.25	3.0	10.0
+org.junit.jupiter.params.ParameterizedTestMethodContextTests	1.0	1.0	10.0
+org.junit.jupiter.params.ParameterizedTestParameterResolver	2.0	2.0	10.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverter	1.6666666666666667	2.0	10.0
+org.junit.platform.console.ConsoleDetailsTests	1.6666666666666667	4.0	10.0
+org.junit.platform.engine.FilterResult	1.1111111111111112	2.0	10.0
+org.junit.platform.engine.TestTag	1.25	2.0	10.0
+org.junit.platform.engine.UniqueIdTests.Creation	1.0	1.0	10.0
+org.junit.platform.engine.discovery.ClassSelector	1.4285714285714286	3.0	10.0
+org.junit.platform.engine.discovery.FileSelector	1.25	3.0	10.0
+org.junit.platform.engine.support.descriptor.AbstractTestDescriptorTests	1.25	2.0	10.0
+org.junit.platform.engine.support.descriptor.PackageSource	1.25	3.0	10.0
+org.junit.platform.engine.support.hierarchical.MemoryLeakTests	1.0	1.0	10.0
+org.junit.platform.launcher.core.DefaultLauncher	1.0	1.0	10.0
+org.junit.platform.launcher.core.EngineExecutionOrchestrator	1.4285714285714286	3.0	10.0
+org.junit.platform.launcher.core.LauncherConfigTests	1.0	1.0	10.0
+org.junit.platform.testkit.engine.Assertions	1.4285714285714286	2.0	10.0
+org.junit.platform.testkit.engine.EventStatistics	1.0	1.0	10.0
+org.junit.vintage.engine.VintageUniqueIdBuilder	1.1111111111111112	2.0	10.0
+org.junit.api.tools.AsciidocApiReportWriter	1.125	2.0	9.0
+org.junit.api.tools.HtmlApiReportWriter	1.0	1.0	9.0
+org.junit.api.tools.MarkdownApiReportWriter	1.0	1.0	9.0
+org.junit.jupiter.api.AssertFalse	1.2857142857142858	2.0	9.0
+org.junit.jupiter.api.AssertFalseAssertionsTests	1.0	1.0	9.0
+org.junit.jupiter.api.AssertTrue	1.2857142857142858	2.0	9.0
+org.junit.jupiter.api.AssertTrueAssertionsTests	1.0	1.0	9.0
+org.junit.jupiter.api.condition.DisabledIfIntegrationTests	1.0	1.0	9.0
+org.junit.jupiter.api.condition.DisabledOnOsIntegrationTests	1.0	1.0	9.0
+org.junit.jupiter.api.condition.EnabledIfEnvironmentVariableIntegrationTests	1.0	1.0	9.0
+org.junit.jupiter.api.condition.EnabledIfIntegrationTests	1.0	1.0	9.0
+org.junit.jupiter.api.condition.JRETests	1.0	1.0	9.0
+org.junit.jupiter.engine.JupiterTestEngine	1.125	2.0	9.0
+org.junit.jupiter.engine.StandardTestClassTests.MyStandardTestCase	1.0	1.0	9.0
+org.junit.jupiter.engine.config.CachingJupiterConfigurationTests	1.0	1.0	9.0
+org.junit.jupiter.engine.descriptor.DynamicExtensionContext	1.0	1.0	9.0
+org.junit.jupiter.engine.descriptor.JupiterEngineExtensionContext	1.0	1.0	9.0
+org.junit.jupiter.engine.descriptor.TestTemplateExtensionContext	1.0	1.0	9.0
+org.junit.jupiter.engine.discovery.AbstractOrderingVisitor	3.0	1.0	9.0
+org.junit.jupiter.engine.discovery.predicates.IsTestMethodTests.ClassWithTestMethods	1.0	1.0	9.0
+org.junit.jupiter.engine.execution.DefaultTestInstances	1.2857142857142858	3.0	9.0
+org.junit.jupiter.engine.execution.JupiterEngineExecutionContext.Builder	1.2857142857142858	2.0	9.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests	1.0	1.0	9.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.TestCaseWithThreeInterceptors	1.0	1.0	9.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.BaseTestCase	1.8	2.0	9.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.OrderAnnotationTestCase	1.0	1.0	9.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.SharedTempDir	1.0	1.0	9.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.PlainTestCase	1.125	2.0	9.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.LifecycleTestCase	1.0	1.0	9.0
+org.junit.jupiter.params.provider.CsvFileArgumentsProvider	1.0	1.0	9.0
+org.junit.platform.commons.logging.LogRecordListener	1.5	2.0	9.0
+org.junit.platform.commons.util.ClassFileVisitor	1.2857142857142858	2.0	9.0
+org.junit.platform.commons.util.PackageUtilsTests	1.0	1.0	9.0
+org.junit.platform.console.ConsoleLauncher	1.2857142857142858	3.0	9.0
+org.junit.platform.console.ConsoleLauncherExecutionResult	1.2857142857142858	3.0	9.0
+org.junit.platform.console.tasks.Color	2.25	5.0	9.0
+org.junit.platform.console.tasks.TreePrintingListener	1.0	1.0	9.0
+org.junit.platform.engine.discovery.ClasspathResourceSelector	1.5	3.0	9.0
+org.junit.platform.engine.discovery.DirectorySelector	1.2857142857142858	3.0	9.0
+org.junit.platform.engine.discovery.IterationSelector	1.2857142857142858	3.0	9.0
+org.junit.platform.engine.support.descriptor.ClasspathResourceSourceTests	1.0	1.0	9.0
+org.junit.platform.engine.support.descriptor.DirectorySource	1.2857142857142858	3.0	9.0
+org.junit.platform.engine.support.descriptor.FilePositionTests	1.125	2.0	9.0
+org.junit.platform.engine.support.hierarchical.DemoHierarchicalTestDescriptor	1.5	2.0	9.0
+org.junit.platform.engine.support.hierarchical.ExclusiveResource	1.5	1.0	9.0
+org.junit.platform.launcher.EngineFilter	1.125	1.0	9.0
+org.junit.platform.launcher.TestIdentifierTests	1.0	1.0	9.0
+org.junit.platform.launcher.core.LauncherConfigurationParameters.Builder	1.5	4.0	9.0
+org.junit.platform.launcher.core.SessionPerRequestLauncher	1.0	1.0	9.0
+org.junit.platform.launcher.listeners.UniqueIdTrackingListenerUnitTests	1.0	1.0	9.0
+org.junit.platform.launcher.listeners.discovery.AbortOnFailureLauncherDiscoveryListener	2.25	4.0	9.0
+org.junit.platform.launcher.tagexpression.ParserErrorTests	1.0	1.0	9.0
+org.junit.platform.suite.engine.ClassSelectorResolver	1.5	3.0	9.0
+org.junit.platform.suite.engine.SuiteTestDescriptor	1.125	2.0	9.0
+org.junit.platform.testkit.engine.Execution	1.0	1.0	9.0
+org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder	1.5	1.0	9.0
+org.junit.vintage.engine.discovery.VintageDiscovererTests	1.0	1.0	9.0
+platform.tooling.support.tests.ToolProviderTests	1.5	4.0	9.0
+example.StandardTests	1.0	1.0	8.0
+example.callbacks.Logger	1.0	1.0	8.0
+org.junit.jupiter.api.AssertAll	1.1428571428571428	2.0	8.0
+org.junit.jupiter.api.AssertEqualsAssertionsTests.MixedBoxedAndUnboxedPrimitivesTests	1.0	1.0	8.0
+org.junit.jupiter.api.AssertInstanceOf	1.6	4.0	8.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.MixedBoxedAndUnboxedPrimitivesTests	1.0	1.0	8.0
+org.junit.jupiter.api.AssertNull	1.6	2.0	8.0
+org.junit.jupiter.api.DynamicTest	1.0	1.0	8.0
+org.junit.jupiter.api.condition.DisabledForJreRangeIntegrationTests	1.0	1.0	8.0
+org.junit.jupiter.api.condition.DisabledIfEnvironmentVariableIntegrationTests	1.0	1.0	8.0
+org.junit.jupiter.api.condition.EnabledForJreRangeIntegrationTests	1.0	1.0	8.0
+org.junit.jupiter.api.extension.ConditionEvaluationResult	1.1428571428571428	2.0	8.0
+org.junit.jupiter.api.extension.support.TypeBasedParameterResolver	1.6	4.0	8.0
+org.junit.jupiter.engine.TestClassInheritanceTests.LocalTestCase	1.1428571428571428	2.0	8.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.InstancePerClassOuterTestCase.NestedInstancePerClassTestCase	1.0	1.0	8.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.InstancePerMethodTestCase	1.0	1.0	8.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.MixedLifecyclesOuterTestCase.NestedInstancePerClassTestCase	1.0	1.0	8.0
+org.junit.jupiter.engine.config.DefaultJupiterConfigurationTests	1.0	1.0	8.0
+org.junit.jupiter.engine.config.InstantiatingConfigurationParameterConverterTests	1.0	1.0	8.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.TestCase	1.0	1.0	8.0
+org.junit.jupiter.engine.discovery.ClassOrderingVisitor	1.3333333333333333	2.0	8.0
+org.junit.jupiter.engine.discovery.JupiterUniqueIdBuilder	1.1428571428571428	2.0	8.0
+org.junit.jupiter.engine.execution.DefaultParameterContext	1.0	1.0	8.0
+org.junit.jupiter.engine.execution.InvocationInterceptorChain.ValidatingInvocation	1.3333333333333333	2.0	8.0
+org.junit.jupiter.engine.execution.NamespaceAwareStore	1.0	1.0	8.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests	1.0	1.0	8.0
+org.junit.jupiter.engine.extension.TestInfoParameterResolver.DefaultTestInfo	1.1428571428571428	2.0	8.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests	1.0	1.0	8.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.PreConstructInNestedTestCase	1.0	1.0	8.0
+org.junit.jupiter.engine.extension.TestWatcherTests	1.1428571428571428	1.0	8.0
+org.junit.jupiter.migrationsupport.rules.EnableRuleMigrationSupportWithBothRuleTypesTests	1.3333333333333333	3.0	8.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportForDifferentDeclaredReturnTypesRulesTests	1.3333333333333333	3.0	8.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportForMultipleFieldRulesTests	1.3333333333333333	3.0	8.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.NullAndEmptySourceIntegrationTests	1.0	1.0	8.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverterTests.Book	1.3333333333333333	3.0	8.0
+org.junit.jupiter.params.converter.TypedArgumentConverterTests.UnitTests	1.0	1.0	8.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests.PrimitiveArrays	1.0	1.0	8.0
+org.junit.jupiter.params.provider.MockCsvAnnotationBuilder.MockCsvFileSourceBuilder	1.0	1.0	8.0
+org.junit.platform.commons.util.ClassLoaderUtils	2.6666666666666665	5.0	8.0
+org.junit.platform.console.tasks.TreeNodeTests	1.6	2.0	8.0
+org.junit.platform.engine.TestTagTests	1.0	1.0	8.0
+org.junit.platform.engine.UniqueId.Segment	1.3333333333333333	3.0	8.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests.NestedClassAndMethodSelectors	1.0	1.0	8.0
+org.junit.platform.engine.discovery.FilePositionTests	1.1428571428571428	2.0	8.0
+org.junit.platform.engine.support.descriptor.CompositeTestSource	1.3333333333333333	3.0	8.0
+org.junit.platform.engine.support.discovery.SelectorResolver.Match	1.0	1.0	8.0
+org.junit.platform.engine.support.discovery.SelectorResolver.Resolution	1.0	1.0	8.0
+org.junit.platform.engine.support.hierarchical.CompositeLock	1.3333333333333333	2.0	8.0
+org.junit.platform.engine.support.hierarchical.LockManagerTests	1.0	1.0	8.0
+org.junit.platform.launcher.core.DefaultLauncherSession.DelegatingLauncher	1.0	1.0	8.0
+org.junit.platform.launcher.listeners.discovery.LauncherDiscoveryListeners	1.3333333333333333	1.0	8.0
+org.junit.platform.launcher.tagexpression.ParserTests	1.0	1.0	8.0
+org.junit.platform.testkit.engine.EngineTestKit.Builder	1.0	1.0	8.0
+org.junit.vintage.engine.discovery.ClassSelectorResolver	1.6	3.0	8.0
+org.junit.vintage.engine.discovery.UniqueIdFilter	1.3333333333333333	2.0	8.0
+example.TestTemplateDemo.MyTestTemplateInvocationContextProvider	1.0	1.0	7.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsFloatWithoutDelta	1.0	1.0	7.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsObject	1.0	1.0	7.0
+org.junit.jupiter.api.AssertNotNull	1.4	2.0	7.0
+org.junit.jupiter.api.AssertNotSame	1.4	2.0	7.0
+org.junit.jupiter.api.AssertNotSameAssertionsTests	1.0	1.0	7.0
+org.junit.jupiter.api.AssertSame	1.4	2.0	7.0
+org.junit.jupiter.api.DisplayNameGenerationTests.AbstractTestCase	1.0	1.0	7.0
+org.junit.jupiter.api.condition.DisabledIfConditionTests	1.0	1.0	7.0
+org.junit.jupiter.api.condition.EnabledIfConditionTests	1.0	1.0	7.0
+org.junit.jupiter.api.extension.ExtensionContext.Namespace	1.4	3.0	7.0
+org.junit.jupiter.api.extension.support.TypeBasedParameterResolverTests	1.0	1.0	7.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.StringParameterResolvingInvocationContextProvider	1.0	1.0	7.0
+org.junit.jupiter.engine.descriptor.TestCaseWithStandardLifecycle	1.0	1.0	7.0
+org.junit.jupiter.engine.discovery.AbstractAnnotatedDescriptorWrapper	1.0	1.0	7.0
+org.junit.jupiter.engine.execution.InvocationInterceptorChain	1.4	1.0	7.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.ThirdLevelStaticHidingTestCase	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.MethodInjectionTestCase	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirFieldTests	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirParameterTests	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.AllPossibleDeclarationLocationsTestCase	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.TestInfoParameterResolverTests	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.FactoryPreConstructTestCase	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.InstancePreConstructTestCase	1.0	1.0	7.0
+org.junit.jupiter.engine.extension.TimeoutInvocation	2.3333333333333335	2.0	7.0
+org.junit.jupiter.jmh.AssertionBenchmarks	1.0	1.0	7.0
+org.junit.jupiter.migrationsupport.rules.VerifierSupportForMixedMethodAndFieldRulesTests	1.4	3.0	7.0
+org.junit.jupiter.params.provider.CsvParserFactory	1.4	3.0	7.0
+org.junit.jupiter.params.provider.EnumSourceTests	1.0	1.0	7.0
+org.junit.platform.commons.function.Try	1.1666666666666667	1.0	7.0
+org.junit.platform.commons.util.ClassUtils	1.75	3.0	7.0
+org.junit.platform.commons.util.CloseablePath	1.4	3.0	7.0
+org.junit.platform.commons.util.RuntimeUtils	2.3333333333333335	4.0	7.0
+org.junit.platform.commons.util.ToStringBuilder	1.1666666666666667	2.0	7.0
+org.junit.platform.console.ConsoleLauncherWrapper	1.4	3.0	7.0
+org.junit.platform.console.tasks.VerboseTreeListenerTests	1.0	1.0	7.0
+org.junit.platform.engine.CompositeFilter	1.0	1.0	7.0
+org.junit.platform.engine.SelectorResolutionResult	1.0	1.0	7.0
+org.junit.platform.engine.TestExecutionResult	1.0	1.0	7.0
+org.junit.platform.engine.discovery.ClasspathRootSelector	1.4	3.0	7.0
+org.junit.platform.engine.discovery.ExcludePackageNameFilter	1.0	1.0	7.0
+org.junit.platform.engine.discovery.IncludePackageNameFilter	1.0	1.0	7.0
+org.junit.platform.engine.discovery.ModuleSelector	1.4	3.0	7.0
+org.junit.platform.engine.discovery.PackageSelector	1.4	3.0	7.0
+org.junit.platform.engine.discovery.UniqueIdSelector	1.4	3.0	7.0
+org.junit.platform.engine.discovery.UriSelector	1.4	3.0	7.0
+org.junit.platform.engine.reporting.ReportEntry	1.0	1.0	7.0
+org.junit.platform.engine.support.config.PrefixedConfigurationParameters	1.0	1.0	7.0
+org.junit.platform.engine.support.descriptor.DefaultUriSource	1.4	3.0	7.0
+org.junit.platform.engine.support.descriptor.FileSystemSourceTests	1.0	1.0	7.0
+org.junit.platform.engine.support.descriptor.PackageSourceTests	1.0	1.0	7.0
+org.junit.platform.engine.support.hierarchical.NodeTestTaskContext	1.1666666666666667	2.0	7.0
+org.junit.platform.jfr.FlightRecordingExecutionListener	1.1666666666666667	2.0	7.0
+org.junit.platform.launcher.TestPlanTests	1.0	1.0	7.0
+org.junit.platform.launcher.core.CompositeTestExecutionListenerTests.ThrowingTestExecutionListener	1.0	1.0	7.0
+org.junit.platform.launcher.core.DefaultDiscoveryRequest	1.0	1.0	7.0
+org.junit.platform.launcher.core.ExecutionListenerAdapter	1.0	1.0	7.0
+org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilderTests.DiscoverySelectionTests	1.0	1.0	7.0
+org.junit.platform.launcher.listeners.LegacyReportingUtils	1.4	3.0	7.0
+org.junit.platform.launcher.tagexpression.Token	1.0	1.0	7.0
+org.junit.platform.testkit.engine.ExecutionsIntegrationTests	1.0	1.0	7.0
+org.junit.vintage.engine.VintageTestEngine	1.1666666666666667	2.0	7.0
+org.junit.vintage.engine.discovery.RunnerTestDescriptorPostProcessor	2.3333333333333335	4.0	7.0
+org.junit.vintage.engine.samples.junit4.PlainJUnit4TestCaseWithLifecycleMethods	1.0	1.0	7.0
+platform.tooling.support.tests.StandaloneTests	1.1666666666666667	2.0	7.0
+example.RepeatedTestsDemo	1.0	1.0	6.0
+example.session.GlobalSetupTeardownListener	2.0	2.0	6.0
+org.junit.jupiter.api.AssertSameAssertionsTests	1.0	1.0	6.0
+org.junit.jupiter.api.AssertThrows	1.2	2.0	6.0
+org.junit.jupiter.api.AssertThrowsExactly	1.2	2.0	6.0
+org.junit.jupiter.api.condition.DisabledIfEnvironmentVariableCondition	1.5	3.0	6.0
+org.junit.jupiter.api.condition.EnabledIfEnvironmentVariableCondition	1.5	3.0	6.0
+org.junit.jupiter.api.fixtures.TrackLogRecords.Extension	1.0	1.0	6.0
+org.junit.jupiter.engine.AbstractJupiterTestEngineTests	1.0	1.0	6.0
+org.junit.jupiter.engine.StandardTestClassTests	1.0	1.0	6.0
+org.junit.jupiter.engine.TestClassInheritanceTests	1.0	1.0	6.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.InstancePerMethodOuterTestCase.NestedInstancePerMethodTestCase	1.0	1.0	6.0
+org.junit.jupiter.engine.bridge.BridgeMethodTests	1.0	1.0	6.0
+org.junit.jupiter.engine.descriptor.TestInstanceLifecycleUtilsTests	1.0	1.0	6.0
+org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptorTests	1.0	1.0	6.0
+org.junit.jupiter.engine.discovery.DiscoveryTests.LocalTestCase	1.0	1.0	6.0
+org.junit.jupiter.engine.discovery.predicates.IsPotentialTestContainerTests	1.0	1.0	6.0
+org.junit.jupiter.engine.discovery.predicates.IsTestableMethod	3.0	5.0	6.0
+org.junit.jupiter.engine.execution.ConstructorInvocation	1.0	1.0	6.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests.ConfigurableParameterResolver	1.0	1.0	6.0
+org.junit.jupiter.engine.execution.ExtensionValuesStore.MemoizingSupplier	2.0	2.0	6.0
+org.junit.jupiter.engine.execution.MethodInvocation	1.0	1.0	6.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.AllInOneWithTestInstancePerMethodTestCase	1.0	1.0	6.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.RandomTestCase	1.0	1.0	6.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.BaseSeparateTempDirsFieldInjectionTestCase	1.2	2.0	6.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.BaseSeparateTempDirsParameterInjectionTestCase	1.2	2.0	6.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.BaseSharedTempDirFieldInjectionTestCase	1.2	2.0	6.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.PerClassLifecycleTestCase	1.0	1.0	6.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests	1.0	1.0	6.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportForMixedMethodAndFieldRulesTests	1.2	2.0	6.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.NullSourceIntegrationTests	1.0	1.0	6.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverterTests.Newspaper	1.5	3.0	6.0
+org.junit.jupiter.params.converter.TypedArgumentConverterTests.IntegrationTests	1.0	1.0	6.0
+org.junit.jupiter.params.provider.CsvFileArgumentsProvider.CsvParserIterator	1.5	3.0	6.0
+org.junit.jupiter.params.provider.EmptyArgumentsProvider	6.0	6.0	6.0
+org.junit.jupiter.params.provider.EnumArgumentsProvider	1.5	2.0	6.0
+org.junit.platform.commons.util.ClassFilter	1.0	1.0	6.0
+org.junit.platform.commons.util.ClassNamePatternFilterUtils	1.2	2.0	6.0
+org.junit.platform.commons.util.ClassNamePatternFilterUtilsTests	1.0	1.0	6.0
+org.junit.platform.console.tasks.FlatPrintingListenerTests	1.0	1.0	6.0
+org.junit.platform.console.tasks.TreePrinterTests	1.0	1.0	6.0
+org.junit.platform.engine.UniqueIdTests.ParsingAndFormatting	1.2	2.0	6.0
+org.junit.platform.engine.discovery.ClassNameFilterTests	1.0	1.0	6.0
+org.junit.platform.engine.discovery.ExcludeClassNameFilter	1.0	1.0	6.0
+org.junit.platform.engine.discovery.IncludeClassNameFilter	1.0	1.0	6.0
+org.junit.platform.engine.support.descriptor.AbstractTestSourceTests	1.0	1.0	6.0
+org.junit.platform.engine.support.descriptor.DemoMethodTestDescriptor	1.2	2.0	6.0
+org.junit.platform.engine.support.discovery.ClassContainerSelectorResolver	1.2	2.0	6.0
+org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolver.Builder	1.0	1.0	6.0
+org.junit.platform.engine.support.hierarchical.DefaultParallelExecutionConfiguration	1.0	1.0	6.0
+org.junit.platform.engine.support.hierarchical.DemoHierarchicalContainerDescriptor	1.2	2.0	6.0
+org.junit.platform.engine.support.hierarchical.DemoHierarchicalEngineDescriptor	1.2	2.0	6.0
+org.junit.platform.engine.support.hierarchical.Node.SkipResult	1.0	1.0	6.0
+org.junit.platform.engine.support.hierarchical.NodeExecutionAdvisor	1.2	2.0	6.0
+org.junit.platform.launcher.EngineDiscoveryResult	1.0	1.0	6.0
+org.junit.platform.launcher.TagIntegrationTests	1.0	1.0	6.0
+org.junit.platform.launcher.core.DefaultLauncherSession.ClosedLauncher	1.0	1.0	6.0
+org.junit.platform.launcher.core.DelegatingEngineExecutionListener	1.0	1.0	6.0
+org.junit.platform.launcher.core.EngineDiscoveryResultValidator	3.0	5.0	6.0
+org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilderTests.DiscoveryConfigurationParameterTests	1.0	1.0	6.0
+org.junit.platform.launcher.listeners.discovery.CompositeLauncherDiscoveryListener	1.0	1.0	6.0
+org.junit.platform.launcher.listeners.discovery.LoggingLauncherDiscoveryListenerTests	1.0	1.0	6.0
+org.junit.platform.reporting.legacy.LegacyReportingUtilsTests	1.0	1.0	6.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.Descriptions	1.0	1.0	6.0
+org.junit.platform.testkit.engine.ExecutionRecorder	1.0	1.0	6.0
+org.junit.vintage.engine.JUnit4VersionCheck	1.5	2.0	6.0
+org.junit.vintage.engine.JUnit4VersionCheckTests	1.0	1.0	6.0
+org.junit.vintage.engine.samples.junit4.JUnit4ParameterizedTestCase	1.0	1.0	6.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithRunnerWithDuplicateChangingChildDescriptions.Runner	1.2	2.0	6.0
+org.junit.vintage.engine.samples.junit4.RunnerWithCustomUniqueIdsAndDisplayNames	1.2	2.0	6.0
+platform.tooling.support.MavenRepo	1.0	1.0	6.0
+example.SharedResourcesDemo	1.0	1.0	5.0
+example.callbacks.BrokenLifecycleMethodConfigDemo	1.0	1.0	5.0
+example.callbacks.DatabaseTestsDemo	1.0	1.0	5.0
+example.exception.RecordStateOnErrorExtension	1.0	1.0	5.0
+org.junit.api.tools.ApiReportGenerator	2.5	3.0	5.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsDoubleWithoutDelta	1.0	1.0	5.0
+org.junit.jupiter.api.DisplayNameGenerator.ReplaceUnderscores	1.0	1.0	5.0
+org.junit.jupiter.api.DynamicContainer	1.0	1.0	5.0
+org.junit.jupiter.api.condition.DisabledIfSystemPropertyCondition	1.6666666666666667	3.0	5.0
+org.junit.jupiter.api.condition.EnabledIfSystemPropertyCondition	1.6666666666666667	3.0	5.0
+org.junit.jupiter.api.condition.OSTests.ValidNames	1.0	1.0	5.0
+org.junit.jupiter.engine.InvalidLifecycleMethodConfigurationTests	1.0	1.0	5.0
+org.junit.jupiter.engine.TestClassInheritanceTests.TestCase3	1.0	1.0	5.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.InvocationContextProviderWithDynamicLifecycleCallbacks	1.0	1.0	5.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.InvocationContextProviderWithDynamicLifecycleCallbacks.LifecycleCallbackExtension	1.0	1.0	5.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.StringParameterInjectingInvocationContextProvider	1.0	1.0	5.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.TestTemplateTestClassWithBeforeAndAfterEach	1.0	1.0	5.0
+org.junit.jupiter.engine.config.InstantiatingConfigurationParameterConverter	1.0	1.0	5.0
+org.junit.jupiter.engine.descriptor.ClassTestDescriptor	1.0	1.0	5.0
+org.junit.jupiter.engine.descriptor.JupiterEngineDescriptor	1.0	1.0	5.0
+org.junit.jupiter.engine.descriptor.NestedClassTestDescriptor	1.25	2.0	5.0
+org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptorTests.TestSources	1.0	1.0	5.0
+org.junit.jupiter.engine.descriptor.TestTemplateInvocationTestDescriptor	1.0	1.0	5.0
+org.junit.jupiter.engine.discovery.AbstractOrderingVisitor.DescriptorWrapperOrderer	1.0	1.0	5.0
+org.junit.jupiter.engine.discovery.DefaultMethodOrdererContext	1.0	1.0	5.0
+org.junit.jupiter.engine.discovery.predicates.IsPotentialTestContainer	5.0	5.0	5.0
+org.junit.jupiter.engine.discovery.predicates.IsTestFactoryMethodTests	1.0	1.0	5.0
+org.junit.jupiter.engine.execution.ConditionEvaluator	1.25	2.0	5.0
+org.junit.jupiter.engine.execution.ExtensionContextStoreTests	1.0	1.0	5.0
+org.junit.jupiter.engine.execution.ExtensionValuesStore.CompositeKey	1.6666666666666667	3.0	5.0
+org.junit.jupiter.engine.execution.injection.sample.LongParameterResolver	2.5	4.0	5.0
+org.junit.jupiter.engine.extension.CloseablePathCleanupTests	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.ExecutionConditionTests.TestCaseWithExecutionConditionOnMethods	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.BeforeAllParameterTestCase	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExtensionRegistrationTestCase	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationWithTestInstancePerClassLifecycleTestCase	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.BaseSharedTempDirParameterInjectionTestCase	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.Failures	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.SeparateTempDirs	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.Failures	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TestExecutionExceptionHandlerTests	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.PreConstructOnMethod	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TestWatcherTests.TrackingTestWatcher	1.0	1.0	5.0
+org.junit.jupiter.engine.extension.TimeoutConfigurationTests	1.0	1.0	5.0
+org.junit.jupiter.engine.support.OpenTest4JAndJUnit4AwareThrowableCollectorTests.TestClassLoader	2.5	4.0	5.0
+org.junit.jupiter.extensions.HeavyweightTests.Alpha	1.0	1.0	5.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreAnnotationIntegrationTests.BaseNestedTestCase	1.0	1.0	5.0
+org.junit.jupiter.migrationsupport.rules.LauncherBasedEnableRuleMigrationSupportTests.EnableRuleMigrationSupportWithBothRuleTypesTestCase	1.0	1.0	5.0
+org.junit.jupiter.migrationsupport.rules.WrongExtendWithForVerifierMethodTests	1.25	2.0	5.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.NullAndEmptySourceTestCase	1.0	1.0	5.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.NullSourceTestCase	1.0	1.0	5.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.UnusedArgumentsIntegrationTests	1.0	1.0	5.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.UnusedArgumentsTestCase	1.0	1.0	5.0
+org.junit.jupiter.params.converter.TypedArgumentConverter	2.5	4.0	5.0
+org.junit.jupiter.params.provider.EnumSource.Mode	1.0	1.0	5.0
+org.junit.jupiter.params.provider.MockCsvAnnotationBuilder.MockCsvSourceBuilder	1.0	1.0	5.0
+org.junit.platform.commons.function.TryTests	1.0	1.0	5.0
+org.junit.platform.commons.logging.LoggerFactory	1.25	1.0	5.0
+org.junit.platform.commons.test.ConcurrencyTestingUtils	2.5	4.0	5.0
+org.junit.platform.commons.util.ExceptionUtilsTests	1.0	1.0	5.0
+org.junit.platform.commons.util.ReflectionUtilsTests.PublicClass	1.0	1.0	5.0
+org.junit.platform.console.ConsoleDetailsTests.ReportTestCase	1.0	1.0	5.0
+org.junit.platform.console.ConsoleLauncherExecutionResultTests	1.0	1.0	5.0
+org.junit.platform.console.ConsoleLauncherIntegrationTests	1.0	1.0	5.0
+org.junit.platform.console.ConsoleLauncherTests	1.0	1.0	5.0
+org.junit.platform.console.tasks.CustomContextClassLoaderExecutor	1.6666666666666667	2.0	5.0
+org.junit.platform.engine.UniqueIdTests.EqualsContract	1.0	1.0	5.0
+org.junit.platform.engine.support.config.PrefixedConfigurationParametersTests	1.0	1.0	5.0
+org.junit.platform.engine.support.descriptor.CompositeTestSourceTests	1.0	1.0	5.0
+org.junit.platform.engine.support.descriptor.DefaultUriSourceTests	1.0	1.0	5.0
+org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolver.DefaultInitializationContext	1.0	1.0	5.0
+org.junit.platform.engine.support.hierarchical.NodeTestTask.DefaultDynamicTestExecutor	1.6666666666666667	2.0	5.0
+org.junit.platform.fakes.TestEngineStub	1.0	1.0	5.0
+org.junit.platform.launcher.core.DefaultLauncherSession	1.25	2.0	5.0
+org.junit.platform.launcher.core.LauncherDiscoveryResult	1.0	1.0	5.0
+org.junit.platform.launcher.core.ServiceLoaderTestEngineRegistry	1.25	2.0	5.0
+org.junit.platform.launcher.core.StreamInterceptingTestExecutionListenerIntegrationTests	1.25	1.0	5.0
+org.junit.platform.launcher.listeners.UniqueIdTrackingListenerIntegrationTests.TestCase1	1.0	1.0	5.0
+org.junit.platform.launcher.listeners.discovery.AbortOnFailureLauncherDiscoveryListenerTests	1.0	1.0	5.0
+org.junit.platform.launcher.tagexpression.DequeStack	1.0	1.0	5.0
+org.junit.platform.launcher.tagexpression.ParseResults	1.0	1.0	5.0
+org.junit.platform.reporting.legacy.xml.IncrementingClock	1.0	1.0	5.0
+org.junit.platform.suite.commons.SuiteLauncherDiscoveryRequestBuilderTests.ParentConfigurationParameters	1.0	1.0	5.0
+org.junit.platform.suite.engine.IsPotentialTestContainer	5.0	5.0	5.0
+org.junit.platform.suite.engine.SuiteLauncher	1.0	1.0	5.0
+org.junit.platform.suite.engine.SuiteTestDescriptorTests	1.0	1.0	5.0
+org.junit.platform.suite.engine.SuiteTestEngine	1.0	1.0	5.0
+org.junit.platform.testkit.engine.EngineExecutionResults	1.0	1.0	5.0
+org.junit.platform.testkit.engine.EngineTestKitTests	1.0	1.0	5.0
+org.junit.platform.testkit.engine.NestedContainerEventConditionTests	1.0	1.0	5.0
+org.junit.vintage.engine.descriptor.DescriptionUtils	2.5	4.0	5.0
+org.junit.vintage.engine.descriptor.DescriptionUtilsTests	1.25	2.0	5.0
+org.junit.vintage.engine.descriptor.RunnerTestDescriptor.ExcludeDescriptionFilter	1.25	2.0	5.0
+org.junit.vintage.engine.discovery.IsPotentialJUnit4TestClassTests	1.0	1.0	5.0
+org.junit.vintage.engine.samples.junit4.PlainJUnit4TestCaseWithFiveTestMethods	1.0	1.0	5.0
+org.junit.vintage.engine.support.UniqueIdStringifier	1.6666666666666667	3.0	5.0
+org.junit.vintage.engine.support.UniqueIdStringifierTests	1.0	1.0	5.0
+platform.tooling.support.tests.ArchUnitTests	1.0	1.0	5.0
+platform.tooling.support.tests.ManifestTests	1.6666666666666667	2.0	5.0
+platform.tooling.support.tests.PackageCyclesDetectionTests	2.5	4.0	5.0
+example.ExampleTestCase	1.0	1.0	4.0
+example.TestInfoDemo	1.0	1.0	4.0
+example.TestingAStackDemo.WhenNew	1.0	1.0	4.0
+example.TestingAStackDemo.WhenNew.AfterPushing	1.0	1.0	4.0
+example.callbacks.AbstractDatabaseTests	1.0	1.0	4.0
+example.extensions.RandomNumberExtension	1.0	1.0	4.0
+example.util.Calculator	1.0	1.0	4.0
+org.junit.jupiter.api.AssertLinesMatchAssertionsTests.WithStreamsOfStrings	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsByte	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsChar	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsDoubleWithDelta	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsFloatWithDelta	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsInt	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsLong	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.AssertNotEqualsShort	1.0	1.0	4.0
+org.junit.jupiter.api.AssertNotNullAssertionsTests	1.0	1.0	4.0
+org.junit.jupiter.api.DisplayNameGenerationTests.StackTestCase.A_new_stack	1.0	1.0	4.0
+org.junit.jupiter.api.DisplayNameGenerationTests.StackTestCase.A_new_stack.After_pushing_an_element_to_an_empty_stack	1.0	1.0	4.0
+org.junit.jupiter.api.DisplayNameGenerator.Simple	1.3333333333333333	2.0	4.0
+org.junit.jupiter.api.DisplayNameGenerator.Standard	1.0	1.0	4.0
+org.junit.jupiter.api.DynamicNode	1.0	1.0	4.0
+org.junit.jupiter.api.condition.AbstractRepeatableAnnotationCondition	1.3333333333333333	2.0	4.0
+org.junit.jupiter.api.condition.BooleanExecutionCondition	1.3333333333333333	2.0	4.0
+org.junit.jupiter.api.extension.support.TypeBasedParameterResolverTests.Sample	1.0	1.0	4.0
+org.junit.jupiter.engine.JupiterTestEngineBasicTests	1.0	1.0	4.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithDoubleNesting.NestedTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithDoubleNesting.NestedTestCase.DoublyNestedTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.NonVoidTestableMethodIntegrationTests	1.0	1.0	4.0
+org.junit.jupiter.engine.ReportingTests.MyReportingTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.TestClassInheritanceTests.TestCase1	1.0	1.0	4.0
+org.junit.jupiter.engine.TestClassInheritanceTests.TestCase2	1.0	1.0	4.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.InstancePerClassOuterTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.InstancePerMethodOuterTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.MixedLifecyclesOuterTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.bridge.PackagePrivateParent	1.0	1.0	4.0
+org.junit.jupiter.engine.config.EnumConfigurationParameterConverter	1.3333333333333333	2.0	4.0
+org.junit.jupiter.engine.descriptor.DefaultTestInstanceFactoryContext	1.0	1.0	4.0
+org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor	1.0	1.0	4.0
+org.junit.jupiter.engine.descriptor.DynamicNodeTestDescriptor	1.0	1.0	4.0
+org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor	1.0	1.0	4.0
+org.junit.jupiter.engine.descriptor.ExtensionContextTests.EchoParameters	1.0	1.0	4.0
+org.junit.jupiter.engine.descriptor.TestCaseWithLifecyclePerClass	1.0	1.0	4.0
+org.junit.jupiter.engine.descriptor.TestCaseWithNonVoidLifecyleMethods	1.0	1.0	4.0
+org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptorTests.Streams	1.0	1.0	4.0
+org.junit.jupiter.engine.discovery.MyTestClass	1.0	1.0	4.0
+org.junit.jupiter.engine.discovery.predicates.IsTestFactoryMethodTests.ClassWithTestFactoryMethods	1.0	1.0	4.0
+org.junit.jupiter.engine.execution.JupiterEngineExecutionContextTests	1.0	1.0	4.0
+org.junit.jupiter.engine.execution.injection.sample.MapOfStringsParameterResolver	2.0	3.0	4.0
+org.junit.jupiter.engine.extension.BaseFieldExtension	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ExceptionInBeforeEachMethodTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.ConstructorParameterTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.NestedConstructorParameterTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.NestedConstructorParameterTestCase.DoublyNestedConstructorParameterTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.ConvertExceptionHandler	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.RethrowExceptionHandler	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.ShouldNotBeCalledHandler	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.SwallowExceptionHandler	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.UnrecoverableExceptionHandler	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.MisbehavingByRemovingTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.WithoutTestMethodOrderTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.RandomlyOrderedTests.BaseTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.RepeatedTestExtension	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.RepeatedTestTests.TestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.RepetitionInfoParameterResolver.DefaultRepetitionInfo	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestExecutionExceptionHandlerTests.ATestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.PreConstructInNestedTestCase.InnerTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.PreConstructWithClassLifecycle	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestReporterParameterResolverTests	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestWatcherTests.AbstractTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestWatcherTests.AbstractTestCase.SecondLevel	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestWatcherTests.ExceptionThrowingTestWatcher	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestWatcherTests.TrackingTestWatcherRepeatedTestMethodsTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TestWatcherTests.TrackingTestWatcherTestFactoryMethodsTestCase	1.0	1.0	4.0
+org.junit.jupiter.engine.extension.TimeoutExtension.ExecutorResource	1.3333333333333333	2.0	4.0
+org.junit.jupiter.engine.support.OpenTest4JAndJUnit4AwareThrowableCollector	2.0	3.0	4.0
+org.junit.jupiter.extensions.HeavyweightTests.Beta	1.0	1.0	4.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreConditionTests	1.0	1.0	4.0
+org.junit.jupiter.migrationsupport.rules.AbstractTestRuleAdapterTests	1.0	1.0	4.0
+org.junit.jupiter.migrationsupport.rules.ExpectedExceptionSupport	1.3333333333333333	2.0	4.0
+org.junit.jupiter.migrationsupport.rules.ExpectedExceptionSupportTests.ExpectedExceptionTestCase	1.0	1.0	4.0
+org.junit.jupiter.migrationsupport.rules.WrongExtendWithForVerifierFieldTests	1.3333333333333333	2.0	4.0
+org.junit.jupiter.migrationsupport.rules.adapter.ExpectedExceptionAdapter	1.3333333333333333	2.0	4.0
+org.junit.jupiter.params.converter.DefaultArgumentConverter.StringToCommonJavaTypesConverter	1.0	1.0	4.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverter.IsFactoryMethod	2.0	3.0	4.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverterTests.Journal	2.0	3.0	4.0
+org.junit.jupiter.params.converter.TypedArgumentConverterTests.StringLengthArgumentConverter	1.3333333333333333	2.0	4.0
+org.junit.jupiter.params.provider.ArgumentsTests	1.0	1.0	4.0
+org.junit.jupiter.params.support.AnnotationConsumerInitializer	1.3333333333333333	2.0	4.0
+org.junit.platform.commons.util.ClassLoaderUtilsTests	1.0	1.0	4.0
+org.junit.platform.commons.util.ExceptionUtils	1.0	1.0	4.0
+org.junit.platform.commons.util.ModuleUtils.ModuleReferenceScanner	1.0	1.0	4.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithVoidAndNonVoidMethods	1.0	1.0	4.0
+org.junit.platform.commons.util.ReflectionUtilsTests.InvocationTracker	1.0	1.0	4.0
+org.junit.platform.commons.util.ReflectionUtilsTests.IsClassAssignableToClassTests	1.0	1.0	4.0
+org.junit.platform.commons.util.ReflectionUtilsTests.IsObjectAssignableToClassTests	1.0	1.0	4.0
+org.junit.platform.commons.util.ReflectionUtilsTests.MethodShadowingParent	1.0	1.0	4.0
+org.junit.platform.commons.util.ReflectionUtilsTests.StaticMethodHidingParent	1.0	1.0	4.0
+org.junit.platform.console.ConsoleDetailsTests.Runner	2.0	3.0	4.0
+org.junit.platform.console.options.PicocliCommandLineOptionsParser	1.3333333333333333	2.0	4.0
+org.junit.platform.console.options.PicocliCommandLineOptionsParserTests.ArgsType	1.3333333333333333	2.0	4.0
+org.junit.platform.console.tasks.CustomContextClassLoaderExecutorTests	1.0	1.0	4.0
+org.junit.platform.engine.ExecutionRequest	1.0	1.0	4.0
+org.junit.platform.engine.FilterCompositionTests	1.0	1.0	4.0
+org.junit.platform.engine.UniqueIdFormatTests	1.0	1.0	4.0
+org.junit.platform.engine.UniqueIdTests.Prefixing	1.0	1.0	4.0
+org.junit.platform.engine.discovery.PackageNameFilterTests	1.0	1.0	4.0
+org.junit.platform.engine.support.descriptor.DemoClassTestDescriptor	1.3333333333333333	2.0	4.0
+org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolver	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.CompositeLockTests	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.DefaultParallelExecutionConfigurationStrategy	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.FailingWithoutLockTestCase	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.InterruptedThreadTestCase	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.SuccessfulParallelTestCase	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.SuccessfulWithClassLockTestCase	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.SuccessfulWithMethodLockTestCase	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.TestCaseWithNestedLocks	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.TestCaseWithSortedLocks	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.TestCaseWithUnsortedLocks	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ThreadReporter	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.SameThreadExecutionIntegrationTests.InterruptedThreadTestCase	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService	1.0	1.0	4.0
+org.junit.platform.engine.support.hierarchical.SingleLock	1.0	1.0	4.0
+org.junit.platform.jfr.FlightRecordingDiscoveryListener	1.0	1.0	4.0
+org.junit.platform.launcher.FilterStub	1.0	1.0	4.0
+org.junit.platform.launcher.TagIntegrationTests.TaggedTestCase	1.0	1.0	4.0
+org.junit.platform.launcher.TestIdentifier.SerializedForm	1.0	1.0	4.0
+org.junit.platform.launcher.TestLauncherDiscoveryListener	2.0	3.0	4.0
+org.junit.platform.launcher.TestLauncherSessionListener	2.0	3.0	4.0
+org.junit.platform.launcher.core.EngineDiscoveryErrorDescriptor	1.0	1.0	4.0
+org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilderTests.DiscoveryFilterTests	1.0	1.0	4.0
+org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilderTests.DiscoveryListenerTests	1.0	1.0	4.0
+org.junit.platform.launcher.core.StreamInterceptor.RewindableByteArrayOutputStream	1.3333333333333333	2.0	4.0
+org.junit.platform.launcher.core.StreamInterceptorTests	1.0	1.0	4.0
+org.junit.platform.launcher.listeners.discovery.AbstractLauncherDiscoveryListenerTests	1.0	1.0	4.0
+org.junit.platform.launcher.listeners.session.LauncherSessionListeners	2.0	3.0	4.0
+org.junit.platform.launcher.tagexpression.TokenTests	1.0	1.0	4.0
+org.junit.platform.reporting.legacy.xml.XmlReportWriter.AggregatedTestResult	1.0	1.0	4.0
+org.junit.platform.runner.JUnitPlatformRunnerTests	1.0	1.0	4.0
+org.junit.platform.suite.engine.SuiteTestDescriptorTests.EmptyConfigurationParameters	1.0	1.0	4.0
+org.junit.platform.testkit.engine.ExecutionsIntegrationTests.ExampleTestCase	1.0	1.0	4.0
+org.junit.vintage.engine.descriptor.OrFilterTests	1.0	1.0	4.0
+org.junit.vintage.engine.discovery.IgnoringRunnerDecorator	1.0	1.0	4.0
+org.junit.vintage.engine.discovery.IsPotentialJUnit4TestClass	4.0	4.0	4.0
+org.junit.vintage.engine.discovery.RunnerTestDescriptorPostProcessorTests	1.0	1.0	4.0
+org.junit.vintage.engine.execution.RunnerExecutor	1.3333333333333333	2.0	4.0
+org.junit.vintage.engine.samples.junit4.DynamicRunner	1.3333333333333333	2.0	4.0
+org.junit.vintage.engine.samples.junit4.RunnerWithCustomUniqueIdsAndDisplayNames.CustomUniqueId	1.3333333333333333	2.0	4.0
+platform.tooling.support.HelperTests	1.0	1.0	4.0
+platform.tooling.support.tests.JarDescribeModuleTests	2.0	2.0	4.0
+platform.tooling.support.tests.ModularUserGuideTests	1.3333333333333333	2.0	4.0
+example.AssumptionsDemo	1.0	1.0	3.0
+example.B_TestCase	1.5	2.0	3.0
+example.CustomTestEngine	1.0	1.0	3.0
+example.DisplayNameDemo	1.0	1.0	3.0
+example.OrderedTestsDemo	1.0	1.0	3.0
+example.ParameterizedTestDemo.Book	1.0	1.0	3.0
+example.ParameterizedTestDemo.ToLengthArgumentConverter	1.5	2.0	3.0
+example.PollingTimeoutDemo	1.5	2.0	3.0
+example.TestReporterDemo	1.0	1.0	3.0
+example.UsingTheLauncherDemo	1.0	1.0	3.0
+example.defaultmethods.StringTests	1.0	1.0	3.0
+example.extensions.RandomNumberDemo	1.0	1.0	3.0
+example.registration.DocumentationExtension	1.0	1.0	3.0
+example.registration.WebServerExtension	1.0	1.0	3.0
+example.timing.TimingExtension	1.0	1.0	3.0
+example.util.StringUtils	3.0	3.0	3.0
+extensions.ExpectToFail.Extension	1.0	1.0	3.0
+org.junit.api.tools.ApiReport	1.0	1.0	3.0
+org.junit.jupiter.api.AssertDoesNotThrowAssertionsTests.Foo	1.0	1.0	3.0
+org.junit.jupiter.api.AssertThrowsAssertionsTests.EnigmaClassLoader	1.5	2.0	3.0
+org.junit.jupiter.api.AssertThrowsExactlyAssertionsTests.EnigmaClassLoader	1.5	2.0	3.0
+org.junit.jupiter.api.ClassOrderer.OrderAnnotation	1.0	1.0	3.0
+org.junit.jupiter.api.ClassOrderer.Random	1.0	1.0	3.0
+org.junit.jupiter.api.DisplayNameGenerationTests.NoNameGenerator	1.0	1.0	3.0
+org.junit.jupiter.api.MethodOrderer.MethodName	1.0	1.0	3.0
+org.junit.jupiter.api.MethodOrderer.OrderAnnotation	1.0	1.0	3.0
+org.junit.jupiter.api.MethodOrderer.Random	1.0	1.0	3.0
+org.junit.jupiter.api.extension.ExtensionComposabilityTests	1.0	1.0	3.0
+org.junit.jupiter.engine.BeforeAllAndAfterAllComposedAnnotationTests.TestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.BeforeEachAndAfterEachComposedAnnotationTests.TestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithDoubleNesting	1.0	1.0	3.0
+org.junit.jupiter.engine.StandardTestClassTests.FirstOfTwoTestCases	1.0	1.0	3.0
+org.junit.jupiter.engine.StandardTestClassTests.SecondOfTwoTestCases	1.0	1.0	3.0
+org.junit.jupiter.engine.StandardTestClassTests.TestCaseWithFailingBefore	1.0	1.0	3.0
+org.junit.jupiter.engine.TestClassInheritanceTests.AbstractTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.TestInstanceLifecycleConfigurationTests.AssumedInstancePerClassTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.TestInstanceLifecycleConfigurationTests.AssumedInstancePerTestMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.TestInstanceLifecycleConfigurationTests.ExplicitInstancePerClassTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.TestInstanceLifecycleConfigurationTests.ExplicitInstancePerTestMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.InstancePerClassTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.InvocationContextProviderWithCustomizedDisplayNames	1.0	1.0	3.0
+org.junit.jupiter.engine.bridge.ChildWithBridgeMethods	1.0	1.0	3.0
+org.junit.jupiter.engine.bridge.ChildWithoutBridgeMethods	1.0	1.0	3.0
+org.junit.jupiter.engine.bridge.NumberResolver	1.5	2.0	3.0
+org.junit.jupiter.engine.descriptor.CustomDisplayNameGenerator	1.0	1.0	3.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.ClassDisplayNameTests	1.0	1.0	3.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.ClassDisplayNameTests.ClassDisplayNameSupplierTests	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.DefaultClassDescriptor	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.DefaultClassOrdererContext	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.DefaultMethodDescriptor	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.MethodOrderingVisitor	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.predicates.IsInnerClass	3.0	3.0	3.0
+org.junit.jupiter.engine.discovery.predicates.IsInnerClassTests	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.predicates.IsNestedTestClassTests	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTests	1.0	1.0	3.0
+org.junit.jupiter.engine.discovery.predicates.IsTestTemplateMethodTests	1.0	1.0	3.0
+org.junit.jupiter.engine.execution.ExtensionContextStoreConcurrencyTests	1.0	1.0	3.0
+org.junit.jupiter.engine.execution.ExtensionValuesStore.StoredValue	1.0	1.0	3.0
+org.junit.jupiter.engine.execution.ExtensionValuesStoreTests.CompositeNamespaceTests	1.0	1.0	3.0
+org.junit.jupiter.engine.execution.InvocationInterceptorChain.InterceptedInvocation	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BaseParameterExtension	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.ExceptionInBeforeAllCallbackTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.ExceptionInBeforeAllMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.SecondLevelTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.ThirdLevelTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.TopLevelTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ExceptionInAfterEachCallbackTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ExceptionInAfterEachMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ExceptionInBeforeEachCallbackTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ExceptionInTestMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.OuterTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.OuterTestCase.InnerTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ExceptionInAfterTestExecutionCallbackTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ExceptionInBeforeEachMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ExceptionInBeforeTestExecutionCallbackTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ExceptionInTestMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.OuterTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.OuterTestCase.InnerTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.DisabledCondition	1.5	2.0	3.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.AfterAllParameterTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.BeforeEachParameterTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.TwoInvocationsContextProvider	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.MagicParameter.Extension	1.5	2.0	3.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.MisbehavingByAddingTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.OrderAnnotationWithNestedClassTestCase.NestedTests	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.BeforeAndAfterAllMethodInjectionTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.BeforeAndAfterMethodInjectionTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.PotentiallyIncompatibleTypeMethodInjectionTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.CrystalBall	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationWithInjectedExtensionTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.RepeatedTestInvocationContext	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.RepetitionInfoParameterResolver	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.LambdaFactoryTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.MultipleConstructorsTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.ProxyClassLoader	1.5	2.0	3.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.AbstractTestInstanceCallbacks	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorTests	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorTests.OuterTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorTests.OuterTestCase.InnerTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorTests.TestCaseWithTestSpecificTestInstancePostProcessor	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.AbstractTestInstancePreDestroyCallback	1.5	2.0	3.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.PerClassLifecyclePreDestroyCallbacksWithTwoTestMethods	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TimeoutDurationParser	3.0	3.0	3.0
+org.junit.jupiter.engine.extension.TimeoutDurationParserTests	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.NonTimeoutExceedingTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.TimeoutAnnotatedClassTestCase.NestedClass	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.TimeoutAnnotatedTestMethodTestCase	1.0	1.0	3.0
+org.junit.jupiter.engine.extension.sub.SystemPropertyCondition	3.0	3.0	3.0
+org.junit.jupiter.engine.support.OpenTest4JAndJUnit4AwareThrowableCollectorTests	1.0	1.0	3.0
+org.junit.jupiter.extensions.Heavyweight	1.0	1.0	3.0
+org.junit.jupiter.extensions.Heavyweight.ResourceValue	1.0	1.0	3.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreCondition	1.5	2.0	3.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreConditionTests.IgnoredMethodsTestCase	1.0	1.0	3.0
+org.junit.jupiter.migrationsupport.rules.ExpectedExceptionSupportTests	1.0	1.0	3.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportForMixedMethodAndFieldRulesTests.MyExternalResource	1.0	1.0	3.0
+org.junit.jupiter.migrationsupport.rules.LauncherBasedEnableRuleMigrationSupportTests	1.0	1.0	3.0
+org.junit.jupiter.migrationsupport.rules.adapter.AbstractTestRuleAdapter	1.0	1.0	3.0
+org.junit.jupiter.migrationsupport.rules.adapter.ExternalResourceAdapter	1.0	1.0	3.0
+org.junit.jupiter.params.ParameterizedTestInvocationContext	1.0	1.0	3.0
+org.junit.jupiter.params.ParameterizedTestNameFormatterTests.ParameterizedTestCases	1.0	1.0	3.0
+org.junit.jupiter.params.converter.DefaultArgumentConverter.StringToEnumConverter	1.0	1.0	3.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverter.IsFactoryConstructor	1.5	2.0	3.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverterTests.Magazine	1.0	1.0	3.0
+org.junit.jupiter.params.converter.JavaTimeArgumentConverter	1.5	2.0	3.0
+org.junit.jupiter.params.provider.EnumArgumentsProviderTests.TestCase	1.0	1.0	3.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests.ObjectArrays	1.0	1.0	3.0
+org.junit.platform.TestEngineTests.DefaultEngine	1.0	1.0	3.0
+org.junit.platform.commons.support.ClassSupport	1.0	1.0	3.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ClassWithAnnotatedMethods	1.0	1.0	3.0
+org.junit.platform.commons.util.FunctionUtilsTests	1.0	1.0	3.0
+org.junit.platform.commons.util.PackageUtils	1.0	1.0	3.0
+org.junit.platform.commons.util.ReflectionUtilsTests.MethodShadowingChild	1.0	1.0	3.0
+org.junit.platform.commons.util.ReflectionUtilsTests.StaticMethodHidingChild	1.0	1.0	3.0
+org.junit.platform.commons.util.ToStringBuilderTests.RoleModel	1.0	1.0	3.0
+org.junit.platform.commons.util.UnrecoverableExceptions	1.5	2.0	3.0
+org.junit.platform.engine.UniqueIdFormatTests.Formatting	1.0	1.0	3.0
+org.junit.platform.engine.UniqueIdFormatTests.ParsingWithCustomFormat	1.0	1.0	3.0
+org.junit.platform.engine.UniqueIdFormatTests.ParsingWithDefaultFormat	1.0	1.0	3.0
+org.junit.platform.engine.discovery.NestedClassSelectorTests	1.0	1.0	3.0
+org.junit.platform.engine.discovery.NestedMethodSelectorTests	1.0	1.0	3.0
+org.junit.platform.engine.support.descriptor.ResourceUtils	1.5	2.0	3.0
+org.junit.platform.engine.support.filter.ClasspathScanningSupport	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutorTests.MyLeaf	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.NodeUtils	1.5	2.0	3.0
+org.junit.platform.engine.support.hierarchical.NopLock	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.BarrierTestCase	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ConcurrentDynamicTestCase	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.IsolatedTestCase	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.NestedIsolatedTestCase	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.TestCaseWithNestedLocks.B	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.ResourceLockSupport	3.0	3.0	3.0
+org.junit.platform.engine.support.hierarchical.SingleTestExecutorTests	1.0	1.0	3.0
+org.junit.platform.engine.support.hierarchical.ThrowableCollectorTests	1.0	1.0	3.0
+org.junit.platform.fakes.TestDescriptorStub	1.5	2.0	3.0
+org.junit.platform.fakes.TestEngineSpy	1.0	1.0	3.0
+org.junit.platform.launcher.core.EngineDiscoveryResultValidatorTests	1.0	1.0	3.0
+org.junit.platform.launcher.core.ExecutionListenerAdapterTests	1.0	1.0	3.0
+org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilderTests	1.0	1.0	3.0
+org.junit.platform.launcher.core.LauncherSessionTests	1.0	1.0	3.0
+org.junit.platform.launcher.core.ListenerRegistryTests	1.0	1.0	3.0
+org.junit.platform.launcher.listeners.MutableTestExecutionSummary.DefaultFailure	1.0	1.0	3.0
+org.junit.platform.launcher.listeners.session.CompositeLauncherSessionListener	1.0	1.0	3.0
+org.junit.platform.launcher.tagexpression.Parser	1.0	1.0	3.0
+org.junit.platform.launcher.tagexpression.Tokenizer	3.0	3.0	3.0
+org.junit.platform.reporting.legacy.xml.XmlReportDataTests	1.0	1.0	3.0
+org.junit.platform.reporting.legacy.xml.XmlReportWriter.AggregatedTestResult.Type	3.0	3.0	3.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.DynamicTestEngine	1.0	1.0	3.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.Execution	1.0	1.0	3.0
+org.junit.platform.suite.commons.SuiteLauncherDiscoveryRequestBuilderTests.StubAbstractTestDescriptor	1.0	1.0	3.0
+org.junit.vintage.engine.JUnit4ParameterizedTests	1.0	1.0	3.0
+org.junit.vintage.engine.VintageTestEngineBasicTests	1.0	1.0	3.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests.DynamicAndStaticChildrenRunner	1.0	1.0	3.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests.DynamicSuiteRunner	1.0	1.0	3.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests.MisbehavingChildlessRunner	1.0	1.0	3.0
+org.junit.vintage.engine.descriptor.OrFilter	1.0	1.0	3.0
+org.junit.vintage.engine.descriptor.VintageTestDescriptorTests	1.0	1.0	3.0
+org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder.DefensiveAnnotatedBuilder	1.5	2.0	3.0
+org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder.DefensiveJUnit4Builder	1.5	2.0	3.0
+org.junit.vintage.engine.samples.junit3.JUnit3ParallelSuiteWithSubsuites	1.0	1.0	3.0
+org.junit.vintage.engine.samples.junit3.JUnit3SuiteWithSubsuites	1.0	1.0	3.0
+org.junit.vintage.engine.samples.junit4.ConfigurableRunner	1.0	1.0	3.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithErrorInAfterClass	1.0	1.0	3.0
+org.junit.vintage.engine.support.UniqueIdReader	1.0	1.0	3.0
+platform.tooling.support.tests.JavaVersionsTests	1.0	1.0	3.0
+platform.tooling.support.tests.VintageGradleIntegrationTests	1.0	1.0	3.0
+platform.tooling.support.tests.VintageMavenIntegrationTests	1.0	1.0	3.0
+example.DisabledTestsDemo	1.0	1.0	2.0
+example.DisplayNameGeneratorDemo.A_year_is_a_leap_year	1.0	1.0	2.0
+example.DisplayNameGeneratorDemo.A_year_is_not_supported	1.0	1.0	2.0
+example.IgnoredTestsDemo	1.0	1.0	2.0
+example.JUnitPlatformClassDemo	1.0	1.0	2.0
+example.ParameterizedTestDemo.ToStringArgumentConverter	2.0	2.0	2.0
+example.TempDirectoryDemo	1.0	1.0	2.0
+example.TempDirectoryDemo.SharedTempDirectoryDemo	1.0	1.0	2.0
+example.TimeoutDemo	1.0	1.0	2.0
+example.callbacks.Extension1	1.0	1.0	2.0
+example.callbacks.Extension2	1.0	1.0	2.0
+example.exception.IgnoreIOExceptionExtension	2.0	2.0	2.0
+example.exception.IgnoreIOExceptionTests	1.0	1.0	2.0
+example.interceptor.SwingEdtInterceptor	2.0	2.0	2.0
+example.registration.DocumentationDemo	1.0	1.0	2.0
+example.registration.WebServerExtension.Builder	1.0	1.0	2.0
+example.session.GlobalSetupTeardownListener.Fixture	1.0	1.0	2.0
+example.testkit.EngineTestKitStatisticsDemo	1.0	1.0	2.0
+example.timing.TimingExtensionTests	1.0	1.0	2.0
+example.util.ListWriter	1.0	1.0	2.0
+org.junit.jupiter.api.AssertLinesMatchAssertionsTests.WithCustomFailureMessage	1.0	1.0	2.0
+org.junit.jupiter.api.ClassOrderer.ClassName	1.0	1.0	2.0
+org.junit.jupiter.api.ClassOrderer.DisplayName	1.0	1.0	2.0
+org.junit.jupiter.api.DisplayNameGenerationTests.IndicativeGeneratorTestCase.when_new	1.0	1.0	2.0
+org.junit.jupiter.api.DisplayNameGenerationTests.IndicativeGeneratorTestCase.when_new.after_pushing_an_element_to_an_empty_stack	1.0	1.0	2.0
+org.junit.jupiter.api.DisplayNameGenerationTests.IndicativeGeneratorWithCustomSeparatorTestCase.when_new	1.0	1.0	2.0
+org.junit.jupiter.api.DisplayNameGenerationTests.IndicativeGeneratorWithCustomSeparatorTestCase.when_new.after_pushing_an_element_to_an_empty_stack	1.0	1.0	2.0
+org.junit.jupiter.api.IterableFactory	1.0	1.0	2.0
+org.junit.jupiter.api.MethodOrderer.DisplayName	1.0	1.0	2.0
+org.junit.jupiter.api.condition.DisabledForJreRangeCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.DisabledIfCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.DisabledIfConditionTests.ExternalConditionMethod	1.0	1.0	2.0
+org.junit.jupiter.api.condition.DisabledIfIntegrationTests.ExternalConditionMethod	1.0	1.0	2.0
+org.junit.jupiter.api.condition.DisabledOnJreCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.DisabledOnOsCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.EnabledForJreRangeCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.EnabledIfCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.EnabledIfConditionTests.ExternalConditionMethod	1.0	1.0	2.0
+org.junit.jupiter.api.condition.EnabledIfIntegrationTests.ExternalConditionMethod	1.0	1.0	2.0
+org.junit.jupiter.api.condition.EnabledOnJreCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.EnabledOnOsCondition	1.0	1.0	2.0
+org.junit.jupiter.api.condition.OSTests	1.0	1.0	2.0
+org.junit.jupiter.api.condition.StaticConditionMethods	1.0	1.0	2.0
+org.junit.jupiter.api.extension.CloseableResourceIntegrationTests	1.0	1.0	2.0
+org.junit.jupiter.api.extension.CloseableResourceIntegrationTests.TestCase	1.0	1.0	2.0
+org.junit.jupiter.api.extension.ExtensionConfigurationException	1.0	1.0	2.0
+org.junit.jupiter.api.extension.ExtensionContextParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.api.extension.ParameterResolutionException	1.0	1.0	2.0
+org.junit.jupiter.api.extension.TestInstantiationException	1.0	1.0	2.0
+org.junit.jupiter.api.subpackage.SubclassedAssertionsTests	1.0	1.0	2.0
+org.junit.jupiter.api.subpackage.SubclassedAssumptionsTests	1.0	1.0	2.0
+org.junit.jupiter.engine.DefaultMethodTests.GenericTestCaseWithOverriddenDefaultMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.DisabledTests	1.0	1.0	2.0
+org.junit.jupiter.engine.DisabledTests.DisabledTestMethodsTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.ExceptionHandlingTests.TestCaseWithInvalidConstructorAndThrowingAfterAllCallbackAndPerClassLifecycle	1.0	1.0	2.0
+org.junit.jupiter.engine.ExceptionHandlingTests.TestCaseWithInvalidConstructorAndThrowingAfterAllCallbackAndPerMethodLifecycle	1.0	1.0	2.0
+org.junit.jupiter.engine.FailedAssumptionsTests	1.0	1.0	2.0
+org.junit.jupiter.engine.FailedAssumptionsTests.AssumptionViolatedExceptionInBeforeAllTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.FailedAssumptionsTests.TestAbortedExceptionInBeforeAllTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.InvalidLifecycleMethodConfigurationTests.TestCaseWithInvalidAfterAllMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.InvalidLifecycleMethodConfigurationTests.TestCaseWithInvalidAfterEachMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.InvalidLifecycleMethodConfigurationTests.TestCaseWithInvalidBeforeAllMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.InvalidLifecycleMethodConfigurationTests.TestCaseWithInvalidBeforeEachMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.NestedTestClassesTests.AbstractSuperClass.NestedInAbstractClass	1.0	1.0	2.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithNesting.NestedTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.OverloadedTestMethodTests	1.0	1.0	2.0
+org.junit.jupiter.engine.OverloadedTestMethodTests.TestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.RecordTests.TestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.SealedClassTests.AbstractTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.StandardTestClassTests.TestCaseWithFailingAfter	1.0	1.0	2.0
+org.junit.jupiter.engine.SuperClass	1.0	1.0	2.0
+org.junit.jupiter.engine.SuperClass1	1.0	1.0	2.0
+org.junit.jupiter.engine.SuperClass2	1.0	1.0	2.0
+org.junit.jupiter.engine.SuperClass3	1.0	1.0	2.0
+org.junit.jupiter.engine.TestInstanceLifecycleKotlinTests	1.0	1.0	2.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.AnotherInvocationContextProviderWithASingleInvocation	1.0	1.0	2.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.InvocationContextProviderThatSupportsEverythingButProvidesNothing	1.0	1.0	2.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.InvocationContextProviderWithCloseableStream	1.0	1.0	2.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.MyTestTemplateTestCaseWithConstructor	1.0	1.0	2.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.SingleInvocationContextProvider	1.0	1.0	2.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.SingleInvocationContextProviderWithDisabledInvocations	1.0	1.0	2.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.TwoInvocationsContextProvider	1.0	1.0	2.0
+org.junit.jupiter.engine.bridge.AbstractNonGenericTests	1.0	1.0	2.0
+org.junit.jupiter.engine.bridge.AbstractNonGenericTests.B	1.0	1.0	2.0
+org.junit.jupiter.engine.bridge.AbstractNonGenericTests.C	1.0	1.0	2.0
+org.junit.jupiter.engine.bridge.NumberTestGroup.ByteTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.bridge.NumberTestGroup.ShortTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.DefaultDynamicTestInvocationContext	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.MethodDisplayNameTests	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.NestedClassDisplayNameTests	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.DynamicDescendantFilter.WithoutIndexFiltering	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.TestCaseWithInvalidAfterAllMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.TestCaseWithInvalidAfterEachMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.TestCaseWithInvalidBeforeAllMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.TestCaseWithInvalidBeforeEachMethod	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptorTests.CustomStreamTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.descriptor.TestInstanceLifecycleUtils	1.0	1.0	2.0
+org.junit.jupiter.engine.discovery.OtherTestClass.NestedTestClass	1.0	1.0	2.0
+org.junit.jupiter.engine.discovery.YourTestClass	1.0	1.0	2.0
+org.junit.jupiter.engine.discovery.predicates.ClassWithNestedTestClass.InnerClass	1.0	1.0	2.0
+org.junit.jupiter.engine.discovery.predicates.IsNestedTestClass	2.0	2.0	2.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.PrivateClassWithNestedTestClass.InnerClass	1.0	1.0	2.0
+org.junit.jupiter.engine.discovery.predicates.IsTestTemplateMethodTests.ClassWithTestTemplateMethods	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.DefaultTestInstancesTests	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests.ArgumentRecordingParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests.NumberParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests.StringParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.ExtensionValuesStoreTests	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.ExtensionValuesStoreTests.InheritedValuesTests	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.JupiterEngineExecutionContext.State	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.injection.sample.CustomAnnotationParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.injection.sample.CustomTypeParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.injection.sample.DoubleParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.injection.sample.NullIntegerParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.injection.sample.NumberParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.injection.sample.PrimitiveArrayParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.execution.injection.sample.PrimitiveIntegerParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.BarClassLevelCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.BazClassLevelCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.FooClassLevelCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.QuuxClassLevelCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.BarMethodLevelCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.FizzMethodLevelCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.FooMethodLevelCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.BarTestExecutionCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.FizzTestExecutionCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.FooTestExecutionCallbacks	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.EventuallyInterruptibleInvocation	2.0	2.0	2.0
+org.junit.jupiter.engine.extension.ExecutionConditionTests.TestCaseWithExecutionConditionOnClass	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionContextExecutionTests	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionContextExecutionTests.OnlyIncrementCounterOnce	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.AfterEachParameterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.StaticFieldTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.TestFactoryMethodParameterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.TestInstancePerClassFieldTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.TestMethodParameterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.TestTemplateMethodParameterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ExtensionRegistryTests.MultipleExtension	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.DoubleInvocationInterceptorTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.InvocationIgnoringInterceptorTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.InvocationSkippedTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.MultipleHandlersTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.PerClassLifecycleTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.OrderedClassTests.BaseTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.BaseTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.MisbehavingByAdding	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.AfterEachExtension	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.BeforeEachExtension	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.AnnotatedParameterConstructorInjectionTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.AnnotatedParameterConstructorInjectionTestCase.AnnotatedConstructorParameterNestedTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.ConstructorInjectionTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.ConstructorInjectionTestCase.NestedTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.ExtendWithOnMethodTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.NullMethodInjectionTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.CustomExtensionImpl	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.TwoNestedClassesTestCase.A	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.TwoNestedClassesTestCase.B	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.RandomlyOrderedTests	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.RepeatedTestDisplayNameFormatter	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryParameterResolverTests.ATestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnAfterAllMethodParameterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnConstructorParameterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.FileInjectionTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.PrivateFields	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.TempDirectoryDoesNotPreventConstructorParameterResolutionTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.AnnotationOnConstructorParameterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.PrivateFields	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.TempDirectoryDoesNotPreventConstructorParameterResolutionTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInfoParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.AbstractTestInstanceFactory	2.0	2.0	2.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.ProxiedTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.ExceptionInTestClassConstructorTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.ExceptionThrowingTestInstancePostProcessor	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.ExceptionThrowingTestInstancePreDestroyCallback	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorTests.BarInstancePostProcessor	2.0	2.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorTests.FooInstancePostProcessor	2.0	2.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.AbstractTestInstancePreConstructCallback	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.OuterTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.OuterTestCase.InnerTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.TestCaseWithTestSpecificTestInstancePreDestroyCallback	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.TestInstanceLifecycleExtension	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestReporterParameterResolver	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TestReporterParameterResolverTests.Sample	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutDurationTests	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.NestedClassWithOuterSetupMethodTestCase.NestedClass	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.TimeoutAnnotatedAfterAllMethodTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.TimeoutAnnotatedAfterEachMethodTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.TimeoutAnnotatedBeforeAllMethodTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.TimeoutAnnotatedBeforeEachMethodTestCase	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutInvocation.InterruptTask	1.0	1.0	2.0
+org.junit.jupiter.engine.extension.TimeoutInvocationTests	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.AbstractTestRuleAdapterTests.SimpleRuleAnnotatedMember	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.ExpectedExceptionSupportTests.ExpectedExceptionSupportWithoutExpectedExceptionRuleTestCase	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupport	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportForDifferentDeclaredReturnTypesRulesTests.MyExternalResource1	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportForTemporaryFolderFieldTests	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceWithoutAdapterTests	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.adapter.VerifierAdapter	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.member.AbstractTestRuleAnnotatedMember	1.0	1.0	2.0
+org.junit.jupiter.migrationsupport.rules.member.TestRuleAnnotatedField	1.0	1.0	2.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.MissingNoArgumentsConstructorArgumentsProvider	1.0	1.0	2.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.Book	1.0	1.0	2.0
+org.junit.jupiter.params.ParameterizedTestMethodContext.Aggregator	1.0	1.0	2.0
+org.junit.jupiter.params.ParameterizedTestMethodContext.Converter	1.0	1.0	2.0
+org.junit.jupiter.params.ParameterizedTestMethodContext.ResolverType	1.0	1.0	2.0
+org.junit.jupiter.params.ParameterizedTestParameterResolver.CloseableArgument	1.0	1.0	2.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.InstanceCountingAggregator	1.0	1.0	2.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.InstanceCountingConverter	1.0	1.0	2.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.Person	1.0	1.0	2.0
+org.junit.jupiter.params.aggregator.ArgumentAccessException	1.0	1.0	2.0
+org.junit.jupiter.params.aggregator.ArgumentsAggregationException	1.0	1.0	2.0
+org.junit.jupiter.params.converter.ArgumentConversionException	1.0	1.0	2.0
+org.junit.jupiter.params.converter.DefaultArgumentConverter.StringToBooleanAndCharPrimitiveConverter	1.0	1.0	2.0
+org.junit.jupiter.params.converter.DefaultArgumentConverter.StringToJavaTimeConverter	1.0	1.0	2.0
+org.junit.jupiter.params.converter.DefaultArgumentConverter.StringToNumericPrimitiveConverter	1.0	1.0	2.0
+org.junit.jupiter.params.provider.CsvFileArgumentsProvider.DefaultInputStreamProvider	1.0	1.0	2.0
+org.junit.jupiter.params.provider.CsvParsingException	1.0	1.0	2.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests.DefaultFactoryMethodNameTestCase	1.0	1.0	2.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests.ExternalFactoryMethods	1.0	1.0	2.0
+org.junit.jupiter.params.provider.ValueArgumentsProvider	1.0	1.0	2.0
+org.junit.platform.commons.JUnitException	1.0	1.0	2.0
+org.junit.platform.commons.PreconditionViolationException	1.0	1.0	2.0
+org.junit.platform.commons.annotation.TestableAnnotationTests.TestableEverywhere	1.0	1.0	2.0
+org.junit.platform.commons.support.AnnotationSupportTests.Probe	1.0	1.0	2.0
+org.junit.platform.commons.support.ClassSupportTests	1.0	1.0	2.0
+org.junit.platform.commons.support.PreconditionAssertions	1.0	1.0	2.0
+org.junit.platform.commons.util.BlacklistedExceptions	1.0	1.0	2.0
+org.junit.platform.commons.util.ClassUtilsTests	1.0	1.0	2.0
+org.junit.platform.commons.util.FunctionUtils	1.0	1.0	2.0
+org.junit.platform.commons.util.LruCache	1.0	1.0	2.0
+org.junit.platform.commons.util.PreconditionViolationException	1.0	1.0	2.0
+org.junit.platform.commons.util.ReflectionUtilsTests.C	1.0	1.0	2.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ChildClass	1.0	1.0	2.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithTwoConstructors	1.0	1.0	2.0
+org.junit.platform.commons.util.ReflectionUtilsTests.GrandparentClass	1.0	1.0	2.0
+org.junit.platform.commons.util.ReflectionUtilsTests.InterfaceWithOverriddenGenericDefaultMethodImpl	1.0	1.0	2.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ParentClass	1.0	1.0	2.0
+org.junit.platform.commons.util.ReflectionUtilsTests.PublicChildClass	1.0	1.0	2.0
+org.junit.platform.commons.util.SerializationUtils	1.0	1.0	2.0
+org.junit.platform.console.ConsoleDetailsTests.BasicTestCase	1.0	1.0	2.0
+org.junit.platform.console.ConsoleDetailsTests.FailTestCase	1.0	1.0	2.0
+org.junit.platform.console.ConsoleDetailsTests.SkipTestCase	1.0	1.0	2.0
+org.junit.platform.console.ConsoleLauncherToolProvider	1.0	1.0	2.0
+org.junit.platform.console.options.ThemeTests	1.0	1.0	2.0
+org.junit.platform.engine.TestDescriptor.Type	1.0	1.0	2.0
+org.junit.platform.engine.TestDescriptorTests	1.0	1.0	2.0
+org.junit.platform.engine.UniqueIdTests.LastSegment	1.0	1.0	2.0
+org.junit.platform.engine.discovery.AbstractClassNameFilter	1.0	1.0	2.0
+org.junit.platform.engine.discovery.ClassSelectorTests	1.0	1.0	2.0
+org.junit.platform.engine.discovery.ClasspathResourceSelectorTests	1.0	1.0	2.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests.NestedClassAndMethodSelectors.AbstractClassWithNestedInnerClass.NestedClass	1.0	1.0	2.0
+org.junit.platform.engine.discovery.FileSelectorTests	1.0	1.0	2.0
+org.junit.platform.engine.discovery.MethodSelectorTests	1.0	1.0	2.0
+org.junit.platform.engine.support.descriptor.EngineDescriptor	1.0	1.0	2.0
+org.junit.platform.engine.support.descriptor.GroupDescriptor	1.0	1.0	2.0
+org.junit.platform.engine.support.descriptor.LeafDescriptor	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.CompositeLock.CompositeLockManagedBlocker	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.ExclusiveTask	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutorTests.MyContainer	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutorTests.MyContainerAndTestTestCase	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.IndependentClasses.A	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.IndependentClasses.B	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.IndependentClasses.C	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.NestedIsolatedTestCase.Inner	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.NestedIsolatedTestCase.Inner.InnerInner	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.SameThreadExecutionIntegrationTests	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.SingleLock.SingleLockManagedBlocker	1.0	1.0	2.0
+org.junit.platform.engine.support.hierarchical.SingleLockTests	1.0	1.0	2.0
+org.junit.platform.jfr.FlightRecordingExecutionListener.TestEvent	2.0	2.0	2.0
+org.junit.platform.jfr.FlightRecordingExecutionListenerIntegrationTests.TestCase	1.0	1.0	2.0
+org.junit.platform.launcher.DiscoveryFilterStub	1.0	1.0	2.0
+org.junit.platform.launcher.PostDiscoveryFilterStub	1.0	1.0	2.0
+org.junit.platform.launcher.core.CompositeTestExecutionListenerTests.ThrowingEagerTestExecutionListener	1.0	1.0	2.0
+org.junit.platform.launcher.core.ConfigurationParametersFactoryForTests	1.0	1.0	2.0
+org.junit.platform.launcher.core.LauncherFactoryForTestingPurposesOnly	1.0	1.0	2.0
+org.junit.platform.launcher.core.StreamInterceptingTestExecutionListenerIntegrationTests.HiddenSystemOutAndErr	1.0	1.0	2.0
+org.junit.platform.launcher.listeners.UniqueIdTrackingListenerIntegrationTests.TestCase2	1.0	1.0	2.0
+org.junit.platform.launcher.listeners.UniqueIdTrackingListenerIntegrationTests.TestCase3	1.0	1.0	2.0
+org.junit.platform.launcher.listeners.UniqueIdTrackingListenerIntegrationTests.TestCase4	1.0	1.0	2.0
+org.junit.platform.launcher.tagexpression.Operators	1.0	1.0	2.0
+org.junit.platform.reporting.legacy.LegacyReportingUtils	1.0	1.0	2.0
+org.junit.platform.reporting.legacy.xml.XmlReportAssertions.CachedSchema	1.0	1.0	2.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.DemoContainerAndTestTestDescriptor	1.0	1.0	2.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.DemoContainerTestDescriptor	1.0	1.0	2.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.DemoTestTestDescriptor	1.0	1.0	2.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.Filtering	1.0	1.0	2.0
+org.junit.platform.suite.engine.DiscoverySelectorResolver	1.0	1.0	2.0
+org.junit.platform.suite.engine.IsSuiteClass	1.0	1.0	2.0
+org.junit.platform.suite.engine.SuiteEngineDescriptor	1.0	1.0	2.0
+org.junit.platform.suite.engine.testcases.MultipleTestsTestCase	1.0	1.0	2.0
+org.junit.vintage.engine.JUnit4ParameterizedTests.StatusTrackingListener	2.0	2.0	2.0
+org.junit.vintage.engine.descriptor.RunnerRequest	1.0	1.0	2.0
+org.junit.vintage.engine.descriptor.VintageEngineDescriptor	1.0	1.0	2.0
+org.junit.vintage.engine.discovery.FilterableIgnoringRunnerDecorator	1.0	1.0	2.0
+org.junit.vintage.engine.discovery.VintageDiscoverer	2.0	2.0	2.0
+org.junit.vintage.engine.execution.TestRunTests	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.AbstractJunit4TestCaseWithConstructorParameter	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.EnclosedJUnit4TestCase.NestedClass	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.ExceptionThrowingRunner	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.IgnoredJUnit4TestCase	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.IgnoredParameterizedTestCase	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithAssumptionFailureInBeforeClass	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithDistinguishableOverloadedMethod	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithErrorCollectorStoringMultipleFailures	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithErrorInBeforeClass	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithIndistinguishableOverloadedMethod	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.ParameterizedTestCase	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.PlainJUnit4TestCaseWithTwoTestMethods	1.0	1.0	2.0
+org.junit.vintage.engine.samples.junit4.RunnerThatOnlyReportsFailures	1.0	1.0	2.0
+org.junit.vintage.engine.support.UniqueIdReaderTests	1.0	1.0	2.0
+org.junit.vintage.engine.support.UniqueIdStringifierTests.ClassWithErroneousSerialization	1.0	1.0	2.0
+org.junit.vintage.engine.support.UniqueIdStringifierTests.MyCustomId	1.0	1.0	2.0
+platform.tooling.support.ThirdPartyJars	1.0	1.0	2.0
+platform.tooling.support.tests.GradleMissingEngineTests	1.0	1.0	2.0
+platform.tooling.support.tests.JarContainsManifestFirstTests	2.0	2.0	2.0
+platform.tooling.support.tests.MavenPomFileTests	1.0	1.0	2.0
+platform.tooling.support.tests.MultiReleaseJarTests	1.0	1.0	2.0
+DefaultPackageTestCase	1.0	1.0	1.0
+example.CustomPostDiscoveryFilter	1.0	1.0	1.0
+example.DisabledClassDemo	1.0	1.0	1.0
+example.ExternalCondition	1.0	1.0	1.0
+example.ExternalCustomConditionDemo	1.0	1.0	1.0
+example.ExternalMethodSourceDemo	1.0	1.0	1.0
+example.HamcrestAssertionsDemo	1.0	1.0	1.0
+example.JUnit4Tests	1.0	1.0	1.0
+example.MyFirstJUnitJupiterTests	1.0	1.0	1.0
+example.OrderedNestedTestClassesDemo.PrimaryTests	1.0	1.0	1.0
+example.OrderedNestedTestClassesDemo.SecondaryTests	1.0	1.0	1.0
+example.ParameterizedTestDemo.MyArgumentsProvider	1.0	1.0	1.0
+example.ParameterizedTestDemo.NullAndEmptySource_1	1.0	1.0	1.0
+example.ParameterizedTestDemo.NullAndEmptySource_2	1.0	1.0	1.0
+example.ParameterizedTestDemo.PersonAggregator	1.0	1.0	1.0
+example.StringsProviders	1.0	1.0	1.0
+example.TaggingDemo	1.0	1.0	1.0
+example.TempDirCleanupModeDemo	1.0	1.0	1.0
+example.TestTemplateDemo	1.0	1.0	1.0
+example.TestingAStackDemo	1.0	1.0	1.0
+example.exception.MultipleHandlersTestCase	1.0	1.0	1.0
+example.exception.MultipleHandlersTestCase.FirstExecutedHandler	1.0	1.0	1.0
+example.exception.MultipleHandlersTestCase.SecondExecutedHandler	1.0	1.0	1.0
+example.exception.MultipleHandlersTestCase.ThirdExecutedHandler	1.0	1.0	1.0
+example.registration.WebClient	1.0	1.0	1.0
+example.registration.WebResponse	1.0	1.0	1.0
+example.registration.WebServerDemo	1.0	1.0	1.0
+example.session.HttpTests	1.0	1.0	1.0
+example.testinterface.TestInterfaceDemo	1.0	1.0	1.0
+example.testkit.EngineTestKitAllEventsDemo	1.0	1.0	1.0
+example.testkit.EngineTestKitFailedMethodDemo	1.0	1.0	1.0
+example.testkit.EngineTestKitSkippedMethodDemo	1.0	1.0	1.0
+org.junit.jupiter.api.AssertEqualsAssertionsTests.EqualsThrowsException	1.0	1.0	1.0
+org.junit.jupiter.api.AssertEqualsAssertionsTests.ToStringThrowsException	1.0	1.0	1.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests.EqualsThrowsExceptionClass	1.0	1.0	1.0
+org.junit.jupiter.api.AssertNullAssertionsTests.NullToString	1.0	1.0	1.0
+org.junit.jupiter.api.AssertTimeout.ExecutionTimeoutException	1.0	1.0	1.0
+org.junit.jupiter.api.AssertTimeout.TimeoutThreadFactory	1.0	1.0	1.0
+org.junit.jupiter.api.DisplayNameGenerationInheritanceTestCase.InnerNestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.DisplayNameGenerationInheritanceTestCase.StaticNestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.DisplayNameGenerationTests.IndicativeGeneratorTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.DisplayNameGenerationTests.IndicativeGeneratorWithCustomSeparatorTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.DisplayNameGenerationTests.StackTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.IndicativeSentencesGenerationInheritanceTestCase.InnerNestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.IndicativeSentencesGenerationInheritanceTestCase.StaticNestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.IndicativeSentencesNestedTestCase.A_year_is_a_leap_year	1.0	1.0	1.0
+org.junit.jupiter.api.IndicativeSentencesTopLevelTestCase.A_year_is_a_leap_year	1.0	1.0	1.0
+org.junit.jupiter.api.MethodOrderer.Alphanumeric	1.0	1.0	1.0
+org.junit.jupiter.api.condition.DisabledIfIntegrationTests.ConditionallyDisabledClass	1.0	1.0	1.0
+org.junit.jupiter.api.condition.EnabledIfIntegrationTests.ConditionallyDisabledClass	1.0	1.0	1.0
+org.junit.jupiter.api.extension.CloseableResourceIntegrationTests.ExceptionInCloseableResourceTestCase	1.0	1.0	1.0
+org.junit.jupiter.api.extension.CloseableResourceIntegrationTests.ThrowingOnCloseExtension	1.0	1.0	1.0
+org.junit.jupiter.api.extension.ExtensionContextException	1.0	1.0	1.0
+org.junit.jupiter.api.extension.support.TypeBasedParameterResolverTests.BasicTypeBasedParameterResolver	1.0	1.0	1.0
+org.junit.jupiter.api.extension.support.TypeBasedParameterResolverTests.MissingTypeTypeBasedParameterResolver	1.0	1.0	1.0
+org.junit.jupiter.api.extension.support.TypeBasedParameterResolverTests.ParameterizedTypeBasedParameterResolver	1.0	1.0	1.0
+org.junit.jupiter.api.parallel.Resources	1.0	1.0	1.0
+org.junit.jupiter.engine.AtypicalJvmMethodNameTests	1.0	1.0	1.0
+org.junit.jupiter.engine.BeforeAllAndAfterAllComposedAnnotationTests	1.0	1.0	1.0
+org.junit.jupiter.engine.BeforeEachAndAfterEachComposedAnnotationTests	1.0	1.0	1.0
+org.junit.jupiter.engine.Constants	1.0	1.0	1.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.OuterTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.OuterTestCase.LevelOne	1.0	1.0	1.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.OuterTestCase.LevelOne.LevelTwo	1.0	1.0	1.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.OuterTestCase.LevelOne.LevelTwo.LevelThree	1.0	1.0	1.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.TestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.TestCase.NestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.DefaultMethodTests.GenericTestCaseWithDefaultMethod	1.0	1.0	1.0
+org.junit.jupiter.engine.DisabledTests.DisabledTestClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.ExceptionHandlingTests.TestCaseWithThrowingBeforeAllAndAfterAllCallbacks	1.0	1.0	1.0
+org.junit.jupiter.engine.ExceptionHandlingTests.ThrowingAfterAllCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.ExceptionHandlingTests.ThrowingBeforeAllCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.InvalidLifecycleMethodConfigurationTests.TestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.MultipleTestableAnnotationsTests	1.0	1.0	1.0
+org.junit.jupiter.engine.MultipleTestableAnnotationsTests.TestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedTestClassesTests.AbstractSuperClass.NestedInAbstractClass.SecondLevelInherited	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedTestClassesTests.InterfaceWithNestedClass.NestedInInterface	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedTestClassesTests.OuterClass	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedTestClassesTests.OuterClass.NestedClass	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedTestClassesTests.OuterClass.NestedClass.RecursiveNestedClass	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedTestClassesTests.OuterClass.NestedClass.RecursiveNestedSiblingClass	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithNesting	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedWithInheritanceTests.NestedClass	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedWithInheritanceTests.NestedClass.NestedNestedClass	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedWithSeparateInheritanceTests.NestedClass	1.0	1.0	1.0
+org.junit.jupiter.engine.NestedWithSeparateInheritanceTests.NestedClass.NestedNestedClass	1.0	1.0	1.0
+org.junit.jupiter.engine.RecordTests	1.0	1.0	1.0
+org.junit.jupiter.engine.ReportingTests	1.0	1.0	1.0
+org.junit.jupiter.engine.SealedClassTests	1.0	1.0	1.0
+org.junit.jupiter.engine.TestInstanceLifecycleTests.SubInstancePerClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.AlwaysDisabledExecutionCondition	1.0	1.0	1.0
+org.junit.jupiter.engine.TestTemplateInvocationTests.TestTemplateTestClassWithDynamicLifecycleCallbacks	1.0	1.0	1.0
+org.junit.jupiter.engine.bridge.AbstractNumberTests	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.MyTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.ExtensionContextTests.OuterClass	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.AbstractTestBase	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.MethodSourceSupport	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.TestTemplateInvocationTestDescriptorTests	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.TestTemplateInvocationTestDescriptorTests.MyTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptorTests.MyTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.subpackage.Class1WithTestCases	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.subpackage.Class2WithTestCases	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.subpackage.ClassWithStaticInnerTestCases.ShouldBeDiscovered	1.0	1.0	1.0
+org.junit.jupiter.engine.descriptor.subpackage.ClassWithStaticInnerTestCases.ShouldNotBeDiscovered	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.AbstractTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.DiscoverySelectorResolver	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.DiscoveryTests.AbstractSuperClass.NestedInAbstractClass	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.DiscoveryTests.AbstractTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.DiscoveryTests.TestTemplateClass	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.HerTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.MatchingClass.NestedClass	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.MethodFinder	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.OtherClass	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.TestCaseWithNesting	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.TestCaseWithNesting.NestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.TestCaseWithNesting.NestedTestCase.DoubleNestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.TestClassWithTemplate	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.ClassWithTestFactory	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.ClassWithTestMethod	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.ClassWithTestTemplate	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.OuterClass.InnerClass	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.PrivateClassWithTestFactory	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.PrivateClassWithTestMethod	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.PrivateClassWithTestTemplate	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.PrivateStaticTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.StaticTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestFactoryMethod	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestMethod	1.0	1.0	1.0
+org.junit.jupiter.engine.discovery.predicates.IsTestTemplateMethod	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.ConditionEvaluationException	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.DynamicTestIntegrationTests	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests.ArgumentRecordingParameterResolver.Arguments	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests.ConstructorInjectionTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.ExecutableInvokerTests.ConstructorInjectionTestCase.NestedTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.ExtensionValuesStore.MemoizingSupplier.Failure	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.UniqueIdParsingForArrayParameterIntegrationTests	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.UniqueIdParsingForArrayParameterIntegrationTests.PrimitiveArrayMethodInjectionTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.injection.sample.CustomType	1.0	1.0	1.0
+org.junit.jupiter.engine.execution.injection.sample.MapOfListsTypeBasedParameterResolver	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterAllTests.ExceptionThrowingBeforeAllCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ChildTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ExceptionThrowingAfterEachCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ExceptionThrowingBeforeEachCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.TestInterfaceTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ChildTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ExceptionThrowingAfterTestExecutionCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ExceptionThrowingBeforeTestExecutionCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.TestInterfaceTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.EnigmaException	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ExtensionContextExecutionTests.Parent	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.AllInOneWithTestInstancePerClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.DuplicateRegistrationViaFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.InstanceFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ExtensionRegistrationViaParametersAndFieldsTests.MultipleRegistrationsViaFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ExtensionRegistryTests.MyExtension	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ExtensionRegistryTests.YourExtension	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.BarInvocationInterceptor	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.BazInvocationInterceptor	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.FooInvocationInterceptor	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithGlobalConfig.Inner0	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithGlobalConfig.Inner1	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithGlobalConfig.Inner2	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithGlobalConfig.Inner3	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithLocalConfig.Inner0	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithLocalConfig.Inner1	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithLocalConfig.Inner1.Inner1Inner0	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithLocalConfig.Inner1.Inner1Inner1	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithLocalConfig.Inner2	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithLocalConfig.Inner3	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.MisbehavingByRemoving	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.AbstractTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.ParameterizedTypeTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.PrimitiveArrayMethodInjectionTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.PrimitiveIntegerMethodInjectionTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ParameterResolverTests.TypeBasedParameterResolverTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.AbstractTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelCustomExtensionApiTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExtensionRegistrationParentTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ExplosiveExtension	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ExtensionInjector	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ExtensionRegistrationFromInterfaceTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelCustomExtensionApiTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationParentTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.SubClassLevelExtensionRegistrationTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.ServiceLoaderExtension	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirFieldTests.AlwaysFieldCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirFieldTests.DefaultFieldCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirFieldTests.NeverFieldCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirFieldTests.OnSuccessFailingFieldCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirFieldTests.OnSuccessPassingFieldCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirParameterTests.AlwaysParameterCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirParameterTests.DefaultParameterCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirParameterTests.NeverParameterCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirParameterTests.OnSuccessFailingParameterCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests.TempDirParameterTests.OnSuccessPassingParameterCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryParameterResolverTests	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnBeforeAllMethodParameterTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnBeforeAllMethodParameterWithTestInstancePerClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnConstructorParameterWithTestInstancePerClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnInstanceFieldAndBeforeAllMethodParameterTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnInstanceFieldWithUnsupportedTypeTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnPrivateInstanceFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnPrivateStaticFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnStaticFieldAndBeforeAllMethodParameterTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnStaticFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnStaticFieldWithUnsupportedTypeTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.InvalidTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.NonWritableFileDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.ReadOnlyFileInDirInReadOnlyDirDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.ReadOnlyFileInReadOnlyDirDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.StaticTempDirUsageInsideNestedClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.StaticTempDirUsageInsideNestedClassTestCase.NestedTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.TempDirUsageInsideNestedClassesTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.TempDirUsageInsideNestedClassesTestCase.NestedTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.TempDirUsageInsideNestedClassesTestCase.NestedTestClass.EvenDeeperNestedTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.UserTempDirectoryDeletionDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.AnnotationOnConstructorParameterWithTestInstancePerClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.AnnotationOnInstanceFieldWithUnsupportedTypeTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.AnnotationOnPrivateInstanceFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.AnnotationOnPrivateStaticFieldTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.AnnotationOnStaticFieldWithUnsupportedTypeTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.FileAndPathInjection	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.InvalidTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.NonWritableFileDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.ReadOnlyFileInDirInReadOnlyDirDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.ReadOnlyFileInReadOnlyDirDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.StaticTempDirUsageInsideNestedClassTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.StaticTempDirUsageInsideNestedClassTestCase.NestedTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.TempDirUsageInsideNestedClassesTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.TempDirUsageInsideNestedClassesTestCase.NestedTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.TempDirUsageInsideNestedClassesTestCase.NestedTestClass.EvenDeeperNestedTestClass	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.UserTempDirectoryDeletionDoesNotCauseFailureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestExecutionExceptionHandlerTests.ConvertException	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestExecutionExceptionHandlerTests.RethrowException	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestExecutionExceptionHandlerTests.ShouldNotBeCalled	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestExecutionExceptionHandlerTests.SwallowException	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.BogusTestInstanceFactory	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.BogusTestInstanceFactoryTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.ExplosiveTestInstanceFactory	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.ExplosiveTestInstanceFactoryTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.FactoryFromInterfaceTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.InheritedFactoryTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.MultipleConstructorsTestInstanceFactory	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.MultipleFactoriesRegisteredOnSingleTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.MultipleFactoriesRegisteredWithinClassHierarchyTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.MultipleFactoriesRegisteredWithinNestedClassStructureTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.MultipleFactoriesRegisteredWithinNestedClassStructureTestCase.InnerTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.NullTestInstanceFactory	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.NullTestInstanceFactoryTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.OuterTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.OuterTestCase.InnerTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.OuterTestCase.InnerTestCase.InnerInnerTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.ParentTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.ProxyTestInstanceFactory	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.BarTestInstanceCallbacks	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.BazTestInstanceCallbacks	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.ExceptionInTestInstancePostProcessorTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.ExceptionInTestInstancePreDestroyCallbackTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.FooTestInstanceCallbacks	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.QuuxTestInstanceCallbacks	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.SecondLevelTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.ThirdLevelTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePostProcessorAndPreDestroyCallbackTests.TopLevelTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.CallSequenceRecordingTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.InstancePreConstructCallbackRecordingBar	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.InstancePreConstructCallbackRecordingBaz	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.InstancePreConstructCallbackRecordingFoo	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.BarInstancePreDestroyCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.BazInstancePreDestroyCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.Destroyable	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackTests.FooInstancePreDestroyCallback	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerClassLifecycleOnAllLevels.Inner	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerClassWithinPerMethodLifecycle.Inner	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerMethodLifecycleOnAllLevels.Inner	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerMethodWithinPerClassLifecycle.Inner	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TestWatcherTests.ProblematicConstructorTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.IllegalTimeoutDurationTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.MethodWithoutInterruptedExceptionTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.NestedClassWithOuterSetupMethodTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.UnrecoverableExceptionTestCase	1.0	1.0	1.0
+org.junit.jupiter.engine.extension.sub.AlwaysDisabledCondition	1.0	1.0	1.0
+org.junit.jupiter.engine.support.JupiterThrowableCollectorFactory	1.0	1.0	1.0
+org.junit.jupiter.extensions.Heavyweight.CloseableOnlyOnceResource	1.0	1.0	1.0
+org.junit.jupiter.extensions.HeavyweightTests	1.0	1.0	1.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreConditionTests.IgnoredClassWithCustomMessageTestCase	1.0	1.0	1.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreConditionTests.IgnoredClassWithDefaultMessageTestCase	1.0	1.0	1.0
+org.junit.jupiter.migrationsupport.rules.AbstractTestRuleAdapterTests.TestableTestRuleAdapter	1.0	1.0	1.0
+org.junit.jupiter.migrationsupport.rules.FailAfterAllHelper	1.0	1.0	1.0
+org.junit.jupiter.migrationsupport.rules.LauncherBasedEnableRuleMigrationSupportTests.VerifierSupportForErrorCollectorTestCase	1.0	1.0	1.0
+org.junit.jupiter.migrationsupport.rules.VerifierSupport	1.0	1.0	1.0
+org.junit.jupiter.migrationsupport.rules.member.TestRuleAnnotatedMethod	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.ArgumentsProviderWithCloseHandler	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.ArgumentsProviderWithCloseHandlerTestCase	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.DefaultDisplayNameProviderTestCase	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.EmptyDisplayNameProviderTestCase	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.MissingNoArgumentsConstructorArgumentsProviderTestCase	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.NonStaticArgumentsProvider	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.NonStaticArgumentsProviderTestCase	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.TestCaseWithAnnotatedMethod	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.TestCaseWithMethod	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.AutoCloseableArgument	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.AutoCloseableArgumentProvider	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.ErroneousConverter	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.StringAggregator	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.StringLengthConverter	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.TwoSingleStringArgumentsProvider	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestIntegrationTests.TwoUnusedStringArgumentsProvider	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestNameFormatterTests.ParameterizedTestCases.CustomAggregator	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestNameFormatterTests.ToStringReturnsNull	1.0	1.0	1.0
+org.junit.jupiter.params.ParameterizedTestNameFormatterTests.ToStringThrowsException	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.Address	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.AddressAggregator	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.CountingTestCase	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.ErroneousAggregator	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.ErroneousTestCases	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.MapAggregator	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.NullAggregator	1.0	1.0	1.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.PersonAggregator	1.0	1.0	1.0
+org.junit.jupiter.params.converter.SimpleArgumentConverter	1.0	1.0	1.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests.ExternalFactoryMethods.Nested	1.0	1.0	1.0
+org.junit.jupiter.params.provider.MethodArgumentsProviderTests.NonStaticTestCase	1.0	1.0	1.0
+org.junit.jupiter.params.provider.NullArgumentsProvider	1.0	1.0	1.0
+org.junit.platform.AbstractEqualsAndHashCodeTests	1.0	1.0	1.0
+org.junit.platform.TestEngineTests	1.0	1.0	1.0
+org.junit.platform.commons.annotation.TestableAnnotationTests	1.0	1.0	1.0
+org.junit.platform.commons.support.ModifierSupportTests.FinalClass	1.0	1.0	1.0
+org.junit.platform.commons.support.ModifierSupportTests.PackageVisibleClass	1.0	1.0	1.0
+org.junit.platform.commons.support.ModifierSupportTests.PrivateClass	1.0	1.0	1.0
+org.junit.platform.commons.support.ModifierSupportTests.ProtectedClass	1.0	1.0	1.0
+org.junit.platform.commons.support.ModifierSupportTests.PublicClass	1.0	1.0	1.0
+org.junit.platform.commons.support.ModifierSupportTests.StaticClass	1.0	1.0	1.0
+org.junit.platform.commons.util.AnnotationUtilsTests.Annotation2Class	1.0	1.0	1.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ComposedAnnotationClass	1.0	1.0	1.0
+org.junit.platform.commons.util.AnnotationUtilsTests.InheritedComposedAnnotationClass	1.0	1.0	1.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SuperclassWithAnnotatedMethod	1.0	1.0	1.0
+org.junit.platform.commons.util.ClasspathScannerTests.ThrowingClassLoader	1.0	1.0	1.0
+org.junit.platform.commons.util.LruCacheTests	1.0	1.0	1.0
+org.junit.platform.commons.util.ModuleUtilsTests	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithOneCustomConstructor	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.Exploder	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.FinalClass	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.InterfaceWithGenericDefaultMethodImpl	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.MyClass	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.MySubClass	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.PackageVisibleClass	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.PrivateClass	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ProtectedClass	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsTests.StaticClass	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsWithGenericTypeHierarchiesTests.ClassImplementingGenericInterfaceWithMoreSpecificMethod	1.0	1.0	1.0
+org.junit.platform.commons.util.ReflectionUtilsWithGenericTypeHierarchiesTests.ClassOverridingDefaultMethodAndImplementingMoreSpecificInterface	1.0	1.0	1.0
+org.junit.platform.commons.util.RuntimeUtilsTests	1.0	1.0	1.0
+org.junit.platform.commons.util.StringUtilsTests.ToStringReturnsNull	1.0	1.0	1.0
+org.junit.platform.commons.util.StringUtilsTests.ToStringThrowsException	1.0	1.0	1.0
+org.junit.platform.commons.util.classes.AExecutionConditionClass	1.0	1.0	1.0
+org.junit.platform.commons.util.classes.BExecutionConditionClass	1.0	1.0	1.0
+org.junit.platform.console.options.Details	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.Class	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.ClasspathResource	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.Directory	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.File	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.Method	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.Module	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.Package	1.0	1.0	1.0
+org.junit.platform.console.options.SelectorConverter.Uri	1.0	1.0	1.0
+org.junit.platform.console.subpackage.ContainerForInnerTest.NestedTest	1.0	1.0	1.0
+org.junit.platform.console.subpackage.ContainerForInnerTests.NestedTests	1.0	1.0	1.0
+org.junit.platform.console.subpackage.ContainerForStaticNestedTest.NestedTest	1.0	1.0	1.0
+org.junit.platform.console.subpackage.ContainerForStaticNestedTests.NestedTests	1.0	1.0	1.0
+org.junit.platform.console.subpackage.SecondTest	1.0	1.0	1.0
+org.junit.platform.console.subpackage.Test	1.0	1.0	1.0
+org.junit.platform.console.subpackage.Test1	1.0	1.0	1.0
+org.junit.platform.console.subpackage.Tests	1.0	1.0	1.0
+org.junit.platform.console.subpackage.ThirdTests	1.0	1.0	1.0
+org.junit.platform.engine.UniqueIdTests	1.0	1.0	1.0
+org.junit.platform.engine.discovery.ClasspathRootSelectorTests	1.0	1.0	1.0
+org.junit.platform.engine.discovery.DirectorySelectorTests	1.0	1.0	1.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests.NestedClassAndMethodSelectors.AbstractClassWithNestedInnerClass.NestedClass.DoubleNestedClass	1.0	1.0	1.0
+org.junit.platform.engine.discovery.ModuleSelectorTests	1.0	1.0	1.0
+org.junit.platform.engine.discovery.PackageSelectorTests	1.0	1.0	1.0
+org.junit.platform.engine.discovery.UniqueIdSelectorTests	1.0	1.0	1.0
+org.junit.platform.engine.discovery.UriSelectorTests	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.DefaultParallelExecutionConfigurationStrategyTests.CustomParallelExecutionConfigurationStrategy	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.WorkerThread	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.WorkerThreadFactory	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithGlobalLockRequiringChild.NestedTestCaseWithResourceLock	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithResourceLock	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithResourceReadLockOnClass	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithResourceReadLockOnClassAndReadClockOnTestCase	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithResourceReadLockOnClassAndWriteClockOnTestCase	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithResourceWriteLockOnClass	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithoutResourceLock	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithoutResourceLock.NestedTestCaseWithResourceLock	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.OpenTest4JAwareThrowableCollector	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ConcurrentTemplateTestCase	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelClassesTestCase	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelMethodsTestCase	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.TestCaseWithTestFactory	1.0	1.0	1.0
+org.junit.platform.engine.support.hierarchical.SingleTestExecutor	1.0	1.0	1.0
+org.junit.platform.jfr.FlightRecordingDiscoveryListenerIntegrationTests	1.0	1.0	1.0
+org.junit.platform.jfr.FlightRecordingExecutionListenerIntegrationTests	1.0	1.0	1.0
+org.junit.platform.launcher.EngineFilter.Type	1.0	1.0	1.0
+org.junit.platform.launcher.LauncherConstants	1.0	1.0	1.0
+org.junit.platform.launcher.TestPostDiscoveryTagFilter	1.0	1.0	1.0
+org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.Phase	1.0	1.0	1.0
+org.junit.platform.launcher.core.ExecutionListenerAdapterTests.MockTestExecutionListener	1.0	1.0	1.0
+org.junit.platform.launcher.core.LauncherConfigurationParametersTests.Mutator	1.0	1.0	1.0
+org.junit.platform.launcher.core.LauncherConfigurationParametersTests.Something	1.0	1.0	1.0
+org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilderTests.SampleTestClass	1.0	1.0	1.0
+org.junit.platform.launcher.core.LauncherFactoryTests.JUnit4Example	1.0	1.0	1.0
+org.junit.platform.launcher.core.LauncherFactoryTests.JUnit5Example	1.0	1.0	1.0
+org.junit.platform.launcher.core.ServiceLoaderRegistry	1.0	1.0	1.0
+org.junit.platform.launcher.listeners.discovery.LauncherDiscoveryListeners.LauncherDiscoveryListenerType	1.0	1.0	1.0
+org.junit.platform.launcher.tagexpression.TokenWith	1.0	1.0	1.0
+org.junit.platform.reporting.legacy.xml.XmlReportAssertions	1.0	1.0	1.0
+org.junit.platform.suite.engine.testcases.DynamicTestsTestCase	1.0	1.0	1.0
+org.junit.platform.suite.engine.testcases.SingleTestTestCase	1.0	1.0	1.0
+org.junit.platform.testkit.engine.EngineTestKitTests.ExampleTestCase	1.0	1.0	1.0
+org.junit.platform.testkit.engine.NestedContainerEventConditionTests.ATestCase	1.0	1.0	1.0
+org.junit.platform.testkit.engine.NestedContainerEventConditionTests.ATestCase.BTestCase	1.0	1.0	1.0
+org.junit.platform.testkit.engine.NestedContainerEventConditionTests.ATestCase.BTestCase.CTestCase	1.0	1.0	1.0
+org.junit.vintage.engine.descriptor.TestSourceProviderTests	1.0	1.0	1.0
+org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder.NullIgnoredBuilder	1.0	1.0	1.0
+org.junit.vintage.engine.discovery.IsPotentialJUnit4TestMethod	1.0	1.0	1.0
+org.junit.vintage.engine.discovery.VintageDiscovererTests.Bar	1.0	1.0	1.0
+org.junit.vintage.engine.discovery.VintageDiscovererTests.Foo	1.0	1.0	1.0
+org.junit.vintage.engine.samples.PlainOldJavaClassWithoutAnyTestsTestCase	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit3.AbstractJUnit3TestCase	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit3.JUnit3SuiteWithSingleTestCaseWithSingleTestWhichFails	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit3.PlainJUnit3TestCaseWithSingleTestWhichFails	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.AbstractJUnit4TestCase	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithFailingDescriptionThatIsNotReportedAsFinished	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithNotFilterableRunner	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithRunnerWithCustomUniqueIdsAndDisplayNames	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.MalformedJUnit4TestCase	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.NotFilterableRunner	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.PlainJUnit4TestCaseWithSingleTestWhichFails	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.PlainJUnit4TestCaseWithSingleTestWhichIsIgnored	1.0	1.0	1.0
+org.junit.vintage.engine.samples.junit4.SingleFailingTheoryTestCase	1.0	1.0	1.0
+platform.tooling.support.tests.AntStarterTests	1.0	1.0	1.0
+platform.tooling.support.tests.ArchUnitTests.AllJars	1.0	1.0	1.0
+platform.tooling.support.tests.GradleKotlinExtensionsTests	1.0	1.0	1.0
+platform.tooling.support.tests.GradleModuleFileTests	1.0	1.0	1.0
+platform.tooling.support.tests.GradleStarterTests	1.0	1.0	1.0
+platform.tooling.support.tests.MavenStarterTests	1.0	1.0	1.0
+example.CustomLauncherDiscoveryListener			0.0
+example.CustomLauncherSessionListener			0.0
+example.CustomTestExecutionListener			0.0
+example.DisplayNameGeneratorDemo			0.0
+example.DocumentationTestSuite			0.0
+example.JUnitPlatformSuiteDemo			0.0
+example.MyTestClass			0.0
+example.OrderedNestedTestClassesDemo			0.0
+example.SuiteDemo			0.0
+example.domain.Person.Gender			0.0
+org.junit.jupiter.JupiterTestSuite			0.0
+org.junit.jupiter.api.AssertAllAssertionsTests.EnigmaThrowable			0.0
+org.junit.jupiter.api.AssertInstanceOfAssertionsTests.BaseClass			0.0
+org.junit.jupiter.api.AssertInstanceOfAssertionsTests.SubClass			0.0
+org.junit.jupiter.api.AssertNotEqualsAssertionsTests			0.0
+org.junit.jupiter.api.AssertThrowsAssertionsTests.LocalException			0.0
+org.junit.jupiter.api.AssertThrowsExactlyAssertionsTests.LocalException			0.0
+org.junit.jupiter.api.DisplayNameGenerationInheritanceTestCase			0.0
+org.junit.jupiter.api.DisplayNameGenerationTests.DefaultStyleTestCase			0.0
+org.junit.jupiter.api.DisplayNameGenerationTests.IndicativeStyleTestCase			0.0
+org.junit.jupiter.api.DisplayNameGenerationTests.NoNameStyleTestCase			0.0
+org.junit.jupiter.api.DisplayNameGenerationTests.SimpleStyleTestCase			0.0
+org.junit.jupiter.api.DisplayNameGenerationTests.UnderscoreStyleInheritedFromSuperClassTestCase			0.0
+org.junit.jupiter.api.DisplayNameGenerationTests.UnderscoreStyleTestCase			0.0
+org.junit.jupiter.api.EnigmaThrowable			0.0
+org.junit.jupiter.api.IndicativeSentencesGenerationInheritanceTestCase			0.0
+org.junit.jupiter.api.IndicativeSentencesNestedTestCase			0.0
+org.junit.jupiter.api.IndicativeSentencesTopLevelTestCase			0.0
+org.junit.jupiter.api.TestInstance.Lifecycle			0.0
+org.junit.jupiter.api.extension.support.TypeBasedParameterResolverTests.SubClassedBasicTypeBasedParameterResolver			0.0
+org.junit.jupiter.api.io.CleanupMode			0.0
+org.junit.jupiter.api.parallel.ExecutionMode			0.0
+org.junit.jupiter.api.parallel.ResourceAccessMode			0.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.ConcurrentTestCase			0.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.SameThreadTestCase			0.0
+org.junit.jupiter.engine.DefaultExecutionModeTests.SimpleTestInstancePerClassTestCase			0.0
+org.junit.jupiter.engine.DefaultMethodTests.TestCaseWithDefaultMethod			0.0
+org.junit.jupiter.engine.NestedTestClassesTests.AbstractOuterClass			0.0
+org.junit.jupiter.engine.NestedTestClassesTests.AbstractSuperClass			0.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithExtendedNested			0.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithExtendedNested.ConcreteInner1			0.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithExtendedNested.ConcreteInner2			0.0
+org.junit.jupiter.engine.NestedTestClassesTests.TestCaseWithInheritedNested			0.0
+org.junit.jupiter.engine.NestedWithInheritanceTests			0.0
+org.junit.jupiter.engine.NestedWithSeparateInheritanceTests			0.0
+org.junit.jupiter.engine.SealedClassTests.TestCase			0.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.BlankDisplayNameTestCase			0.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.NestedTestCase			0.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.NotDisplayNameTestCase			0.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.StandardDisplayNameTestCase			0.0
+org.junit.jupiter.engine.descriptor.DisplayNameUtilsTests.Underscore_DisplayName_TestCase			0.0
+org.junit.jupiter.engine.descriptor.DynamicDescendantFilter.Mode			0.0
+org.junit.jupiter.engine.descriptor.ExtensionContextTests.OuterClass.NestedClass			0.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.AbstractTestCase			0.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.ConcreteTestCase			0.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.NestedTestCase			0.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.StaticTestCase			0.0
+org.junit.jupiter.engine.descriptor.JupiterTestDescriptorTests.StaticTestCase.StaticTestCaseLevel2			0.0
+org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptorTests			0.0
+org.junit.jupiter.engine.descriptor.TestInstanceLifecycleUtilsTests.BaseMetaAnnotatedTestCase			0.0
+org.junit.jupiter.engine.descriptor.TestInstanceLifecycleUtilsTests.SpecializedTestCase			0.0
+org.junit.jupiter.engine.descriptor.TestInstanceLifecycleUtilsTests.TestCase			0.0
+org.junit.jupiter.engine.descriptor.subpackage.ClassWithStaticInnerTestCases			0.0
+org.junit.jupiter.engine.descriptor.subpackage.ClassWithoutTestCases			0.0
+org.junit.jupiter.engine.discovery.DiscoveryTests.AbstractSuperClass			0.0
+org.junit.jupiter.engine.discovery.DiscoveryTests.TestCaseWithExtendedNested			0.0
+org.junit.jupiter.engine.discovery.DiscoveryTests.TestCaseWithExtendedNested.ConcreteInner1			0.0
+org.junit.jupiter.engine.discovery.MatchingClass			0.0
+org.junit.jupiter.engine.discovery.NonTestClass			0.0
+org.junit.jupiter.engine.discovery.OtherTestClass			0.0
+org.junit.jupiter.engine.discovery.predicates.AbstractClass			0.0
+org.junit.jupiter.engine.discovery.predicates.ClassWithNestedTestClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsInnerClassTests.InnerClassesTestCase			0.0
+org.junit.jupiter.engine.discovery.predicates.IsInnerClassTests.InnerClassesTestCase.InnerClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsInnerClassTests.InnerClassesTestCase.PrivateInnerClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsInnerClassTests.InnerClassesTestCase.StaticNestedClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsNestedTestClassTests.NestedClassesTestCase			0.0
+org.junit.jupiter.engine.discovery.predicates.IsNestedTestClassTests.NestedClassesTestCase.InnerClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsNestedTestClassTests.NestedClassesTestCase.PrivateInnerClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsNestedTestClassTests.NestedClassesTestCase.StaticNestedClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsPotentialTestContainerTests.PrivateStaticClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsPotentialTestContainerTests.StaticClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.OuterClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.OuterClass.RecursiveInnerClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsTestClassWithTestsTests.PrivateClassWithNestedTestClass			0.0
+org.junit.jupiter.engine.discovery.predicates.IsTestMethodTests.AbstractClassWithAbstractTestMethod			0.0
+org.junit.jupiter.engine.execution.DefaultTestInstancesTests.Nested			0.0
+org.junit.jupiter.engine.extension.AfterAllParameter.Extension			0.0
+org.junit.jupiter.engine.extension.AfterEachParameter.Extension			0.0
+org.junit.jupiter.engine.extension.BeforeAllParameter.Extension			0.0
+org.junit.jupiter.engine.extension.BeforeAndAfterEachTests.ParentTestCase			0.0
+org.junit.jupiter.engine.extension.BeforeAndAfterTestExecutionCallbackTests.ParentTestCase			0.0
+org.junit.jupiter.engine.extension.BeforeEachParameter.Extension			0.0
+org.junit.jupiter.engine.extension.ClassLevelExtension1			0.0
+org.junit.jupiter.engine.extension.ClassLevelExtension2			0.0
+org.junit.jupiter.engine.extension.ConstructorParameter.Extension			0.0
+org.junit.jupiter.engine.extension.DummyExtension			0.0
+org.junit.jupiter.engine.extension.ExtensionContextExecutionTests.A			0.0
+org.junit.jupiter.engine.extension.ExtensionContextExecutionTests.B			0.0
+org.junit.jupiter.engine.extension.InstanceField1.Extension			0.0
+org.junit.jupiter.engine.extension.InstanceField2.Extension			0.0
+org.junit.jupiter.engine.extension.InstanceLevelExtension1			0.0
+org.junit.jupiter.engine.extension.InstanceLevelExtension2			0.0
+org.junit.jupiter.engine.extension.InvocationInterceptorTests.InvocationType			0.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.ConvertingTestCase			0.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.RethrowingTestCase			0.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.SwallowingTestCase			0.0
+org.junit.jupiter.engine.extension.LifecycleMethodExecutionExceptionHandlerTests.UnrecoverableExceptionTestCase			0.0
+org.junit.jupiter.engine.extension.MagicField.Extension			0.0
+org.junit.jupiter.engine.extension.OrderedClassTests.A_TestCase			0.0
+org.junit.jupiter.engine.extension.OrderedClassTests.B_TestCase			0.0
+org.junit.jupiter.engine.extension.OrderedClassTests.C_TestCase			0.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithGlobalConfig			0.0
+org.junit.jupiter.engine.extension.OrderedClassTests.OuterWithLocalConfig			0.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.OrderAnnotationWithNestedClassTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.OuterTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedMethodTests.OuterTestCase.NestedOrderAnnotationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.DefaultOrderAndExplicitOrderClassLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.DefaultOrderAndExplicitOrderExtensionRegistrationFromInterfaceTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.DefaultOrderAndExplicitOrderInstanceLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.DefaultOrderAndExplicitOrderInstanceLevelExtensionRegistrationWithTestInstancePerClassLifecycleTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.DefaultOrderInstanceLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.DefaultOrderPlusOneAndDefaultOrderInstanceLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.DefaultOrderShadowingDefaultOrderAndExplicitOrderClassLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.ExplicitOrderInstanceLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.ExplicitOrderShadowingDefaultOrderAndExplicitOrderClassLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.OrderedProgrammaticExtensionRegistrationTests.InheritedDefaultOrderAndExplicitOrderClassLevelExtensionRegistrationTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExplosiveCheckedExceptionTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExplosiveErrorTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExplosiveUncheckedExceptionTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExtensionRegistrationChildTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExtensionRegistrationWithNonExtensionFieldValueTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExtensionRegistrationWithNullFieldTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.ClassLevelExtensionRegistrationWithPrivateFieldTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExplosiveCheckedExceptionTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExplosiveErrorTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExplosiveUncheckedExceptionTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationChildTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationWithNonExtensionFieldValueTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationWithNullFieldTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.InstanceLevelExtensionRegistrationWithPrivateFieldTestCase			0.0
+org.junit.jupiter.engine.extension.ProgrammaticExtensionRegistrationTests.TwoNestedClassesTestCase			0.0
+org.junit.jupiter.engine.extension.RandomlyOrderedTests.A_TestCase			0.0
+org.junit.jupiter.engine.extension.RandomlyOrderedTests.B_TestCase			0.0
+org.junit.jupiter.engine.extension.RandomlyOrderedTests.C_TestCase			0.0
+org.junit.jupiter.engine.extension.StaticField1.Extension			0.0
+org.junit.jupiter.engine.extension.StaticField2.Extension			0.0
+org.junit.jupiter.engine.extension.TempDirectory.Scope			0.0
+org.junit.jupiter.engine.extension.TempDirectoryCleanupTests			0.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.AnnotationOnInstanceFieldAndBeforeAllMethodParameterWithTestInstancePerClassTestCase			0.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase			0.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.SeparateTempDirsWhenUsedOnForEachLifecycleMethodsFieldInjectionTestCase			0.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.SeparateTempDirsWhenUsedOnForEachLifecycleMethodsParameterInjectionTestCase			0.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.SeparateTempDirsWhenUsedOnForEachLifecycleMethodsWithTestInstancePerClassFieldInjectionTestCase			0.0
+org.junit.jupiter.engine.extension.TempDirectoryPerContextTests.SeparateTempDirsWhenUsedOnForEachLifecycleMethodsWithTestInstancePerClassParameterInjectionTestCase			0.0
+org.junit.jupiter.engine.extension.TempDirectoryPerDeclarationTests.NonMintTempDirectoryPermissionsDoNotCauseFailureTestCase			0.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.BarInstanceFactory			0.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.FooInstanceFactory			0.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.PerClassLifecycleBogusTestInstanceFactoryTestCase			0.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.PerClassLifecycleExplosiveTestInstanceFactoryTestCase			0.0
+org.junit.jupiter.engine.extension.TestInstanceFactoryTests.PerClassLifecycleNullTestInstanceFactoryTestCase			0.0
+org.junit.jupiter.engine.extension.TestInstancePreConstructCallbackTests.PreConstructInNestedTestCase.InnerParent			0.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerClassLifecycleOnAllLevels			0.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerClassWithinPerMethodLifecycle			0.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerMethodLifecycleOnAllLevels			0.0
+org.junit.jupiter.engine.extension.TestInstancePreDestroyCallbackUtilityMethodTests.PerMethodWithinPerClassLifecycle			0.0
+org.junit.jupiter.engine.extension.TestParameter.Extension			0.0
+org.junit.jupiter.engine.extension.TestWatcherTests.ExceptionThrowingTestWatcherTestCase			0.0
+org.junit.jupiter.engine.extension.TestWatcherTests.TrackingTestWatcherTestMethodsTestCase			0.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.InheritedTimeoutAnnotatedClassTestCase			0.0
+org.junit.jupiter.engine.extension.TimeoutExtensionTests.TimeoutAnnotatedClassTestCase			0.0
+org.junit.jupiter.engine.extension.sub.AnotherAlwaysDisabledCondition			0.0
+org.junit.jupiter.migrationsupport.JupiterMigrationSupportTestSuite			0.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreAnnotationIntegrationTests			0.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreAnnotationIntegrationTests.ExplicitIgnoreConditionRegistration			0.0
+org.junit.jupiter.migrationsupport.conditions.IgnoreAnnotationIntegrationTests.ImplicitIgnoreConditionRegistration			0.0
+org.junit.jupiter.migrationsupport.rules.ExternalResourceSupportWithInheritanceTests			0.0
+org.junit.jupiter.params.ParameterizedTestExtensionTests.TestCaseWithoutMethod			0.0
+org.junit.jupiter.params.ParameterizedTestSuite			0.0
+org.junit.jupiter.params.aggregator.AggregatorIntegrationTests.Gender			0.0
+org.junit.jupiter.params.converter.FallbackStringToObjectConverterTests.Diary			0.0
+org.junit.jupiter.params.converter.TypedArgumentConverterTests			0.0
+org.junit.jupiter.params.provider.EnumArgumentsProviderTests.EnumWithTwoConstants			0.0
+org.junit.jupiter.params.provider.EnumSourceTests.EnumWithThreeConstants			0.0
+org.junit.jupiter.params.provider.NullEnum			0.0
+org.junit.platform.JUnitPlatformTestSuite			0.0
+org.junit.platform.commons.support.AnnotationSupportTests.Fields			0.0
+org.junit.platform.commons.support.AnnotationSupportTests.Probe.InnerClass			0.0
+org.junit.platform.commons.support.HierarchyTraversalMode			0.0
+org.junit.platform.commons.support.ModifierSupportTests.AbstractClass			0.0
+org.junit.platform.commons.support.ReflectionSupportTests.ClassWithNestedClasses			0.0
+org.junit.platform.commons.support.ReflectionSupportTests.ClassWithNestedClasses.Nested1			0.0
+org.junit.platform.commons.support.ReflectionSupportTests.ClassWithNestedClasses.Nested2			0.0
+org.junit.platform.commons.support.SearchOption			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.Annotation1Class			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.Annotation1Class.InnerClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.Annotation1Class.InnerClass.InnerInnerClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.Annotation1Class.NestedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.AnnotationWithDefaultValueClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ClassWithAnnotatedFields			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ClassWithPublicAnnotatedFieldsFromInterface			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ClassWithShadowedAnnotatedFields			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ComposedAnnotationClass.InnerClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ComposedAnnotationClass.InnerClass.InnerInnerClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ComposedTestingTraitClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ContainerAfterComposedTaggedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ContainerExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ContainerPlusSubMultiComposedExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.ContainerTaggedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.FastAndSmokyTaggedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.InheritedAnnotationClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.LocalTagOnTaggedInterfaceClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.MultiComposedExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.MultiComposedTaggedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.MultiExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.MultiTaggedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.MultipleFoos1			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.MultipleFoos2			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.NonInheritedCompositionOfInheritedAnnotationClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SingleComposedExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SingleComposedTaggedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SingleExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SingleTaggedClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubContainerExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubInheritedAnnotationClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubInheritedComposedAnnotationClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubMultiComposedExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubMultiExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubNonInheritedCompositionOfInheritedAnnotationClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubSingleComposedExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SubSingleExtensionClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.SuperclassWithAnnotatedField			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.TaggedInterfaceClass			0.0
+org.junit.platform.commons.util.AnnotationUtilsTests.TestingTraitClass			0.0
+org.junit.platform.commons.util.ClasspathScannerTests.ClassForGenericRuntimeExceptionSimulation			0.0
+org.junit.platform.commons.util.ClasspathScannerTests.ClassForMalformedClassNameSimulation			0.0
+org.junit.platform.commons.util.ClasspathScannerTests.ClassForOtherInternalErrorSimulation			0.0
+org.junit.platform.commons.util.ClasspathScannerTests.ClassForOutOfMemoryErrorSimulation			0.0
+org.junit.platform.commons.util.ClasspathScannerTests.MemberClassToBeFound			0.0
+org.junit.platform.commons.util.ClasspathScannerTests.NestedClassToBeFound			0.0
+org.junit.platform.commons.util.ReflectionUtils.HierarchyTraversalMode			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.A			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.AbstractClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.AbstractOuterClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.AbstractOuterClass.InnerClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.B			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassExtendingClassWithNestedClasses			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithFields			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithNestedClasses			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithNestedClasses.Nested1			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithNestedClasses.Nested2			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithNestedClasses.Nested3			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.ClassWithSyntheticMethod			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.FirstClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.FirstClass.SecondClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.FirstClass.SecondClass.ThirdClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.Interface45.Nested5			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.InterfaceWithDefaultMethodImpl			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.InterfaceWithNestedClass.Nested4			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.InterfaceWithStaticMethodImpl			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClass.InnerClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClass.InnerClass.RecursiveInnerInnerClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClass.InnerSiblingClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClass.RecursiveInnerClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClass.StaticNestedClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClass.StaticNestedSiblingClass			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClassImplementingInterface			0.0
+org.junit.platform.commons.util.ReflectionUtilsTests.OuterClassImplementingInterface.InnerClassImplementingInterface			0.0
+org.junit.platform.commons.util.ReflectionUtilsWithGenericTypeHierarchiesTests.ClassImplementingGenericAndMoreSpecificInterface			0.0
+org.junit.platform.commons.util.ReflectionUtilsWithGenericTypeHierarchiesTests.ClassImplementingInterfaceWithInvertedHierarchy			0.0
+org.junit.platform.commons.util.classes.ATestExecutionListenerClass			0.0
+org.junit.platform.commons.util.classes.AVanillaEmpty			0.0
+org.junit.platform.commons.util.classes.BTestExecutionListenerClass			0.0
+org.junit.platform.commons.util.classes.BVanillaEmpty			0.0
+org.junit.platform.console.options.SelectorConverter			0.0
+org.junit.platform.console.subpackage.ContainerForInnerTest			0.0
+org.junit.platform.console.subpackage.ContainerForInnerTests			0.0
+org.junit.platform.console.subpackage.ContainerForStaticNestedTest			0.0
+org.junit.platform.console.subpackage.ContainerForStaticNestedTests			0.0
+org.junit.platform.engine.SelectorResolutionResult.Status			0.0
+org.junit.platform.engine.TestExecutionResult.Status			0.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests.NestedClassAndMethodSelectors.AbstractClassWithNestedInnerClass			0.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests.NestedClassAndMethodSelectors.ClassWithNestedInnerClass			0.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests.NestedClassAndMethodSelectors.OtherClassWithNestedInnerClass			0.0
+org.junit.platform.engine.discovery.DiscoverySelectorsTests.TestCaseWithDefaultMethod			0.0
+org.junit.platform.engine.support.discovery.SelectorResolver.Match.Type			0.0
+org.junit.platform.engine.support.hierarchical.DemoEngineExecutionContext			0.0
+org.junit.platform.engine.support.hierarchical.ExclusiveResource.LockMode			0.0
+org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutorTests.MyEngineExecutionContext			0.0
+org.junit.platform.engine.support.hierarchical.Node.ExecutionMode			0.0
+org.junit.platform.engine.support.hierarchical.NodeTreeWalkerIntegrationTests.TestCaseWithGlobalLockRequiringChild			0.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.IndependentClasses			0.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelClassesTestCaseA			0.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelClassesTestCaseB			0.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelClassesTestCaseC			0.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelMethodsTestCaseA			0.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelMethodsTestCaseB			0.0
+org.junit.platform.engine.support.hierarchical.ParallelExecutionIntegrationTests.ParallelMethodsTestCaseC			0.0
+org.junit.platform.engine.support.hierarchical.ThrowableCollectorTests.CustomAbort			0.0
+org.junit.platform.jfr.FlightRecordingDiscoveryListener.DiscoveryEvent			0.0
+org.junit.platform.jfr.FlightRecordingDiscoveryListener.EngineDiscoveryEvent			0.0
+org.junit.platform.jfr.FlightRecordingDiscoveryListener.LauncherDiscoveryEvent			0.0
+org.junit.platform.jfr.FlightRecordingExecutionListener.ExecutionEvent			0.0
+org.junit.platform.jfr.FlightRecordingExecutionListener.ReportEntryEvent			0.0
+org.junit.platform.jfr.FlightRecordingExecutionListener.SkippedTestEvent			0.0
+org.junit.platform.jfr.FlightRecordingExecutionListener.TestExecutionEvent			0.0
+org.junit.platform.jfr.FlightRecordingExecutionListener.TestPlanExecutionEvent			0.0
+org.junit.platform.launcher.EngineDiscoveryResult.Status			0.0
+org.junit.platform.launcher.TagFilterTests.ClassWithBothTags			0.0
+org.junit.platform.launcher.TagFilterTests.ClassWithDifferentTags			0.0
+org.junit.platform.launcher.TagFilterTests.ClassWithNoTags			0.0
+org.junit.platform.launcher.TagFilterTests.ClassWithTag1			0.0
+org.junit.platform.launcher.TagFilterTests.ClassWithTag1AndSurroundingWhitespace			0.0
+org.junit.platform.launcher.TagFilterTests.ClassWithTag2			0.0
+org.junit.platform.launcher.core.OutcomeDelayingEngineExecutionListener.Outcome			0.0
+org.junit.platform.launcher.listeners.AnotherUnusedTestExecutionListener			0.0
+org.junit.platform.launcher.listeners.NoopTestExecutionListener			0.0
+org.junit.platform.launcher.listeners.UnusedTestExecutionListener			0.0
+org.junit.platform.launcher.tagexpression.Operator.Associativity			0.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.TestClass			0.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.TestClassWithTechnicalNames			0.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.TestSuiteWithCustomDisplayName			0.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.TestSuiteWithCustomDisplayNameAndTechnicalNames			0.0
+org.junit.platform.runner.JUnitPlatformRunnerTests.TestSuiteWithDefaultDisplayName			0.0
+org.junit.platform.suite.engine.SuiteEngineTests.InnerSuite			0.0
+org.junit.platform.suite.engine.SuiteEngineTests.PrivateSuite			0.0
+org.junit.platform.suite.engine.testsuites.AbstractSuite			0.0
+org.junit.platform.suite.engine.testsuites.CyclicSuite			0.0
+org.junit.platform.suite.engine.testsuites.DynamicSuite			0.0
+org.junit.platform.suite.engine.testsuites.MultipleSuite			0.0
+org.junit.platform.suite.engine.testsuites.NestedSuite			0.0
+org.junit.platform.suite.engine.testsuites.NestedSuite.Jupiter			0.0
+org.junit.platform.suite.engine.testsuites.NestedSuite.Tagged			0.0
+org.junit.platform.suite.engine.testsuites.SelectClassesSuite			0.0
+org.junit.platform.suite.engine.testsuites.SuiteDisplayNameSuite			0.0
+org.junit.platform.suite.engine.testsuites.SuiteSuite			0.0
+org.junit.platform.testkit.engine.EventType			0.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests.DynamicAndStaticTestClass			0.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests.DynamicTestClass			0.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests.MisbehavingChildTestClass			0.0
+org.junit.vintage.engine.VintageTestEngineExecutionTests.SuiteWithDynamicAndStaticTestClass			0.0
+org.junit.vintage.engine.VintageTestEngineTestSuite			0.0
+org.junit.vintage.engine.discovery.IsPotentialJUnit4TestClassTests.Bar			0.0
+org.junit.vintage.engine.discovery.IsPotentialJUnit4TestClassTests.Baz			0.0
+org.junit.vintage.engine.discovery.IsPotentialJUnit4TestClassTests.Foo			0.0
+org.junit.vintage.engine.discovery.IsPotentialJUnit4TestClassTests.FooBaz			0.0
+org.junit.vintage.engine.execution.EventType			0.0
+org.junit.vintage.engine.samples.junit4.Categories			0.0
+org.junit.vintage.engine.samples.junit4.CompletelyDynamicTestCase			0.0
+org.junit.vintage.engine.samples.junit4.ConcreteJUnit4TestCase			0.0
+org.junit.vintage.engine.samples.junit4.EmptyIgnoredTestCase			0.0
+org.junit.vintage.engine.samples.junit4.EnclosedJUnit4TestCase			0.0
+org.junit.vintage.engine.samples.junit4.IgnoredJUnit4TestCaseWithNotFilterableRunner			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteOfSuiteWithFilterableChildRunner			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteOfSuiteWithIgnoredJUnit4TestCase			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteOfSuiteWithJUnit4TestCaseWithAssumptionFailureInBeforeClass			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteOfSuiteWithJUnit4TestCaseWithErrorInBeforeClass			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithExceptionThrowingRunner			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithIgnoredJUnit4TestCase			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithJUnit3SuiteWithSingleTestCase			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithJUnit4TestCaseWithAssumptionFailureInBeforeClass			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithJUnit4TestCaseWithErrorInBeforeClass			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithJUnit4TestCaseWithFailingDescriptionThatIsNotReportedAsFinished			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithJUnit4TestCaseWithRunnerWithCustomUniqueIdsAndDisplayNames			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithPlainJUnit4TestCaseWithSingleTestWhichIsIgnored			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4SuiteWithTwoTestCases			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithExceptionThrowingRunner			0.0
+org.junit.vintage.engine.samples.junit4.JUnit4TestCaseWithRunnerWithDuplicateChangingChildDescriptions			0.0
+org.junit.vintage.engine.samples.junit4.PlainJUnit4TestCaseWithSingleInheritedTestWhichFails			0.0
+org.junit.vintage.engine.samples.junit4.TestCaseRunWithJUnitPlatformRunner			0.0
