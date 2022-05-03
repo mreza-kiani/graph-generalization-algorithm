@@ -41,6 +41,11 @@ abstract class BaseCompareGraphTest {
         println("Graph 2 Diff:")
         println(graph2Diff)
 
+        println("---------------------------------------------")
+        printTopNodesIn(commonGraph, label = "Common Graph", notInCommon = false)
+        printTopNodesIn(graph1Diff, label = "Graph 1 Diff", notInCommon = true)
+        printTopNodesIn(graph2Diff, label = "Graph 2 Diff", notInCommon = true)
+
         checkCommonGraph(commonGraph)
         checkGraph1Diff(graph1Diff)
         checkGraph2Diff(graph2Diff)
@@ -50,6 +55,16 @@ abstract class BaseCompareGraphTest {
 
         assertEquals(graph1, Graph.reconstruct(commonGraph, graphNumber = 1))
         assertEquals(graph2, Graph.reconstruct(commonGraph, graphNumber = 2))
+    }
+
+    private fun printTopNodesIn(commonGraph: Graph, label: String, notInCommon: Boolean) {
+        println("Top nodes in ${label}:")
+        commonGraph.extractNodeCentrality()
+            .filter { (node, _) -> if (notInCommon) !node.isCommon else true }
+            .onEachIndexed { index, (node, score) ->
+                if (index < 10)
+                    println("\t${index + 1}. $node: $score")
+            }
     }
 
     abstract fun checkCommonGraph(commonGraph: Graph)
