@@ -39,6 +39,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         )
 
         fun compare(graph1: Graph, graph2: Graph): Triple<Graph, Graph, Graph> {
+            // TODO: Change variable names based on the structural similarities and then we have a ordinary generalization algorithm.
+            // TODO: Having a matching-threshold to ignore some of the similarities
+
             val commonNodes = graph1.nodes.filter { it in graph2.nodes }
             val commonEdges = mutableMapOf<Node, List<Edge>>()
             var totalSimilarityScore = 0.0
