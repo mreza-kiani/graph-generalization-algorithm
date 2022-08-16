@@ -1,5 +1,6 @@
 package ca.ucalgary.cs.graph
 
+import ca.ucalgary.cs.algorithm.StructuralMatchingAlgorithm
 import ca.ucalgary.cs.exceptions.IllegalEdgeException
 import ca.ucalgary.cs.utils.areListsEqual
 import ca.ucalgary.cs.utils.areListsSubset
@@ -39,6 +40,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         )
 
         fun compare(graph1: Graph, graph2: Graph): Triple<Graph, Graph, Graph> {
+            alterNamesOfSameNodes(graph1, graph2)
             // TODO: Change variable names based on the structural similarities and then we have a ordinary generalization algorithm.
             // TODO: Having a matching-threshold to ignore some of the similarities
 
@@ -92,6 +94,10 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             val g2Diff = graph2 - commonGraph
 
             return Triple(commonGraph, g1Diff, g2Diff)
+        }
+
+        private fun alterNamesOfSameNodes(graph1: Graph, graph2: Graph) {
+            StructuralMatchingAlgorithm.matchSameNodes(graph1, graph2)
         }
 
         private fun mergeLonelyNodeVariable(
@@ -351,5 +357,13 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             EdgeVariable.updateNodeVariablesOf(edgeVariables, listOf(nv), simplifiedNodeVariable)
             nodeVariables[i] = simplifiedNodeVariable
         }
+    }
+
+    fun degreeOf(node: Node): Int {
+        val outDegree = edges[node]?.size ?: 0
+        val inDegree = edges.filter { (key, _) -> key != node }.map { (_, list) ->
+            if (node in list.map { it.to }) 1 else 0
+        }.sum()
+        return outDegree + inDegree
     }
 }

@@ -1,6 +1,6 @@
 package ca.ucalgary.cs.graph
 
-open class Node(val name: String, var isCommon: Boolean = false) : EdgeVariableLeg {
+open class Node(val name: String, var code: Int? = null, var isCommon: Boolean = false) : EdgeVariableLeg {
     override fun equals(other: Any?): Boolean {
         if (other !is Node)
             return false
@@ -8,10 +8,14 @@ open class Node(val name: String, var isCommon: Boolean = false) : EdgeVariableL
     }
 
     override fun hashCode(): Int {
-        return name.hashCode()
+        return completeName().hashCode()
     }
 
     override fun toString(): String {
-        return "Node{$name}"
+        return "Node{${completeName()}}"
+    }
+
+    private fun completeName(): String {
+        return if (code == null) name else "$name-$code"
     }
 }
