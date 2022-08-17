@@ -15,6 +15,10 @@ open class Edge(val from: Node, val to: Node, val name: String = "") {
         return "Edge${if (name.isNotBlank()) "{$name}" else ""}[$from->$to]"
     }
 
+    fun contain(node: Node): Boolean {
+        return from == node || to == node
+    }
+
     companion object {
         fun from(tail: Node, heads: List<Node>) = heads.map { Edge(tail, it) }
     }
