@@ -30,6 +30,8 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
 
     fun edgesOf(node: Node) = edges[node] ?: emptyList()
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
+    fun allInAndOutEdgesOf(node: Node) = edges.values.flatten().filter { edge -> edge.contain(node) }
+    fun degreeOf(node: Node): Int = allInAndOutEdgesOf(node).size
 
     companion object {
         fun from(nodes: List<Node>, edges: Map<Node, List<Node>>) = Graph(
@@ -359,11 +361,4 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         }
     }
 
-    fun degreeOf(node: Node): Int {
-        val outDegree = edges[node]?.size ?: 0
-        val inDegree = edges.filter { (key, _) -> key != node }.map { (_, list) ->
-            if (node in list.map { it.to }) 1 else 0
-        }.sum()
-        return outDegree + inDegree
-    }
 }

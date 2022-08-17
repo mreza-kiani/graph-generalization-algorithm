@@ -1,6 +1,6 @@
 package ca.ucalgary.cs.graph
 
-open class Node(val name: String, var code: Int? = null, var isCommon: Boolean = false) : EdgeVariableLeg {
+open class Node(var name: String, var code: Int? = null, var isCommon: Boolean = false) : EdgeVariableLeg {
     override fun equals(other: Any?): Boolean {
         if (other !is Node)
             return false
@@ -15,7 +15,6 @@ open class Node(val name: String, var code: Int? = null, var isCommon: Boolean =
         return "Node{${completeName()}}"
     }
 
-    private fun completeName(): String {
-        return if (code == null) name else "$name-$code"
-    }
+    fun completeName() = if (code == null) name else "$name-$code"
+    fun isExactMatch(other: Node) = completeName() == other.completeName()
 }

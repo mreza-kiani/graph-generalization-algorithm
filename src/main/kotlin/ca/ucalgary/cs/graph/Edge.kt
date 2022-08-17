@@ -16,7 +16,7 @@ open class Edge(val from: Node, val to: Node, val name: String = "") {
     }
 
     fun contain(node: Node): Boolean {
-        return from == node || to == node
+        return node.isExactMatch(from) || node.isExactMatch(to)
     }
 
     companion object {
