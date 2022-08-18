@@ -1,6 +1,21 @@
 package ca.ucalgary.cs.graph
 
-open class Node(var name: String, var code: Int? = null, var isCommon: Boolean = false) : EdgeVariableLeg {
+open class Node(
+    var name: String,
+    isDuplicate: Boolean = false,
+    var code: Int? = null,
+    var isCommon: Boolean = false
+) : EdgeVariableLeg {
+
+    init {
+        if (isDuplicate)
+            code = codeCounter++
+    }
+
+    companion object {
+        private var codeCounter = 1
+    }
+
     override fun equals(other: Any?): Boolean {
         if (other !is Node)
             return false

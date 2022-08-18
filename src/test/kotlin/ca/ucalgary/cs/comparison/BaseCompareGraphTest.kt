@@ -3,6 +3,7 @@ package ca.ucalgary.cs.comparison
 import ca.ucalgary.cs.exceptions.UninitializedGraphException
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.utils.areListsEqual
+import ca.ucalgary.cs.utils.areListsSubset
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -50,6 +51,7 @@ abstract class BaseCompareGraphTest {
         checkGraph1Diff(graph1Diff)
         checkGraph2Diff(graph2Diff)
 
+        // TODO: fix reconstruction with the renamed nodes
         assertEquals(graph1, Graph.reconstruct(commonGraph, graph1Diff))
         assertEquals(graph2, Graph.reconstruct(commonGraph, graph2Diff))
 
@@ -73,4 +75,7 @@ abstract class BaseCompareGraphTest {
 
     fun <E> checkListsEquality(first: List<E>?, second: List<E>?, message: String = "") =
         assertTrue(message, areListsEqual(first, second))
+
+    fun <E> checkListsInclusion(first: List<E>, second: List<E>, message: String = "") =
+        assertTrue(message, areListsSubset(first, second))
 }
