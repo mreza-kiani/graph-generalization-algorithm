@@ -53,7 +53,7 @@ private fun getDottedUndirectedLinkTo(neighbor: Node) =
     Link.to(getMutNode(neighbor)).with(Style.DOTTED, Arrow.NONE)
 
 fun getMutNode(node: Node): MutableNode {
-    val mutNode = mutNode(node.name)
+    val mutNode = mutNode(node.completeName())
     if (node is NodeVariable)
         mutNode.attrs().add(Shape.RECTANGLE, Style.FILLED, Color.hsv(.7, .3, 1.0))
     else if (node.isCommon)

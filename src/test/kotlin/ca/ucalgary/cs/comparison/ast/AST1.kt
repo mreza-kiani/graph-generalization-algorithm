@@ -4,6 +4,7 @@ import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Edge
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
+import ca.ucalgary.cs.io.visualize
 
 class AST1: BaseCompareGraphTest() {
     override fun initializeGraphs() {
@@ -32,6 +33,9 @@ class AST1: BaseCompareGraphTest() {
                 e to listOf(d),
             )
         )
+
+        graph1.visualize("AST1_G1")
+        graph2.visualize("AST1_G2")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
@@ -44,25 +48,25 @@ class AST1: BaseCompareGraphTest() {
         checkListsInclusion(commonGraph.nodes, listOf(a, d, e, renamedB))
         checkListsEquality(commonGraph.edges[a], Edge.from(a, listOf(renamedB)))
         checkListsEquality(commonGraph.edges[e], Edge.from(e, listOf(d)))
+
+        commonGraph.visualize("AST1_Generalization")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
         val a = Node("A")
         val b = Node("B")
-        val e = Node("E")
         val f = Node("F")
 
-        val renamedCommonB = graph1Diff.nodes.first { b.name in it.name && it.isCommon}
         val uncommonB = graph1Diff.nodes.first { b.name in it.name && !it.isCommon}
-        checkListsEquality(graph1Diff.nodes, listOf(a, renamedCommonB, uncommonB, f, e))
+        checkListsEquality(graph1Diff.nodes, listOf(a, uncommonB, f))
         checkListsEquality(graph1Diff.edges[a], Edge.from(a, listOf(uncommonB)))
+
+        graph1Diff.visualize("AST1_G1_Differences")
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        val b = Node("B")
-        val e = Node("E")
+        checkListsEquality(graph2Diff.nodes, emptyList())
 
-        val renamedCommonB = graph2Diff.nodes.first { b.name in it.name && it.isCommon}
-        checkListsEquality(graph2Diff.nodes, listOf(e, renamedCommonB))
+        graph2Diff.visualize("AST1_G2_Differences")
     }
 }
