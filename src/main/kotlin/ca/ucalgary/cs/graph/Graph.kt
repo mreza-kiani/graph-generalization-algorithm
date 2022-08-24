@@ -28,7 +28,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         """.trimMargin()
     }
 
-    fun edgesOf(node: Node) = edges.filter { (n, _) -> n == node }.values.flatten()
+    fun edgesOf(node: Node) = if (node.code == null) edges[node] ?: emptyList()
+    else edges.filter { (n, _) -> n == node }.values.flatten()
+
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
     fun allInAndOutEdgesOf(node: Node) = edges.values.flatten().filter { edge -> edge.contain(node) }
     fun degreeOf(node: Node): Int = allInAndOutEdgesOf(node).size
