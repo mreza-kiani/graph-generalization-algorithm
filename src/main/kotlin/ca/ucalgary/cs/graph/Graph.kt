@@ -29,7 +29,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
     }
 
     fun edgesOf(node: Node) = if (node.code == null) edges[node] ?: emptyList()
-    else edges.filter { (n, _) -> n == node }.values.flatten()
+    else edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten()
 
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
     fun allInAndOutEdgesOf(node: Node) = edges.values.flatten().filter { edge -> edge.contain(node) }
@@ -48,7 +48,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             // TODO: Change variable names based on the structural similarities and then we have a ordinary generalization algorithm.
             // TODO: Having a matching-threshold to ignore some of the similarities
 
-            val commonNodes = graph1.nodes.filter { it in graph2.nodes }
+            val commonNodes = graph1.nodes.filter { it in graph2.nodes }.onEach { it.isCommon = true }
             val commonEdges = mutableMapOf<Node, List<Edge>>()
             var totalSimilarityScore = 0.0
 
