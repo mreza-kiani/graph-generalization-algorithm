@@ -22,7 +22,7 @@ fun Graph.visualize(name: String) {
         .associateWith { edgesOf(it) }
         .map { (node, edges) ->
             g.add(getMutNode(node))
-            edges.forEach { edge ->
+            edges.reversed().forEach { edge ->
                 g.add(getMutNode(node).addLink(getMutNode(edge.to)))
             }
         }
