@@ -49,6 +49,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             // TODO: Having a matching-threshold to ignore some of the similarities
 
             val commonNodes = graph1.nodes.filter { it in graph2.nodes }.onEach { it.isCommon = true }
+            graph2.nodes.filter { it in graph1.nodes }.onEach { it.isCommon = true }
             val commonEdges = mutableMapOf<Node, List<Edge>>()
             var totalSimilarityScore = 0.0
 
