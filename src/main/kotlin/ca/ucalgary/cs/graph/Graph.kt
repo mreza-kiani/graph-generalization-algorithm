@@ -34,6 +34,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
     fun allInAndOutEdgesOf(node: Node) = edges.values.flatten().filter { edge -> edge.contain(node) }
     fun degreeOf(node: Node): Int = allInAndOutEdgesOf(node).size
+    fun degreeOfMatchedNodes(node: Node): Int = getAllInAndOutNeighbors(node).filter { it.isCommon }.size
+    private fun getAllInAndOutNeighbors(node: Node) =
+        allInAndOutEdgesOf(node).map { edge -> if (edge.to.isExactMatch(node)) edge.from else edge.to }
 
     companion object {
         fun from(nodes: List<Node>, edges: Map<Node, List<Node>>) = Graph(
@@ -44,12 +47,12 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         )
 
         fun compare(graph1: Graph, graph2: Graph): Triple<Graph, Graph, Graph> {
+            markCommonNodes(graph1, graph2)
             alterNamesOfSameNodes(graph1, graph2)
             // TODO: Change variable names based on the structural similarities and then we have a ordinary generalization algorithm.
             // TODO: Having a matching-threshold to ignore some of the similarities
 
-            val commonNodes = graph1.nodes.filter { it in graph2.nodes }.onEach { it.isCommon = true }
-            graph2.nodes.filter { it in graph1.nodes }.onEach { it.isCommon = true }
+            val commonNodes = graph1.nodes.filter { it in graph2.nodes }
             val commonEdges = mutableMapOf<Node, List<Edge>>()
             var totalSimilarityScore = 0.0
 
@@ -99,6 +102,11 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             val g2Diff = graph2 - commonGraph
 
             return Triple(commonGraph, g1Diff, g2Diff)
+        }
+
+        private fun markCommonNodes(graph1: Graph, graph2: Graph) {
+            graph1.nodes.filter { n1 -> graph2.nodes.any { n2 -> n1.isExactMatch(n2) } }.forEach { it.isCommon = true }
+            graph2.nodes.filter { n2 -> graph1.nodes.any { n1 -> n1.isExactMatch(n2) } }.forEach { it.isCommon = true }
         }
 
         private fun alterNamesOfSameNodes(graph1: Graph, graph2: Graph) {

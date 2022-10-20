@@ -7,6 +7,10 @@ open class Edge(val from: Node, val to: Node, val name: String = "") {
         return from == other.from && to == other.to && name == other.name
     }
 
+    fun isExactMatch(other: Edge): Boolean {
+        return from.isExactMatch(other.from) && to.isExactMatch(other.to) && name == other.name
+    }
+
     override fun hashCode(): Int {
         return name.hashCode()
     }
