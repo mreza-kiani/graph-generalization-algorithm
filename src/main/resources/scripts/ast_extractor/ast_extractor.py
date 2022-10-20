@@ -48,7 +48,7 @@ def process_the_tree(node: Node, parent_name=None):
     if len(node.children) == 0:
         if node.type == 'identifier' or 'literal' in node.type:
             child_name = get_random_name()
-            child_def = node.text.decode('ascii')
+            child_def = node.text.decode('ascii').replace("\"", "\\\"")
             edges_mapping[child_name] = child_def
             edges[variable_name] = [child_name]
     else:
@@ -91,4 +91,4 @@ def copy_kotlin_declaration(graph_number):
 if __name__ == '__main__':
     java_class = read_java_class('Test.java')
     process_the_tree(java_class.root_node)
-    copy_kotlin_declaration(graph_number=2)
+    copy_kotlin_declaration(graph_number=1)
