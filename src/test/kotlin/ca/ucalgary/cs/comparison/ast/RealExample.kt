@@ -8,321 +8,321 @@ import ca.ucalgary.cs.io.visualize
 
 class RealExample: BaseCompareGraphTest() {
     override fun initializeGraphs() {
-        val qxp9 = Node("program")
-        val jwd3 = Node("class_declaration", isDuplicate = true)
-        val bre9 = Node("class", isDuplicate = true)
-        val gpy3 = Node("identifier", isDuplicate = true)
-        val das0 = Node("Animal")
-        val tlq1 = Node("class_body", isDuplicate = true)
-        val qnu7 = Node("{", isDuplicate = true)
-        val jlx5 = Node("method_declaration", isDuplicate = true)
-        val oor7 = Node("modifiers", isDuplicate = true)
-        val idu2 = Node("public", isDuplicate = true)
-        val ntj8 = Node("void_type", isDuplicate = true)
-        val mto6 = Node("identifier", isDuplicate = true)
-        val spn1 = Node("animalSound", isDuplicate = true)
-        val iyj7 = Node("formal_parameters", isDuplicate = true)
-        val obl8 = Node("(", isDuplicate = true)
-        val gwt2 = Node(")", isDuplicate = true)
-        val wam5 = Node("block", isDuplicate = true)
-        val uah7 = Node("{", isDuplicate = true)
-        val yes6 = Node("expression_statement", isDuplicate = true)
-        val lni3 = Node("method_invocation", isDuplicate = true)
-        val gty7 = Node("field_access", isDuplicate = true)
-        val ipl2 = Node("identifier", isDuplicate = true)
-        val dgl5 = Node("System", isDuplicate = true)
-        val pto4 = Node(".", isDuplicate = true)
-        val ehg6 = Node("identifier", isDuplicate = true)
-        val qef2 = Node("out", isDuplicate = true)
-        val pog5 = Node(".", isDuplicate = true)
-        val chl4 = Node("identifier", isDuplicate = true)
-        val olm8 = Node("println", isDuplicate = true)
-        val dgg7 = Node("argument_list", isDuplicate = true)
-        val ins9 = Node("(", isDuplicate = true)
-        val moj1 = Node("string_literal", isDuplicate = true)
-        val eyl3 = Node("The animal makes a sound")
-        val azw9 = Node(")", isDuplicate = true)
-        val bla2 = Node(";", isDuplicate = true)
-        val vto5 = Node("}", isDuplicate = true)
-        val wqp0 = Node("}", isDuplicate = true)
-        val pbr4 = Node("class_declaration", isDuplicate = true)
-        val bro2 = Node("class", isDuplicate = true)
-        val zbn2 = Node("identifier", isDuplicate = true)
-        val fpy0 = Node("Pig")
-        val osy2 = Node("superclass", isDuplicate = true)
-        val aww8 = Node("extends", isDuplicate = true)
-        val xyt7 = Node("type_identifier", isDuplicate = true)
-        val jgo6 = Node("class_body", isDuplicate = true)
-        val mle1 = Node("{", isDuplicate = true)
-        val dyv8 = Node("method_declaration", isDuplicate = true)
-        val yin4 = Node("modifiers", isDuplicate = true)
-        val krx9 = Node("public", isDuplicate = true)
-        val nzz8 = Node("void_type", isDuplicate = true)
-        val csq8 = Node("identifier", isDuplicate = true)
-        val zoj7 = Node("animalSound", isDuplicate = true)
-        val vca2 = Node("formal_parameters", isDuplicate = true)
-        val emd4 = Node("(", isDuplicate = true)
-        val rlg2 = Node(")", isDuplicate = true)
-        val mxs3 = Node("block", isDuplicate = true)
-        val caq6 = Node("{", isDuplicate = true)
-        val zwo7 = Node("expression_statement", isDuplicate = true)
-        val isj4 = Node("method_invocation", isDuplicate = true)
-        val juh8 = Node("field_access", isDuplicate = true)
-        val djf3 = Node("identifier", isDuplicate = true)
-        val wfy9 = Node("System", isDuplicate = true)
-        val qdq9 = Node(".", isDuplicate = true)
-        val fyl2 = Node("identifier", isDuplicate = true)
-        val abn4 = Node("out", isDuplicate = true)
-        val aaj7 = Node(".", isDuplicate = true)
-        val qwl5 = Node("identifier", isDuplicate = true)
-        val suq7 = Node("println", isDuplicate = true)
-        val ohb4 = Node("argument_list", isDuplicate = true)
-        val nod4 = Node("(", isDuplicate = true)
-        val joa5 = Node("string_literal", isDuplicate = true)
-        val who6 = Node("The pig says: wee wee")
-        val lgn3 = Node(")", isDuplicate = true)
-        val swv0 = Node(";", isDuplicate = true)
-        val wbz7 = Node("}", isDuplicate = true)
-        val ymm9 = Node("}", isDuplicate = true)
-        val eey7 = Node("class_declaration", isDuplicate = true)
-        val pew7 = Node("class", isDuplicate = true)
-        val zeo1 = Node("identifier", isDuplicate = true)
-        val iuw4 = Node("Dog")
-        val oyy0 = Node("superclass", isDuplicate = true)
-        val jvz6 = Node("extends", isDuplicate = true)
-        val vqx6 = Node("type_identifier", isDuplicate = true)
-        val npj5 = Node("class_body", isDuplicate = true)
-        val rzn2 = Node("{", isDuplicate = true)
-        val jnr9 = Node("method_declaration", isDuplicate = true)
-        val jho4 = Node("modifiers", isDuplicate = true)
-        val hnl5 = Node("public", isDuplicate = true)
-        val hhq5 = Node("void_type", isDuplicate = true)
-        val mme1 = Node("identifier", isDuplicate = true)
-        val ltr3 = Node("animalSound", isDuplicate = true)
-        val bfn2 = Node("formal_parameters", isDuplicate = true)
-        val frn1 = Node("(", isDuplicate = true)
-        val wej5 = Node(")", isDuplicate = true)
-        val ywe9 = Node("block", isDuplicate = true)
-        val acn7 = Node("{", isDuplicate = true)
-        val lku2 = Node("expression_statement", isDuplicate = true)
-        val lid8 = Node("method_invocation", isDuplicate = true)
-        val flq7 = Node("field_access", isDuplicate = true)
-        val cwt3 = Node("identifier", isDuplicate = true)
-        val npe7 = Node("System", isDuplicate = true)
-        val fcz8 = Node(".", isDuplicate = true)
-        val lvr3 = Node("identifier", isDuplicate = true)
-        val yde8 = Node("out", isDuplicate = true)
-        val cyb0 = Node(".", isDuplicate = true)
-        val qtf7 = Node("identifier", isDuplicate = true)
-        val clw4 = Node("println", isDuplicate = true)
-        val ltb0 = Node("argument_list", isDuplicate = true)
-        val tpc5 = Node("(", isDuplicate = true)
-        val gqh5 = Node("string_literal", isDuplicate = true)
-        val yoj3 = Node("The dog says: bow wow")
-        val rwh0 = Node(")", isDuplicate = true)
-        val xlk5 = Node(";", isDuplicate = true)
-        val crf6 = Node("}", isDuplicate = true)
-        val vkw0 = Node("}", isDuplicate = true)
-        val lzy6 = Node("class_declaration", isDuplicate = true)
-        val nri0 = Node("class", isDuplicate = true)
-        val ird9 = Node("identifier", isDuplicate = true)
-        val hdk3 = Node("Main")
-        val yxr9 = Node("class_body", isDuplicate = true)
-        val wzw7 = Node("{", isDuplicate = true)
-        val ynd9 = Node("method_declaration", isDuplicate = true)
-        val gju8 = Node("modifiers", isDuplicate = true)
-        val izf6 = Node("public", isDuplicate = true)
-        val tag7 = Node("static")
-        val zbq3 = Node("void_type", isDuplicate = true)
-        val jfw5 = Node("identifier", isDuplicate = true)
-        val yvg9 = Node("main")
-        val nxj0 = Node("formal_parameters", isDuplicate = true)
-        val jej4 = Node("(", isDuplicate = true)
-        val wze8 = Node("formal_parameter")
-        val uqj2 = Node("array_type")
-        val cuk2 = Node("type_identifier", isDuplicate = true)
-        val moh5 = Node("dimensions")
-        val oax6 = Node("[")
-        val dvg0 = Node("]")
-        val wkk7 = Node("identifier", isDuplicate = true)
-        val unl8 = Node("args")
-        val pfy6 = Node(")", isDuplicate = true)
-        val ffd0 = Node("block", isDuplicate = true)
-        val mmx0 = Node("{", isDuplicate = true)
-        val vkv1 = Node("local_variable_declaration", isDuplicate = true)
-        val gpt1 = Node("type_identifier", isDuplicate = true)
-        val vca4 = Node("variable_declarator", isDuplicate = true)
-        val vjr0 = Node("identifier", isDuplicate = true)
-        val scu7 = Node("myAnimal", isDuplicate = true)
-        val tja7 = Node("=", isDuplicate = true)
-        val nfj0 = Node("object_creation_expression", isDuplicate = true)
-        val wwe3 = Node("new", isDuplicate = true)
-        val edu1 = Node("type_identifier", isDuplicate = true)
-        val yxg1 = Node("argument_list", isDuplicate = true)
-        val faq7 = Node("(", isDuplicate = true)
-        val xfc9 = Node(")", isDuplicate = true)
-        val vwe7 = Node(";", isDuplicate = true)
-        val fpk4 = Node("line_comment", isDuplicate = true)
-        val sjs4 = Node("local_variable_declaration", isDuplicate = true)
-        val fah8 = Node("type_identifier", isDuplicate = true)
-        val eit8 = Node("variable_declarator", isDuplicate = true)
-        val wlj5 = Node("identifier", isDuplicate = true)
-        val qal1 = Node("myPig", isDuplicate = true)
-        val ryd0 = Node("=", isDuplicate = true)
-        val jke6 = Node("object_creation_expression", isDuplicate = true)
-        val vbn8 = Node("new", isDuplicate = true)
-        val hjd6 = Node("type_identifier", isDuplicate = true)
-        val mec8 = Node("argument_list", isDuplicate = true)
-        val svy4 = Node("(", isDuplicate = true)
-        val cuz9 = Node(")", isDuplicate = true)
-        val otb8 = Node(";", isDuplicate = true)
-        val fpi6 = Node("line_comment", isDuplicate = true)
-        val dje8 = Node("local_variable_declaration", isDuplicate = true)
-        val rfi0 = Node("type_identifier", isDuplicate = true)
-        val bla3 = Node("variable_declarator", isDuplicate = true)
-        val gua7 = Node("identifier", isDuplicate = true)
-        val lmi3 = Node("myDog", isDuplicate = true)
-        val atj9 = Node("=", isDuplicate = true)
-        val yqs4 = Node("object_creation_expression", isDuplicate = true)
-        val jgq8 = Node("new", isDuplicate = true)
-        val ezl2 = Node("type_identifier", isDuplicate = true)
-        val piw9 = Node("argument_list", isDuplicate = true)
-        val giu8 = Node("(", isDuplicate = true)
-        val mda6 = Node(")", isDuplicate = true)
-        val umc4 = Node(";", isDuplicate = true)
-        val miy9 = Node("line_comment", isDuplicate = true)
-        val xah9 = Node("expression_statement", isDuplicate = true)
-        val ulf5 = Node("method_invocation", isDuplicate = true)
-        val ank8 = Node("identifier", isDuplicate = true)
-        val pxb3 = Node("myAnimal", isDuplicate = true)
-        val acw0 = Node(".", isDuplicate = true)
-        val vmq4 = Node("identifier", isDuplicate = true)
-        val yru4 = Node("animalSound", isDuplicate = true)
-        val pvh0 = Node("argument_list", isDuplicate = true)
-        val hnb4 = Node("(", isDuplicate = true)
-        val tee6 = Node(")", isDuplicate = true)
-        val fdj1 = Node(";", isDuplicate = true)
-        val ies7 = Node("expression_statement", isDuplicate = true)
-        val nlb9 = Node("method_invocation", isDuplicate = true)
-        val wec4 = Node("identifier", isDuplicate = true)
-        val acz6 = Node("myPig", isDuplicate = true)
-        val pgj9 = Node(".", isDuplicate = true)
-        val aan7 = Node("identifier", isDuplicate = true)
-        val cqw5 = Node("animalSound", isDuplicate = true)
-        val jxq2 = Node("argument_list", isDuplicate = true)
-        val rvg9 = Node("(", isDuplicate = true)
-        val syy9 = Node(")", isDuplicate = true)
-        val aex2 = Node(";", isDuplicate = true)
-        val wzz1 = Node("expression_statement", isDuplicate = true)
-        val thr0 = Node("method_invocation", isDuplicate = true)
-        val npt5 = Node("identifier", isDuplicate = true)
-        val ted1 = Node("myDog", isDuplicate = true)
-        val moc2 = Node(".", isDuplicate = true)
-        val zfs8 = Node("identifier", isDuplicate = true)
-        val hxe9 = Node("animalSound", isDuplicate = true)
-        val cnk9 = Node("argument_list", isDuplicate = true)
-        val lfh3 = Node("(", isDuplicate = true)
-        val osq7 = Node(")", isDuplicate = true)
-        val fhr4 = Node(";", isDuplicate = true)
-        val dyj2 = Node("}", isDuplicate = true)
-        val yui2 = Node("}", isDuplicate = true)
+        val xui5 = Node("program")
+        val ttx6 = Node("class_declaration", isDuplicate = true)
+        val mii9 = Node("class", isDuplicate = true)
+        val pij9 = Node("identifier", isDuplicate = true)
+        val vol5 = Node("Animal")
+        val xut6 = Node("class_body", isDuplicate = true)
+        val mic0 = Node("{", isDuplicate = true)
+        val mok8 = Node("method_declaration", isDuplicate = true)
+        val ngp1 = Node("modifiers", isDuplicate = true)
+        val chy2 = Node("public", isDuplicate = true)
+        val hxu6 = Node("void_type", isDuplicate = true)
+        val qax6 = Node("identifier", isDuplicate = true)
+        val uts2 = Node("animalSound", isDuplicate = true)
+        val kwt8 = Node("formal_parameters", isDuplicate = true)
+        val qzy1 = Node("(", isDuplicate = true)
+        val zlj7 = Node(")", isDuplicate = true)
+        val ezg4 = Node("block", isDuplicate = true)
+        val mtg1 = Node("{", isDuplicate = true)
+        val fdu1 = Node("expression_statement", isDuplicate = true)
+        val bzw3 = Node("method_invocation", isDuplicate = true)
+        val rge7 = Node("field_access", isDuplicate = true)
+        val bal1 = Node("identifier", isDuplicate = true)
+        val cvh7 = Node("System", isDuplicate = true)
+        val ztf3 = Node(".", isDuplicate = true)
+        val aqg2 = Node("identifier", isDuplicate = true)
+        val dsj8 = Node("out", isDuplicate = true)
+        val qyc0 = Node(".", isDuplicate = true)
+        val wgi0 = Node("identifier", isDuplicate = true)
+        val dzh0 = Node("println", isDuplicate = true)
+        val uzg4 = Node("argument_list", isDuplicate = true)
+        val lla8 = Node("(", isDuplicate = true)
+        val cve1 = Node("string_literal", isDuplicate = true)
+        val jqe6 = Node("\"The animal makes a sound\"")
+        val nxh8 = Node(")", isDuplicate = true)
+        val kwr3 = Node(";", isDuplicate = true)
+        val iyq8 = Node("}", isDuplicate = true)
+        val aex6 = Node("}", isDuplicate = true)
+        val lan8 = Node("class_declaration", isDuplicate = true)
+        val uyi0 = Node("class", isDuplicate = true)
+        val kjo5 = Node("identifier", isDuplicate = true)
+        val pxo1 = Node("Dog")
+        val vuw3 = Node("superclass", isDuplicate = true)
+        val twv5 = Node("extends", isDuplicate = true)
+        val xbz7 = Node("type_identifier", isDuplicate = true)
+        val qtb7 = Node("class_body", isDuplicate = true)
+        val wbd8 = Node("{", isDuplicate = true)
+        val mqi7 = Node("method_declaration", isDuplicate = true)
+        val htj2 = Node("modifiers", isDuplicate = true)
+        val ief6 = Node("public", isDuplicate = true)
+        val kls9 = Node("void_type", isDuplicate = true)
+        val yir2 = Node("identifier", isDuplicate = true)
+        val pxw0 = Node("animalSound", isDuplicate = true)
+        val tnv1 = Node("formal_parameters", isDuplicate = true)
+        val upp2 = Node("(", isDuplicate = true)
+        val wbs5 = Node(")", isDuplicate = true)
+        val uhj1 = Node("block", isDuplicate = true)
+        val fya8 = Node("{", isDuplicate = true)
+        val wdc3 = Node("expression_statement", isDuplicate = true)
+        val ztr6 = Node("method_invocation", isDuplicate = true)
+        val qfn3 = Node("field_access", isDuplicate = true)
+        val rao8 = Node("identifier", isDuplicate = true)
+        val aee0 = Node("System", isDuplicate = true)
+        val yww8 = Node(".", isDuplicate = true)
+        val kxt6 = Node("identifier", isDuplicate = true)
+        val esd5 = Node("out", isDuplicate = true)
+        val bgx0 = Node(".", isDuplicate = true)
+        val wwp7 = Node("identifier", isDuplicate = true)
+        val hoq0 = Node("println", isDuplicate = true)
+        val pya3 = Node("argument_list", isDuplicate = true)
+        val dua4 = Node("(", isDuplicate = true)
+        val oxl1 = Node("string_literal", isDuplicate = true)
+        val fbj9 = Node("\"The dog says: bow wow\"")
+        val ico5 = Node(")", isDuplicate = true)
+        val tam6 = Node(";", isDuplicate = true)
+        val txm1 = Node("}", isDuplicate = true)
+        val jgq3 = Node("}", isDuplicate = true)
+        val duq0 = Node("class_declaration", isDuplicate = true)
+        val bam5 = Node("class", isDuplicate = true)
+        val mbo9 = Node("identifier", isDuplicate = true)
+        val hus7 = Node("Pig")
+        val wzf8 = Node("superclass", isDuplicate = true)
+        val szz5 = Node("extends", isDuplicate = true)
+        val ymu0 = Node("type_identifier", isDuplicate = true)
+        val axa4 = Node("class_body", isDuplicate = true)
+        val bfd0 = Node("{", isDuplicate = true)
+        val nht4 = Node("method_declaration", isDuplicate = true)
+        val nmc7 = Node("modifiers", isDuplicate = true)
+        val zeb2 = Node("public", isDuplicate = true)
+        val nvj3 = Node("void_type", isDuplicate = true)
+        val qhs7 = Node("identifier", isDuplicate = true)
+        val dhb5 = Node("animalSound", isDuplicate = true)
+        val uum5 = Node("formal_parameters", isDuplicate = true)
+        val bke8 = Node("(", isDuplicate = true)
+        val ypk9 = Node(")", isDuplicate = true)
+        val sln2 = Node("block", isDuplicate = true)
+        val veh9 = Node("{", isDuplicate = true)
+        val gpx6 = Node("expression_statement", isDuplicate = true)
+        val ldz8 = Node("method_invocation", isDuplicate = true)
+        val rwt9 = Node("field_access", isDuplicate = true)
+        val pac6 = Node("identifier", isDuplicate = true)
+        val htb4 = Node("System", isDuplicate = true)
+        val urt6 = Node(".", isDuplicate = true)
+        val ucl2 = Node("identifier", isDuplicate = true)
+        val bpf1 = Node("out", isDuplicate = true)
+        val vot4 = Node(".", isDuplicate = true)
+        val nxf7 = Node("identifier", isDuplicate = true)
+        val cow9 = Node("println", isDuplicate = true)
+        val zkm5 = Node("argument_list", isDuplicate = true)
+        val zrq0 = Node("(", isDuplicate = true)
+        val rrn7 = Node("string_literal", isDuplicate = true)
+        val zwd9 = Node("\"The pig says: wee wee\"")
+        val ixl9 = Node(")", isDuplicate = true)
+        val azi9 = Node(";", isDuplicate = true)
+        val iqh1 = Node("}", isDuplicate = true)
+        val lbe9 = Node("}", isDuplicate = true)
+        val lwq2 = Node("class_declaration", isDuplicate = true)
+        val dii5 = Node("class", isDuplicate = true)
+        val mll2 = Node("identifier", isDuplicate = true)
+        val rfv6 = Node("Main")
+        val kpu3 = Node("class_body", isDuplicate = true)
+        val uyh8 = Node("{", isDuplicate = true)
+        val xst7 = Node("method_declaration", isDuplicate = true)
+        val sxd1 = Node("modifiers", isDuplicate = true)
+        val nys1 = Node("public", isDuplicate = true)
+        val nbg5 = Node("static")
+        val vqs7 = Node("void_type", isDuplicate = true)
+        val mzi4 = Node("identifier", isDuplicate = true)
+        val jzm7 = Node("main")
+        val jcj0 = Node("formal_parameters", isDuplicate = true)
+        val jty2 = Node("(", isDuplicate = true)
+        val gpc0 = Node("formal_parameter")
+        val tuh2 = Node("array_type")
+        val ebb3 = Node("type_identifier", isDuplicate = true)
+        val zlq9 = Node("dimensions")
+        val mhf7 = Node("[")
+        val rxj4 = Node("]")
+        val gjt1 = Node("identifier", isDuplicate = true)
+        val mjp9 = Node("args")
+        val auy8 = Node(")", isDuplicate = true)
+        val ejy1 = Node("block", isDuplicate = true)
+        val fdy6 = Node("{", isDuplicate = true)
+        val zdn3 = Node("local_variable_declaration", isDuplicate = true)
+        val evc1 = Node("type_identifier", isDuplicate = true)
+        val ipw1 = Node("variable_declarator", isDuplicate = true)
+        val mlc9 = Node("identifier", isDuplicate = true)
+        val utk7 = Node("myAnimal", isDuplicate = true)
+        val ysr2 = Node("=", isDuplicate = true)
+        val efe6 = Node("object_creation_expression", isDuplicate = true)
+        val wrd1 = Node("new", isDuplicate = true)
+        val tly6 = Node("type_identifier", isDuplicate = true)
+        val wxe0 = Node("argument_list", isDuplicate = true)
+        val ukn0 = Node("(", isDuplicate = true)
+        val fvm9 = Node(")", isDuplicate = true)
+        val zgh4 = Node(";", isDuplicate = true)
+        val brn6 = Node("line_comment", isDuplicate = true)
+        val byf0 = Node("local_variable_declaration", isDuplicate = true)
+        val nlv9 = Node("type_identifier", isDuplicate = true)
+        val edd0 = Node("variable_declarator", isDuplicate = true)
+        val ptu8 = Node("identifier", isDuplicate = true)
+        val igt2 = Node("myPig", isDuplicate = true)
+        val usv9 = Node("=", isDuplicate = true)
+        val fyl0 = Node("object_creation_expression", isDuplicate = true)
+        val nwr5 = Node("new", isDuplicate = true)
+        val zlh8 = Node("type_identifier", isDuplicate = true)
+        val xsy7 = Node("argument_list", isDuplicate = true)
+        val pgk3 = Node("(", isDuplicate = true)
+        val aht0 = Node(")", isDuplicate = true)
+        val gqm0 = Node(";", isDuplicate = true)
+        val lsp0 = Node("line_comment", isDuplicate = true)
+        val luo0 = Node("local_variable_declaration", isDuplicate = true)
+        val npz4 = Node("type_identifier", isDuplicate = true)
+        val xmn4 = Node("variable_declarator", isDuplicate = true)
+        val mvc6 = Node("identifier", isDuplicate = true)
+        val byo6 = Node("myDog", isDuplicate = true)
+        val acd0 = Node("=", isDuplicate = true)
+        val iry5 = Node("object_creation_expression", isDuplicate = true)
+        val zvj5 = Node("new", isDuplicate = true)
+        val hsc4 = Node("type_identifier", isDuplicate = true)
+        val ucy2 = Node("argument_list", isDuplicate = true)
+        val qca3 = Node("(", isDuplicate = true)
+        val ggs4 = Node(")", isDuplicate = true)
+        val raf8 = Node(";", isDuplicate = true)
+        val ifi8 = Node("line_comment", isDuplicate = true)
+        val pdc9 = Node("expression_statement", isDuplicate = true)
+        val oam8 = Node("method_invocation", isDuplicate = true)
+        val cur6 = Node("identifier", isDuplicate = true)
+        val bob6 = Node("myAnimal", isDuplicate = true)
+        val ack8 = Node(".", isDuplicate = true)
+        val zde1 = Node("identifier", isDuplicate = true)
+        val uko3 = Node("animalSound", isDuplicate = true)
+        val ydq8 = Node("argument_list", isDuplicate = true)
+        val hmt2 = Node("(", isDuplicate = true)
+        val bdm2 = Node(")", isDuplicate = true)
+        val rvq3 = Node(";", isDuplicate = true)
+        val glw7 = Node("expression_statement", isDuplicate = true)
+        val kgd1 = Node("method_invocation", isDuplicate = true)
+        val qpo9 = Node("identifier", isDuplicate = true)
+        val man3 = Node("myPig", isDuplicate = true)
+        val ixc2 = Node(".", isDuplicate = true)
+        val kgf6 = Node("identifier", isDuplicate = true)
+        val ycb7 = Node("animalSound", isDuplicate = true)
+        val xws1 = Node("argument_list", isDuplicate = true)
+        val rgl0 = Node("(", isDuplicate = true)
+        val vwc1 = Node(")", isDuplicate = true)
+        val fso9 = Node(";", isDuplicate = true)
+        val smr5 = Node("expression_statement", isDuplicate = true)
+        val xdg9 = Node("method_invocation", isDuplicate = true)
+        val tfz5 = Node("identifier", isDuplicate = true)
+        val ctb4 = Node("myDog", isDuplicate = true)
+        val fgf4 = Node(".", isDuplicate = true)
+        val mnq6 = Node("identifier", isDuplicate = true)
+        val ced7 = Node("animalSound", isDuplicate = true)
+        val grh0 = Node("argument_list", isDuplicate = true)
+        val hmn3 = Node("(", isDuplicate = true)
+        val ybw8 = Node(")", isDuplicate = true)
+        val uph3 = Node(";", isDuplicate = true)
+        val uod4 = Node("}", isDuplicate = true)
+        val vyl6 = Node("}", isDuplicate = true)
 
-        graph1 = Graph.from(
-            nodes = listOf(qxp9, jwd3, bre9, gpy3, das0, tlq1, qnu7, jlx5, oor7, idu2, ntj8, mto6, spn1, iyj7, obl8, gwt2, wam5, uah7, yes6, lni3, gty7, ipl2, dgl5, pto4, ehg6, qef2, pog5, chl4, olm8, dgg7, ins9, moj1, eyl3, azw9, bla2, vto5, wqp0, pbr4, bro2, zbn2, fpy0, osy2, aww8, xyt7, jgo6, mle1, dyv8, yin4, krx9, nzz8, csq8, zoj7, vca2, emd4, rlg2, mxs3, caq6, zwo7, isj4, juh8, djf3, wfy9, qdq9, fyl2, abn4, aaj7, qwl5, suq7, ohb4, nod4, joa5, who6, lgn3, swv0, wbz7, ymm9, eey7, pew7, zeo1, iuw4, oyy0, jvz6, vqx6, npj5, rzn2, jnr9, jho4, hnl5, hhq5, mme1, ltr3, bfn2, frn1, wej5, ywe9, acn7, lku2, lid8, flq7, cwt3, npe7, fcz8, lvr3, yde8, cyb0, qtf7, clw4, ltb0, tpc5, gqh5, yoj3, rwh0, xlk5, crf6, vkw0, lzy6, nri0, ird9, hdk3, yxr9, wzw7, ynd9, gju8, izf6, tag7, zbq3, jfw5, yvg9, nxj0, jej4, wze8, uqj2, cuk2, moh5, oax6, dvg0, wkk7, unl8, pfy6, ffd0, mmx0, vkv1, gpt1, vca4, vjr0, scu7, tja7, nfj0, wwe3, edu1, yxg1, faq7, xfc9, vwe7, fpk4, sjs4, fah8, eit8, wlj5, qal1, ryd0, jke6, vbn8, hjd6, mec8, svy4, cuz9, otb8, fpi6, dje8, rfi0, bla3, gua7, lmi3, atj9, yqs4, jgq8, ezl2, piw9, giu8, mda6, umc4, miy9, xah9, ulf5, ank8, pxb3, acw0, vmq4, yru4, pvh0, hnb4, tee6, fdj1, ies7, nlb9, wec4, acz6, pgj9, aan7, cqw5, jxq2, rvg9, syy9, aex2, wzz1, thr0, npt5, ted1, moc2, zfs8, hxe9, cnk9, lfh3, osq7, fhr4, dyj2, yui2),
+        graph2 = Graph.from(
+            nodes = listOf(xui5, ttx6, mii9, pij9, vol5, xut6, mic0, mok8, ngp1, chy2, hxu6, qax6, uts2, kwt8, qzy1, zlj7, ezg4, mtg1, fdu1, bzw3, rge7, bal1, cvh7, ztf3, aqg2, dsj8, qyc0, wgi0, dzh0, uzg4, lla8, cve1, jqe6, nxh8, kwr3, iyq8, aex6, lan8, uyi0, kjo5, pxo1, vuw3, twv5, xbz7, qtb7, wbd8, mqi7, htj2, ief6, kls9, yir2, pxw0, tnv1, upp2, wbs5, uhj1, fya8, wdc3, ztr6, qfn3, rao8, aee0, yww8, kxt6, esd5, bgx0, wwp7, hoq0, pya3, dua4, oxl1, fbj9, ico5, tam6, txm1, jgq3, duq0, bam5, mbo9, hus7, wzf8, szz5, ymu0, axa4, bfd0, nht4, nmc7, zeb2, nvj3, qhs7, dhb5, uum5, bke8, ypk9, sln2, veh9, gpx6, ldz8, rwt9, pac6, htb4, urt6, ucl2, bpf1, vot4, nxf7, cow9, zkm5, zrq0, rrn7, zwd9, ixl9, azi9, iqh1, lbe9, lwq2, dii5, mll2, rfv6, kpu3, uyh8, xst7, sxd1, nys1, nbg5, vqs7, mzi4, jzm7, jcj0, jty2, gpc0, tuh2, ebb3, zlq9, mhf7, rxj4, gjt1, mjp9, auy8, ejy1, fdy6, zdn3, evc1, ipw1, mlc9, utk7, ysr2, efe6, wrd1, tly6, wxe0, ukn0, fvm9, zgh4, brn6, byf0, nlv9, edd0, ptu8, igt2, usv9, fyl0, nwr5, zlh8, xsy7, pgk3, aht0, gqm0, lsp0, luo0, npz4, xmn4, mvc6, byo6, acd0, iry5, zvj5, hsc4, ucy2, qca3, ggs4, raf8, ifi8, pdc9, oam8, cur6, bob6, ack8, zde1, uko3, ydq8, hmt2, bdm2, rvq3, glw7, kgd1, qpo9, man3, ixc2, kgf6, ycb7, xws1, rgl0, vwc1, fso9, smr5, xdg9, tfz5, ctb4, fgf4, mnq6, ced7, grh0, hmn3, ybw8, uph3, uod4, vyl6),
             edges = mapOf(
-                qxp9 to listOf(jwd3, pbr4, eey7, lzy6),
-                jwd3 to listOf(bre9, gpy3, tlq1),
-                gpy3 to listOf(das0),
-                tlq1 to listOf(qnu7, jlx5, wqp0),
-                jlx5 to listOf(oor7, ntj8, mto6, iyj7, wam5),
-                oor7 to listOf(idu2),
-                mto6 to listOf(spn1),
-                iyj7 to listOf(obl8, gwt2),
-                wam5 to listOf(uah7, yes6, vto5),
-                yes6 to listOf(lni3, bla2),
-                lni3 to listOf(gty7, pog5, chl4, dgg7),
-                gty7 to listOf(ipl2, pto4, ehg6),
-                ipl2 to listOf(dgl5),
-                ehg6 to listOf(qef2),
-                chl4 to listOf(olm8),
-                dgg7 to listOf(ins9, moj1, azw9),
-                moj1 to listOf(eyl3),
-                pbr4 to listOf(bro2, zbn2, osy2, jgo6),
-                zbn2 to listOf(fpy0),
-                osy2 to listOf(aww8, xyt7),
-                jgo6 to listOf(mle1, dyv8, ymm9),
-                dyv8 to listOf(yin4, nzz8, csq8, vca2, mxs3),
-                yin4 to listOf(krx9),
-                csq8 to listOf(zoj7),
-                vca2 to listOf(emd4, rlg2),
-                mxs3 to listOf(caq6, zwo7, wbz7),
-                zwo7 to listOf(isj4, swv0),
-                isj4 to listOf(juh8, aaj7, qwl5, ohb4),
-                juh8 to listOf(djf3, qdq9, fyl2),
-                djf3 to listOf(wfy9),
-                fyl2 to listOf(abn4),
-                qwl5 to listOf(suq7),
-                ohb4 to listOf(nod4, joa5, lgn3),
-                joa5 to listOf(who6),
-                eey7 to listOf(pew7, zeo1, oyy0, npj5),
-                zeo1 to listOf(iuw4),
-                oyy0 to listOf(jvz6, vqx6),
-                npj5 to listOf(rzn2, jnr9, vkw0),
-                jnr9 to listOf(jho4, hhq5, mme1, bfn2, ywe9),
-                jho4 to listOf(hnl5),
-                mme1 to listOf(ltr3),
-                bfn2 to listOf(frn1, wej5),
-                ywe9 to listOf(acn7, lku2, crf6),
-                lku2 to listOf(lid8, xlk5),
-                lid8 to listOf(flq7, cyb0, qtf7, ltb0),
-                flq7 to listOf(cwt3, fcz8, lvr3),
-                cwt3 to listOf(npe7),
-                lvr3 to listOf(yde8),
-                qtf7 to listOf(clw4),
-                ltb0 to listOf(tpc5, gqh5, rwh0),
-                gqh5 to listOf(yoj3),
-                lzy6 to listOf(nri0, ird9, yxr9),
-                ird9 to listOf(hdk3),
-                yxr9 to listOf(wzw7, ynd9, yui2),
-                ynd9 to listOf(gju8, zbq3, jfw5, nxj0, ffd0),
-                gju8 to listOf(izf6, tag7),
-                jfw5 to listOf(yvg9),
-                nxj0 to listOf(jej4, wze8, pfy6),
-                wze8 to listOf(uqj2, wkk7),
-                uqj2 to listOf(cuk2, moh5),
-                moh5 to listOf(oax6, dvg0),
-                wkk7 to listOf(unl8),
-                ffd0 to listOf(mmx0, vkv1, fpk4, sjs4, fpi6, dje8, miy9, xah9, ies7, wzz1, dyj2),
-                vkv1 to listOf(gpt1, vca4, vwe7),
-                vca4 to listOf(vjr0, tja7, nfj0),
-                vjr0 to listOf(scu7),
-                nfj0 to listOf(wwe3, edu1, yxg1),
-                yxg1 to listOf(faq7, xfc9),
-                sjs4 to listOf(fah8, eit8, otb8),
-                eit8 to listOf(wlj5, ryd0, jke6),
-                wlj5 to listOf(qal1),
-                jke6 to listOf(vbn8, hjd6, mec8),
-                mec8 to listOf(svy4, cuz9),
-                dje8 to listOf(rfi0, bla3, umc4),
-                bla3 to listOf(gua7, atj9, yqs4),
-                gua7 to listOf(lmi3),
-                yqs4 to listOf(jgq8, ezl2, piw9),
-                piw9 to listOf(giu8, mda6),
-                xah9 to listOf(ulf5, fdj1),
-                ulf5 to listOf(ank8, acw0, vmq4, pvh0),
-                ank8 to listOf(pxb3),
-                vmq4 to listOf(yru4),
-                pvh0 to listOf(hnb4, tee6),
-                ies7 to listOf(nlb9, aex2),
-                nlb9 to listOf(wec4, pgj9, aan7, jxq2),
-                wec4 to listOf(acz6),
-                aan7 to listOf(cqw5),
-                jxq2 to listOf(rvg9, syy9),
-                wzz1 to listOf(thr0, fhr4),
-                thr0 to listOf(npt5, moc2, zfs8, cnk9),
-                npt5 to listOf(ted1),
-                zfs8 to listOf(hxe9),
-                cnk9 to listOf(lfh3, osq7),
+                xui5 to listOf(ttx6, lan8, duq0, lwq2),
+                ttx6 to listOf(mii9, pij9, xut6),
+                pij9 to listOf(vol5),
+                xut6 to listOf(mic0, mok8, aex6),
+                mok8 to listOf(ngp1, hxu6, qax6, kwt8, ezg4),
+                ngp1 to listOf(chy2),
+                qax6 to listOf(uts2),
+                kwt8 to listOf(qzy1, zlj7),
+                ezg4 to listOf(mtg1, fdu1, iyq8),
+                fdu1 to listOf(bzw3, kwr3),
+                bzw3 to listOf(rge7, qyc0, wgi0, uzg4),
+                rge7 to listOf(bal1, ztf3, aqg2),
+                bal1 to listOf(cvh7),
+                aqg2 to listOf(dsj8),
+                wgi0 to listOf(dzh0),
+                uzg4 to listOf(lla8, cve1, nxh8),
+                cve1 to listOf(jqe6),
+                lan8 to listOf(uyi0, kjo5, vuw3, qtb7),
+                kjo5 to listOf(pxo1),
+                vuw3 to listOf(twv5, xbz7),
+                qtb7 to listOf(wbd8, mqi7, jgq3),
+                mqi7 to listOf(htj2, kls9, yir2, tnv1, uhj1),
+                htj2 to listOf(ief6),
+                yir2 to listOf(pxw0),
+                tnv1 to listOf(upp2, wbs5),
+                uhj1 to listOf(fya8, wdc3, txm1),
+                wdc3 to listOf(ztr6, tam6),
+                ztr6 to listOf(qfn3, bgx0, wwp7, pya3),
+                qfn3 to listOf(rao8, yww8, kxt6),
+                rao8 to listOf(aee0),
+                kxt6 to listOf(esd5),
+                wwp7 to listOf(hoq0),
+                pya3 to listOf(dua4, oxl1, ico5),
+                oxl1 to listOf(fbj9),
+                duq0 to listOf(bam5, mbo9, wzf8, axa4),
+                mbo9 to listOf(hus7),
+                wzf8 to listOf(szz5, ymu0),
+                axa4 to listOf(bfd0, nht4, lbe9),
+                nht4 to listOf(nmc7, nvj3, qhs7, uum5, sln2),
+                nmc7 to listOf(zeb2),
+                qhs7 to listOf(dhb5),
+                uum5 to listOf(bke8, ypk9),
+                sln2 to listOf(veh9, gpx6, iqh1),
+                gpx6 to listOf(ldz8, azi9),
+                ldz8 to listOf(rwt9, vot4, nxf7, zkm5),
+                rwt9 to listOf(pac6, urt6, ucl2),
+                pac6 to listOf(htb4),
+                ucl2 to listOf(bpf1),
+                nxf7 to listOf(cow9),
+                zkm5 to listOf(zrq0, rrn7, ixl9),
+                rrn7 to listOf(zwd9),
+                lwq2 to listOf(dii5, mll2, kpu3),
+                mll2 to listOf(rfv6),
+                kpu3 to listOf(uyh8, xst7, vyl6),
+                xst7 to listOf(sxd1, vqs7, mzi4, jcj0, ejy1),
+                sxd1 to listOf(nys1, nbg5),
+                mzi4 to listOf(jzm7),
+                jcj0 to listOf(jty2, gpc0, auy8),
+                gpc0 to listOf(tuh2, gjt1),
+                tuh2 to listOf(ebb3, zlq9),
+                zlq9 to listOf(mhf7, rxj4),
+                gjt1 to listOf(mjp9),
+                ejy1 to listOf(fdy6, zdn3, brn6, byf0, lsp0, luo0, ifi8, pdc9, glw7, smr5, uod4),
+                zdn3 to listOf(evc1, ipw1, zgh4),
+                ipw1 to listOf(mlc9, ysr2, efe6),
+                mlc9 to listOf(utk7),
+                efe6 to listOf(wrd1, tly6, wxe0),
+                wxe0 to listOf(ukn0, fvm9),
+                byf0 to listOf(nlv9, edd0, gqm0),
+                edd0 to listOf(ptu8, usv9, fyl0),
+                ptu8 to listOf(igt2),
+                fyl0 to listOf(nwr5, zlh8, xsy7),
+                xsy7 to listOf(pgk3, aht0),
+                luo0 to listOf(npz4, xmn4, raf8),
+                xmn4 to listOf(mvc6, acd0, iry5),
+                mvc6 to listOf(byo6),
+                iry5 to listOf(zvj5, hsc4, ucy2),
+                ucy2 to listOf(qca3, ggs4),
+                pdc9 to listOf(oam8, rvq3),
+                oam8 to listOf(cur6, ack8, zde1, ydq8),
+                cur6 to listOf(bob6),
+                zde1 to listOf(uko3),
+                ydq8 to listOf(hmt2, bdm2),
+                glw7 to listOf(kgd1, fso9),
+                kgd1 to listOf(qpo9, ixc2, kgf6, xws1),
+                qpo9 to listOf(man3),
+                kgf6 to listOf(ycb7),
+                xws1 to listOf(rgl0, vwc1),
+                smr5 to listOf(xdg9, uph3),
+                xdg9 to listOf(tfz5, fgf4, mnq6, grh0),
+                tfz5 to listOf(ctb4),
+                mnq6 to listOf(ced7),
+                grh0 to listOf(hmn3, ybw8),
             )
         )
 
@@ -358,7 +358,7 @@ class RealExample: BaseCompareGraphTest() {
         val vhj7 = Node("argument_list", isDuplicate = true)
         val tvy2 = Node("(", isDuplicate = true)
         val mjn0 = Node("string_literal", isDuplicate = true)
-        val cra1 = Node("The animal makes a sound")
+        val cra1 = Node("\"The animal makes a sound\"")
         val mia5 = Node(")", isDuplicate = true)
         val itf4 = Node(";", isDuplicate = true)
         val rfg8 = Node("}", isDuplicate = true)
@@ -397,7 +397,7 @@ class RealExample: BaseCompareGraphTest() {
         val xev3 = Node("argument_list", isDuplicate = true)
         val axz0 = Node("(", isDuplicate = true)
         val qwl6 = Node("string_literal", isDuplicate = true)
-        val kdg9 = Node("The dog says: bow wow")
+        val kdg9 = Node("\"The dog says: bow wow\"")
         val tpm4 = Node(")", isDuplicate = true)
         val iqe3 = Node(";", isDuplicate = true)
         val org9 = Node("}", isDuplicate = true)
@@ -481,7 +481,7 @@ class RealExample: BaseCompareGraphTest() {
         val kks8 = Node("}", isDuplicate = true)
         val hhx0 = Node("}", isDuplicate = true)
 
-        graph2 = Graph.from(
+        graph1 = Graph.from(
             nodes = listOf(bnn8, btl7, sgb5, cox9, nnl9, qjv2, sjt8, mxx5, crj6, qoa2, agx2, iei2, exr6, ios0, lah2, sgs5, zzu1, ppt1, blm3, lcw5, oha6, pkl2, lqc4, lkm3, ygt1, njb2, mrb0, ber7, pub0, vhj7, tvy2, mjn0, cra1, mia5, itf4, rfg8, cpr9, tzx9, jty4, ruh6, gwn0, pfa6, ldq3, nfo9, ocy4, twk2, gby5, bxr6, ezt9, tbs4, scq0, rsm4, igi2, mcb0, drd1, kfe8, kzl9, zjn6, inl2, kpk2, nnq0, wwz4, bxt2, usc6, irg1, vou4, uox8, nns4, xev3, axz0, qwl6, kdg9, tpm4, iqe3, org9, hli7, bjp9, nac9, kny4, fmz1, pmy2, jal0, qcr3, azz9, enn5, ygj1, dxj3, gau4, esh6, qzn7, hug7, xsi3, rtj4, dmk8, qhh2, dam3, sun3, qpy4, ncd1, kxf6, qtw4, pbj1, coy2, rsi2, kot9, nzj7, eei4, ioi2, sri2, szl7, ggz4, tzt7, oxx3, zzl2, iiq0, vrw1, fvz4, mmt4, kid8, owd5, tpc9, jzh5, uen8, cfm2, qxs8, efg8, jhm7, uoa2, luk9, gng0, xnq6, npn1, yos9, vjk2, rvh2, gnf2, sbv8, tfa0, khb1, ljk2, naz4, aaz9, ozl6, guf2, ufz1, sqz5, nnr0, wrf0, bih2, awn8, ser0, ruf4, kks8, hhx0),
             edges = mapOf(
                 bnn8 to listOf(btl7, tzx9, bjp9),
@@ -553,19 +553,21 @@ class RealExample: BaseCompareGraphTest() {
             )
         )
 
-        graph1.visualize("RealExample_G1")
-        graph2.visualize("RealExample_G2")
+        graph1.visualize("Complex/G1")
+        graph2.visualize("Complex/G2")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        commonGraph.visualize("RealExample_Generalization")
+        graph1.visualize("Complex/G1_Generalized")
+        graph2.visualize("Complex/G2_Generalized")
+        commonGraph.visualize("Complex/Generalization")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
-        graph1Diff.visualize("RealExample_G1_Differences")
+        graph1Diff.visualize("Complex/G1_Differences")
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        graph2Diff.visualize("RealExample_G2_Differences")
+        graph2Diff.visualize("Complex/G2_Differences")
     }
 }

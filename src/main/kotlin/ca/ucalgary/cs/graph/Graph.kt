@@ -49,6 +49,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         fun compare(graph1: Graph, graph2: Graph): Triple<Graph, Graph, Graph> {
             markCommonNodes(graph1, graph2)
             alterNamesOfSameNodes(graph1, graph2)
+            unmarkIrrelevantNodes(graph1, graph2)
             // TODO: Change variable names based on the structural similarities and then we have a ordinary generalization algorithm.
             // TODO: Having a matching-threshold to ignore some of the similarities
 
@@ -102,6 +103,10 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             val g2Diff = graph2 - commonGraph
 
             return Triple(commonGraph, g1Diff, g2Diff)
+        }
+
+        private fun unmarkIrrelevantNodes(graph1: Graph, graph2: Graph) {
+            StructuralMatchingAlgorithm.unmarkIrrelevantParents(graph1, graph2)
         }
 
         private fun markCommonNodes(graph1: Graph, graph2: Graph) {

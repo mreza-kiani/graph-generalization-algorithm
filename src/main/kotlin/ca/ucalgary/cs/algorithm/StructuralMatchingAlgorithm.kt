@@ -46,4 +46,9 @@ object StructuralMatchingAlgorithm {
             .filter { (_, list) -> list.size > 1 }
             .values
             .flatten()
+
+    fun unmarkIrrelevantParents(graph: Graph, dependentGraph: Graph) {
+        // TODO       graph.extract
+    }
+
 }
