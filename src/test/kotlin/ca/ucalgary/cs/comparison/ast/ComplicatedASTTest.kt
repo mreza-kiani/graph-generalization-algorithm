@@ -1850,21 +1850,21 @@ class ComplicatedASTTest : BaseCompareGraphTest() {
             )
         )
 
-        graph1.visualize("Complicated/G1")
-        graph2.visualize("Complicated/G2")
+        graph1.visualize("ComplicatedV2/G1")
+        graph2.visualize("ComplicatedV2/G2")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        graph1.visualize("Complicated/G1_Generalized")
-        graph2.visualize("Complicated/G2_Generalized")
-        commonGraph.visualize("Complicated/Generalization")
+        graph1.visualize("ComplicatedV2/G1_Generalized")
+        graph2.visualize("ComplicatedV2/G2_Generalized")
+        commonGraph.visualize("ComplicatedV2/Generalization")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
-        graph1Diff.visualize("Complicated/G1_Differences")
+        graph1Diff.visualize("ComplicatedV2/G1_Differences")
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        graph2Diff.visualize("Complicated/G2_Differences")
+        graph2Diff.visualize("ComplicatedV2/G2_Differences")
     }
 }

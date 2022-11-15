@@ -553,21 +553,21 @@ class RealExample: BaseCompareGraphTest() {
             )
         )
 
-        graph1.visualize("Complex/G1")
-        graph2.visualize("Complex/G2")
+        graph1.visualize("ComplexV2/G1")
+        graph2.visualize("ComplexV2/G2")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        graph1.visualize("Complex/G1_Generalized")
-        graph2.visualize("Complex/G2_Generalized")
-        commonGraph.visualize("Complex/Generalization")
+        graph1.visualize("ComplexV2/G1_Generalized")
+        graph2.visualize("ComplexV2/G2_Generalized")
+        commonGraph.visualize("ComplexV2/Generalization")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
-        graph1Diff.visualize("Complex/G1_Differences")
+        graph1Diff.visualize("ComplexV2/G1_Differences")
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        graph2Diff.visualize("Complex/G2_Differences")
+        graph2Diff.visualize("ComplexV2/G2_Differences")
     }
 }
