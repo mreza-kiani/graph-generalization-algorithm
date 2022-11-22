@@ -4,11 +4,55 @@ import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 
 object StructuralMatchingAlgorithm {
-    const val MATCHING_THRESHOLD = 0.5
+    private const val MATCHING_THRESHOLD = 0.5
+    private const val NODE_SIMILARITY_FACTOR = 0.5
+    private const val PARENT_SIMILARITY_FACTOR = 0.2
+    private const val CHILDREN_SIMILARITY_FACTOR = 0.3
 
     fun matchSameNodes(graph1: Graph, graph2: Graph) {
+        val similarities = List(graph1.nodes.size) { MutableList(graph2.nodes.size) { 0.0 } }
+
+        compareLeaves(similarities, graph1, graph2)
+        compareNonLeaves(similarities, graph1, graph2)
+
         matchSameNodesOf(sourceGraph = graph1, targetGraph = graph2)
         matchSameNodesOf(sourceGraph = graph2, targetGraph = graph1)
+    }
+
+    private fun compareLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
+        val g1Leaves = graph1.getLeaves()
+        val g2Leaves = graph2.getLeaves()
+
+        g1Leaves.forEach { g1Leaf ->
+            val g1NodeIndex = graph2.indexOf(g1Leaf)
+            graph2.nodes.forEachIndexed { g2NodeIndex, g2Node ->
+                if (g2Node !in g2Leaves)
+                    return@forEachIndexed
+
+                val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Leaf.name, g2Node.name) * (NODE_SIMILARITY_FACTOR + CHILDREN_SIMILARITY_FACTOR)
+                val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Leaf), graph1.findParent(g2Node)) * PARENT_SIMILARITY_FACTOR
+                similarities[g1NodeIndex][g2NodeIndex] = leavesSimilarity + parentsSimilarity
+            }
+        }
+    }
+
+    private fun compareNonLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
+        val graph1Levels = graph1.nodes.associateWith { 0 }.toMutableMap()
+        dfs(node = graph1.edges.keys.first(), level = 0, graph1Levels, graph1)
+
+        val graph2Levels = mutableListOf<MutableList<Node>>()
+        dfs(node = graph2.edges.keys.first(), level = 0, graph2Levels, graph2)
+
+        val g1Leaves = graph1.getLeaves()
+        val g2Leaves = graph2.getLeaves()
+
+        for (i in graph1Levels.size - 2 downTo 0)
+            graph1Levels[i].forEach { node ->
+                if (node in g1Leaves)
+                    return@forEach
+
+
+            }
     }
 
     private fun matchSameNodesOf(sourceGraph: Graph, targetGraph: Graph) {
@@ -65,7 +109,8 @@ object StructuralMatchingAlgorithm {
                 val neighbors = graph.edgesOf(node)
                 if (!node.isCommon || neighbors.isEmpty())
                     return@forEach
-                val matchedChildren = neighbors.filter { edge -> dependentGraph.nodes.any { edge.to.isExactMatch(it) } }.size
+                val matchedChildren =
+                    neighbors.filter { edge -> dependentGraph.nodes.any { edge.to.isExactMatch(it) } }.size
                 if (matchedChildren.toDouble() / neighbors.size < MATCHING_THRESHOLD)
                     unmatchNode(node, dependentGraph)
             }
@@ -86,6 +131,16 @@ object StructuralMatchingAlgorithm {
         if (levels.any { seenNodes -> node in seenNodes })
             return
 
+        if (levels.size <= level)
+            levels.add(mutableListOf())
+
+        levels[level].add(node)
+        graph.edgesOf(node).forEach { edge ->
+            dfs(node = edge.to, level = level + 1, levels, graph)
+        }
+    }
+
+    private fun dfs(node: Node, level: Int, levels: Map<Node, MutableList<Int>>, graph: Graph) {
         if (levels.size <= level)
             levels.add(mutableListOf())
 
