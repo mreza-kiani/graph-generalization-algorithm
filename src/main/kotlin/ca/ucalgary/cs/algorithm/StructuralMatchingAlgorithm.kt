@@ -37,17 +37,17 @@ object StructuralMatchingAlgorithm {
     }
 
     private fun compareNonLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
-        val graph1Levels = graph1.nodes.associateWith { 0 }.toMutableMap()
-        dfs(node = graph1.edges.keys.first(), level = 0, graph1Levels, graph1)
+        val graph1Depth = graph1.nodes.associateWith { 0 }.toMutableMap()
+        dfs(node = graph1.edges.keys.first(), graph1Depth, graph1)
 
-        val graph2Levels = mutableListOf<MutableList<Node>>()
-        dfs(node = graph2.edges.keys.first(), level = 0, graph2Levels, graph2)
+        val graph2Depth = graph2.nodes.associateWith { 0 }.toMutableMap()
+        dfs(node = graph2.edges.keys.first(), graph2Depth, graph2)
 
         val g1Leaves = graph1.getLeaves()
         val g2Leaves = graph2.getLeaves()
 
-        for (i in graph1Levels.size - 2 downTo 0)
-            graph1Levels[i].forEach { node ->
+        for (i in graph1Depth.size - 2 downTo 0)
+            graph1Depth[i].forEach { node ->
                 if (node in g1Leaves)
                     return@forEach
 
@@ -140,14 +140,16 @@ object StructuralMatchingAlgorithm {
         }
     }
 
-    private fun dfs(node: Node, level: Int, levels: Map<Node, MutableList<Int>>, graph: Graph) {
-        if (levels.size <= level)
-            levels.add(mutableListOf())
-
-        levels[level].add(node)
-        graph.edgesOf(node).forEach { edge ->
-            dfs(node = edge.to, level = level + 1, levels, graph)
+    private fun dfs(node: Node, depth: MutableMap<Node, Int>, graph: Graph): Int {
+        val edges = graph.edgesOf(node)
+        if (edges.isEmpty()) {
+            depth[node] = 0
+            return 0
         }
+
+        val maximumDepth = edges.maxOfOrNull { edge -> dfs(node = edge.to, depth, graph) } ?: 0
+        depth[node] = maximumDepth + 1
+        return maximumDepth + 1
     }
 
 }
