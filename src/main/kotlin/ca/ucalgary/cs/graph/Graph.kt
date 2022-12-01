@@ -32,7 +32,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
     fun getLeaves() = nodes.filter { node -> edgesOf(node).isEmpty() }
     fun findParent(node: Node) = edges
         .filter { (_, edges) -> node in edges.map { it.to } }
-        .firstNotNullOf { (parent, _) -> parent }
+        .firstNotNullOfOrNull { (parent, _) -> parent }
 
     fun edgesOf(node: Node) = if (node.code == null) edges[node] ?: emptyList()
     else edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten()

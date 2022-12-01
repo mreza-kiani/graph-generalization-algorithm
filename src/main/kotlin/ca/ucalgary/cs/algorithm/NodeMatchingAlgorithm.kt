@@ -4,7 +4,9 @@ import ca.ucalgary.cs.graph.Node
 
 object NodeMatchingAlgorithm {
 
-    fun similarityScoreOf(node1: Node, node2: Node): Double {
+    fun similarityScoreOf(node1: Node?, node2: Node?): Double {
+        if (node1 == null || node2 == null)
+            return 0.0
         return if (node1.name == node2.name) 1.0
         else 0.0
     }
