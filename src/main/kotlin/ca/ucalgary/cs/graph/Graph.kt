@@ -31,7 +31,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
     fun indexOf(node: Node) = nodes.indexOfFirst { node.isExactMatch(it) }
     fun getLeaves() = nodes.filter { node -> edgesOf(node).isEmpty() }
     fun findParent(node: Node) = edges
-        .filter { (_, edges) -> node in edges.map { it.to } }
+        .filter { (_, edges) -> edges.any { it.to.isExactMatch(node) } }
         .firstNotNullOfOrNull { (parent, _) -> parent }
 
     fun edgesOf(node: Node) = if (node.code == null) edges[node] ?: emptyList()
@@ -55,7 +55,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         fun compare(graph1: Graph, graph2: Graph): Triple<Graph, Graph, Graph> {
             markCommonNodes(graph1, graph2)
             alterNamesOfSameNodes(graph1, graph2)
-            unmatchIrrelevantNodes(graph1, graph2)
+//            unmatchIrrelevantNodes(graph1, graph2)
             // TODO: Change variable names based on the structural similarities and then we have a ordinary generalization algorithm.
             // TODO: Having a matching-threshold to ignore some of the similarities
 
@@ -122,7 +122,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         }
 
         private fun alterNamesOfSameNodes(graph1: Graph, graph2: Graph) {
-            StructuralMatchingAlgorithm.matchSameNodes(graph1, graph2)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2)
         }
 
         private fun mergeLonelyNodeVariable(

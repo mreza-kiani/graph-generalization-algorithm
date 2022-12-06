@@ -2,6 +2,8 @@ package ca.ucalgary.cs.algorithm
 
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
+import java.util.*
+import kotlin.Comparator
 
 object StructuralMatchingAlgorithm {
     private const val MATCHING_THRESHOLD = 0.5
@@ -9,14 +11,13 @@ object StructuralMatchingAlgorithm {
     private const val PARENT_SIMILARITY_FACTOR = 0.2
     private const val CHILDREN_SIMILARITY_FACTOR = 0.3
 
-    fun matchSameNodes(graph1: Graph, graph2: Graph) {
+    fun matchSimilarNodes(graph1: Graph, graph2: Graph) {
         val similarities = List(graph1.nodes.size) { MutableList(graph2.nodes.size) { 0.0 } }
 
         compareLeaves(similarities, graph1, graph2)
         compareNonLeaves(similarities, graph1, graph2)
 
-        matchSameNodesOf(sourceGraph = graph1, targetGraph = graph2)
-        matchSameNodesOf(sourceGraph = graph2, targetGraph = graph1)
+        matchSimilarNodes(similarities, graph1, graph2)
     }
 
     private fun compareLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
@@ -29,9 +30,12 @@ object StructuralMatchingAlgorithm {
                 if (g2Node !in g2Leaves)
                     return@forEachIndexed
 
-                val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Leaf.name, g2Node.name) * (NODE_SIMILARITY_FACTOR + CHILDREN_SIMILARITY_FACTOR)
-                val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Leaf), graph2.findParent(g2Node)) * PARENT_SIMILARITY_FACTOR
-                similarities[g1NodeIndex][g2NodeIndex] = leavesSimilarity + parentsSimilarity
+                if (g1Leaf.completeName() == "(-13" && g2Node.completeName() == "(-123")
+                    println("inja")
+
+                val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Leaf.name, g2Node.name)
+                val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Leaf), graph2.findParent(g2Node))
+                similarities[g1NodeIndex][g2NodeIndex] = similarityOf(leavesSimilarity, parentsSimilarity, leavesSimilarity)
             }
         }
     }
@@ -77,14 +81,47 @@ object StructuralMatchingAlgorithm {
             g1Nodes.forEach { g1Node ->
                 for (i in 1..graph2MaximumDepth) {
                     graph2DepthMap[i]?.forEach { g2Node ->
-                        val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Node, g2Node) * NODE_SIMILARITY_FACTOR
-                        val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Node), graph2.findParent(g2Node)) * PARENT_SIMILARITY_FACTOR
-                        val childrenSimilarity = extractChildrenSimilarity(g1Node, g2Node) * CHILDREN_SIMILARITY_FACTOR
+                        val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Node, g2Node)
+                        val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Node), graph2.findParent(g2Node))
+                        val childrenSimilarity = extractChildrenSimilarity(g1Node, g2Node)
 
-                        similarities[graph1.indexOf(g1Node)][graph2.indexOf(g2Node)] = leavesSimilarity + parentsSimilarity + childrenSimilarity
+                        similarities[graph1.indexOf(g1Node)][graph2.indexOf(g2Node)] = similarityOf(leavesSimilarity, parentsSimilarity, childrenSimilarity)
                     }
                 }
             }
+        }
+    }
+
+    private fun similarityOf(nodesSimilarity: Double, parentsSimilarity: Double, childrenSimilarity: Double): Double =
+        nodesSimilarity * NODE_SIMILARITY_FACTOR + parentsSimilarity * PARENT_SIMILARITY_FACTOR + childrenSimilarity * CHILDREN_SIMILARITY_FACTOR
+
+    private fun matchSimilarNodes(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
+        val compareBySimilarity: Comparator<Pair<String, Double>> = compareByDescending { it.second }
+        val queue = PriorityQueue(compareBySimilarity)
+
+        graph1.nodes.reversed().forEachIndexed { g1Index, g1Node ->
+            if (g1Node.isCommon)
+                return@forEachIndexed
+            graph2.nodes.reversed().forEachIndexed { g2Index, g2Node ->
+                if (g2Node.isCommon)
+                    return@forEachIndexed
+                queue.add("${g1Node.completeName()}#${g2Node.completeName()}" to similarities[graph1.nodes.size-1 - g1Index][graph2.nodes.size-1 - g2Index])
+            }
+        }
+
+        while (queue.isNotEmpty()) {
+            val (matchedKey, matchedSimilarityScore) = queue.remove()
+            if (matchedSimilarityScore == 0.0)
+                continue
+
+            val (g1Code, g2Code) = matchedKey.split("#")
+
+            val g1Node = graph1.nodes.first { it.completeName() == g1Code }
+            val g2Node = graph2.nodes.first { it.completeName() == g2Code }
+
+            applyMatchingInNames(g1Node, g2Node)
+
+            queue.removeIf { (key, _) -> "$g1Code#" in key || "#$g2Code" in key }
         }
     }
 
