@@ -13,7 +13,7 @@ import guru.nidi.graphviz.model.MutableNode
 import java.io.File
 
 
-fun Graph.visualize(name: String) {
+fun Graph.visualize(name: String, commonGraph: Graph? = null) {
     simplifyNodeVariableNames()
 
     val g: MutableGraph = mutGraph(name).setDirected(true)
@@ -23,7 +23,10 @@ fun Graph.visualize(name: String) {
         .map { (node, edges) ->
             g.add(getMutNode(node))
             (if (node.isCommon) edges else edges.reversed()).forEach { edge ->
-                g.add(getMutNode(node).addLink(getMutNode(edge.to)))
+                if (commonGraph == null || edge in commonGraph.edgesOf(node))
+                    g.add(getMutNode(node).addLink(getMutNode(edge.to)))
+                else
+                    g.add(getMutNode(node).addLink(getColoredLinkTo(edge.to)))
             }
         }
 
@@ -51,6 +54,9 @@ fun Graph.visualize(name: String) {
 
 private fun getDottedUndirectedLinkTo(neighbor: Node) =
     Link.to(getMutNode(neighbor)).with(Style.DOTTED, Arrow.NONE)
+
+private fun getColoredLinkTo(neighbor: Node) =
+    Link.to(getMutNode(neighbor)).with(Color.RED)
 
 fun getMutNode(node: Node): MutableNode {
     val mutNode = mutNode(node.completeName())

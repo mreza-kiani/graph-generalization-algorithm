@@ -30,9 +30,6 @@ object StructuralMatchingAlgorithm {
                 if (g2Node !in g2Leaves)
                     return@forEachIndexed
 
-                if (g1Leaf.completeName() == "(-13" && g2Node.completeName() == "(-123")
-                    println("inja")
-
                 val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Leaf.name, g2Node.name)
                 val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Leaf), graph2.findParent(g2Node))
                 similarities[g1NodeIndex][g2NodeIndex] = similarityOf(leavesSimilarity, parentsSimilarity, leavesSimilarity)
