@@ -70,8 +70,8 @@ object StructuralMatchingAlgorithm {
             }
         }
 
-        val graph1DepthMap = extractGraphDepthMap(graph1)
-        val graph2DepthMap = extractGraphDepthMap(graph2)
+        val graph1DepthMap = extractGraphDepthMap(graph1).toSortedMap()
+        val graph2DepthMap = extractGraphDepthMap(graph2).toSortedMap()
         val graph2MaximumDepth = graph2DepthMap.maxOf { (depth, _) -> depth }
 
         graph1DepthMap.forEach { (depth, g1Nodes) ->
