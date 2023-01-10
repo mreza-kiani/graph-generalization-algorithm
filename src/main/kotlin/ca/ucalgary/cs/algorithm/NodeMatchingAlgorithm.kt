@@ -7,7 +7,9 @@ object NodeMatchingAlgorithm {
     fun similarityScoreOf(node1: Node?, node2: Node?): Double {
         if (node1 == null || node2 == null)
             return 0.0
-        return if (node1.name == node2.name) 1.0
+        return if (node1.isExactMatch(node2)) 1.0
+        else if (node1.isCommon || node2.isCommon) 0.0
+        else if (node1.name == node2.name) 0.5
         else 0.0
     }
 

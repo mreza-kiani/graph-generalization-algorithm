@@ -116,7 +116,17 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         }
 
         private fun alterNamesOfSameNodes(graph1: Graph, graph2: Graph) {
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+//            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = true)
+            StructuralMatchingAlgorithm.alterNameOfDifferentNodes(graph1, graph2)
         }
 
         private fun mergeLonelyNodeVariable(
