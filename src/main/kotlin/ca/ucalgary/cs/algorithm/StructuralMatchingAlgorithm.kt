@@ -117,7 +117,7 @@ object StructuralMatchingAlgorithm {
 
         while (queue.isNotEmpty()) {
             val (matchedKey, matchedSimilarityScore) = queue.remove()
-            if (matchedSimilarityScore == 0.0)
+            if (matchedSimilarityScore < MATCHING_THRESHOLD)
                 continue
 
             val (g1Code, g2Code) = matchedKey.split("#")
@@ -165,7 +165,7 @@ object StructuralMatchingAlgorithm {
 
         while (queue.isNotEmpty()) {
             val (matchedKey, matchedSimilarityScore) = queue.remove()
-            if (matchedSimilarityScore == 0.0)
+            if (matchedSimilarityScore < MATCHING_THRESHOLD)
                 continue
 
             val (g1Code, g2Code) = matchedKey.split("#")
