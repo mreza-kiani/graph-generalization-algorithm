@@ -21,6 +21,7 @@ object StructuralMatchingAlgorithm {
             matchSimilarNodesEvenIfDraw(similarities, graph1, graph2)
         else
             matchOnlySimilarNodes(similarities, graph1, graph2)
+        println("-----------------------------------------------------------------------------------------------------")
     }
 
     private fun compareLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
@@ -148,7 +149,7 @@ object StructuralMatchingAlgorithm {
                 drawMap.entries.removeIf { (key, _) -> drawList.any { it in key } }
             }
             queue.addAll(drawMap.toList())
-            println("isDraw: $isDraw, drawList: $drawList")
+            println("match: ${if(isDraw) 'x' else '✓'} list: $drawList score: $matchedSimilarityScore")
 
             if (!isDraw) {
                 val g1Node = graph1.nodes.first { it.completeName() == g1Code }
@@ -180,7 +181,7 @@ object StructuralMatchingAlgorithm {
     }
 
     private fun applyMatchingInNames(source: Node, matchedNode: Node) {
-        println("\tmatched: $source, $matchedNode")
+        println("\t$source <> $matchedNode")
         source.name += "_${source.code}"
         source.isCommon = true
         matchedNode.name = source.name
