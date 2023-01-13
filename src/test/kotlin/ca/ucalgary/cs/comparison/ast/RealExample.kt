@@ -227,7 +227,7 @@ class RealExample: BaseCompareGraphTest() {
         val uod4 = Node("}", isDuplicate = true)
         val vyl6 = Node("}", isDuplicate = true)
 
-        graph2 = Graph.from(
+        graph1 = Graph.from(
             nodes = listOf(xui5, ttx6, mii9, pij9, vol5, xut6, mic0, mok8, ngp1, chy2, hxu6, qax6, uts2, kwt8, qzy1, zlj7, ezg4, mtg1, fdu1, bzw3, rge7, bal1, cvh7, ztf3, aqg2, dsj8, qyc0, wgi0, dzh0, uzg4, lla8, cve1, jqe6, nxh8, kwr3, iyq8, aex6, lan8, uyi0, kjo5, pxo1, vuw3, twv5, xbz7, qtb7, wbd8, mqi7, htj2, ief6, kls9, yir2, pxw0, tnv1, upp2, wbs5, uhj1, fya8, wdc3, ztr6, qfn3, rao8, aee0, yww8, kxt6, esd5, bgx0, wwp7, hoq0, pya3, dua4, oxl1, fbj9, ico5, tam6, txm1, jgq3, duq0, bam5, mbo9, hus7, wzf8, szz5, ymu0, axa4, bfd0, nht4, nmc7, zeb2, nvj3, qhs7, dhb5, uum5, bke8, ypk9, sln2, veh9, gpx6, ldz8, rwt9, pac6, htb4, urt6, ucl2, bpf1, vot4, nxf7, cow9, zkm5, zrq0, rrn7, zwd9, ixl9, azi9, iqh1, lbe9, lwq2, dii5, mll2, rfv6, kpu3, uyh8, xst7, sxd1, nys1, nbg5, vqs7, mzi4, jzm7, jcj0, jty2, gpc0, tuh2, ebb3, zlq9, mhf7, rxj4, gjt1, mjp9, auy8, ejy1, fdy6, zdn3, evc1, ipw1, mlc9, utk7, ysr2, efe6, wrd1, tly6, wxe0, ukn0, fvm9, zgh4, brn6, byf0, nlv9, edd0, ptu8, igt2, usv9, fyl0, nwr5, zlh8, xsy7, pgk3, aht0, gqm0, lsp0, luo0, npz4, xmn4, mvc6, byo6, acd0, iry5, zvj5, hsc4, ucy2, qca3, ggs4, raf8, ifi8, pdc9, oam8, cur6, bob6, ack8, zde1, uko3, ydq8, hmt2, bdm2, rvq3, glw7, kgd1, qpo9, man3, ixc2, kgf6, ycb7, xws1, rgl0, vwc1, fso9, smr5, xdg9, tfz5, ctb4, fgf4, mnq6, ced7, grh0, hmn3, ybw8, uph3, uod4, vyl6),
             edges = mapOf(
                 xui5 to listOf(ttx6, lan8, duq0, lwq2),
@@ -481,7 +481,7 @@ class RealExample: BaseCompareGraphTest() {
         val kks8 = Node("}", isDuplicate = true)
         val hhx0 = Node("}", isDuplicate = true)
 
-        graph1 = Graph.from(
+        graph2 = Graph.from(
             nodes = listOf(bnn8, btl7, sgb5, cox9, nnl9, qjv2, sjt8, mxx5, crj6, qoa2, agx2, iei2, exr6, ios0, lah2, sgs5, zzu1, ppt1, blm3, lcw5, oha6, pkl2, lqc4, lkm3, ygt1, njb2, mrb0, ber7, pub0, vhj7, tvy2, mjn0, cra1, mia5, itf4, rfg8, cpr9, tzx9, jty4, ruh6, gwn0, pfa6, ldq3, nfo9, ocy4, twk2, gby5, bxr6, ezt9, tbs4, scq0, rsm4, igi2, mcb0, drd1, kfe8, kzl9, zjn6, inl2, kpk2, nnq0, wwz4, bxt2, usc6, irg1, vou4, uox8, nns4, xev3, axz0, qwl6, kdg9, tpm4, iqe3, org9, hli7, bjp9, nac9, kny4, fmz1, pmy2, jal0, qcr3, azz9, enn5, ygj1, dxj3, gau4, esh6, qzn7, hug7, xsi3, rtj4, dmk8, qhh2, dam3, sun3, qpy4, ncd1, kxf6, qtw4, pbj1, coy2, rsi2, kot9, nzj7, eei4, ioi2, sri2, szl7, ggz4, tzt7, oxx3, zzl2, iiq0, vrw1, fvz4, mmt4, kid8, owd5, tpc9, jzh5, uen8, cfm2, qxs8, efg8, jhm7, uoa2, luk9, gng0, xnq6, npn1, yos9, vjk2, rvh2, gnf2, sbv8, tfa0, khb1, ljk2, naz4, aaz9, ozl6, guf2, ufz1, sqz5, nnr0, wrf0, bih2, awn8, ser0, ruf4, kks8, hhx0),
             edges = mapOf(
                 bnn8 to listOf(btl7, tzx9, bjp9),
@@ -553,21 +553,21 @@ class RealExample: BaseCompareGraphTest() {
             )
         )
 
-        graph1.visualize("ComplexV2/G1")
-        graph2.visualize("ComplexV2/G2")
+        graph1.visualize("ComplexV2.2/G1")
+        graph2.visualize("ComplexV2.2/G2")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        graph1.visualize("ComplexV2/G1_Generalized")
-        graph2.visualize("ComplexV2/G2_Generalized")
-        commonGraph.visualize("ComplexV2/Generalization")
+        graph1.visualize("ComplexV2.2/G1_Generalized", commonGraph)
+        graph2.visualize("ComplexV2.2/G2_Generalized", commonGraph)
+        commonGraph.visualize("ComplexV2.2/Generalization")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
-        graph1Diff.visualize("ComplexV2/G1_Differences")
+        graph1Diff.visualize("ComplexV2.2/G1_Differences")
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        graph2Diff.visualize("ComplexV2/G2_Differences")
+        graph2Diff.visualize("ComplexV2.2/G2_Differences")
     }
 }
