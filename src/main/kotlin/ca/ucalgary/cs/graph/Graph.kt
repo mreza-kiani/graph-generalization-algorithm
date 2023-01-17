@@ -34,7 +34,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         .filter { (_, edges) -> edges.any { it.to.isExactMatch(node) } }
         .firstNotNullOfOrNull { (parent, _) -> parent }
 
-    fun edgesOf(node: Node) = if (node.code == null) edges[node] ?: emptyList()
+    fun edgesOf(node: Node) = if (node.code == null) edges[node] ?: edges.filter { (key, _) -> key == node }.values.flatten()
     else edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten()
 
     fun edgeCounts(): Int = edges.values.sumOf { it.size }

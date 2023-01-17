@@ -182,7 +182,8 @@ object StructuralMatchingAlgorithm {
 
     private fun applyMatchingInNames(source: Node, matchedNode: Node) {
         println("\t$source <> $matchedNode")
-        source.name += "_${source.code}"
+        if (source.code != null)
+            source.name += "_${source.code}"
         source.isCommon = true
         matchedNode.name = source.name
         matchedNode.code = source.code
