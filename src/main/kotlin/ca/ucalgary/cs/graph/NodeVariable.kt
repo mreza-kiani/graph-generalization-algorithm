@@ -67,7 +67,7 @@ class NodeVariable(name: String) : Node(name) {
 
     companion object {
         private var counter = 1
-        fun getUniqueName() = "E${counter++}"
+        fun getUniqueName() = "N${counter++}"
 
         fun extractNeighborsMap(edgeVariables: MutableList<EdgeVariable>) =
             edgeVariables
