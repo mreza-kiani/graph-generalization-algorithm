@@ -34,8 +34,10 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         .filter { (_, edges) -> edges.any { it.to.isExactMatch(node) } }
         .firstNotNullOfOrNull { (parent, _) -> parent }
 
-    fun edgesOf(node: Node) = if (node.code == null) edges[node] ?: edges.filter { (key, _) -> key == node }.values.flatten()
-    else edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten()
+    fun edgesOf(node: Node) = if (node.code == null)
+        edges[node] ?: edges.filter { (key, _) -> key == node }.values.flatten()
+    else
+        edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten()
 
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
     fun allInAndOutEdgesOf(node: Node) = edges.values.flatten().filter { edge -> edge.contain(node) }
@@ -116,15 +118,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         }
 
         private fun alterNamesOfSameNodes(graph1: Graph, graph2: Graph) {
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
-            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            do {
+                StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            } while (StructuralMatchingAlgorithm.nodesMatchingHappened)
 //            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = true)
             StructuralMatchingAlgorithm.alterNameOfDifferentNodes(graph1, graph2)
         }

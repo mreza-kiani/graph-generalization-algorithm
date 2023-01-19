@@ -10,8 +10,11 @@ object StructuralMatchingAlgorithm {
     private const val NODE_SIMILARITY_FACTOR = 0.5
     private const val PARENT_SIMILARITY_FACTOR = 0.2
     private const val CHILDREN_SIMILARITY_FACTOR = 0.3
+    var nodesMatchingHappened = false
+    var iteration = 1
 
     fun matchSimilarNodes(graph1: Graph, graph2: Graph, ignoreDraw: Boolean) {
+        nodesMatchingHappened = false
         val similarities = List(graph1.nodes.size) { MutableList(graph2.nodes.size) { 0.0 } }
 
         compareLeaves(similarities, graph1, graph2)
@@ -21,7 +24,7 @@ object StructuralMatchingAlgorithm {
             matchSimilarNodesEvenIfDraw(similarities, graph1, graph2)
         else
             matchOnlySimilarNodes(similarities, graph1, graph2)
-        println("-----------------------------------------------------------------------------------------------------")
+        println("----------------------------------------iteration:${iteration++}----------------------------------------")
     }
 
     private fun compareLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
@@ -181,6 +184,7 @@ object StructuralMatchingAlgorithm {
     }
 
     private fun applyMatchingInNames(source: Node, matchedNode: Node) {
+        nodesMatchingHappened = true
         println("\t$source <> $matchedNode")
         if (source.code != null)
             source.name += "_${source.code}"
