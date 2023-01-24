@@ -34,4 +34,11 @@ object NodeMatchingAlgorithm {
         return scores.mapNotNull { list -> list.maxOrNull() }.maxOrNull() ?: 0
     }
 
+    fun similarityScoreOf(nodes1: Set<Node>, nodes2: Set<Node>): Double {
+        if (nodes1.isEmpty() || nodes2.isEmpty())
+            return 0.0
+        return 2.0 * nodes1.sumOf { node1 -> nodes2.maxOf { node2 -> similarityScoreOf(node1, node2) } } /
+                (nodes1.size + nodes2.size)
+    }
+
 }

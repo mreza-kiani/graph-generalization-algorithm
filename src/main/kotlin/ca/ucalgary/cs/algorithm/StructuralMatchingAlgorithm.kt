@@ -38,7 +38,7 @@ object StructuralMatchingAlgorithm {
                     return@forEachIndexed
 
                 val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Leaf.name, g2Node.name)
-                val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Leaf), graph2.findParent(g2Node))
+                val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParents(g1Leaf), graph2.findParents(g2Node))
                 similarities[g1NodeIndex][g2NodeIndex] = similarityOf(leavesSimilarity, parentsSimilarity, leavesSimilarity)
             }
         }
@@ -55,23 +55,13 @@ object StructuralMatchingAlgorithm {
             val g1Children = graph1.edgesOf(g1ParentNode)
             val g2Children = graph2.edgesOf(g2ParentNode)
 
-            return if (g1Children.size < g2Children.size) {
-                g1Children.sumOf { g1Edge ->
-                    val g1Index = graph1.indexOf(g1Edge.to)
-                    g2Children.maxOfOrNull { g2Edge ->
-                        val g2Index = graph2.indexOf(g2Edge.to)
-                        similarities[g1Index][g2Index]
-                    } ?: 0.0
-                } / g2Children.size
-            } else {
-                g2Children.sumOf { g2Edge ->
+            return 2.0 * g1Children.sumOf { g1Edge ->
+                val g1Index = graph1.indexOf(g1Edge.to)
+                g2Children.maxOfOrNull { g2Edge ->
                     val g2Index = graph2.indexOf(g2Edge.to)
-                    g1Children.maxOfOrNull { g1Edge ->
-                        val g1Index = graph1.indexOf(g1Edge.to)
-                        similarities[g1Index][g2Index]
-                    } ?: 0.0
-                } / g1Children.size
-            }
+                    similarities[g1Index][g2Index]
+                } ?: 0.0
+            } / (g1Children.size + g2Children.size)
         }
 
         val graph1DepthMap = extractGraphDepthMap(graph1).toSortedMap()
@@ -86,7 +76,7 @@ object StructuralMatchingAlgorithm {
                 for (i in 1..graph2MaximumDepth) {
                     graph2DepthMap[i]?.forEach { g2Node ->
                         val leavesSimilarity = NodeMatchingAlgorithm.similarityScoreOf(g1Node, g2Node)
-                        val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParent(g1Node), graph2.findParent(g2Node))
+                        val parentsSimilarity = NodeMatchingAlgorithm.similarityScoreOf(graph1.findParents(g1Node), graph2.findParents(g2Node))
                         val childrenSimilarity = extractChildrenSimilarity(g1Node, g2Node)
 
                         similarities[graph1.indexOf(g1Node)][graph2.indexOf(g2Node)] = similarityOf(leavesSimilarity, parentsSimilarity, childrenSimilarity)

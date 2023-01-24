@@ -30,9 +30,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
 
     fun indexOf(node: Node) = nodes.indexOfFirst { node.isExactMatch(it) }
     fun getLeaves() = nodes.filter { node -> edgesOf(node).isEmpty() }
-    fun findParent(node: Node) = edges
+    fun findParents(node: Node) = edges
         .filter { (_, edges) -> edges.any { it.to.isExactMatch(node) } }
-        .firstNotNullOfOrNull { (parent, _) -> parent }
+        .keys
 
     fun edgesOf(node: Node) = if (node.code == null)
         edges[node] ?: edges.filter { (key, _) -> key == node }.values.flatten()
