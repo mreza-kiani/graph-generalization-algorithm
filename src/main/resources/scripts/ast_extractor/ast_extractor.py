@@ -33,7 +33,7 @@ def read_java_class(address):
 
 
 def get_random_name():
-    return ''.join(random.choices(string.ascii_lowercase, k=5)) + random.choice(string.digits)
+    return ''.join(random.choices(string.ascii_lowercase, k=6)) + random.choice(string.digits)
 
 
 def process_the_tree(node: Node, parent_name=None):
@@ -45,7 +45,7 @@ def process_the_tree(node: Node, parent_name=None):
         edges[parent_name].append(variable_name)
 
     if len(node.children) == 0:
-        if node.type in ['identifier', 'type_identifier', 'line_comment'] or 'literal' in node.type:
+        if node.type in ['identifier', 'type_identifier', 'line_comment', 'block_comment'] or 'literal' in node.type:
             child_name = get_random_name()
             child_def = node.text.decode('ascii').replace("\"", "\\\"")
             edges_mapping[child_name] = child_def
