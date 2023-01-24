@@ -470,20 +470,20 @@ class AST3 : BaseCompareGraphTest() {
             )
         )
 
-        graph1.visualize("ModerateV2.2/G1")
-        graph2.visualize("ModerateV2.2/G2")
+        graph1.visualize("ModerateV2.3/G1")
+        graph2.visualize("ModerateV2.3/G2")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        graph1.visualize("ModerateV2.2/G1_generalized", commonGraph)
-        graph2.visualize("ModerateV2.2/G2_generalized", commonGraph)
-        commonGraph.visualize("ModerateV2.2/Generalization")
+        graph1.visualize("ModerateV2.3/G1_generalized", commonGraph)
+        graph2.visualize("ModerateV2.3/G2_generalized", commonGraph)
+        commonGraph.visualize("ModerateV2.3/Generalization")
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
-        graph1Diff.visualize("ModerateV2.2/G1_Diff")
+        graph1Diff.visualize("ModerateV2.3/G1_Diff")
     }
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        graph2Diff.visualize("ModerateV2.2/G2_Diff")
+        graph2Diff.visualize("ModerateV2.3/G2_Diff")
     }
 }
