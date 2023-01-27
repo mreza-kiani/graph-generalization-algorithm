@@ -6,6 +6,7 @@ import ca.ucalgary.cs.graph.NodeVariable
 import guru.nidi.graphviz.attribute.*
 import guru.nidi.graphviz.engine.Format
 import guru.nidi.graphviz.engine.Graphviz
+import guru.nidi.graphviz.engine.GraphvizException
 import guru.nidi.graphviz.model.Factory.*
 import guru.nidi.graphviz.model.Link
 import guru.nidi.graphviz.model.MutableGraph
@@ -49,7 +50,11 @@ fun Graph.visualize(name: String, commonGraph: Graph? = null) {
         }
     }
 
-    Graphviz.fromGraph(g).render(Format.PNG).toFile(File("data/$name.png"))
+    try {
+        Graphviz.fromGraph(g).render(Format.PNG).toFile(File("data/$name.png"))
+    } catch (e: GraphvizException) {
+        println(e)
+    }
 }
 
 private fun getDottedUndirectedLinkTo(neighbor: Node) =

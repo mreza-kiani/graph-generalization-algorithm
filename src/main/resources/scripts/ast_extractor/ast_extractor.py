@@ -47,7 +47,7 @@ def process_the_tree(node: Node, parent_name=None):
     if len(node.children) == 0:
         if node.type in ['identifier', 'type_identifier', 'line_comment', 'block_comment'] or 'literal' in node.type:
             child_name = get_random_name()
-            child_def = node.text.decode('ascii').replace("\"", "\\\"")
+            child_def = node.text.decode('ascii').replace("\"", "\\\"").replace("\n", "\\n")
             edges_mapping[child_name] = child_def
             edges[variable_name] = [child_name]
     else:
