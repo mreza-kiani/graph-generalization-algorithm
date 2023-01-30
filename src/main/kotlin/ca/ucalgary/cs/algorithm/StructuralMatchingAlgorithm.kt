@@ -13,6 +13,9 @@ object StructuralMatchingAlgorithm {
     var nodesMatchingHappened = false
     var iteration = 1
 
+    lateinit var g1DepthMap: Map<Int, List<Node>>
+    lateinit var g2DepthMap: Map<Int, List<Node>>
+
     fun matchSimilarNodes(graph1: Graph, graph2: Graph, ignoreDraw: Boolean) {
         nodesMatchingHappened = false
         val similarities = List(graph1.nodes.size) { MutableList(graph2.nodes.size) { 0.0 } }
@@ -58,8 +61,8 @@ object StructuralMatchingAlgorithm {
             } / (g1Children.size + g2Children.size)
         }
 
-        val graph1DepthMap = extractGraphDepthMap(graph1)
-        val graph2DepthMap = extractGraphDepthMap(graph2)
+        val graph1DepthMap = getGraphDepthMap(graph1, graphNumber = 1)
+        val graph2DepthMap = getGraphDepthMap(graph2, graphNumber = 2)
         val graph2MaximumDepth = graph2DepthMap.maxOf { (depth, _) -> depth }
 
         graph1DepthMap.forEach { (depth, g1Nodes) ->
@@ -178,7 +181,21 @@ object StructuralMatchingAlgorithm {
         matchedNode.isCommon = true
     }
 
-    fun extractGraphDepthMap(graph: Graph): Map<Int, List<Node>> {
+    fun getGraphDepthMap(graph: Graph, graphNumber: Int): Map<Int, List<Node>> {
+        when (graphNumber) {
+            1 -> if (this::g1DepthMap.isInitialized) return g1DepthMap
+            2 -> if (this::g2DepthMap.isInitialized) return g2DepthMap
+        }
+
+        val result = extractGraphDepthMap(graph)
+        when (graphNumber) {
+            1 -> g1DepthMap = result
+            2 -> g2DepthMap = result
+        }
+        return result
+    }
+
+    private fun extractGraphDepthMap(graph: Graph): Map<Int, List<Node>> {
         val depthMap = graph.nodes.associateWith { 0 }.toMutableMap()
         dfs(node = graph.edges.keys.first(), depthMap, graph)
         return depthMap.toList().groupBy({ it.second }, { it.first }).toSortedMap()

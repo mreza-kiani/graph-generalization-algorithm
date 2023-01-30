@@ -5,8 +5,8 @@ import ca.ucalgary.cs.graph.Graph
 import java.io.File
 
 object ASTPrinter {
-    fun from(graph: Graph, fileName: String) {
-        val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMap(graph)
+    fun from(graph: Graph, graphNumber: Int, fileName: String) {
+        val graphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(graph, graphNumber)
 
         var uncommonNode = false
         var result = ""
