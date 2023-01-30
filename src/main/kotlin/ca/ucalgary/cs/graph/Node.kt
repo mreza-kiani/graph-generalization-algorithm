@@ -32,4 +32,15 @@ open class Node(
 
     fun completeName() = if (code == null) name else "$name-$code"
     fun isExactMatch(other: Node) = completeName() == other.completeName()
+
+    fun getRealName(): String {
+        var result = name
+        val lastUnderlineIndex = name.lastIndexOf("_")
+        if (lastUnderlineIndex != -1)
+            result = name.substring(0, lastUnderlineIndex)
+        val lastSharpIndex = name.lastIndexOf("#")
+        if (lastSharpIndex != -1)
+            result = name.substring(0, lastSharpIndex)
+        return result
+    }
 }
