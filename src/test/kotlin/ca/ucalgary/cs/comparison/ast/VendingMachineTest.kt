@@ -3,6 +3,7 @@ package ca.ucalgary.cs.comparison.ast
 import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
+import ca.ucalgary.cs.io.ASTPrinter
 import ca.ucalgary.cs.io.visualize
 
 class VendingMachineTest : BaseCompareGraphTest() {
@@ -2175,6 +2176,10 @@ class VendingMachineTest : BaseCompareGraphTest() {
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
+        ASTPrinter.from(graph1, graphNumber = 1, fileName = "VendingMachine/G1_generalized_v2")
+        ASTPrinter.from(graph2, graphNumber = 2, fileName = "VendingMachine/G2_generalized_v2")
+        ASTPrinter.from(commonGraph, fileName = "VendingMachine/generalized")
+
         graph1.visualize("VendingMachine/G1_Generalized", commonGraph)
         graph2.visualize("VendingMachine/G2_Generalized", commonGraph)
         commonGraph.visualize("VendingMachine/Generalization")

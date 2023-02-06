@@ -195,7 +195,7 @@ object StructuralMatchingAlgorithm {
         return result
     }
 
-    private fun extractGraphDepthMap(graph: Graph): Map<Int, List<Node>> {
+    fun extractGraphDepthMap(graph: Graph): Map<Int, List<Node>> {
         val depthMap = graph.nodes.associateWith { 0 }.toMutableMap()
         dfs(node = graph.edges.keys.first(), depthMap, graph)
         return depthMap.toList().groupBy({ it.second }, { it.first }).toSortedMap()
