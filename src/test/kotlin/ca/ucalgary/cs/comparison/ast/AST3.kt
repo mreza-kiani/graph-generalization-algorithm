@@ -3,6 +3,7 @@ package ca.ucalgary.cs.comparison.ast
 import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
+import ca.ucalgary.cs.io.ASTPrinter
 import ca.ucalgary.cs.io.visualize
 
 class AST3 : BaseCompareGraphTest() {
@@ -475,6 +476,10 @@ class AST3 : BaseCompareGraphTest() {
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
+        ASTPrinter.from(graph1, graphNumber = 1, "ModerateV2.3/G1_Generalized")
+        ASTPrinter.from(graph2, graphNumber = 2, "ModerateV2.3/G2_Generalized")
+        ASTPrinter.from(commonGraph, "ModerateV2.3/Generalized")
+
         graph1.visualize("ModerateV2.3/G1_generalized", commonGraph)
         graph2.visualize("ModerateV2.3/G2_generalized", commonGraph)
         commonGraph.visualize("ModerateV2.3/Generalization")

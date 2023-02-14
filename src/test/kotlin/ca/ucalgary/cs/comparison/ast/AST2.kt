@@ -419,8 +419,9 @@ class AST2 : BaseCompareGraphTest() {
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
-        ASTPrinter.from(graph1, graphNumber = 1, fileName = "SimpleV2.5/G1_generalized")
-        ASTPrinter.from(graph2, graphNumber = 2, fileName = "SimpleV2.5/G2_generalized")
+        ASTPrinter.from(graph1, graphNumber = 1, "SimpleV2.5/G1_Generalized")
+        ASTPrinter.from(graph2, graphNumber = 2, "SimpleV2.5/G2_Generalized")
+        ASTPrinter.from(commonGraph, "SimpleV2.5/Generalized")
 
         graph1.visualize("SimpleV2.5/G1_generalized", commonGraph)
         graph2.visualize("SimpleV2.5/G2_generalized", commonGraph)
