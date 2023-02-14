@@ -201,6 +201,12 @@ object StructuralMatchingAlgorithm {
         return depthMap.toList().groupBy({ it.second }, { it.first }).toSortedMap()
     }
 
+    fun extractLeavesOf(node: Node, graph: Graph): List<Node> {
+        val depthMap = graph.nodes.associateWith { -1 }.toMutableMap()
+        dfs(node = node, depthMap, graph)
+        return depthMap.toList().groupBy({ it.second }, { it.first }).toSortedMap()[0] ?: emptyList()
+    }
+
     private fun dfs(node: Node, depth: MutableMap<Node, Int>, graph: Graph): Int {
         val edges = graph.edgesOf(node)
         if (edges.isEmpty()) {

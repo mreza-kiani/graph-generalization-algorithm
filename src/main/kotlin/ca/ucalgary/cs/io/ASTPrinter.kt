@@ -19,6 +19,9 @@ object ASTPrinter {
     }
 
     private fun from(graph: Graph, graphDepthMap: Map<Int, List<Node>>, fileName: String) {
+        val templateValueMap = mutableMapOf<String, String>()
+        var templateCounter = 1
+
         var lastUncommonParent: Node? = null
         var result = ""
         graphDepthMap[0]?.forEach { child ->
@@ -29,7 +32,15 @@ object ASTPrinter {
             } else {
                 val parent = getNodeFirstUncommonParent(child, graph)
                 if (lastUncommonParent != parent) {
-                    result += " T_${parent.getRealName().uppercase()} "
+                    val leavesValue = extractLeavesValueOf(parent, graph)
+                    if (templateValueMap[leavesValue] != null) {
+                        result += " ${templateValueMap[leavesValue]} "
+                    } else {
+                        val nodeName = "T_${parent.getRealName().uppercase()}_$templateCounter"
+                        templateValueMap[leavesValue] = nodeName
+                        templateCounter++
+                        result += " $nodeName "
+                    }
                     lastUncommonParent = parent
                 }
             }
@@ -40,6 +51,11 @@ object ASTPrinter {
         val file = File("data/$fileName.java")
         file.createNewFile()
         file.printWriter().use { out -> out.print(result) }
+    }
+
+    private fun extractLeavesValueOf(parent: Node, graph: Graph): String {
+        val leaves = StructuralMatchingAlgorithm.extractLeavesOf(parent, graph)
+        return leaves.joinToString("-") { it.getRealName() }
     }
 
     private fun getNodeFirstUncommonParent(child: Node, graph: Graph): Node {
