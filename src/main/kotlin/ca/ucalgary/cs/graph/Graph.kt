@@ -39,6 +39,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
     else
         edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten()
 
+    fun edgeVariablesOf(leg: EdgeVariableLeg) = edgeVariables.filter { it.has(leg) }
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
     fun allInAndOutEdgesOf(node: Node) = edges.values.flatten().filter { edge -> edge.contain(node) }
     fun degreeOf(node: Node): Int = allInAndOutEdgesOf(node).size

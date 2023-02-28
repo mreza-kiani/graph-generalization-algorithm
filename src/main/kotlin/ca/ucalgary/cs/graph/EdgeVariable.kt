@@ -51,7 +51,7 @@ class EdgeVariable(
         }
     }
 
-    fun otherLegThan(leg: NodeVariable): EdgeVariableLeg {
+    fun otherLegThan(leg: Node): EdgeVariableLeg {
         return when (leg) {
             leg1 -> leg2
             leg2 -> leg1

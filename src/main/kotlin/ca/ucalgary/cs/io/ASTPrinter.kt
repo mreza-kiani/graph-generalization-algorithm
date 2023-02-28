@@ -7,7 +7,7 @@ import java.io.File
 
 object ASTPrinter {
     fun from(graph: Graph, fileName: String) {
-        val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMap(graph)
+        val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(graph)
 
         from(graph, graphDepthMap, fileName)
     }
