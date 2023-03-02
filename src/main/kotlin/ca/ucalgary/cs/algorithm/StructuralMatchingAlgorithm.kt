@@ -219,29 +219,27 @@ object StructuralMatchingAlgorithm {
         return maximumDepth + 1
     }
 
-    fun extractGraphDepthMapWithNodeVariables(graph: Graph): Map<Int, List<Node>> {
+    fun extractGraphDepthMapWithNodeVariables(graph: Graph): MutableMap<Int, List<Node>> {
         val depthMap = graph.nodes.associateWith { -1 }.toMutableMap()
         graph.nodeVariables.forEach { nv -> depthMap[nv] = -1 }
-        val seenNodes = mutableListOf<Node>()
-        dfsWithNodeVariables(graph.edges.keys.first(), depthMap, seenNodes, graph)
+        val root = graph.edges.keys.first()
+        val seenNodes = mutableListOf(root)
+        dfsWithNodeVariables(root, depthMap, seenNodes, graph)
         return depthMap.toList().groupBy({ it.second }, { it.first }).toSortedMap()
     }
 
     private fun dfsWithNodeVariables(node: Node, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, graph: Graph): Int {
-        if (node in seenNodes)
-            return -1
-
         val edges = graph.edgesOf(node).filter { it.to !in seenNodes }
-        val edgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 !in seenNodes && it.leg2 !in seenNodes }
+        val edgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
         if (edges.isEmpty() && edgeVariables.isEmpty()) {
             depth[node] = 0
             return 0
         }
 
-        seenNodes.add(node)
+        seenNodes.addAll(edges.map { it.to })
+        seenNodes.addAll(edgeVariables.map { it.otherLegThan(node) }.map { if (it is NodeVariable) it else if(it is Node) it else error("WTF!") })
 
-        val maximumEdgeDepth =
-            edges.maxOfOrNull { edge -> dfsWithNodeVariables(node = edge.to, depth, seenNodes, graph) }
+        val maximumEdgeDepth = edges.maxOfOrNull { edge -> dfsWithNodeVariables(node = edge.to, depth, seenNodes, graph) }
         val maximumEdgeVariableDepth = edgeVariables.maxOfOrNull { edge ->
             when (val otherLeg = edge.otherLegThan(node)) {
                 is NodeVariable -> dfsWithNodeVariables(otherLeg, depth, seenNodes, graph)
@@ -250,24 +248,20 @@ object StructuralMatchingAlgorithm {
             }
         }
         var maximumDepth = maximumEdgeVariableDepth ?: 0
-        if (maximumEdgeDepth != null && maximumDepth > maximumEdgeDepth)
+        if (maximumEdgeDepth != null && maximumEdgeDepth > maximumDepth)
             maximumDepth = maximumEdgeDepth
         depth[node] = maximumDepth + 1
         return maximumDepth + 1
     }
 
     private fun dfsWithNodeVariables(nodeVariable: NodeVariable, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, graph: Graph): Int {
-        if (nodeVariable in seenNodes)
-            return -1
-
-        val edgeVariables =
-            graph.edgeVariablesOf(nodeVariable).filter { it.leg1 !in seenNodes && it.leg2 !in seenNodes }
+        val edgeVariables = graph.edgeVariablesOf(nodeVariable).filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
         if (edgeVariables.isEmpty()) {
             depth[nodeVariable] = -1
             return -1
         }
 
-        seenNodes.add(nodeVariable)
+        seenNodes.addAll(edgeVariables.map { it.otherLegThan(nodeVariable) }.map { if (it is NodeVariable) it else if(it is Node) it else error("WTF!") })
 
         val maximumDepth = edgeVariables.maxOfOrNull { edge ->
             when (val otherLeg = edge.otherLegThan(nodeVariable)) {

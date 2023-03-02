@@ -12,6 +12,19 @@ object ASTPrinter {
         from(graph, graphDepthMap, fileName)
     }
 
+    fun from(graph: Graph, fileName: String, orderedGraph: Graph, graphNumber: Int) {
+        val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(graph)
+        val orderedGraphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(orderedGraph, graphNumber)
+
+        val leaves = graphDepthMap[0] ?: emptyList()
+        val orderedLeaves = mutableListOf<Node>()
+
+        orderedGraphDepthMap[0]?.forEach { node -> if (node in leaves) orderedLeaves.add(node) }
+        graphDepthMap[0] = orderedLeaves
+
+        from(graph, graphDepthMap, fileName)
+    }
+
     fun from(graph: Graph, graphNumber: Int, fileName: String) {
         val graphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(graph, graphNumber)
 
