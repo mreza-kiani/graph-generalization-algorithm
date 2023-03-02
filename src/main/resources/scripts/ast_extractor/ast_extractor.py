@@ -50,6 +50,12 @@ def process_the_tree(node: Node, parent_name=None):
             child_def = node.text.decode('ascii').replace("\"", "\\\"").replace("\n", "\\n")
             edges_mapping[child_name] = child_def
             edges[variable_name] = [child_name]
+    elif node.type == 'string_literal':
+        child_name = get_random_name()
+        child_def = node.text.decode('ascii')
+        edges_mapping[child_name] = child_def
+        edges[variable_name] = [child_name]
+        return
     else:
         edges[variable_name] = []
 
