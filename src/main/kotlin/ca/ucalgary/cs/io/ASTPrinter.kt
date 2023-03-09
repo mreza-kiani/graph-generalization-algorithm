@@ -12,14 +12,14 @@ object ASTPrinter {
         from(graph, graphDepthMap, fileName)
     }
 
-    fun from(graph: Graph, fileName: String, orderedGraph: Graph, graphNumber: Int) {
+    fun from(graph: Graph, fileName: String, orderedGraph: Graph) {
         val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(graph)
-        val orderedGraphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(orderedGraph, graphNumber)
+        val sourceGraphOrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(orderedGraph)
 
         val leaves = graphDepthMap[0] ?: emptyList()
         val orderedLeaves = mutableListOf<Node>()
 
-        orderedGraphDepthMap[0]?.forEach { node -> if (node in leaves) orderedLeaves.add(node) }
+        sourceGraphOrderedLeaves.forEach { node -> if (node in leaves) orderedLeaves.add(node) }
         graphDepthMap[0] = orderedLeaves
 
         from(graph, graphDepthMap, fileName)

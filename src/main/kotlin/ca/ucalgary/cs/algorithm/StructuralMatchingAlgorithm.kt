@@ -224,13 +224,20 @@ object StructuralMatchingAlgorithm {
         graph.nodeVariables.forEach { nv -> depthMap[nv] = -1 }
         val root = graph.edges.keys.first()
         val seenNodes = mutableListOf(root)
-        dfsWithNodeVariables(root, depthMap, seenNodes, graph)
-        return depthMap.toList().groupBy({ it.second }, { it.first }).toSortedMap()
+        val extraSeenLeaves = mutableListOf<Node>()
+        dfsWithNodeVariables(root, depthMap, seenNodes, extraSeenLeaves, graph)
+        val result = depthMap.toList().toMutableList().groupBy({ it.second }, { it.first }).toMutableMap()
+        result[0] = result[0]!! + extraSeenLeaves
+        return result.toSortedMap()
     }
 
-    private fun dfsWithNodeVariables(node: Node, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, graph: Graph): Int {
+    private fun dfsWithNodeVariables(node: Node, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, extraSeenLeaves: MutableList<Node>, graph: Graph): Int {
         val edges = graph.edgesOf(node).filter { it.to !in seenNodes }
         val edgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
+
+        val seenEdges = graph.edgesOf(node).filter { it.to in seenNodes }
+        seenEdges.forEach { edge -> extraSeenLeaves.add(edge.to) }
+
         if (edges.isEmpty() && edgeVariables.isEmpty()) {
             depth[node] = 0
             return 0
@@ -239,11 +246,11 @@ object StructuralMatchingAlgorithm {
         seenNodes.addAll(edges.map { it.to })
         seenNodes.addAll(edgeVariables.map { it.otherLegThan(node) }.map { if (it is NodeVariable) it else if(it is Node) it else error("WTF!") })
 
-        val maximumEdgeDepth = edges.maxOfOrNull { edge -> dfsWithNodeVariables(node = edge.to, depth, seenNodes, graph) }
+        val maximumEdgeDepth = edges.maxOfOrNull { edge -> dfsWithNodeVariables(node = edge.to, depth, seenNodes, extraSeenLeaves, graph) }
         val maximumEdgeVariableDepth = edgeVariables.maxOfOrNull { edge ->
             when (val otherLeg = edge.otherLegThan(node)) {
-                is NodeVariable -> dfsWithNodeVariables(otherLeg, depth, seenNodes, graph)
-                is Node -> dfsWithNodeVariables(otherLeg, depth, seenNodes, graph)
+                is NodeVariable -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
+                is Node -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
                 else -> error("WTF!")
             }
         }
@@ -254,7 +261,7 @@ object StructuralMatchingAlgorithm {
         return maximumDepth + 1
     }
 
-    private fun dfsWithNodeVariables(nodeVariable: NodeVariable, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, graph: Graph): Int {
+    private fun dfsWithNodeVariables(nodeVariable: NodeVariable, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, extraSeenLeaves: MutableList<Node>, graph: Graph): Int {
         val edgeVariables = graph.edgeVariablesOf(nodeVariable).filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
         if (edgeVariables.isEmpty()) {
             depth[nodeVariable] = -1
@@ -265,8 +272,8 @@ object StructuralMatchingAlgorithm {
 
         val maximumDepth = edgeVariables.maxOfOrNull { edge ->
             when (val otherLeg = edge.otherLegThan(nodeVariable)) {
-                is NodeVariable -> dfsWithNodeVariables(otherLeg, depth, seenNodes, graph)
-                is Node -> dfsWithNodeVariables(otherLeg, depth, seenNodes, graph)
+                is NodeVariable -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
+                is Node -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
                 else -> error("WTF!")
             }
         } ?: 0
@@ -281,6 +288,21 @@ object StructuralMatchingAlgorithm {
                 node.name += "#${node.code}"
             }
         }
+    }
+
+    fun extractNodesWithOrder(graph: Graph): List<Node> {
+        val root = graph.edges.keys.first()
+        val list = mutableListOf<Node>()
+        fillOutTheOrderList(root, graph, list)
+        return list
+    }
+
+    private fun fillOutTheOrderList(node: Node, graph: Graph, list: MutableList<Node>) {
+        val edges = graph.edgesOf(node)
+        if (edges.isNotEmpty()) {
+            edges.forEach { edge -> fillOutTheOrderList(edge.to, graph, list) }
+        }
+        list.add(node)
     }
 
 }
