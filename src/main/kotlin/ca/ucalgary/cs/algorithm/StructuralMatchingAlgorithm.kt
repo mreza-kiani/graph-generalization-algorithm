@@ -238,6 +238,9 @@ object StructuralMatchingAlgorithm {
         val seenEdges = graph.edgesOf(node).filter { it.to in seenNodes }
         seenEdges.forEach { edge -> extraSeenLeaves.add(edge.to) }
 
+        val seenEdgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 in seenNodes && it.leg2 in seenNodes }
+        seenEdgeVariables.map { it.otherLegThan(node) }.forEach { if(it !is NodeVariable && it is Node ) extraSeenLeaves.add(it) }
+
         if (edges.isEmpty() && edgeVariables.isEmpty()) {
             depth[node] = 0
             return 0
@@ -267,6 +270,8 @@ object StructuralMatchingAlgorithm {
             depth[nodeVariable] = -1
             return -1
         }
+
+        // TODO: Should we add seenEdgeVariables to extraSeenLeaves?
 
         seenNodes.addAll(edgeVariables.map { it.otherLegThan(nodeVariable) }.map { if (it is NodeVariable) it else if(it is Node) it else error("WTF!") })
 
