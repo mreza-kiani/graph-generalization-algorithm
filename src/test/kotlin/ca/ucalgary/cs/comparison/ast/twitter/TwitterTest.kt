@@ -18,8 +18,7 @@ class TwitterTest : BaseCompareGraphTest() {
     override fun checkCommonGraph(commonGraph: Graph) {
         ASTPrinter.from(graph1, graphNumber = 1, fileName = "Twitter7vs31/G1_Generalized")
         ASTPrinter.from(graph2, graphNumber = 2, fileName = "Twitter7vs31/G2_Generalized")
-        ASTPrinter.from(commonGraph, fileName = "Twitter7vs31/Generalization_1", orderedGraph = graph1)
-        ASTPrinter.from(commonGraph, fileName = "Twitter7vs31/Generalization_2", orderedGraph = graph2)
+        ASTPrinter.from(commonGraph, fileName = "Twitter7vs31/Generalization_1", graph1, graph2)
 
         graph1.visualize("Twitter7vs31/G1_Generalized", commonGraph)
         graph2.visualize("Twitter7vs31/G2_Generalized", commonGraph)

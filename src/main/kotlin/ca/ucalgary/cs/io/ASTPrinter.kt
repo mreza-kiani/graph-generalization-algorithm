@@ -12,18 +12,47 @@ object ASTPrinter {
         from(graph, graphDepthMap, fileName)
     }
 
-    fun from(graph: Graph, fileName: String, orderedGraph: Graph) {
+    fun from(graph: Graph, fileName: String, graph1: Graph, graph2: Graph) {
         val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(graph)
-        val sourceGraphOrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(orderedGraph)
+        val graph1OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph1)
+        val graph2OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph2).filter { it.isCommon }
 
+        val conflictNodes = graphDepthMap[-2] ?: emptyList()
         val leaves = graphDepthMap[0] ?: emptyList()
         val orderedLeaves = mutableListOf<Node>()
 
-        sourceGraphOrderedLeaves.forEach { node -> if (node in leaves) orderedLeaves.add(node) }
+        val conflictNodePositionMap = mutableMapOf<Node, MutableList<Node>>()
+        var i = 0
+        while (i < graph2OrderedLeaves.size) {
+            if (graph2OrderedLeaves[i] in conflictNodes) {
+                var j = i
+                while (j < graph2OrderedLeaves.size) {
+                   if (graph2OrderedLeaves[j] !in conflictNodes) {
+                       if (graph2OrderedLeaves[j] !in conflictNodePositionMap)
+                           conflictNodePositionMap[graph2OrderedLeaves[j]] = mutableListOf()
+                       conflictNodePositionMap[graph2OrderedLeaves[j]]?.add(graph2OrderedLeaves[i])
+                       break
+                   }
+                   j++
+                }
+            }
+            i++
+        }
+
+        graph1OrderedLeaves.forEach { node ->
+            if (node in conflictNodePositionMap)
+                conflictNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
+            if (node in leaves)
+                orderedLeaves.add(node)
+            if (node in conflictNodes)
+                orderedLeaves.add(Node("// -> ${getTemplateNodeName(node)} \n", isCommon = true))
+        }
         graphDepthMap[0] = orderedLeaves
 
-        from(graph, graphDepthMap, fileName)
+        from(graph, graphDepthMap, fileName, conflictNodes)
     }
+
+    private fun getTemplateNodeName(node: Node) = "T_${node.getRealName().uppercase()}_N"
 
     fun from(graph: Graph, graphNumber: Int, fileName: String) {
         val graphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(graph, graphNumber)
@@ -31,7 +60,7 @@ object ASTPrinter {
         from(graph, graphDepthMap, fileName)
     }
 
-    private fun from(graph: Graph, graphDepthMap: Map<Int, List<Node>>, fileName: String) {
+    private fun from(graph: Graph, graphDepthMap: Map<Int, List<Node>>, fileName: String, conflictNodes: List<Node> = emptyList()) {
         val templateValueMap = mutableMapOf<String, String>()
         var templateCounter = 1
 
@@ -39,9 +68,13 @@ object ASTPrinter {
         var result = ""
         graphDepthMap[0]?.forEach { child ->
             if (child.isCommon) {
-                val realName = child.getRealName()
-                if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
-                result += realName
+                if (child in conflictNodes) {
+                    result += "\n // ${getTemplateNodeName(child)} \n"
+                } else {
+                    val realName = child.getRealName()
+                    if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
+                    result += realName
+                }
             } else {
                 val parent = getNodeFirstUncommonParent(child, graph)
                 if (lastUncommonParent != parent) {
@@ -68,7 +101,7 @@ object ASTPrinter {
 
     private fun extractLeavesValueOf(parent: Node, graph: Graph): String {
         val leaves = StructuralMatchingAlgorithm.extractLeavesOf(parent, graph)
-        return leaves.joinToString("-") { it.getRealName() }
+        return leaves.joinToString("") { it.getRealName() }
     }
 
     private fun getNodeFirstUncommonParent(child: Node, graph: Graph): Node {

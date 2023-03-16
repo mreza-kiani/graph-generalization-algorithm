@@ -227,7 +227,7 @@ object StructuralMatchingAlgorithm {
         val extraSeenLeaves = mutableListOf<Node>()
         dfsWithNodeVariables(root, depthMap, seenNodes, extraSeenLeaves, graph)
         val result = depthMap.toList().toMutableList().groupBy({ it.second }, { it.first }).toMutableMap()
-        result[0] = result[0]!! + extraSeenLeaves
+        result[-2] = extraSeenLeaves
         return result.toSortedMap()
     }
 
@@ -238,8 +238,10 @@ object StructuralMatchingAlgorithm {
         val seenEdges = graph.edgesOf(node).filter { it.to in seenNodes }
         seenEdges.forEach { edge -> extraSeenLeaves.add(edge.to) }
 
-        val seenEdgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 in seenNodes && it.leg2 in seenNodes }
-        seenEdgeVariables.map { it.otherLegThan(node) }.forEach { if(it !is NodeVariable && it is Node ) extraSeenLeaves.add(it) }
+        if (node !in extraSeenLeaves) {
+            val seenEdgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 in seenNodes && it.leg2 in seenNodes }
+            seenEdgeVariables.map { it.otherLegThan(node) }.forEach { if (it !is NodeVariable && it is Node) extraSeenLeaves.add(it) }
+        }
 
         if (edges.isEmpty() && edgeVariables.isEmpty()) {
             depth[node] = 0
