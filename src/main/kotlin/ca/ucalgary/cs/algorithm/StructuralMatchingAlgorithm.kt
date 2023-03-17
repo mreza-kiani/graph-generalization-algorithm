@@ -228,6 +228,13 @@ object StructuralMatchingAlgorithm {
         dfsWithNodeVariables(root, depthMap, seenNodes, extraSeenLeaves, graph)
         val result = depthMap.toList().toMutableList().groupBy({ it.second }, { it.first }).toMutableMap()
         result[-2] = extraSeenLeaves
+        (result[-1] ?: emptyList())
+            .filterIsInstance<NodeVariable>()
+            .associateWith { nv -> graph.edgeVariablesOf(nv).map { it.otherLegThan(nv) } }
+            .filter { (_, list) -> list.size == 1}
+            .map { (nv, list) -> nv to list.first() as Node }
+            .filter { (_, node) -> node !in (result[0] ?: emptyList()) }
+            .forEach { (_, node) -> result[0] = result[0]!! + node }
         return result.toSortedMap()
     }
 

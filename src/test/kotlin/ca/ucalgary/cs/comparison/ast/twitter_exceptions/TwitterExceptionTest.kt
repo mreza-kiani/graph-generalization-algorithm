@@ -18,7 +18,8 @@ class TwitterExceptionTest : BaseCompareGraphTest() {
     override fun checkCommonGraph(commonGraph: Graph) {
         ASTPrinter.from(graph1, graphNumber = 1, fileName = "TwitterExceptions3vs38/G1_Generalized")
         ASTPrinter.from(graph2, graphNumber = 2, fileName = "TwitterExceptions3vs38/G2_Generalized")
-        ASTPrinter.from(commonGraph, fileName = "TwitterExceptions3vs38/Generalization_1", graph1, graph2)
+        ASTPrinter.from(commonGraph, fileName = "TwitterExceptions3vs38/Generalization_F", graph1, graph2)
+        ASTPrinter.from(commonGraph, fileName = "TwitterExceptions3vs38/Generalization_S", graph2, graph1)
 
         graph1.visualize("TwitterExceptions3vs38/G1_Generalized", commonGraph)
         graph2.visualize("TwitterExceptions3vs38/G2_Generalized", commonGraph)
