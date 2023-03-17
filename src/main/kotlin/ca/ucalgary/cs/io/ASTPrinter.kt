@@ -27,13 +27,13 @@ object ASTPrinter {
             if (graph2OrderedLeaves[i] in conflictNodes) {
                 var j = i
                 while (j < graph2OrderedLeaves.size) {
-                   if (graph2OrderedLeaves[j] !in conflictNodes) {
-                       if (graph2OrderedLeaves[j] !in conflictNodePositionMap)
-                           conflictNodePositionMap[graph2OrderedLeaves[j]] = mutableListOf()
-                       conflictNodePositionMap[graph2OrderedLeaves[j]]?.add(graph2OrderedLeaves[i])
-                       break
-                   }
-                   j++
+                    if (graph2OrderedLeaves[j] !in conflictNodes) {
+                        if (graph2OrderedLeaves[j] !in conflictNodePositionMap)
+                            conflictNodePositionMap[graph2OrderedLeaves[j]] = mutableListOf()
+                        conflictNodePositionMap[graph2OrderedLeaves[j]]?.add(graph2OrderedLeaves[i])
+                        break
+                    }
+                    j++
                 }
             }
             i++
@@ -47,12 +47,11 @@ object ASTPrinter {
             if (node in conflictNodes)
                 orderedLeaves.add(Node("// -> ${getTemplateNodeName(node)} \n", isCommon = true))
         }
-        graphDepthMap[0] = orderedLeaves
 
-        from(graph, graphDepthMap, fileName, conflictNodes)
+        from(graph1, graph2, orderedLeaves, conflictNodes, fileName)
     }
 
-    private fun getTemplateNodeName(node: Node) = "T_${node.getRealName().uppercase()}_N"
+    private fun getTemplateNodeName(node: Node, counter: Int = 1): String = "T_${node.getRealName().uppercase()}_$counter"
 
     fun from(graph: Graph, graphNumber: Int, fileName: String) {
         val graphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(graph, graphNumber)
@@ -60,7 +59,7 @@ object ASTPrinter {
         from(graph, graphDepthMap, fileName)
     }
 
-    private fun from(graph: Graph, graphDepthMap: Map<Int, List<Node>>, fileName: String, conflictNodes: List<Node> = emptyList()) {
+    private fun from(graph: Graph, graphDepthMap: Map<Int, List<Node>>, fileName: String) {
         val templateValueMap = mutableMapOf<String, String>()
         var templateCounter = 1
 
@@ -68,13 +67,9 @@ object ASTPrinter {
         var result = ""
         graphDepthMap[0]?.forEach { child ->
             if (child.isCommon) {
-                if (child in conflictNodes) {
-                    result += "\n // ${getTemplateNodeName(child)} \n"
-                } else {
-                    val realName = child.getRealName()
-                    if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
-                    result += realName
-                }
+                val realName = child.getRealName()
+                if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
+                result += realName
             } else {
                 val parent = getNodeFirstUncommonParent(child, graph)
                 if (lastUncommonParent != parent) {
@@ -92,6 +87,55 @@ object ASTPrinter {
             }
 
             if (child.getRealName() in listOf("}", ";", "{", "\\\\", "\\*")) result += "\n"
+        }
+
+        val file = File("data/$fileName.java")
+        file.createNewFile()
+        file.printWriter().use { out -> out.print(result) }
+    }
+
+    private fun from(graph1: Graph, graph2: Graph, leaves: List<Node>, conflictNodes: List<Node>, fileName: String) {
+        var result = ""
+        var counter = 1
+        val g1ValueMap = mutableMapOf <String, MutableList<Int>>()
+        val g2ValueMap = mutableMapOf <String, MutableList<Int>>()
+
+        leaves.forEach { node ->
+            val realName = if (graph1.edgesOf(node).isNotEmpty()) {
+                val g1Value = extractLeavesValueOf(node, graph1)
+                val g2Value = extractLeavesValueOf(node, graph2)
+
+                var selectedCounter = counter
+                if (g1Value in g1ValueMap && g2Value in g2ValueMap) {
+                    if (g1ValueMap[g1Value]!!.any { it in g2ValueMap[g2Value]!! }) {
+                        selectedCounter = g1ValueMap[g1Value]!!.first { it in g2ValueMap[g2Value]!! }
+                    } else {
+                        g1ValueMap[g1Value]?.add(counter)
+                        g2ValueMap[g2Value]?.add(counter)
+                        counter++
+                    }
+                } else {
+                    if (g1ValueMap[g1Value] == null)
+                        g1ValueMap[g1Value] = mutableListOf()
+                    if (g2ValueMap[g2Value] == null)
+                        g2ValueMap[g2Value] = mutableListOf()
+                    g1ValueMap[g1Value]?.add(counter)
+                    g2ValueMap[g2Value]?.add(counter)
+                    counter++
+                }
+
+                getTemplateNodeName(node, selectedCounter)
+            } else
+                node.getRealName()
+
+            if (node in conflictNodes) {
+                result += "\n // $realName \n"
+            } else {
+                if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
+                result += realName
+            }
+
+            if (realName in listOf("}", ";", "{", "//", "/*", "*/")) result += "\n"
         }
 
         val file = File("data/$fileName.java")
