@@ -45,13 +45,13 @@ object ASTPrinter {
             if (node in leaves)
                 orderedLeaves.add(node)
             if (node in conflictNodes)
-                orderedLeaves.add(Node("// -> ${getTemplateNodeName(node)} \n", isCommon = true))
+                orderedLeaves.add(Node("//->${node.completeName()}", isCommon = true))
         }
 
         from(graph1, graph2, orderedLeaves, conflictNodes, fileName)
     }
 
-    private fun getTemplateNodeName(node: Node, counter: Int = 1): String = "T_${node.getRealName().uppercase()}_$counter"
+    private fun getTemplateNodeName(node: Node, counter: Int): String = "T_${node.getRealName().uppercase()}_$counter"
 
     fun from(graph: Graph, graphNumber: Int, fileName: String) {
         val graphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(graph, graphNumber)
@@ -97,42 +97,52 @@ object ASTPrinter {
     private fun from(graph1: Graph, graph2: Graph, leaves: List<Node>, conflictNodes: List<Node>, fileName: String) {
         var result = ""
         var counter = 1
-        val g1ValueMap = mutableMapOf <String, MutableList<Int>>()
-        val g2ValueMap = mutableMapOf <String, MutableList<Int>>()
+        val g1ValueMap = mutableMapOf<String, MutableList<Int>>()
+        val g2ValueMap = mutableMapOf<String, MutableList<Int>>()
 
-        leaves.forEach { node ->
-            val realName = if (graph1.edgesOf(node).isNotEmpty()) {
-                val g1Value = extractLeavesValueOf(node, graph1)
-                val g2Value = extractLeavesValueOf(node, graph2)
+        fun extractNodeCounter(node: Node): Int {
+            val g1Value = extractLeavesValueOf(node, graph1)
+            val g2Value = extractLeavesValueOf(node, graph2)
 
-                var selectedCounter = counter
-                if (g1Value in g1ValueMap && g2Value in g2ValueMap) {
-                    if (g1ValueMap[g1Value]!!.any { it in g2ValueMap[g2Value]!! }) {
-                        selectedCounter = g1ValueMap[g1Value]!!.first { it in g2ValueMap[g2Value]!! }
-                    } else {
-                        g1ValueMap[g1Value]?.add(counter)
-                        g2ValueMap[g2Value]?.add(counter)
-                        counter++
-                    }
+            var selectedCounter = counter
+            if (g1Value in g1ValueMap && g2Value in g2ValueMap) {
+                if (g1ValueMap[g1Value]!!.any { it in g2ValueMap[g2Value]!! }) {
+                    selectedCounter = g1ValueMap[g1Value]!!.first { it in g2ValueMap[g2Value]!! }
                 } else {
-                    if (g1ValueMap[g1Value] == null)
-                        g1ValueMap[g1Value] = mutableListOf()
-                    if (g2ValueMap[g2Value] == null)
-                        g2ValueMap[g2Value] = mutableListOf()
                     g1ValueMap[g1Value]?.add(counter)
                     g2ValueMap[g2Value]?.add(counter)
                     counter++
                 }
-
-                getTemplateNodeName(node, selectedCounter)
-            } else
-                node.getRealName()
-
-            if (node in conflictNodes) {
-                result += "\n // $realName \n"
             } else {
-                if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
-                result += realName
+                if (g1ValueMap[g1Value] == null)
+                    g1ValueMap[g1Value] = mutableListOf()
+                if (g2ValueMap[g2Value] == null)
+                    g2ValueMap[g2Value] = mutableListOf()
+                g1ValueMap[g1Value]?.add(counter)
+                g2ValueMap[g2Value]?.add(counter)
+                counter++
+            }
+
+            return selectedCounter
+        }
+
+        leaves.forEach { node ->
+            val realName = if (graph1.edgesOf(node).isNotEmpty()) {
+                getTemplateNodeName(node, extractNodeCounter(node))
+            } else if (node !in graph1.nodes) {
+                val selectedNode = leaves.filter { it in graph1.nodes }.first { it.completeName() in node.name }
+                getTemplateNodeName(selectedNode, extractNodeCounter(selectedNode))
+            } else {
+                node.getRealName()
+            }
+
+            when (node) {
+                in conflictNodes -> result += "\n // $realName \n"
+                !in graph1.nodes -> result += "// -> $realName \n"
+                else -> {
+                    if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
+                    result += realName
+                }
             }
 
             if (realName in listOf("}", ";", "{", "//", "/*", "*/")) result += "\n"
