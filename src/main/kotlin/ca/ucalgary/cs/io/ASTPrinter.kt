@@ -3,6 +3,7 @@ package ca.ucalgary.cs.io
 import ca.ucalgary.cs.algorithm.StructuralMatchingAlgorithm
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
+import ca.ucalgary.cs.graph.NodeVariable
 import java.io.File
 
 object ASTPrinter {
@@ -15,31 +16,48 @@ object ASTPrinter {
     fun from(graph: Graph, fileName: String, graph1: Graph, graph2: Graph) {
         val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(graph)
         val graph1OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph1)
-        val graph2OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph2).filter { it.isCommon }
+        val graph2OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph2)
+        val commonNodes = graph2OrderedLeaves.filter { it.isCommon }
 
         val conflictNodes = graphDepthMap[-2] ?: emptyList()
         val leaves = graphDepthMap[0] ?: emptyList()
         val orderedLeaves = mutableListOf<Node>()
+        val nodeVariablesWithoutRep = (graphDepthMap[-3] ?: emptyList()).filterIsInstance<NodeVariable>()
+        val fixingNodePositionMap = nodeVariablesWithoutRep
+            .associateWith { nv -> graph.edgeVariablesOf(nv) }
+            .filter { (_, list) -> list.size == 1 }
+            .map { (nv, list) -> nv to list.first() }
+            .map { (nv, ev) -> ev to nv }
+            .map { (ev, nv) -> ev to ev.otherLegThan(nv) as Node }
+            .map { (ev, n) ->
+                val g1UncommonNodes = (ev.graph1Edges[n]?.map { it.to } ?: emptyList()) +
+                        ev.graph1Edges.filter { (_, list) -> n in list.map { it.to } }.keys
 
-        val conflictNodePositionMap = mutableMapOf<Node, MutableList<Node>>()
-        var i = 0
-        while (i < graph2OrderedLeaves.size) {
-            if (graph2OrderedLeaves[i] in conflictNodes) {
-                var j = i
-                while (j < graph2OrderedLeaves.size) {
-                    if (graph2OrderedLeaves[j] !in conflictNodes) {
-                        if (graph2OrderedLeaves[j] !in conflictNodePositionMap)
-                            conflictNodePositionMap[graph2OrderedLeaves[j]] = mutableListOf()
-                        conflictNodePositionMap[graph2OrderedLeaves[j]]?.add(graph2OrderedLeaves[i])
-                        break
-                    }
-                    j++
-                }
-            }
-            i++
-        }
+                val g2UncommonNodes = (ev.graph2Edges[n]?.map { it.to } ?: emptyList()) +
+                        ev.graph2Edges.filter { (_, list) -> n in list.map { it.to } }.keys
+
+                val map1 = extractFixingNodePositionMap(
+                    graph1OrderedLeaves,
+                    targetNodes = g1UncommonNodes,
+                    eligibleNodes = commonNodes,
+                    targetSubstitutionMap = g1UncommonNodes.associateWith { n }
+                )
+                val map2 = extractFixingNodePositionMap(
+                    graph2OrderedLeaves,
+                    targetNodes = g2UncommonNodes,
+                    eligibleNodes = commonNodes,
+                    targetSubstitutionMap = g2UncommonNodes.associateWith { n }
+                )
+
+                mergeMaps(map1, map2)
+            }.fold(mapOf<Node, List<Node>>()) { acc, curr -> mergeMaps(acc, curr) }
+
+        val conflictNodePositionMap =
+            extractFixingNodePositionMap(graph2OrderedLeaves, targetNodes = conflictNodes, eligibleNodes = commonNodes)
 
         graph1OrderedLeaves.forEach { node ->
+            if (node in fixingNodePositionMap)
+                fixingNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
             if (node in conflictNodePositionMap)
                 conflictNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
             if (node in leaves)
@@ -49,6 +67,42 @@ object ASTPrinter {
         }
 
         from(graph1, graph2, orderedLeaves, conflictNodes, fileName)
+    }
+
+    private fun mergeMaps(map1: Map<Node, List<Node>>, map2: Map<Node, List<Node>>) =
+        (map1.asSequence() + map2.asSequence())
+            .distinct()
+            .groupBy({ it.key }, { it.value })
+            .mapValues { (_, values) -> values.flatten().toSet().toList() }
+
+    private fun extractFixingNodePositionMap(
+        graphOrderedLeaves: List<Node>,
+        targetNodes: List<Node>,
+        eligibleNodes: List<Node>,
+        targetSubstitutionMap: Map<Node, Node> = emptyMap()
+    ): Map<Node, List<Node>> {
+        val fixingNodePositionMap = mutableMapOf<Node, MutableList<Node>>()
+
+        var i = 0
+        while (i < graphOrderedLeaves.size) {
+            if (graphOrderedLeaves[i] in targetNodes) {
+                var j = i
+                while (j < graphOrderedLeaves.size) {
+                    if (graphOrderedLeaves[j] !in targetNodes && graphOrderedLeaves[j] in eligibleNodes) {
+                        if (graphOrderedLeaves[j] !in fixingNodePositionMap)
+                            fixingNodePositionMap[graphOrderedLeaves[j]] = mutableListOf()
+                        fixingNodePositionMap[graphOrderedLeaves[j]]?.add(
+                            targetSubstitutionMap[graphOrderedLeaves[i]] ?: graphOrderedLeaves[i]
+                        )
+                        break
+                    }
+                    j++
+                }
+            }
+            i++
+        }
+
+        return fixingNodePositionMap
     }
 
     private fun getTemplateNodeName(node: Node, counter: Int): String = "T_${node.getRealName().uppercase()}_$counter"
