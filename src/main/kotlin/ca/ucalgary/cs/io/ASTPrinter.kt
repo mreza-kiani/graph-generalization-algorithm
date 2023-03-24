@@ -1,6 +1,7 @@
 package ca.ucalgary.cs.io
 
 import ca.ucalgary.cs.algorithm.StructuralMatchingAlgorithm
+import ca.ucalgary.cs.graph.EdgeVariable
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import ca.ucalgary.cs.graph.NodeVariable
@@ -23,6 +24,7 @@ object ASTPrinter {
         val leaves = graphDepthMap[0] ?: emptyList()
         val orderedLeaves = mutableListOf<Node>()
         val nodeVariablesWithoutRep = (graphDepthMap[-3] ?: emptyList()).filterIsInstance<NodeVariable>()
+        val edgeVariableRepMap = mutableMapOf<Node, EdgeVariable>()
         val fixingNodePositionMap = nodeVariablesWithoutRep
             .associateWith { nv -> graph.edgeVariablesOf(nv) }
             .filter { (_, list) -> list.size == 1 }
@@ -49,6 +51,8 @@ object ASTPrinter {
                     targetSubstitutionMap = g2UncommonNodes.associateWith { n }
                 )
 
+                edgeVariableRepMap[n] = ev
+
                 mergeMaps(map1, map2)
             }.fold(mapOf<Node, List<Node>>()) { acc, curr -> mergeMaps(acc, curr) }
 
@@ -66,7 +70,7 @@ object ASTPrinter {
                 orderedLeaves.add(Node("//->${node.completeName()}", isCommon = true))
         }
 
-        from(graph1, graph2, orderedLeaves, conflictNodes, fileName)
+        from(graph1, graph2, orderedLeaves, conflictNodes, fileName, edgeVariableRepMap)
     }
 
     private fun mergeMaps(map1: Map<Node, List<Node>>, map2: Map<Node, List<Node>>) =
@@ -148,15 +152,29 @@ object ASTPrinter {
         file.printWriter().use { out -> out.print(result) }
     }
 
-    private fun from(graph1: Graph, graph2: Graph, leaves: List<Node>, conflictNodes: List<Node>, fileName: String) {
+    private fun from(graph1: Graph, graph2: Graph, leaves: List<Node>, conflictNodes: List<Node>, fileName: String, edgeVariableRepMap: Map<Node, EdgeVariable>) {
         var result = ""
         var counter = 1
         val g1ValueMap = mutableMapOf<String, MutableList<Int>>()
         val g2ValueMap = mutableMapOf<String, MutableList<Int>>()
 
-        fun extractNodeCounter(node: Node): Int {
-            val g1Value = extractLeavesValueOf(node, graph1)
-            val g2Value = extractLeavesValueOf(node, graph2)
+        fun extractNodeCounter(node: Node, relatedEdgeVariable: EdgeVariable? = null): Int {
+            val g1Value: String
+            val g2Value: String
+            if (relatedEdgeVariable != null) {
+                val g1Parent = relatedEdgeVariable.graph1Edges[node]?.firstOrNull()?.to
+                val g2Parent = relatedEdgeVariable.graph2Edges[node]?.firstOrNull()?.to
+                if (g1Parent != null && g2Parent != null) {
+                    g1Value = extractLeavesValueOf(g1Parent, graph1)
+                    g2Value = extractLeavesValueOf(g2Parent, graph2)
+                } else {
+                    g1Value = extractLeavesValueOf(node, graph1)
+                    g2Value = extractLeavesValueOf(node, graph2)
+                }
+            } else {
+                g1Value = extractLeavesValueOf(node, graph1)
+                g2Value = extractLeavesValueOf(node, graph2)
+            }
 
             var selectedCounter = counter
             if (g1Value in g1ValueMap && g2Value in g2ValueMap) {
@@ -182,7 +200,7 @@ object ASTPrinter {
 
         leaves.forEach { node ->
             val realName = if (graph1.edgesOf(node).isNotEmpty()) {
-                getTemplateNodeName(node, extractNodeCounter(node))
+                getTemplateNodeName(node, extractNodeCounter(node, edgeVariableRepMap[node]))
             } else if (node !in graph1.nodes) {
                 val selectedNode = leaves.filter { it in graph1.nodes }.first { it.completeName() in node.name }
                 getTemplateNodeName(selectedNode, extractNodeCounter(selectedNode))
