@@ -67,7 +67,7 @@ object ASTPrinter {
             if (node in leaves)
                 orderedLeaves.add(node)
             if (node in conflictNodes)
-                orderedLeaves.add(Node("//->${node.completeName()}", isCommon = true))
+                orderedLeaves.add(Node("//${node.completeName()}", isCommon = true))
         }
 
         from(graph1, graph2, orderedLeaves, conflictNodes, fileName, edgeVariableRepMap)
