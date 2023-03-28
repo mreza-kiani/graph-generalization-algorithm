@@ -19,6 +19,9 @@ class VendingMachine2Test : BaseCompareGraphTest() {
         ASTPrinter.from(graph1, graphNumber = 1, fileName = "VendingMachine3/G1_generalized_v2")
         ASTPrinter.from(graph2, graphNumber = 2, fileName = "VendingMachine3/G2_generalized_v2")
 
+        ASTPrinter.from(commonGraph, fileName = "VendingMachine3/Generalization_F", graph1, graph2)
+        ASTPrinter.from(commonGraph, fileName = "VendingMachine3/Generalization_S", graph2, graph1)
+
         graph1.visualize("VendingMachine3/G1_Generalized", commonGraph)
         graph2.visualize("VendingMachine3/G2_Generalized", commonGraph)
         commonGraph.visualize("VendingMachine3/Generalization")
