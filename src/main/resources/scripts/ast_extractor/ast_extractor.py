@@ -7,6 +7,7 @@ from tree_sitter import Language, Parser, Node
 nodes = []
 edges = {}
 edges_mapping = {}
+PRINTING_MODE = True
 
 
 def configure_tree_sitter():
@@ -91,6 +92,8 @@ def copy_kotlin_declaration(graph_number):
     result = get_variable_declarations()
     result += get_graph_declaration(graph_number)
     pyperclip.copy(result)
+    if PRINTING_MODE:
+        print(result)
 
 
 if __name__ == '__main__':
