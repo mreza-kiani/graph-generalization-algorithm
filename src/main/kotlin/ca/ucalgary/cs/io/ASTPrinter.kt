@@ -70,6 +70,8 @@ object ASTPrinter {
                 orderedLeaves.add(Node("//${node.completeName()}", isCommon = true))
         }
 
+        filterRepeatedUselessLeaves(orderedLeaves)
+
         from(graph1, graph2, orderedLeaves, conflictNodes, fileName, edgeVariableRepMap)
     }
 
@@ -223,6 +225,32 @@ object ASTPrinter {
         val file = File("data/$fileName.java")
         file.createNewFile()
         file.printWriter().use { out -> out.print(result) }
+    }
+
+    private fun filterRepeatedUselessLeaves(orderedLeaves: MutableList<Node>) {
+        var baseNodeName = ""
+        var i = 0
+        while (true) {
+            if (i >= orderedLeaves.size)
+                break
+            if (i == 0 || (baseNodeName !in orderedLeaves[i].completeName())) {
+                baseNodeName = orderedLeaves[i].completeName().replace("//", "")
+                i++
+            } else {
+                if (listOf("(", "{").any { baseNodeName.startsWith(it) } || listOf(
+                        ")",
+                        "}"
+                    ).any { baseNodeName.endsWith(it) }) {
+                    i++
+                } else {
+                    orderedLeaves.remove(orderedLeaves[i])
+                    if (baseNodeName in orderedLeaves[i - 1].completeName()) {
+                        i--
+                        orderedLeaves.remove(orderedLeaves[i])
+                    }
+                }
+            }
+        }
     }
 
     private fun extractLeavesValueOf(parent: Node, graph: Graph): String {
