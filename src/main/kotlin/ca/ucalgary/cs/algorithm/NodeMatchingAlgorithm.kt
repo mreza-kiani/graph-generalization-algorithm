@@ -3,6 +3,7 @@ package ca.ucalgary.cs.algorithm
 import ca.ucalgary.cs.graph.Node
 
 object NodeMatchingAlgorithm {
+    private val LCSMap = mutableMapOf<String, Int>()
 
     fun similarityScoreOf(node1: Node?, node2: Node?): Double {
         if (node1 == null || node2 == null)
@@ -18,6 +19,14 @@ object NodeMatchingAlgorithm {
     }
 
     private fun longestCommonSubstring(a: String, b: String): Int {
+        if (LCSMap["$a#$b"] != null)
+            return LCSMap["$a#$b"] ?: 0
+        val lcs = extractLongestCommonSubstringTable(a, b).mapNotNull { list -> list.maxOrNull() }.maxOrNull() ?: 0
+        LCSMap["$a#$b"] = lcs
+        return lcs
+    }
+
+    private fun extractLongestCommonSubstringTable(a: String, b: String): List<List<Int>> {
         val scores = List(a.length) { MutableList(b.length) { 0 } }
 
         a.lowercase().forEachIndexed { aIndex, aChar ->
@@ -31,7 +40,41 @@ object NodeMatchingAlgorithm {
             }
         }
 
-        return scores.mapNotNull { list -> list.maxOrNull() }.maxOrNull() ?: 0
+        return scores
+    }
+
+    fun extractLongestCommonSubstringWord(a: String, b: String): String {
+        if (a == b)
+            return a
+
+        val table = extractLongestCommonSubstringTable(a, b)
+        val lcs = longestCommonSubstring(a, b)
+        var aMaxIndex = 0
+        var bMaxIndex = 0
+
+        table.forEachIndexed { aIndex, list ->
+            list.forEachIndexed { bIndex, value ->
+               if (value == lcs) {
+                   aMaxIndex = aIndex
+                   bMaxIndex = bIndex
+               }
+            }
+        }
+
+        var result = a.substring(aMaxIndex - lcs + 1, aMaxIndex + 1)
+        if ((aMaxIndex - lcs + 1 > 0) || (bMaxIndex - lcs + 1 > 0))
+            result = "X$result"
+        if ((aMaxIndex + 1 < a.length) || (bMaxIndex + 1 < b.length))
+            result = "${result}X"
+        listOf("/*", "\"").forEach { prefix ->
+            if (a.startsWith(prefix) && !result.startsWith(prefix))
+                result = "$prefix$result"
+        }
+        listOf("*/", "\"").forEach { postfix ->
+            if (a.endsWith(postfix) && !result.endsWith(postfix))
+                result = "$result$postfix"
+        }
+        return result
     }
 
     fun similarityScoreOf(nodes1: Set<Node>, nodes2: Set<Node>): Double {

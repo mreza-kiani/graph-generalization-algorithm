@@ -173,6 +173,7 @@ object StructuralMatchingAlgorithm {
     private fun applyMatchingInNames(source: Node, matchedNode: Node) {
         nodesMatchingHappened = true
         println("\t$source <> $matchedNode")
+        source.name = NodeMatchingAlgorithm.extractLongestCommonSubstringWord(source.name, matchedNode.name)
         if (source.code != null)
             source.name += "_${source.code}"
         source.isCommon = true
