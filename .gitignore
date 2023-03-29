@@ -80,3 +80,5 @@ input.txt
 uml.txt
 data/
 *.iml
+
+src/main/resources/scripts/ast_extractor/Test.java
