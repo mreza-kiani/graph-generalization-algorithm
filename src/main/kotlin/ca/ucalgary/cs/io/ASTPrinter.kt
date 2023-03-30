@@ -204,7 +204,7 @@ object ASTPrinter {
             val realName = if (graph1.edgesOf(node).isNotEmpty()) {
                 getTemplateNodeName(node, extractNodeCounter(node, edgeVariableRepMap[node]))
             } else if (node !in graph1.nodes) {
-                val selectedNode = leaves.filter { it in graph1.nodes }.first { it.completeName() in node.name }
+                val selectedNode = leaves.filter { it in graph1.nodes }.firstOrNull { it.completeName() in node.name } ?: return@forEach
                 getTemplateNodeName(selectedNode, extractNodeCounter(selectedNode))
             } else {
                 node.getRealName()

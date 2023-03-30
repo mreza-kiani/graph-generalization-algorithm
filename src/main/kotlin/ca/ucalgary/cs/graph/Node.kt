@@ -36,11 +36,15 @@ open class Node(
     fun getRealName(): String {
         var result = name
         val lastUnderlineIndex = name.lastIndexOf("_")
-        if (lastUnderlineIndex != -1)
+        if (lastUnderlineIndex != -1 && isNumeric(name.substring(lastUnderlineIndex + 1, name.length)))
             result = name.substring(0, lastUnderlineIndex)
         val lastSharpIndex = name.lastIndexOf("#")
         if (lastSharpIndex != -1)
             result = name.substring(0, lastSharpIndex)
         return result
+    }
+
+    private fun isNumeric(toCheck: String): Boolean {
+        return toCheck.toDoubleOrNull() != null
     }
 }
