@@ -1,0 +1,190 @@
+val ewqnmi2 = Node("program")
+val zrbgpz4 = Node("class_declaration")
+val mhopmr1 = Node("class")
+val irrdgu9 = Node("identifier", isDuplicate = true)
+val qlyfvr7 = Node("Assert8")
+val yblgvw3 = Node("class_body")
+val qmodqf7 = Node("{", isDuplicate = true)
+val slqqax0 = Node("block_comment")
+val hmcrpl4 = Node("/** \n * Copy the contents of the given byte array to the given OutputStream. Closes the stream when done.\n * @param in the byte array to copy from\n * @param out the OutputStream to copy to\n * @throws IOException in case of I/O errors\n */")
+val twnfep5 = Node("method_declaration")
+val pyvqmk0 = Node("modifiers")
+val bwvqku4 = Node("public")
+val cggssl3 = Node("static")
+val srzret7 = Node("void_type")
+val plofbv8 = Node("identifier", isDuplicate = true)
+val nwtryd3 = Node("copy")
+val otzrqv8 = Node("formal_parameters")
+val oesynj2 = Node("(", isDuplicate = true)
+val qujtvk6 = Node("formal_parameter", isDuplicate = true)
+val hhycwn0 = Node("array_type")
+val tzbgcf1 = Node("integral_type")
+val fpmnjk1 = Node("byte")
+val yfkmoi8 = Node("dimensions")
+val rlvqdc1 = Node("[")
+val zrzxef3 = Node("]")
+val hrmpns2 = Node("identifier", isDuplicate = true)
+val xnjhvw9 = Node("in", isDuplicate = true)
+val bbnbrt1 = Node(",", isDuplicate = true)
+val cwvfry2 = Node("formal_parameter", isDuplicate = true)
+val yzobqy1 = Node("type_identifier", isDuplicate = true)
+val sjvxyz0 = Node("OutputStream")
+val fcxrox1 = Node("identifier", isDuplicate = true)
+val tipsdx4 = Node("out", isDuplicate = true)
+val rrtsqr5 = Node(")", isDuplicate = true)
+val mlygeb8 = Node("throws", isDuplicate = true)
+val ihkmcf8 = Node("throws", isDuplicate = true)
+val rxmllm4 = Node("type_identifier", isDuplicate = true)
+val pthwcw6 = Node("IOException", isDuplicate = true)
+val rryhxi4 = Node("block", isDuplicate = true)
+val drdhxa0 = Node("{", isDuplicate = true)
+val gbhijf9 = Node("expression_statement", isDuplicate = true)
+val bxzfsj3 = Node("method_invocation", isDuplicate = true)
+val uonaun2 = Node("identifier", isDuplicate = true)
+val jidmue7 = Node("Assert", isDuplicate = true)
+val fzvtfh7 = Node(".", isDuplicate = true)
+val gczajh8 = Node("identifier", isDuplicate = true)
+val jvssur2 = Node("notNull", isDuplicate = true)
+val trvqky4 = Node("argument_list", isDuplicate = true)
+val oaugiv2 = Node("(", isDuplicate = true)
+val kltfgx4 = Node("identifier", isDuplicate = true)
+val gdghyd9 = Node("in", isDuplicate = true)
+val kndakl3 = Node(",", isDuplicate = true)
+val rxadpi0 = Node("string_literal", isDuplicate = true)
+val zvumwz1 = Node(""No input byte array specified"")
+val qfweny7 = Node(")", isDuplicate = true)
+val yefhfm0 = Node(";", isDuplicate = true)
+val xhuavj7 = Node("expression_statement", isDuplicate = true)
+val zxyhds8 = Node("method_invocation", isDuplicate = true)
+val iaqqmy0 = Node("identifier", isDuplicate = true)
+val opvglr6 = Node("Assert", isDuplicate = true)
+val srgiki7 = Node(".", isDuplicate = true)
+val fplbce2 = Node("identifier", isDuplicate = true)
+val eizlba7 = Node("notNull", isDuplicate = true)
+val auvqov7 = Node("argument_list", isDuplicate = true)
+val dpabqq3 = Node("(", isDuplicate = true)
+val rejrxg7 = Node("identifier", isDuplicate = true)
+val wapzhm4 = Node("out", isDuplicate = true)
+val vcancj6 = Node(",", isDuplicate = true)
+val ycicxq0 = Node("string_literal", isDuplicate = true)
+val fwfavr0 = Node(""No OutputStream specified"")
+val fzouih5 = Node(")", isDuplicate = true)
+val yccydx3 = Node(";", isDuplicate = true)
+val cphafh7 = Node("try_statement", isDuplicate = true)
+val qrsueg8 = Node("try", isDuplicate = true)
+val dqzowo3 = Node("block", isDuplicate = true)
+val xfcfbx3 = Node("{", isDuplicate = true)
+val kfdrqg7 = Node("expression_statement", isDuplicate = true)
+val bbbdsm7 = Node("method_invocation", isDuplicate = true)
+val wflugk1 = Node("identifier", isDuplicate = true)
+val yaorwn7 = Node("out", isDuplicate = true)
+val kncvuf3 = Node(".", isDuplicate = true)
+val cpihdr7 = Node("identifier", isDuplicate = true)
+val cnpncn7 = Node("write")
+val jsgofl0 = Node("argument_list", isDuplicate = true)
+val buhpmv6 = Node("(", isDuplicate = true)
+val ulktfw5 = Node("identifier", isDuplicate = true)
+val rmgzdd9 = Node("in", isDuplicate = true)
+val kklvze0 = Node(")", isDuplicate = true)
+val pfcwcm3 = Node(";", isDuplicate = true)
+val rnnezd9 = Node("}", isDuplicate = true)
+val nhrtnl3 = Node("finally_clause")
+val itfgxt5 = Node("finally")
+val btnhkk0 = Node("block", isDuplicate = true)
+val xmctaw2 = Node("{", isDuplicate = true)
+val vwcmhu9 = Node("try_statement", isDuplicate = true)
+val gsvjit4 = Node("try", isDuplicate = true)
+val xxgjni5 = Node("block", isDuplicate = true)
+val cyawev8 = Node("{", isDuplicate = true)
+val utgsgl6 = Node("expression_statement", isDuplicate = true)
+val qqtnjf0 = Node("method_invocation", isDuplicate = true)
+val mlxmyt2 = Node("identifier", isDuplicate = true)
+val oamvhl2 = Node("out", isDuplicate = true)
+val mudzmg3 = Node(".", isDuplicate = true)
+val vgmdzb7 = Node("identifier", isDuplicate = true)
+val wsfhfk9 = Node("close")
+val ydktlc4 = Node("argument_list", isDuplicate = true)
+val ytndze0 = Node("(", isDuplicate = true)
+val ofjzlz2 = Node(")", isDuplicate = true)
+val tultfe0 = Node(";", isDuplicate = true)
+val jhorpg1 = Node("}", isDuplicate = true)
+val lxjkcx5 = Node("catch_clause")
+val ktsrgz9 = Node("catch")
+val rculnu8 = Node("(", isDuplicate = true)
+val juxmjj9 = Node("catch_formal_parameter")
+val mxfsfo2 = Node("catch_type")
+val lggidb5 = Node("type_identifier", isDuplicate = true)
+val iibojl9 = Node("IOException", isDuplicate = true)
+val lzmrnt2 = Node("identifier", isDuplicate = true)
+val pkpsqr6 = Node("ex")
+val onndle3 = Node(")", isDuplicate = true)
+val staqgk7 = Node("block", isDuplicate = true)
+val jwbqxa5 = Node("{", isDuplicate = true)
+val qiidjf8 = Node("}", isDuplicate = true)
+val rtdios5 = Node("}", isDuplicate = true)
+val jfosfb8 = Node("}", isDuplicate = true)
+val sxiuzk5 = Node("}", isDuplicate = true)
+
+graph1 = Graph.from(
+	nodes = listOf(ewqnmi2, zrbgpz4, mhopmr1, irrdgu9, qlyfvr7, yblgvw3, qmodqf7, slqqax0, hmcrpl4, twnfep5, pyvqmk0, bwvqku4, cggssl3, srzret7, plofbv8, nwtryd3, otzrqv8, oesynj2, qujtvk6, hhycwn0, tzbgcf1, fpmnjk1, yfkmoi8, rlvqdc1, zrzxef3, hrmpns2, xnjhvw9, bbnbrt1, cwvfry2, yzobqy1, sjvxyz0, fcxrox1, tipsdx4, rrtsqr5, mlygeb8, ihkmcf8, rxmllm4, pthwcw6, rryhxi4, drdhxa0, gbhijf9, bxzfsj3, uonaun2, jidmue7, fzvtfh7, gczajh8, jvssur2, trvqky4, oaugiv2, kltfgx4, gdghyd9, kndakl3, rxadpi0, zvumwz1, qfweny7, yefhfm0, xhuavj7, zxyhds8, iaqqmy0, opvglr6, srgiki7, fplbce2, eizlba7, auvqov7, dpabqq3, rejrxg7, wapzhm4, vcancj6, ycicxq0, fwfavr0, fzouih5, yccydx3, cphafh7, qrsueg8, dqzowo3, xfcfbx3, kfdrqg7, bbbdsm7, wflugk1, yaorwn7, kncvuf3, cpihdr7, cnpncn7, jsgofl0, buhpmv6, ulktfw5, rmgzdd9, kklvze0, pfcwcm3, rnnezd9, nhrtnl3, itfgxt5, btnhkk0, xmctaw2, vwcmhu9, gsvjit4, xxgjni5, cyawev8, utgsgl6, qqtnjf0, mlxmyt2, oamvhl2, mudzmg3, vgmdzb7, wsfhfk9, ydktlc4, ytndze0, ofjzlz2, tultfe0, jhorpg1, lxjkcx5, ktsrgz9, rculnu8, juxmjj9, mxfsfo2, lggidb5, iibojl9, lzmrnt2, pkpsqr6, onndle3, staqgk7, jwbqxa5, qiidjf8, rtdios5, jfosfb8, sxiuzk5),
+	edges = mapOf(
+		ewqnmi2 to listOf(zrbgpz4),
+		zrbgpz4 to listOf(mhopmr1, irrdgu9, yblgvw3),
+		irrdgu9 to listOf(qlyfvr7),
+		yblgvw3 to listOf(qmodqf7, slqqax0, twnfep5, sxiuzk5),
+		slqqax0 to listOf(hmcrpl4),
+		twnfep5 to listOf(pyvqmk0, srzret7, plofbv8, otzrqv8, mlygeb8, rryhxi4),
+		pyvqmk0 to listOf(bwvqku4, cggssl3),
+		plofbv8 to listOf(nwtryd3),
+		otzrqv8 to listOf(oesynj2, qujtvk6, bbnbrt1, cwvfry2, rrtsqr5),
+		qujtvk6 to listOf(hhycwn0, hrmpns2),
+		hhycwn0 to listOf(tzbgcf1, yfkmoi8),
+		tzbgcf1 to listOf(fpmnjk1),
+		yfkmoi8 to listOf(rlvqdc1, zrzxef3),
+		hrmpns2 to listOf(xnjhvw9),
+		cwvfry2 to listOf(yzobqy1, fcxrox1),
+		yzobqy1 to listOf(sjvxyz0),
+		fcxrox1 to listOf(tipsdx4),
+		mlygeb8 to listOf(ihkmcf8, rxmllm4),
+		rxmllm4 to listOf(pthwcw6),
+		rryhxi4 to listOf(drdhxa0, gbhijf9, xhuavj7, cphafh7, jfosfb8),
+		gbhijf9 to listOf(bxzfsj3, yefhfm0),
+		bxzfsj3 to listOf(uonaun2, fzvtfh7, gczajh8, trvqky4),
+		uonaun2 to listOf(jidmue7),
+		gczajh8 to listOf(jvssur2),
+		trvqky4 to listOf(oaugiv2, kltfgx4, kndakl3, rxadpi0, qfweny7),
+		kltfgx4 to listOf(gdghyd9),
+		rxadpi0 to listOf(zvumwz1),
+		xhuavj7 to listOf(zxyhds8, yccydx3),
+		zxyhds8 to listOf(iaqqmy0, srgiki7, fplbce2, auvqov7),
+		iaqqmy0 to listOf(opvglr6),
+		fplbce2 to listOf(eizlba7),
+		auvqov7 to listOf(dpabqq3, rejrxg7, vcancj6, ycicxq0, fzouih5),
+		rejrxg7 to listOf(wapzhm4),
+		ycicxq0 to listOf(fwfavr0),
+		cphafh7 to listOf(qrsueg8, dqzowo3, nhrtnl3),
+		dqzowo3 to listOf(xfcfbx3, kfdrqg7, rnnezd9),
+		kfdrqg7 to listOf(bbbdsm7, pfcwcm3),
+		bbbdsm7 to listOf(wflugk1, kncvuf3, cpihdr7, jsgofl0),
+		wflugk1 to listOf(yaorwn7),
+		cpihdr7 to listOf(cnpncn7),
+		jsgofl0 to listOf(buhpmv6, ulktfw5, kklvze0),
+		ulktfw5 to listOf(rmgzdd9),
+		nhrtnl3 to listOf(itfgxt5, btnhkk0),
+		btnhkk0 to listOf(xmctaw2, vwcmhu9, rtdios5),
+		vwcmhu9 to listOf(gsvjit4, xxgjni5, lxjkcx5),
+		xxgjni5 to listOf(cyawev8, utgsgl6, jhorpg1),
+		utgsgl6 to listOf(qqtnjf0, tultfe0),
+		qqtnjf0 to listOf(mlxmyt2, mudzmg3, vgmdzb7, ydktlc4),
+		mlxmyt2 to listOf(oamvhl2),
+		vgmdzb7 to listOf(wsfhfk9),
+		ydktlc4 to listOf(ytndze0, ofjzlz2),
+		lxjkcx5 to listOf(ktsrgz9, rculnu8, juxmjj9, onndle3, staqgk7),
+		juxmjj9 to listOf(mxfsfo2, lzmrnt2),
+		mxfsfo2 to listOf(lggidb5),
+		lggidb5 to listOf(iibojl9),
+		lzmrnt2 to listOf(pkpsqr6),
+		staqgk7 to listOf(jwbqxa5, qiidjf8),
+	)
+)
+

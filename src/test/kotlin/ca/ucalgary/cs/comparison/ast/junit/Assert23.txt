@@ -1,0 +1,240 @@
+val nslsuv8 = Node("program")
+val dqfzxc9 = Node("class_declaration")
+val qyqhwe1 = Node("class")
+val wyhuwn5 = Node("identifier", isDuplicate = true)
+val zqkujs6 = Node("Assert23")
+val yexron9 = Node("class_body")
+val qnmetk3 = Node("{", isDuplicate = true)
+val tprxvt1 = Node("block_comment")
+val autovz5 = Node("/** \n * Return a public static method of a class.\n * @param methodName the static method name\n * @param clazz	the class which defines the method\n * @param args the parameter types to the method\n * @return the static method, or <code>null</code> if no static method was found\n * @throws IllegalArgumentException if the method name is blank or the clazz is null\n */")
+val cityxn4 = Node("method_declaration")
+val fzfkfs3 = Node("modifiers")
+val xkxscm9 = Node("public")
+val sledaw4 = Node("static")
+val yyxqaz6 = Node("type_identifier", isDuplicate = true)
+val wxczzc4 = Node("Method", isDuplicate = true)
+val caxmci6 = Node("identifier", isDuplicate = true)
+val tlljxj9 = Node("getStaticMethod")
+val owpzil4 = Node("formal_parameters")
+val bstuqp5 = Node("(", isDuplicate = true)
+val bsybqc1 = Node("formal_parameter", isDuplicate = true)
+val xkdgag7 = Node("generic_type", isDuplicate = true)
+val mnxaeq5 = Node("type_identifier", isDuplicate = true)
+val gqxteo2 = Node("Class", isDuplicate = true)
+val oefezu7 = Node("type_arguments", isDuplicate = true)
+val qkhtwc6 = Node("<", isDuplicate = true)
+val kimhun0 = Node("wildcard", isDuplicate = true)
+val amhcci2 = Node("?", isDuplicate = true)
+val rxkpvi7 = Node(">", isDuplicate = true)
+val zilghs0 = Node("identifier", isDuplicate = true)
+val nztseh9 = Node("clazz", isDuplicate = true)
+val reichd9 = Node(",", isDuplicate = true)
+val iqqota2 = Node("formal_parameter", isDuplicate = true)
+val cpnodd3 = Node("type_identifier", isDuplicate = true)
+val elohsi2 = Node("String")
+val xbbcuk1 = Node("identifier", isDuplicate = true)
+val rlrsvv7 = Node("methodName", isDuplicate = true)
+val kthhxl6 = Node(",", isDuplicate = true)
+val cywhcv2 = Node("spread_parameter")
+val ioowbt0 = Node("generic_type", isDuplicate = true)
+val phbrkx9 = Node("type_identifier", isDuplicate = true)
+val zssemd7 = Node("Class", isDuplicate = true)
+val msmbgu4 = Node("type_arguments", isDuplicate = true)
+val yusetu1 = Node("<", isDuplicate = true)
+val eipgew3 = Node("wildcard", isDuplicate = true)
+val aaqein1 = Node("?", isDuplicate = true)
+val qkdlbt3 = Node(">", isDuplicate = true)
+val adsnro7 = Node("...")
+val pvxzww9 = Node("variable_declarator", isDuplicate = true)
+val bajolq9 = Node("identifier", isDuplicate = true)
+val rhtnqq5 = Node("args", isDuplicate = true)
+val ckkmvf5 = Node(")", isDuplicate = true)
+val lohxic9 = Node("block", isDuplicate = true)
+val fvgywb3 = Node("{", isDuplicate = true)
+val dikbxv3 = Node("expression_statement", isDuplicate = true)
+val rmlezc5 = Node("method_invocation", isDuplicate = true)
+val eyouus5 = Node("identifier", isDuplicate = true)
+val jwunna5 = Node("Assert", isDuplicate = true)
+val msdpwa6 = Node(".", isDuplicate = true)
+val ajdnyx1 = Node("identifier", isDuplicate = true)
+val cpcxxo3 = Node("notNull", isDuplicate = true)
+val ypzxwo8 = Node("argument_list", isDuplicate = true)
+val aavgkt3 = Node("(", isDuplicate = true)
+val dsfkmr3 = Node("identifier", isDuplicate = true)
+val pqivrh0 = Node("clazz", isDuplicate = true)
+val umnjkq4 = Node(",", isDuplicate = true)
+val mswzkp1 = Node("string_literal", isDuplicate = true)
+val uzviea4 = Node(""Class must not be null"")
+val mqglcs7 = Node(")", isDuplicate = true)
+val dwbify4 = Node(";", isDuplicate = true)
+val elbrme5 = Node("expression_statement", isDuplicate = true)
+val nvphup9 = Node("method_invocation", isDuplicate = true)
+val sshiml0 = Node("identifier", isDuplicate = true)
+val ffwrqo1 = Node("Assert", isDuplicate = true)
+val xqybnd8 = Node(".", isDuplicate = true)
+val jwsemz7 = Node("identifier", isDuplicate = true)
+val kfzfqa3 = Node("notNull", isDuplicate = true)
+val pqsner8 = Node("argument_list", isDuplicate = true)
+val ylsdeh7 = Node("(", isDuplicate = true)
+val mnxiuo3 = Node("identifier", isDuplicate = true)
+val cdtrtk7 = Node("methodName", isDuplicate = true)
+val zyhedv7 = Node(",", isDuplicate = true)
+val qzwklr8 = Node("string_literal", isDuplicate = true)
+val grmavv7 = Node(""Method name must not be null"")
+val jucabo5 = Node(")", isDuplicate = true)
+val gsmkae4 = Node(";", isDuplicate = true)
+val uoyklp0 = Node("try_statement")
+val jxejlw4 = Node("try")
+val jzfwul4 = Node("block", isDuplicate = true)
+val xjsnng0 = Node("{", isDuplicate = true)
+val kcyswp5 = Node("local_variable_declaration")
+val qltgcz3 = Node("type_identifier", isDuplicate = true)
+val sqpbmr4 = Node("Method", isDuplicate = true)
+val hevjli8 = Node("variable_declarator", isDuplicate = true)
+val tlwved1 = Node("identifier", isDuplicate = true)
+val vcacsy3 = Node("method", isDuplicate = true)
+val gbmlku4 = Node("=")
+val lonpfw4 = Node("method_invocation", isDuplicate = true)
+val tglxpm6 = Node("identifier", isDuplicate = true)
+val ztucyw6 = Node("clazz", isDuplicate = true)
+val mqewws8 = Node(".", isDuplicate = true)
+val scispy4 = Node("identifier", isDuplicate = true)
+val tzuzav1 = Node("getMethod")
+val bseykc7 = Node("argument_list", isDuplicate = true)
+val ltnncr0 = Node("(", isDuplicate = true)
+val tynttf1 = Node("identifier", isDuplicate = true)
+val qkevwp6 = Node("methodName", isDuplicate = true)
+val npgzya1 = Node(",", isDuplicate = true)
+val qentoa3 = Node("identifier", isDuplicate = true)
+val gehiqk6 = Node("args", isDuplicate = true)
+val ccoqhn6 = Node(")", isDuplicate = true)
+val tspymj0 = Node(";", isDuplicate = true)
+val pmmuyk1 = Node("return_statement", isDuplicate = true)
+val qibezt1 = Node("return", isDuplicate = true)
+val kqadjr5 = Node("ternary_expression")
+val pbrcti1 = Node("method_invocation", isDuplicate = true)
+val xmnmcc1 = Node("identifier", isDuplicate = true)
+val ryhnkt6 = Node("Modifier")
+val ztvymg6 = Node(".", isDuplicate = true)
+val kkbzsk4 = Node("identifier", isDuplicate = true)
+val beiqjq4 = Node("isStatic")
+val yxwjkw5 = Node("argument_list", isDuplicate = true)
+val ydcqsf2 = Node("(", isDuplicate = true)
+val bwfgub8 = Node("method_invocation", isDuplicate = true)
+val yulyiy4 = Node("identifier", isDuplicate = true)
+val xrgmad6 = Node("method", isDuplicate = true)
+val vwffvm0 = Node(".", isDuplicate = true)
+val mfguqi6 = Node("identifier", isDuplicate = true)
+val xchgbr3 = Node("getModifiers")
+val daqiuu4 = Node("argument_list", isDuplicate = true)
+val hgrhvs4 = Node("(", isDuplicate = true)
+val jmzyhj1 = Node(")", isDuplicate = true)
+val qyuper9 = Node(")", isDuplicate = true)
+val nnkxhz5 = Node("?", isDuplicate = true)
+val hsemqy0 = Node("identifier", isDuplicate = true)
+val bwsgsa3 = Node("method", isDuplicate = true)
+val djpkpi9 = Node(":")
+val jidzsk7 = Node("null_literal", isDuplicate = true)
+val twlydi6 = Node("null", isDuplicate = true)
+val jtbmhm4 = Node(";", isDuplicate = true)
+val luovob9 = Node("}", isDuplicate = true)
+val ckbwyz1 = Node("catch_clause")
+val hgricf7 = Node("catch")
+val vhipos6 = Node("(", isDuplicate = true)
+val asyngv4 = Node("catch_formal_parameter")
+val hjwont5 = Node("catch_type")
+val nskzoj9 = Node("type_identifier", isDuplicate = true)
+val knbfho7 = Node("NoSuchMethodException")
+val vpskvs4 = Node("identifier", isDuplicate = true)
+val mpmrpr5 = Node("ex")
+val rsbyxo6 = Node(")", isDuplicate = true)
+val cyrktd7 = Node("block", isDuplicate = true)
+val yzcscs2 = Node("{", isDuplicate = true)
+val vmidzb6 = Node("return_statement", isDuplicate = true)
+val rpjmjz7 = Node("return", isDuplicate = true)
+val upoitm4 = Node("null_literal", isDuplicate = true)
+val sszwrs5 = Node("null", isDuplicate = true)
+val mzxfdv4 = Node(";", isDuplicate = true)
+val tumilp6 = Node("}", isDuplicate = true)
+val gpxjrq0 = Node("}", isDuplicate = true)
+val nkivfb7 = Node("}", isDuplicate = true)
+
+graph1 = Graph.from(
+	nodes = listOf(nslsuv8, dqfzxc9, qyqhwe1, wyhuwn5, zqkujs6, yexron9, qnmetk3, tprxvt1, autovz5, cityxn4, fzfkfs3, xkxscm9, sledaw4, yyxqaz6, wxczzc4, caxmci6, tlljxj9, owpzil4, bstuqp5, bsybqc1, xkdgag7, mnxaeq5, gqxteo2, oefezu7, qkhtwc6, kimhun0, amhcci2, rxkpvi7, zilghs0, nztseh9, reichd9, iqqota2, cpnodd3, elohsi2, xbbcuk1, rlrsvv7, kthhxl6, cywhcv2, ioowbt0, phbrkx9, zssemd7, msmbgu4, yusetu1, eipgew3, aaqein1, qkdlbt3, adsnro7, pvxzww9, bajolq9, rhtnqq5, ckkmvf5, lohxic9, fvgywb3, dikbxv3, rmlezc5, eyouus5, jwunna5, msdpwa6, ajdnyx1, cpcxxo3, ypzxwo8, aavgkt3, dsfkmr3, pqivrh0, umnjkq4, mswzkp1, uzviea4, mqglcs7, dwbify4, elbrme5, nvphup9, sshiml0, ffwrqo1, xqybnd8, jwsemz7, kfzfqa3, pqsner8, ylsdeh7, mnxiuo3, cdtrtk7, zyhedv7, qzwklr8, grmavv7, jucabo5, gsmkae4, uoyklp0, jxejlw4, jzfwul4, xjsnng0, kcyswp5, qltgcz3, sqpbmr4, hevjli8, tlwved1, vcacsy3, gbmlku4, lonpfw4, tglxpm6, ztucyw6, mqewws8, scispy4, tzuzav1, bseykc7, ltnncr0, tynttf1, qkevwp6, npgzya1, qentoa3, gehiqk6, ccoqhn6, tspymj0, pmmuyk1, qibezt1, kqadjr5, pbrcti1, xmnmcc1, ryhnkt6, ztvymg6, kkbzsk4, beiqjq4, yxwjkw5, ydcqsf2, bwfgub8, yulyiy4, xrgmad6, vwffvm0, mfguqi6, xchgbr3, daqiuu4, hgrhvs4, jmzyhj1, qyuper9, nnkxhz5, hsemqy0, bwsgsa3, djpkpi9, jidzsk7, twlydi6, jtbmhm4, luovob9, ckbwyz1, hgricf7, vhipos6, asyngv4, hjwont5, nskzoj9, knbfho7, vpskvs4, mpmrpr5, rsbyxo6, cyrktd7, yzcscs2, vmidzb6, rpjmjz7, upoitm4, sszwrs5, mzxfdv4, tumilp6, gpxjrq0, nkivfb7),
+	edges = mapOf(
+		nslsuv8 to listOf(dqfzxc9),
+		dqfzxc9 to listOf(qyqhwe1, wyhuwn5, yexron9),
+		wyhuwn5 to listOf(zqkujs6),
+		yexron9 to listOf(qnmetk3, tprxvt1, cityxn4, nkivfb7),
+		tprxvt1 to listOf(autovz5),
+		cityxn4 to listOf(fzfkfs3, yyxqaz6, caxmci6, owpzil4, lohxic9),
+		fzfkfs3 to listOf(xkxscm9, sledaw4),
+		yyxqaz6 to listOf(wxczzc4),
+		caxmci6 to listOf(tlljxj9),
+		owpzil4 to listOf(bstuqp5, bsybqc1, reichd9, iqqota2, kthhxl6, cywhcv2, ckkmvf5),
+		bsybqc1 to listOf(xkdgag7, zilghs0),
+		xkdgag7 to listOf(mnxaeq5, oefezu7),
+		mnxaeq5 to listOf(gqxteo2),
+		oefezu7 to listOf(qkhtwc6, kimhun0, rxkpvi7),
+		kimhun0 to listOf(amhcci2),
+		zilghs0 to listOf(nztseh9),
+		iqqota2 to listOf(cpnodd3, xbbcuk1),
+		cpnodd3 to listOf(elohsi2),
+		xbbcuk1 to listOf(rlrsvv7),
+		cywhcv2 to listOf(ioowbt0, adsnro7, pvxzww9),
+		ioowbt0 to listOf(phbrkx9, msmbgu4),
+		phbrkx9 to listOf(zssemd7),
+		msmbgu4 to listOf(yusetu1, eipgew3, qkdlbt3),
+		eipgew3 to listOf(aaqein1),
+		pvxzww9 to listOf(bajolq9),
+		bajolq9 to listOf(rhtnqq5),
+		lohxic9 to listOf(fvgywb3, dikbxv3, elbrme5, uoyklp0, gpxjrq0),
+		dikbxv3 to listOf(rmlezc5, dwbify4),
+		rmlezc5 to listOf(eyouus5, msdpwa6, ajdnyx1, ypzxwo8),
+		eyouus5 to listOf(jwunna5),
+		ajdnyx1 to listOf(cpcxxo3),
+		ypzxwo8 to listOf(aavgkt3, dsfkmr3, umnjkq4, mswzkp1, mqglcs7),
+		dsfkmr3 to listOf(pqivrh0),
+		mswzkp1 to listOf(uzviea4),
+		elbrme5 to listOf(nvphup9, gsmkae4),
+		nvphup9 to listOf(sshiml0, xqybnd8, jwsemz7, pqsner8),
+		sshiml0 to listOf(ffwrqo1),
+		jwsemz7 to listOf(kfzfqa3),
+		pqsner8 to listOf(ylsdeh7, mnxiuo3, zyhedv7, qzwklr8, jucabo5),
+		mnxiuo3 to listOf(cdtrtk7),
+		qzwklr8 to listOf(grmavv7),
+		uoyklp0 to listOf(jxejlw4, jzfwul4, ckbwyz1),
+		jzfwul4 to listOf(xjsnng0, kcyswp5, pmmuyk1, luovob9),
+		kcyswp5 to listOf(qltgcz3, hevjli8, tspymj0),
+		qltgcz3 to listOf(sqpbmr4),
+		hevjli8 to listOf(tlwved1, gbmlku4, lonpfw4),
+		tlwved1 to listOf(vcacsy3),
+		lonpfw4 to listOf(tglxpm6, mqewws8, scispy4, bseykc7),
+		tglxpm6 to listOf(ztucyw6),
+		scispy4 to listOf(tzuzav1),
+		bseykc7 to listOf(ltnncr0, tynttf1, npgzya1, qentoa3, ccoqhn6),
+		tynttf1 to listOf(qkevwp6),
+		qentoa3 to listOf(gehiqk6),
+		pmmuyk1 to listOf(qibezt1, kqadjr5, jtbmhm4),
+		kqadjr5 to listOf(pbrcti1, nnkxhz5, hsemqy0, djpkpi9, jidzsk7),
+		pbrcti1 to listOf(xmnmcc1, ztvymg6, kkbzsk4, yxwjkw5),
+		xmnmcc1 to listOf(ryhnkt6),
+		kkbzsk4 to listOf(beiqjq4),
+		yxwjkw5 to listOf(ydcqsf2, bwfgub8, qyuper9),
+		bwfgub8 to listOf(yulyiy4, vwffvm0, mfguqi6, daqiuu4),
+		yulyiy4 to listOf(xrgmad6),
+		mfguqi6 to listOf(xchgbr3),
+		daqiuu4 to listOf(hgrhvs4, jmzyhj1),
+		hsemqy0 to listOf(bwsgsa3),
+		jidzsk7 to listOf(twlydi6),
+		ckbwyz1 to listOf(hgricf7, vhipos6, asyngv4, rsbyxo6, cyrktd7),
+		asyngv4 to listOf(hjwont5, vpskvs4),
+		hjwont5 to listOf(nskzoj9),
+		nskzoj9 to listOf(knbfho7),
+		vpskvs4 to listOf(mpmrpr5),
+		cyrktd7 to listOf(yzcscs2, vmidzb6, tumilp6),
+		vmidzb6 to listOf(rpjmjz7, upoitm4, mzxfdv4),
+		upoitm4 to listOf(sszwrs5),
+	)
+)
+
