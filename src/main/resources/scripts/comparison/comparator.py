@@ -3,8 +3,8 @@ from Levenshtein import *
 from comparison.functions import read_inputs, raw_completeness, raw_compression, variable_ratio
 
 dir_name = 'Assert8vs9'
-may, generalization = read_inputs(name1=f"{dir_name}/may.java", name2=f"{dir_name}/generalization.java")
-input1, input2 = read_inputs(name1=f"{dir_name}/input1.java", name2=f"{dir_name}/input2.java")
+may, generalization = read_inputs(name1=f"data/{dir_name}/may.java", name2=f"data/{dir_name}/generalization.java")
+input1, input2 = read_inputs(name1=f"data/{dir_name}/input1.java", name2=f"data/{dir_name}/input2.java")
 
 print('---------------------------------------Distance------------------------------------------------')
 print("\t                input1 vs input2:", distance(input1, input2))
