@@ -223,6 +223,7 @@ object ASTPrinter {
         }
 
         val file = File("data/$fileName.java")
+        file.parentFile.mkdirs()
         file.createNewFile()
         file.printWriter().use { out -> out.print(result) }
     }

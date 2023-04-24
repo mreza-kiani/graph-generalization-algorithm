@@ -7,7 +7,8 @@ from tree_sitter import Language, Parser, Node
 nodes = []
 edges = {}
 edges_mapping = {}
-PRINTING_MODE = True
+PRINTING_MODE = False
+COPY_MODE = True
 
 
 def configure_tree_sitter():
@@ -37,10 +38,16 @@ def get_random_name():
     return ''.join(random.choices(string.ascii_lowercase, k=6)) + random.choice(string.digits)
 
 
+def extract_variable_def(node):
+    variable_def = node.type
+    if variable_def == "void_type":
+        variable_def = "void"
+    return variable_def
+
+
 def process_the_tree(node: Node, parent_name=None):
     variable_name = get_random_name()
-    variable_def = node.type
-    edges_mapping[variable_name] = variable_def
+    edges_mapping[variable_name] = extract_variable_def(node)
 
     if parent_name is not None:
         edges[parent_name].append(variable_name)
@@ -88,15 +95,29 @@ def get_graph_declaration(graph_number):
     return result
 
 
-def copy_kotlin_declaration(graph_number):
+def convert_graph_to_kotlin_declaration(graph_number):
     result = get_variable_declarations()
     result += get_graph_declaration(graph_number)
-    pyperclip.copy(result)
+    if COPY_MODE:
+        pyperclip.copy(result)
     if PRINTING_MODE:
         print(result)
+    return result
+
+
+def initialize_variables():
+    global nodes, edges, edges_mapping
+    nodes = []
+    edges = {}
+    edges_mapping = {}
+
+
+def extract_kotlin_declaration(address):
+    java_class = read_java_class(address)
+    initialize_variables()
+    process_the_tree(java_class.root_node)
+    return convert_graph_to_kotlin_declaration(graph_number=1)
 
 
 if __name__ == '__main__':
-    java_class = read_java_class('Test.java')
-    process_the_tree(java_class.root_node)
-    copy_kotlin_declaration(graph_number=1)
+    extract_kotlin_declaration('Test.java')
