@@ -1,5 +1,6 @@
 package ca.ucalgary.cs.graph
 
+import ca.ucalgary.cs.DEBUG_MODE
 import ca.ucalgary.cs.algorithm.StructuralMatchingAlgorithm
 import ca.ucalgary.cs.exceptions.IllegalEdgeException
 import ca.ucalgary.cs.utils.areListsEqual
@@ -78,11 +79,15 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
                 val all = (g2Edges.size + g1Edges.size).toDouble() / 2
                 val nodeSimilarity = if (all != 0.0) commonNeighbors.size.toDouble() / all else 1.0
                 totalSimilarityScore += nodeSimilarity
-                println("${commonNode.name} -> #similarity: $nodeSimilarity")
+                if (DEBUG_MODE) {
+                    println("${commonNode.name} -> #similarity: $nodeSimilarity")
+                }
             }
 
-            (graph1.nodes + graph2.nodes).filter { it !in commonNodes }.forEach { node ->
-                println("${node.name} -> #similarity: 0.0 (NOT COMMON!)")
+            if (DEBUG_MODE) {
+                (graph1.nodes + graph2.nodes).filter { it !in commonNodes }.forEach { node ->
+                    println("${node.name} -> #similarity: 0.0 (NOT COMMON!)")
+                }
             }
 
             println("############################")
