@@ -119,6 +119,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         }
 
         private fun alterNamesOfSameNodes(graph1: Graph, graph2: Graph) {
+            StructuralMatchingAlgorithm.reset()
             do {
                 StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
             } while (StructuralMatchingAlgorithm.nodesMatchingHappened)

@@ -3,7 +3,7 @@ package ca.ucalgary.cs.algorithm
 import ca.ucalgary.cs.graph.Node
 
 object NodeMatchingAlgorithm {
-    private val LCSMap = mutableMapOf<String, Int>()
+    private var LCSMap = mutableMapOf<String, Int>()
 
     fun similarityScoreOf(node1: Node?, node2: Node?): Double {
         if (node1 == null || node2 == null)
@@ -82,6 +82,10 @@ object NodeMatchingAlgorithm {
             return 0.0
         return 2.0 * nodes1.sumOf { node1 -> nodes2.maxOf { node2 -> similarityScoreOf(node1, node2) } } /
                 (nodes1.size + nodes2.size)
+    }
+
+    fun reset() {
+        LCSMap = mutableMapOf()
     }
 
 }

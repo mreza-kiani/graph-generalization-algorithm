@@ -12,9 +12,8 @@ object StructuralMatchingAlgorithm {
     private const val CHILDREN_SIMILARITY_FACTOR = 0.3
     var nodesMatchingHappened = false
     var iteration = 1
-
-    lateinit var g1DepthMap: Map<Int, List<Node>>
-    lateinit var g2DepthMap: Map<Int, List<Node>>
+    private var g1DepthMap: Map<Int, List<Node>> = emptyMap()
+    private var g2DepthMap: Map<Int, List<Node>> = emptyMap()
 
     fun matchSimilarNodes(graph1: Graph, graph2: Graph, ignoreDraw: Boolean) {
         nodesMatchingHappened = false
@@ -184,8 +183,8 @@ object StructuralMatchingAlgorithm {
 
     fun getGraphDepthMap(graph: Graph, graphNumber: Int): Map<Int, List<Node>> {
         when (graphNumber) {
-            1 -> if (this::g1DepthMap.isInitialized) return g1DepthMap
-            2 -> if (this::g2DepthMap.isInitialized) return g2DepthMap
+            1 -> if (g1DepthMap.isNotEmpty()) return g1DepthMap
+            2 -> if (g2DepthMap.isNotEmpty()) return g2DepthMap
         }
 
         val result = extractGraphDepthMap(graph)
@@ -318,6 +317,14 @@ object StructuralMatchingAlgorithm {
             edges.forEach { edge -> fillOutTheOrderList(edge.to, graph, list) }
         }
         list.add(node)
+    }
+
+    fun reset() {
+        nodesMatchingHappened = false
+        iteration = 1
+        g1DepthMap = emptyMap()
+        g2DepthMap = emptyMap()
+        NodeMatchingAlgorithm.reset()
     }
 
 }
