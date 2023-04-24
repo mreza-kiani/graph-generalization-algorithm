@@ -222,7 +222,7 @@ object ASTPrinter {
             if (realName in listOf("}", ";", "{", "//", "/*", "*/")) result += "\n"
         }
 
-        val file = File("data/$fileName.java")
+        val file = File("$fileName.java")
         file.parentFile.mkdirs()
         file.createNewFile()
         file.printWriter().use { out -> out.print(result) }

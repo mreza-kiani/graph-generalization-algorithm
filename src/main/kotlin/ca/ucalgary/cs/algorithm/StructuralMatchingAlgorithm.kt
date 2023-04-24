@@ -1,5 +1,6 @@
 package ca.ucalgary.cs.algorithm
 
+import ca.ucalgary.cs.DEBUG_MODE
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import ca.ucalgary.cs.graph.NodeVariable
@@ -138,7 +139,8 @@ object StructuralMatchingAlgorithm {
                 drawMap.entries.removeIf { (key, _) -> drawList.any { it in key } }
             }
             queue.addAll(drawMap.toList())
-            println("match: ${if (isDraw) 'x' else '✓'} list: $drawList score: $matchedSimilarityScore")
+            if (DEBUG_MODE)
+                println("match: ${if (isDraw) 'x' else '✓'} list: $drawList score: $matchedSimilarityScore")
 
             if (!isDraw) {
                 val g1Node = graph1.nodes.first { it.completeName() == g1Code }
@@ -171,7 +173,8 @@ object StructuralMatchingAlgorithm {
 
     private fun applyMatchingInNames(source: Node, matchedNode: Node) {
         nodesMatchingHappened = true
-        println("\t$source <> $matchedNode")
+        if (DEBUG_MODE)
+            println("\t$source <> $matchedNode")
         source.name = NodeMatchingAlgorithm.extractLongestCommonSubstringWord(source.name, matchedNode.name)
         if (source.code != null)
             source.name += "_${source.code}"

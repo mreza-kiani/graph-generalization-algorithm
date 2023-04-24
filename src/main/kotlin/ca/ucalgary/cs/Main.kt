@@ -9,6 +9,8 @@ import java.nio.file.Paths
 import kotlin.io.path.name
 import kotlin.io.path.pathString
 import kotlin.streams.toList
+import kotlin.time.ExperimentalTime
+import kotlin.time.measureTime
 
 
 val BASE_DIR = "src/main/resources/Mays"
@@ -16,6 +18,10 @@ val DEBUG_MODE = false
 
 fun extractCategory(input: String): String {
     return input.split("/")[4]
+}
+
+fun extractTemplateNumber(input: String): String {
+    return input.split("/")[5]
 }
 
 fun String.getBaseName(): String {
@@ -31,12 +37,12 @@ fun extractDirName(input1: String, input2: String): String {
 fun runGeneralization(input1: String, input2: String) {
     val category = extractCategory(input1)
     val dirName = extractDirName(input1, input2)
-    val baseName = "Mays/$category/$dirName"
+    val baseName = input1.substringBefore("/Data/") + "/Output"
 
     val graph1: Graph = GraphScanner.scanWithDefinition(input1)
     val graph2: Graph = GraphScanner.scanWithDefinition(input2)
 
-    println("---------------------$baseName------------------------")
+    println("-----------------$baseName-------------------")
 
     if (DEBUG_MODE) {
         graph1.visualize("$baseName/G1")
@@ -76,6 +82,7 @@ fun runGeneralization(input1: String, input2: String) {
     }
 }
 
+@OptIn(ExperimentalTime::class)
 fun main() {
     val data = Files.walk(Paths.get(BASE_DIR))
         .filter { it.name == "Data" }
@@ -86,8 +93,20 @@ fun main() {
                 .toList()
         }.toList()
 
-    data.forEach { (input1, input2) ->
-        runGeneralization(input1, input2)
+    val timeMap = mutableMapOf<String, Long>()
+
+    data.forEachIndexed { index, (input1, input2) ->
+        println("${index + 1} / ${data.size}")
+        val duration = measureTime {
+            runGeneralization(input1, input2)
+        }
+        timeMap[extractCategory(input1)] = (timeMap[extractCategory(input1)] ?: 0) + duration.inWholeMilliseconds
+        timeMap["${extractCategory(input1)}/${extractTemplateNumber(input1)}"] = duration.inWholeMilliseconds
     }
 
+    println("----------------------Time Report-----------------------")
+    timeMap.toSortedMap().forEach { (key, duration) ->
+        println("$key -> $duration")
+    }
+    println("-------------------------Done!--------------------------")
 }
