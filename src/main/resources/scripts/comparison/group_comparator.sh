@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 for d in data/*/*/Data ; do
     [ -L "${d%/}" ] && continue
