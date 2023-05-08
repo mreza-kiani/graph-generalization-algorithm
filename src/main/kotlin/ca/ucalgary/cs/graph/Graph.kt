@@ -128,7 +128,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             do {
                 StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
             } while (StructuralMatchingAlgorithm.nodesMatchingHappened)
-//            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = true)
+            StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = true)
             StructuralMatchingAlgorithm.alterNameOfDifferentNodes(graph1, graph2)
         }
 
