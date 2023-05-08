@@ -18,8 +18,8 @@ class DebugTest : BaseCompareGraphTest() {
     override fun checkCommonGraph(commonGraph: Graph) {
         ASTPrinter.from(graph1, graphNumber = 1, fileName = "debug/G1_Generalized")
         ASTPrinter.from(graph2, graphNumber = 2, fileName = "debug/G2_Generalized")
-        ASTPrinter.from(commonGraph, fileName = "debug/Generalization_f", graph1, graph2)
-        ASTPrinter.from(commonGraph, fileName = "debug/Generalization_s", graph2, graph1)
+        ASTPrinter.from(commonGraph, fileName = "data/debug/Generalization_f", graph1, graph2)
+        ASTPrinter.from(commonGraph, fileName = "data/debug/Generalization_s", graph2, graph1)
 
         graph1.visualize("debug/G1_Generalized", commonGraph)
         graph2.visualize("debug/G2_Generalized", commonGraph)

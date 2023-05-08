@@ -66,11 +66,11 @@ object ASTPrinter {
                 conflictNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
             if (node in leaves)
                 orderedLeaves.add(node)
-            if (node in conflictNodes)
-                orderedLeaves.add(Node("//${node.completeName()}", isCommon = true))
+//            if (node in conflictNodes)
+//                orderedLeaves.add(Node("//${node.completeName()}", isCommon = true))
         }
 
-        filterRepeatedUselessLeaves(orderedLeaves)
+//        filterRepeatedUselessLeaves(orderedLeaves)
 
         from(graph1, graph2, orderedLeaves, conflictNodes, fileName, edgeVariableRepMap)
     }
@@ -211,8 +211,8 @@ object ASTPrinter {
             }
 
             when (node) {
-                in conflictNodes -> result += "\n // $realName \n"
-                !in graph1.nodes -> result += "// -> $realName \n"
+                in conflictNodes -> result += "" //"\n // $realName \n"
+                !in graph1.nodes -> result += "" //""// -> $realName \n"
                 else -> {
                     if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
                     result += realName
@@ -238,10 +238,7 @@ object ASTPrinter {
                 baseNodeName = orderedLeaves[i].completeName().replace("//", "")
                 i++
             } else {
-                if (listOf("(", "{").any { baseNodeName.startsWith(it) } || listOf(
-                        ")",
-                        "}"
-                    ).any { baseNodeName.endsWith(it) }) {
+                if (listOf("(", "{").any { baseNodeName.startsWith(it) } || listOf(")", "}").any { baseNodeName.endsWith(it) }) {
                     i++
                 } else {
                     orderedLeaves.remove(orderedLeaves[i])
