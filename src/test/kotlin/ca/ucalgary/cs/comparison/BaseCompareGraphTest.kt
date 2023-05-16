@@ -1,5 +1,6 @@
 package ca.ucalgary.cs.comparison
 
+import ca.ucalgary.cs.DEBUG_MODE
 import ca.ucalgary.cs.exceptions.UninitializedGraphException
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.utils.areListsEqual
@@ -18,6 +19,7 @@ abstract class BaseCompareGraphTest {
 
     @Before
     fun initialization() {
+        DEBUG_MODE = true
         initializeGraphs()
         if (!this::graph1.isInitialized || !this::graph2.isInitialized)
             throw UninitializedGraphException()
