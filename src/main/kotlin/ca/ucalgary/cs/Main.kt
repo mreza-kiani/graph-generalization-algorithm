@@ -14,7 +14,7 @@ import kotlin.time.measureTime
 
 
 val BASE_DIR = "src/main/resources/Mays"
-val DEBUG_MODE = false
+var DEBUG_MODE = false
 
 fun extractCategory(input: String): String {
     return input.split("/")[4]
