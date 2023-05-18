@@ -86,7 +86,7 @@ object StructuralMatchingAlgorithm {
     private fun similarityOf(nodesSimilarity: Double, parentsSimilarity: Double, childrenSimilarity: Double): Double =
         nodesSimilarity * NODE_SIMILARITY_FACTOR + parentsSimilarity * PARENT_SIMILARITY_FACTOR + childrenSimilarity * CHILDREN_SIMILARITY_FACTOR
 
-    private fun extractPriorityQueue(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph): PriorityQueue<Pair<String, Double>> {
+    private fun extractPriorityQueue(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph, applyCodeWeight: Boolean): PriorityQueue<Pair<String, Double>> {
         val compareBySimilarity: Comparator<Pair<String, Double>> = compareByDescending { it.second }
         val queue = PriorityQueue(compareBySimilarity)
 
@@ -96,7 +96,9 @@ object StructuralMatchingAlgorithm {
             graph2.nodes.forEachIndexed { g2Index, g2Node ->
                 if (g2Node.isCommon)
                     return@forEachIndexed
-                queue.add("${g1Node.completeName()}#${g2Node.completeName()}" to similarities[g1Index][g2Index])
+                val codeWeight = if (applyCodeWeight && g1Node.code != null && g2Node.code != null)
+                    0.0001 / ((g1Node.code ?: 1) + (g2Node.code ?: 1)) else 0.0
+                queue.add("${g1Node.completeName()}#${g2Node.completeName()}" to (similarities[g1Index][g2Index]) + codeWeight)
             }
         }
 
@@ -104,7 +106,7 @@ object StructuralMatchingAlgorithm {
     }
 
     private fun matchOnlySimilarNodes(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
-        val queue = extractPriorityQueue(similarities, graph1, graph2)
+        val queue = extractPriorityQueue(similarities, graph1, graph2, applyCodeWeight = false)
 
         while (queue.isNotEmpty()) {
             val (matchedKey, matchedSimilarityScore) = queue.remove()
@@ -153,7 +155,7 @@ object StructuralMatchingAlgorithm {
     }
 
     private fun matchSimilarNodesEvenIfDraw(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
-        val queue = extractPriorityQueue(similarities, graph1, graph2)
+        val queue = extractPriorityQueue(similarities, graph1, graph2, applyCodeWeight = true)
 
         while (queue.isNotEmpty()) {
             val (matchedKey, matchedSimilarityScore) = queue.remove()
@@ -164,6 +166,9 @@ object StructuralMatchingAlgorithm {
 
             val g1Node = graph1.nodes.first { it.completeName() == g1Code }
             val g2Node = graph2.nodes.first { it.completeName() == g2Code }
+
+            if (DEBUG_MODE)
+                println("match: ✓ list: ${listOf(g1Node, g2Node)} score: $matchedSimilarityScore")
 
             applyMatchingInNames(g1Node, g2Node)
 

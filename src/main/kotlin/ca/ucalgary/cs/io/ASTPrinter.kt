@@ -14,10 +14,11 @@ object ASTPrinter {
         from(graph, graphDepthMap, fileName)
     }
 
-    fun from(graph: Graph, fileName: String, graph1: Graph, graph2: Graph) {
-        val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(graph)
+    fun from(generalizedGraph: Graph, fileName: String, graph1: Graph, graph2: Graph) {
+        val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(generalizedGraph)
         val graph1OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph1)
         val graph2OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph2)
+//        val combinedGraphsOrderedLeaves = combineOrderedLeaves(graph1OrderedLeaves, graph2OrderedLeaves)
         val commonNodes = graph2OrderedLeaves.filter { it.isCommon }
 
         val conflictNodes = graphDepthMap[-2] ?: emptyList()
@@ -26,7 +27,7 @@ object ASTPrinter {
         val nodeVariablesWithoutRep = (graphDepthMap[-3] ?: emptyList()).filterIsInstance<NodeVariable>()
         val edgeVariableRepMap = mutableMapOf<Node, EdgeVariable>()
         val fixingNodePositionMap = nodeVariablesWithoutRep
-            .associateWith { nv -> graph.edgeVariablesOf(nv) }
+            .associateWith { nv -> generalizedGraph.edgeVariablesOf(nv) }
             .filter { (_, list) -> list.size == 1 }
             .map { (nv, list) -> nv to list.first() }
             .map { (nv, ev) -> ev to nv }
@@ -41,19 +42,17 @@ object ASTPrinter {
                 val map1 = extractFixingNodePositionMap(
                     graph1OrderedLeaves,
                     targetNodes = g1UncommonNodes,
-                    eligibleNodes = commonNodes,
-                    targetSubstitutionMap = g1UncommonNodes.associateWith { n }
+                    eligibleNodes = commonNodes
                 )
                 val map2 = extractFixingNodePositionMap(
                     graph2OrderedLeaves,
                     targetNodes = g2UncommonNodes,
-                    eligibleNodes = commonNodes,
-                    targetSubstitutionMap = g2UncommonNodes.associateWith { n }
+                    eligibleNodes = commonNodes
                 )
 
                 edgeVariableRepMap[n] = ev
 
-                mergeMaps(map1, map2)
+                mergeMapsToKeepOneResultPerKey(map1, map2, graph1, graph2)
             }.fold(mapOf<Node, List<Node>>()) { acc, curr -> mergeMaps(acc, curr) }
 
         val conflictNodePositionMap =
@@ -73,6 +72,41 @@ object ASTPrinter {
 //        filterRepeatedUselessLeaves(orderedLeaves)
 
         from(graph1, graph2, orderedLeaves, conflictNodes, fileName, edgeVariableRepMap)
+    }
+
+    private fun mergeMapsToKeepOneResultPerKey(
+        map1: Map<Node, List<Node>>,
+        map2: Map<Node, List<Node>>,
+        graph1: Graph,
+        graph2: Graph
+    ): Map<Node, List<Node>> {
+        return if (map1.isEmpty())
+            map2
+        else if (map2.isEmpty())
+            map1
+        else {
+            val result = mutableMapOf<Node, List<Node>>()
+            val commonKeys = map1.keys.filter { it in map2.keys }
+            map1.filter { (key, _) -> key !in commonKeys }.forEach { (key, list) -> result[key] = list }
+            map2.filter { (key, _) -> key !in commonKeys }.forEach { (key, list) -> result[key] = list }
+            commonKeys.forEach { key ->
+                val list1 = map1[key] ?: emptyList()
+                val list2 = map2[key] ?: emptyList()
+                if (list1.size > list2.size)
+                    result[key] = list1
+                else if (list1.size < list2.size)
+                    result[key] = list2
+                else {
+                    val value1 = extractLeavesValueOf(list1.first(), graph1)
+                    val value2 = extractLeavesValueOf(list2.first(), graph2)
+                    if (value1.length >= value2.length)
+                        result[key] = list1
+                    else
+                        result[key] = list2
+                }
+            }
+            result
+        }
     }
 
     private fun mergeMaps(map1: Map<Node, List<Node>>, map2: Map<Node, List<Node>>) =
@@ -201,9 +235,9 @@ object ASTPrinter {
         }
 
         leaves.forEach { node ->
-            val realName = if (graph1.edgesOf(node).isNotEmpty()) {
+            val realName = if (graph1.edgesOf(node).isNotEmpty() || graph2.edgesOf(node).isNotEmpty()) {
                 getTemplateNodeName(node, extractNodeCounter(node, edgeVariableRepMap[node]))
-            } else if (node !in graph1.nodes) {
+            } else if (node !in (graph1.nodes + graph2.nodes)) {
                 val selectedNode = leaves.filter { it in graph1.nodes }.firstOrNull { it.completeName() in node.name } ?: return@forEach
                 getTemplateNodeName(selectedNode, extractNodeCounter(selectedNode))
             } else {
@@ -212,7 +246,7 @@ object ASTPrinter {
 
             when (node) {
                 in conflictNodes -> result += "" //"\n // $realName \n"
-                !in graph1.nodes -> result += "" //""// -> $realName \n"
+                !in (graph1.nodes + graph2.nodes) -> result += "" //""// -> $realName \n"
                 else -> {
                     if (realName !in listOf(".", ";", "(", ")", "{", "}")) result += " "
                     result += realName
