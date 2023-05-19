@@ -145,7 +145,7 @@ object ASTPrinter {
         return fixingNodePositionMap
     }
 
-    private fun getTemplateNodeName(node: Node, counter: Int): String = "T_${node.getRealName().uppercase()}_$counter"
+    private fun getTemplateNodeName(node: Node, counter: Int): String = "T${counter}_${node.getRealName().uppercase()}"
 
     fun from(graph: Graph, graphNumber: Int, fileName: String) {
         val graphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(graph, graphNumber)
