@@ -106,7 +106,7 @@ fun main() {
 
     println("----------------------Time Report-----------------------")
     timeMap.toSortedMap().forEach { (key, duration) ->
-        println("$key -> $duration")
+        println("$key, $duration")
     }
     println("-------------------------Done!--------------------------")
 }

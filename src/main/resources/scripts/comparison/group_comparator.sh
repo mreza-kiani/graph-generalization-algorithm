@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for d in data/*/*/Data ; do
+for d in ../../Mays/*/*/Data ; do
     [ -L "${d%/}" ] && continue
     echo "---------------------------Running for $d---------------------------"
     files=($(find "$d" -type f -name "*.java"))
