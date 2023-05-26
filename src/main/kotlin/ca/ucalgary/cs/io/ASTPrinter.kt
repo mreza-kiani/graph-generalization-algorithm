@@ -52,15 +52,17 @@ object ASTPrinter {
 
                 edgeVariableRepMap[n] = ev
 
-                mergeMapsToKeepOneResultPerKey(map1, map2, graph1, graph2)
+                mergeMaps(map1, map2)
+//                mergeMapsToKeepOneResultPerKey(map1, map2, graph1, graph2)
             }.fold(mapOf<Node, List<Node>>()) { acc, curr -> mergeMaps(acc, curr) }
+            .map { (key, list) -> key to IONode(list, graph1, graph2) }.toMap()
 
         val conflictNodePositionMap =
             extractFixingNodePositionMap(graph2OrderedLeaves, targetNodes = conflictNodes, eligibleNodes = commonNodes)
 
         graph1OrderedLeaves.forEach { node ->
             if (node in fixingNodePositionMap)
-                fixingNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
+                fixingNodePositionMap[node]?.let { orderedLeaves.add(it) }
             if (node in conflictNodePositionMap)
                 conflictNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
             if (node in leaves)
@@ -171,10 +173,12 @@ object ASTPrinter {
                     if (templateValueMap[leavesValue] != null) {
                         result += " ${templateValueMap[leavesValue]} "
                     } else {
-                        val nodeName = "T_${parent.getRealName().uppercase()}_$templateCounter"
+                        val nodeName = getTemplateNodeName(parent, templateCounter)
                         templateValueMap[leavesValue] = nodeName
                         templateCounter++
                         result += " $nodeName "
+                        if (";" in extractLeavesValueOf(parent, graph))
+                            result += ";"
                     }
                     lastUncommonParent = parent
                 }
@@ -197,7 +201,10 @@ object ASTPrinter {
         fun extractNodeCounter(node: Node, relatedEdgeVariable: EdgeVariable? = null): Int {
             val g1Value: String
             val g2Value: String
-            if (relatedEdgeVariable != null) {
+            if (node is IONode) {
+                g1Value = node.g1Representatives.joinToString { extractLeavesValueOf(it, graph1) }
+                g2Value = node.g2Representatives.joinToString { extractLeavesValueOf(it, graph2) }
+            } else if (relatedEdgeVariable != null) {
                 val g1Parent = relatedEdgeVariable.graph1Edges[node]?.firstOrNull()?.to
                 val g2Parent = relatedEdgeVariable.graph2Edges[node]?.firstOrNull()?.to
                 if (g1Parent != null && g2Parent != null) {
@@ -234,8 +241,14 @@ object ASTPrinter {
             return selectedCounter
         }
 
+        fun isSemicolonInNode(node: IONode) =
+            node.g1Representatives.all { ";" in extractLeavesValueOf(it, graph1) } &&
+                    node.g2Representatives.all { ";" in extractLeavesValueOf(it, graph2) }
+
         leaves.forEach { node ->
-            val realName = if (graph1.edgesOf(node).isNotEmpty() || graph2.edgesOf(node).isNotEmpty()) {
+            val realName = if (node is IONode) {
+                getTemplateNodeName(node, extractNodeCounter(node))
+            } else if (graph1.edgesOf(node).isNotEmpty() || graph2.edgesOf(node).isNotEmpty()) {
                 getTemplateNodeName(node, extractNodeCounter(node, edgeVariableRepMap[node]))
             } else if (node !in (graph1.nodes + graph2.nodes)) {
                 val selectedNode = leaves.filter { it in graph1.nodes }.firstOrNull { it.completeName() in node.name } ?: return@forEach
@@ -245,6 +258,7 @@ object ASTPrinter {
             }
 
             when (node) {
+                is IONode -> result += " $realName "
                 in conflictNodes -> result += "" //"\n // $realName \n"
                 !in (graph1.nodes + graph2.nodes) -> result += "" //""// -> $realName \n"
                 else -> {
@@ -253,7 +267,8 @@ object ASTPrinter {
                 }
             }
 
-            if (realName in listOf("}", ";", "{", "//", "/*", "*/")) result += "\n"
+            if (node is IONode && isSemicolonInNode(node)) result += ";"
+            if (listOf("}", ";", "{", "//", "/*", "*/").any { it in realName }) result += "\n"
         }
 
         val file = File("$fileName.java")
