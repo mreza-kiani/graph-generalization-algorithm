@@ -4,6 +4,7 @@ import ca.ucalgary.cs.DEBUG_MODE
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import ca.ucalgary.cs.graph.NodeVariable
+import java.lang.Exception
 import java.util.*
 
 object StructuralMatchingAlgorithm {
@@ -86,7 +87,7 @@ object StructuralMatchingAlgorithm {
     private fun similarityOf(nodesSimilarity: Double, parentsSimilarity: Double, childrenSimilarity: Double): Double =
         nodesSimilarity * NODE_SIMILARITY_FACTOR + parentsSimilarity * PARENT_SIMILARITY_FACTOR + childrenSimilarity * CHILDREN_SIMILARITY_FACTOR
 
-    private fun extractPriorityQueue(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph, applyCodeWeight: Boolean): PriorityQueue<Pair<String, Double>> {
+    private fun extractPriorityQueue(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph): PriorityQueue<Pair<String, Double>> {
         val compareBySimilarity: Comparator<Pair<String, Double>> = compareByDescending { it.second }
         val queue = PriorityQueue(compareBySimilarity)
 
@@ -96,9 +97,7 @@ object StructuralMatchingAlgorithm {
             graph2.nodes.forEachIndexed { g2Index, g2Node ->
                 if (g2Node.isCommon)
                     return@forEachIndexed
-                val codeWeight = if (applyCodeWeight && g1Node.code != null && g2Node.code != null)
-                    0.0001 / ((g1Node.code ?: 1) + (g2Node.code ?: 1)) else 0.0
-                queue.add("${g1Node.completeName()}#${g2Node.completeName()}" to (similarities[g1Index][g2Index]) + codeWeight)
+                queue.add("${g1Node.completeName()}#${g2Node.completeName()}" to (similarities[g1Index][g2Index]))
             }
         }
 
@@ -106,7 +105,7 @@ object StructuralMatchingAlgorithm {
     }
 
     private fun matchOnlySimilarNodes(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
-        val queue = extractPriorityQueue(similarities, graph1, graph2, applyCodeWeight = false)
+        val queue = extractPriorityQueue(similarities, graph1, graph2)
 
         while (queue.isNotEmpty()) {
             val (matchedKey, matchedSimilarityScore) = queue.remove()
@@ -155,7 +154,7 @@ object StructuralMatchingAlgorithm {
     }
 
     private fun matchSimilarNodesEvenIfDraw(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
-        val queue = extractPriorityQueue(similarities, graph1, graph2, applyCodeWeight = true)
+        val queue = extractPriorityQueue(similarities, graph1, graph2)
 
         while (queue.isNotEmpty()) {
             val (matchedKey, matchedSimilarityScore) = queue.remove()
@@ -163,16 +162,51 @@ object StructuralMatchingAlgorithm {
                 continue
 
             val (g1Code, g2Code) = matchedKey.split("#")
+            val drawMap = mutableMapOf<String, Double>()
+            val drawList = mutableSetOf("$g1Code#", "#$g2Code")
 
-            val g1Node = graph1.nodes.first { it.completeName() == g1Code }
-            val g2Node = graph2.nodes.first { it.completeName() == g2Code }
+            while (queue.isNotEmpty()) {
+                val (key, score) = queue.remove()
+                if (score != matchedSimilarityScore) {
+                    queue.add(key to score)
+                    break
+                } else if (drawList.any { it in key }) {
+                    val (g1Key, g2Key) = key.split("#")
+                    drawList.add("$g1Key#")
+                    drawList.add("#$g2Key")
+                } else {
+                    drawMap[key] = score
+                }
+                drawMap.forEach { (key, _) ->
+                    if (drawList.any { it in key }) {
+                        val (g1Key, g2Key) = key.split("#")
+                        drawList.add("$g1Key#")
+                        drawList.add("#$g2Key")
+                    }
+                }
+                drawMap.entries.removeIf { (key, _) -> drawList.any { it in key } }
+            }
+            queue.addAll(drawMap.toList())
 
-            if (DEBUG_MODE)
-                println("match: ✓ list: ${listOf(g1Node, g2Node)} score: $matchedSimilarityScore")
+            val g1DrawList = drawList.filter { it.endsWith("#") }.map { key -> key.filter { it != '#' } }.sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
+            val g2DrawList = drawList.filter { it.startsWith("#") }.map { key -> key.filter { it != '#' } }.sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
 
-            applyMatchingInNames(g1Node, g2Node)
+            if (g1DrawList.size == g2DrawList.size) {
+                if (DEBUG_MODE)
+                    println("match: ✓ list: $drawList score: $matchedSimilarityScore")
 
-            queue.removeIf { (key, _) -> "$g1Code#" in key || "#$g2Code" in key }
+                for (i in g1DrawList.indices) {
+                    val g1Node = graph1.nodes.first { it.completeName() == g1DrawList[i] }
+                    val g2Node = graph2.nodes.first { it.completeName() == g2DrawList[i] }
+
+                    applyMatchingInNames(g1Node, g2Node)
+                }
+
+                queue.removeIf { (key, _) -> drawList.any { it in key } }
+            } else {
+                if (DEBUG_MODE)
+                    println("match: x list: $drawList score: $matchedSimilarityScore")
+            }
         }
     }
 
