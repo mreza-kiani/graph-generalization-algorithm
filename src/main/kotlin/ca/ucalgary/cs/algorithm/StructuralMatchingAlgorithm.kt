@@ -28,7 +28,7 @@ object StructuralMatchingAlgorithm {
             matchSimilarNodesEvenIfDraw(similarities, graph1, graph2)
         else
             matchOnlySimilarNodes(similarities, graph1, graph2)
-        println("----------------------------------------iteration:${iteration++}----------------------------------------")
+        println("----------------------------------iteration:${iteration++}${if (ignoreDraw) "[D]" else "---" }-----------------------------------")
     }
 
     private fun compareLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {

@@ -55,14 +55,14 @@ object ASTPrinter {
                 mergeMaps(map1, map2)
 //                mergeMapsToKeepOneResultPerKey(map1, map2, graph1, graph2)
             }.fold(mapOf<Node, List<Node>>()) { acc, curr -> mergeMaps(acc, curr) }
-            .map { (key, list) -> key to IONode(list, graph1, graph2) }.toMap()
+            .map { (key, list) -> key to IONode.from(list, graph1, graph2) }.toMap()
 
         val conflictNodePositionMap =
             extractFixingNodePositionMap(graph2OrderedLeaves, targetNodes = conflictNodes, eligibleNodes = commonNodes)
 
         graph1OrderedLeaves.forEach { node ->
             if (node in fixingNodePositionMap)
-                fixingNodePositionMap[node]?.let { orderedLeaves.add(it) }
+                fixingNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
             if (node in conflictNodePositionMap)
                 conflictNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
             if (node in leaves)
