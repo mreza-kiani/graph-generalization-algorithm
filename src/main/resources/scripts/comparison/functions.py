@@ -35,8 +35,8 @@ def is_May_variable(term):
 def is_generalization_variable(term):
     if term.startswith('T'):
         parts = term.split('_')
-        if len(parts) > 2:
-            return parts[-1].isnumeric()
+        if len(parts) >= 2:
+            return parts[0][1:].isnumeric()
     return False
 
 
