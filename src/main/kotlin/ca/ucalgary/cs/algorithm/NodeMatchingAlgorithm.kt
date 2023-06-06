@@ -29,8 +29,8 @@ object NodeMatchingAlgorithm {
     private fun extractLongestCommonSubstringTable(a: String, b: String): List<List<Int>> {
         val scores = List(a.length) { MutableList(b.length) { 0 } }
 
-        a.forEachIndexed { aIndex, aChar ->
-            b.forEachIndexed { bIndex, bChar ->
+        a.lowercase().forEachIndexed { aIndex, aChar ->
+            b.lowercase().forEachIndexed { bIndex, bChar ->
                 if (aChar == bChar) {
                     if (aIndex == 0 || bIndex == 0)
                         scores[aIndex][bIndex] = 1

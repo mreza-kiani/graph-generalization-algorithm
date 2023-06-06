@@ -11,6 +11,10 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
     val edgeVariables = mutableListOf<EdgeVariable>()
     val nodeVariables = mutableListOf<NodeVariable>()
 
+    private val parentsMapCache: MutableMap<Node, Set<Node>> = mutableMapOf()
+    private val nodeIndexMapCache: MutableMap<Node, Int> = mutableMapOf()
+    private val edgesMapCache: MutableMap<Node, List<Edge>> = mutableMapOf()
+
     init {
         val edgeNodes = edges.keys + edges.values.flatten().map { it.to }
         if (edgeNodes.any { !nodes.contains(it) })
@@ -29,16 +33,16 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         """.trimMargin()
     }
 
-    fun indexOf(node: Node) = nodes.indexOfFirst { node.isExactMatch(it) }
+    fun indexOf(node: Node) = nodeIndexMapCache.getOrPut(node) { nodes.indexOfFirst { node.isExactMatch(it) } }
     fun getLeaves() = nodes.filter { node -> edgesOf(node).isEmpty() }
-    fun findParents(node: Node) = edges
-        .filter { (_, edges) -> edges.any { it.to.isExactMatch(node) } }
-        .keys
+    fun findParents(node: Node) = parentsMapCache.getOrPut(node) {
+        edges.filter { (_, edges) -> edges.any { it.to.isExactMatch(node) } }.keys
+    }
 
     fun edgesOf(node: Node) = if (node.code == null)
         edges[node] ?: edges.filter { (key, _) -> key == node }.values.flatten()
     else
-        edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten()
+        edgesMapCache.getOrPut(node) { edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten() }
 
     fun edgeVariablesOf(leg: EdgeVariableLeg) = edgeVariables.filter { it.has(leg) }
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
@@ -129,9 +133,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
                 StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
             } while (StructuralMatchingAlgorithm.nodesMatchingHappened)
             StructuralMatchingAlgorithm.nodesMatchingHappened = false
-            do {
-                StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = true)
-            } while (StructuralMatchingAlgorithm.nodesMatchingHappened)
+//            do {
+//                StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = true)
+//            } while (StructuralMatchingAlgorithm.nodesMatchingHappened)
             StructuralMatchingAlgorithm.alterNameOfDifferentNodes(graph1, graph2)
         }
 
