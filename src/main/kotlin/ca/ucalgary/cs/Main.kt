@@ -13,7 +13,9 @@ import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
 
-val BASE_DIR = "src/main/resources/Mays"
+//val BASE_DIR = "src/main/resources/Mays"
+val BASE_DIR = "src/main/resources/CodeSearchNet"
+//val BASE_DIR = "/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNet"
 var DEBUG_MODE = false
 
 fun extractCategory(input: String): String {
@@ -34,7 +36,7 @@ fun extractDirName(input1: String, input2: String): String {
     return "${input1Name}vs$input2Name"
 }
 
-fun runGeneralization(input1: String, input2: String) {
+fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Graph> {
     val category = extractCategory(input1)
     val dirName = extractDirName(input1, input2)
     val baseName = input1.substringBefore("/Data/") + "/Output"
@@ -80,6 +82,8 @@ fun runGeneralization(input1: String, input2: String) {
         graph1Diff.visualize("$baseName/G1_Differences")
         graph2Diff.visualize("$baseName/G2_Differences")
     }
+
+    return Triple(commonGraph, graph1, graph2)
 }
 
 @OptIn(ExperimentalTime::class)
@@ -91,17 +95,22 @@ fun main() {
                 .filter { ".txt" in it.name }
                 .map { "${dir.pathString}/${it.fileName}" }
                 .toList()
-        }.toList()
+        }.filter { it.size == 2 }
+        .toList()
 
     val timeMap = mutableMapOf<String, Long>()
 
     data.forEachIndexed { index, (input1, input2) ->
         println("${index + 1} / ${data.size}")
+        var key: String
         val duration = measureTime {
-            runGeneralization(input1, input2)
+            val (commonGraph, graph1, graph2) = runGeneralization(input1, input2)
+            key = "${extractCategory(input1)}, ${commonGraph.nodes.size}, ${commonGraph.edges.size}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edges.size}, ${graph2.nodes.size}, ${graph2.edges.size}"
         }
-        timeMap[extractCategory(input1)] = (timeMap[extractCategory(input1)] ?: 0) + duration.inWholeMilliseconds
-        timeMap["${extractCategory(input1)}/${extractTemplateNumber(input1)}"] = duration.inWholeMilliseconds
+        timeMap[key] = duration.inWholeMilliseconds
+
+//        timeMap[extractCategory(input1)] = (timeMap[extractCategory(input1)] ?: 0) + duration.inWholeMilliseconds
+//        timeMap["${extractCategory(input1)}/${extractTemplateNumber(input1)}"] = duration.inWholeMilliseconds
     }
 
     println("----------------------Time Report-----------------------")

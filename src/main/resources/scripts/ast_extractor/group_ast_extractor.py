@@ -16,8 +16,12 @@ def save_kotlin_declaration_to_file(result, java_address):
 
 
 if __name__ == '__main__':
-    files = glob.glob("Mays/*/*/*/*.java")
+    files = glob.glob("../../CodeSearchNet/*/*/*.java")
+    # files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNet/*/*/*/*.java")
     for index, address in enumerate(files, start=1):
-        print(f"{index}/{len(files)}. Converting: {address}")
-        result = extract_kotlin_declaration(address)
-        save_kotlin_declaration_to_file(result, address)
+        try:
+            print(f"{index}/{len(files)}. Converting: {address}")
+            result = extract_kotlin_declaration(address)
+            save_kotlin_declaration_to_file(result, address)
+        except UnicodeDecodeError:
+            print(f"---------------------------------------Error------------------------------------------")
