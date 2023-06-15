@@ -66,10 +66,7 @@ object StructuralMatchingAlgorithm {
         val graph2DepthMap = getGraphDepthMap(graph2, graphNumber = 2)
         val graph2MaximumDepth = graph2DepthMap.maxOf { (depth, _) -> depth }
 
-        graph1DepthMap.forEach { (depth, g1Nodes) ->
-            if (depth == 0)
-                return@forEach
-
+        graph1DepthMap.filter { (depth, _) -> depth != 0 }.forEach { (_, g1Nodes) ->
             g1Nodes.forEach { g1Node ->
                 for (i in 1..graph2MaximumDepth) {
                     graph2DepthMap[i]?.forEach { g2Node ->
