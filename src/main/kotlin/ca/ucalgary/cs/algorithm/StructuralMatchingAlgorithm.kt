@@ -16,9 +16,11 @@ object StructuralMatchingAlgorithm {
     var iteration = 1
     private var g1DepthMap: Map<Int, List<Node>> = emptyMap()
     private var g2DepthMap: Map<Int, List<Node>> = emptyMap()
+    private var priorityQueueSkippedNodes = mutableMapOf<String, Boolean>()
 
     fun matchSimilarNodes(graph1: Graph, graph2: Graph, ignoreDraw: Boolean) {
         nodesMatchingHappened = false
+        priorityQueueSkippedNodes = mutableMapOf()
         val similarities = List(graph1.nodes.size) { MutableList(graph2.nodes.size) { 0.0 } }
 
         compareLeaves(similarities, graph1, graph2)
@@ -112,6 +114,8 @@ object StructuralMatchingAlgorithm {
             val (g1Code, g2Code) = matchedKey.split("#")
             val drawMap = mutableMapOf<String, Double>()
             val drawList = mutableSetOf("$g1Code#", "#$g2Code")
+            if (drawList.any { it in priorityQueueSkippedNodes })
+                continue
             var isDraw = false
 
             while (queue.isNotEmpty()) {
@@ -127,16 +131,21 @@ object StructuralMatchingAlgorithm {
                 } else {
                     drawMap[key] = score
                 }
+                var drawMapShouldBeUpdated = false
                 drawMap.forEach { (key, _) ->
                     if (drawList.any { it in key }) {
                         val (g1Key, g2Key) = key.split("#")
                         drawList.add("$g1Key#")
                         drawList.add("#$g2Key")
+                        drawMapShouldBeUpdated = true
                     }
                 }
-                drawMap.entries.removeIf { (key, _) -> drawList.any { it in key } }
+                if (drawMapShouldBeUpdated)
+                    drawMap.entries.removeIf { (key, _) -> drawList.any { it in key } }
             }
             queue.addAll(drawMap.toList())
+            drawList.forEach { priorityQueueSkippedNodes[it] = true }
+
             if (DEBUG_MODE)
                 println("match: ${if (isDraw) 'x' else '✓'} list: $drawList score: $matchedSimilarityScore")
 
@@ -146,7 +155,6 @@ object StructuralMatchingAlgorithm {
 
                 applyMatchingInNames(g1Node, g2Node)
             }
-            queue.removeIf { (key, _) -> drawList.any { it in key } }
         }
     }
 
@@ -161,6 +169,8 @@ object StructuralMatchingAlgorithm {
             val (g1Code, g2Code) = matchedKey.split("#")
             val drawMap = mutableMapOf<String, Double>()
             val drawList = mutableSetOf("$g1Code#", "#$g2Code")
+            if (drawList.any { it in priorityQueueSkippedNodes })
+                continue
 
             while (queue.isNotEmpty()) {
                 val (key, score) = queue.remove()
@@ -174,16 +184,20 @@ object StructuralMatchingAlgorithm {
                 } else {
                     drawMap[key] = score
                 }
+                var drawMapShouldBeUpdated = false
                 drawMap.forEach { (key, _) ->
                     if (drawList.any { it in key }) {
                         val (g1Key, g2Key) = key.split("#")
                         drawList.add("$g1Key#")
                         drawList.add("#$g2Key")
+                        drawMapShouldBeUpdated = true
                     }
                 }
-                drawMap.entries.removeIf { (key, _) -> drawList.any { it in key } }
+                if (drawMapShouldBeUpdated)
+                    drawMap.entries.removeIf { (key, _) -> drawList.any { it in key } }
             }
             queue.addAll(drawMap.toList())
+            drawList.forEach { priorityQueueSkippedNodes[it] = true }
 
             val g1DrawList = drawList.filter { it.endsWith("#") }.map { key -> key.filter { it != '#' } }.sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
             val g2DrawList = drawList.filter { it.startsWith("#") }.map { key -> key.filter { it != '#' } }.sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
@@ -198,8 +212,6 @@ object StructuralMatchingAlgorithm {
 
                     applyMatchingInNames(g1Node, g2Node)
                 }
-
-                queue.removeIf { (key, _) -> drawList.any { it in key } }
             } else {
                 if (DEBUG_MODE)
                     println("match: x list: $drawList score: $matchedSimilarityScore")
