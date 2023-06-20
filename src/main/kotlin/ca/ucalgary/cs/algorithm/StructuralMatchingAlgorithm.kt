@@ -125,9 +125,11 @@ object StructuralMatchingAlgorithm {
                     break
                 } else if (drawList.any { it in key }) {
                     val (g1Key, g2Key) = key.split("#")
-                    drawList.add("$g1Key#")
-                    drawList.add("#$g2Key")
-                    isDraw = true
+                    if ("$g1Key#" !in priorityQueueSkippedNodes && "#$g2Key" !in priorityQueueSkippedNodes) {
+                        drawList.add("$g1Key#")
+                        drawList.add("#$g2Key")
+                        isDraw = true
+                    }
                 } else {
                     drawMap[key] = score
                 }
@@ -179,8 +181,10 @@ object StructuralMatchingAlgorithm {
                     break
                 } else if (drawList.any { it in key }) {
                     val (g1Key, g2Key) = key.split("#")
-                    drawList.add("$g1Key#")
-                    drawList.add("#$g2Key")
+                    if ("$g1Key#" !in priorityQueueSkippedNodes && "#$g2Key" !in priorityQueueSkippedNodes) {
+                        drawList.add("$g1Key#")
+                        drawList.add("#$g2Key")
+                    }
                 } else {
                     drawMap[key] = score
                 }
@@ -188,9 +192,11 @@ object StructuralMatchingAlgorithm {
                 drawMap.forEach { (key, _) ->
                     if (drawList.any { it in key }) {
                         val (g1Key, g2Key) = key.split("#")
-                        drawList.add("$g1Key#")
-                        drawList.add("#$g2Key")
-                        drawMapShouldBeUpdated = true
+                        if ("$g1Key#" !in priorityQueueSkippedNodes && "#$g2Key" !in priorityQueueSkippedNodes) {
+                            drawList.add("$g1Key#")
+                            drawList.add("#$g2Key")
+                            drawMapShouldBeUpdated = true
+                        }
                     }
                 }
                 if (drawMapShouldBeUpdated)
