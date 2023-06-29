@@ -3,9 +3,9 @@ import javalang
 import time
 import subprocess
 
-base_dir = "/home/mamareza/UofC/Thesis/Projects/JodaTime"
-project1_name = "joda-time-2.0"
-project2_name = "joda-time-2.10.13"
+base_dir = "/home/mamareza/UofC/Thesis/Projects/Log4J"
+project1_name = "log4j2-rel-2.20.0"
+project2_name = "log4j1-1_2_17"
 project1_path = f"{base_dir}/{project1_name}"
 project2_path = f"{base_dir}/{project2_name}"
 
@@ -51,10 +51,13 @@ def enrich_diff_info(diff_info):
                 'v1_size': 0, 'v1_lines': 0, 'v1_fields': 0, 'v1_methods': 0,
                 'v2_size': 0, 'v2_lines': 0, 'v2_fields': 0, 'v2_methods': 0
             }
-            if key != 'removed':
-                fill_version_info(result[key][file_path], file_path, project2_name, version=2)
-            if key != 'added':
-                fill_version_info(result[key][file_path], file_path, project1_name, version=1)
+            try:
+                if key != 'removed':
+                    fill_version_info(result[key][file_path], file_path, project2_name, version=2)
+                if key != 'added':
+                    fill_version_info(result[key][file_path], file_path, project1_name, version=1)
+            except Exception:
+                print(f"Problem in parsing {file_path}")
     return result
 
 
