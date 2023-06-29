@@ -35,6 +35,11 @@ abstract class BaseCompareGraphTest {
         println("Comparing took ${endTime - startTime} millis")
         println("---------------------------------------------")
 
+        println("G1: Nodes: ${graph1.nodes.size}, Edges: ${graph1.edgeCounts()}")
+        println("G2: Nodes: ${graph2.nodes.size}, Edges: ${graph2.edgeCounts()}")
+        println("Generalization: Nodes: ${commonGraph.nodes.size}, Edges: ${commonGraph.edgeCounts()}, " +
+                "NodeVariables: ${commonGraph.nodeVariables.size}, EdgeVariables: ${commonGraph.edgeVariables.size}")
+
         println("Common Graph:")
         println(commonGraph)
 
