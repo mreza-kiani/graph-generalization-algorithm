@@ -87,6 +87,25 @@ fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Grap
 }
 
 @OptIn(ExperimentalTime::class)
+fun runGeneralizationAndMeasureTime(input1: String, input2: String, timeMap: MutableMap<String, Long>) {
+    var key: String
+    val duration = measureTime {
+        val (commonGraph, graph1, graph2) = runGeneralization(input1, input2)
+        key =
+            "${extractCategory(input1)}, ${commonGraph.nodes.size}, ${commonGraph.edges.size}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edges.size}, ${graph2.nodes.size}, ${graph2.edges.size}"
+    }
+    timeMap[key] = duration.inWholeMilliseconds
+}
+
+
+fun printExecutionTimeReport(timeMap: MutableMap<String, Long>) {
+    println("----------------------Time Report-----------------------")
+    timeMap.toSortedMap().forEach { (key, duration) ->
+        println("$key, $duration")
+    }
+    println("-------------------------Done!--------------------------")
+}
+
 fun main() {
     DEBUG_MODE = false
     UNIQUE_LABELS = false
@@ -108,20 +127,10 @@ fun main() {
 
     data.forEachIndexed { index, (input1, input2) ->
         println("${index + 1} / ${data.size}")
-        var key: String
-        val duration = measureTime {
-            val (commonGraph, graph1, graph2) = runGeneralization(input1, input2)
-            key = "${extractCategory(input1)}, ${commonGraph.nodes.size}, ${commonGraph.edges.size}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edges.size}, ${graph2.nodes.size}, ${graph2.edges.size}"
-        }
-        timeMap[key] = duration.inWholeMilliseconds
-
+        runGeneralizationAndMeasureTime(input1, input2, timeMap)
 //        timeMap[extractCategory(input1)] = (timeMap[extractCategory(input1)] ?: 0) + duration.inWholeMilliseconds
 //        timeMap["${extractCategory(input1)}/${extractTemplateNumber(input1)}"] = duration.inWholeMilliseconds
     }
 
-    println("----------------------Time Report-----------------------")
-    timeMap.toSortedMap().forEach { (key, duration) ->
-        println("$key, $duration")
-    }
-    println("-------------------------Done!--------------------------")
+    printExecutionTimeReport(timeMap)
 }
