@@ -1,6 +1,6 @@
 package ca.ucalgary.cs.algorithm
 
-import ca.ucalgary.cs.DEBUG_MODE
+import ca.ucalgary.cs.Config.DEBUG_MODE
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import ca.ucalgary.cs.graph.NodeVariable

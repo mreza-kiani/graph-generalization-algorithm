@@ -1,8 +1,10 @@
 package ca.ucalgary.cs
 
+import ca.ucalgary.cs.Config.AST_CONTEXT
 import ca.ucalgary.cs.Config.BASE_DIR
 import ca.ucalgary.cs.Config.DEBUG_MODE
 import ca.ucalgary.cs.Config.UNIQUE_LABELS
+import ca.ucalgary.cs.Config.VISUALIZATION
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.io.ASTPrinter
 import ca.ucalgary.cs.io.GraphScanner
@@ -39,8 +41,8 @@ fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Grap
     val dirName = extractDirName(input1, input2)
     val baseName = input1.substringBefore("/Data/") + "/Output"
 
-    val graph1: Graph = GraphScanner.scanWithDefinition(input1)
-    val graph2: Graph = GraphScanner.scanWithDefinition(input2)
+    val graph1: Graph = if (AST_CONTEXT) GraphScanner.scanWithDefinition(input1) else GraphScanner.scan(input1)
+    val graph2: Graph = if (AST_CONTEXT) GraphScanner.scanWithDefinition(input2) else GraphScanner.scan(input2)
 
     println("-----------------$baseName-------------------")
 
@@ -88,6 +90,8 @@ fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Grap
 fun main() {
     DEBUG_MODE = false
     UNIQUE_LABELS = false
+    AST_CONTEXT = true
+    VISUALIZATION = false
     BASE_DIR = "src/main/resources/CodeSearchNet"
 
     val data = Files.walk(Paths.get(BASE_DIR))

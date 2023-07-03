@@ -1,5 +1,6 @@
 package ca.ucalgary.cs.io
 
+import ca.ucalgary.cs.Config.VISUALIZATION
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import ca.ucalgary.cs.graph.NodeVariable
@@ -15,6 +16,8 @@ import java.io.File
 
 
 fun Graph.visualize(name: String, commonGraph: Graph? = null) {
+    if (!VISUALIZATION)
+        return
     simplifyNodeVariableNames()
 
     val g: MutableGraph = mutGraph(name).setDirected(true)
