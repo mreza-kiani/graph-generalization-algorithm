@@ -1,5 +1,8 @@
 package ca.ucalgary.cs
 
+import ca.ucalgary.cs.Config.BASE_DIR
+import ca.ucalgary.cs.Config.DEBUG_MODE
+import ca.ucalgary.cs.Config.UNIQUE_LABELS
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.io.ASTPrinter
 import ca.ucalgary.cs.io.GraphScanner
@@ -12,11 +15,6 @@ import kotlin.streams.toList
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
-
-//val BASE_DIR = "src/main/resources/Mays"
-val BASE_DIR = "src/main/resources/CodeSearchNet"
-//val BASE_DIR = "/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNet"
-var DEBUG_MODE = false
 
 fun extractCategory(input: String): String {
     return input.split("/")[4]
@@ -88,6 +86,10 @@ fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Grap
 
 @OptIn(ExperimentalTime::class)
 fun main() {
+    DEBUG_MODE = false
+    UNIQUE_LABELS = false
+    BASE_DIR = "src/main/resources/CodeSearchNet"
+
     val data = Files.walk(Paths.get(BASE_DIR))
         .filter { it.name == "Data" }
         .map { dir ->
