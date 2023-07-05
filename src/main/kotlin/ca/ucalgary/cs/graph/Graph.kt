@@ -199,10 +199,8 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
 
                     edgeVariables.addAll(
                         EdgeVariable.merge(
-                            graph1EdgeVariables = graph1EdgeVariables.filter { it.has(mergedNodeVariable) }
-                                .toMutableList(),
-                            graph2EdgeVariables = graph2EdgeVariables.filter { it.has(mergedNodeVariable) }
-                                .toMutableList(),
+                            graph1EdgeVariables = graph1EdgeVariables.filter { it.has(mergedNodeVariable) }.toMutableList(),
+                            graph2EdgeVariables = graph2EdgeVariables.filter { it.has(mergedNodeVariable) }.toMutableList(),
                             commonNodeVariable = mergedNodeVariable
                         )
                     )
@@ -292,8 +290,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
                     val nodeVariable1 = nodeVariablesMap[node] ?: error("There is no NodeVariable for $node!")
                     val nodeVariable2 = nodeVariablesMap[edge.to] ?: error("There is no NodeVariable for ${edge.to}!")
 
-                    val mergedNodeVariable = nodeVariable1.merge(nodeVariable2)
-                    mergedNodeVariable.addEdge(edge, graphNumber)
+//                    val mergedNodeVariable = nodeVariable1.merge(nodeVariable2)
+//                    mergedNodeVariable.addEdge(edge, graphNumber)
+                    val mergedNodeVariable = nodeVariable1.mergeAndAddEdge(nodeVariable2, edge, graphNumber)
 
                     (nodeVariable1.getGraph(graphNumber).nodes + nodeVariable2.getGraph(graphNumber).nodes)
                         .distinct()

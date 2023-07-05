@@ -34,8 +34,6 @@ fun main() {
     val timeMap = mutableMapOf<String, Long>()
 
     files.forEachIndexed { i, input1 ->
-        if (i >= 3)
-            return@forEachIndexed
         for (j in (i + 1) until n) {
             println("${(choose(n, 2) - choose(n - i, 2) + (j - i))} / $totalPairs")
             val input2 = files[j]
