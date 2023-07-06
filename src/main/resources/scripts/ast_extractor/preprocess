@@ -1,0 +1,22 @@
+#!/bin/bash
+
+for d in ../../CodeSearchNet/* ; do
+    [ -L "${d%/}" ] && continue
+#    echo "-------------------------------------Running for $d-------------------------------------------"
+    b=0
+    for f in $d/Data/*.txt ; do
+      a=($(wc -l $f))
+      if (( a > b ))
+      then
+        b=$a
+      fi
+    done
+    if [ $b -gt 800 ]
+    then
+      cp -r $d ../../CodeSearchNetLarge
+      rm -rf $d
+    fi
+#    mkdir -p $d/Data
+#    cp $d/*.java $d/Data
+#    rm $d/*.java
+done

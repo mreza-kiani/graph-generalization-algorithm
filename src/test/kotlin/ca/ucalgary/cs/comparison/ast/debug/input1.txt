@@ -1,0 +1,126 @@
+val ekohmt9 = Node("program")
+val hdqglm7 = Node("class_declaration")
+val anenxw8 = Node("class")
+val yuscph6 = Node("identifier", isDuplicate = true)
+val jmjdzq9 = Node("MediaType18")
+val xzkrzk6 = Node("class_body")
+val mczvix1 = Node("{", isDuplicate = true)
+val dewmgq6 = Node("method_declaration")
+val gbmnuh0 = Node("modifiers")
+val tofcji5 = Node("protected")
+val wxuosk0 = Node("type_identifier", isDuplicate = true)
+val vobssl2 = Node("Representation")
+val wcuynw2 = Node("identifier", isDuplicate = true)
+val fgrwuk1 = Node("getFoafRepresentation")
+val qmcazc1 = Node("formal_parameters")
+val nmyskm6 = Node("(", isDuplicate = true)
+val imkecj8 = Node("formal_parameter", isDuplicate = true)
+val vrotfd6 = Node("type_identifier", isDuplicate = true)
+val bvrhnq4 = Node("User")
+val ozmkcq7 = Node("identifier", isDuplicate = true)
+val nxuurw2 = Node("user", isDuplicate = true)
+val yoaxev4 = Node(",", isDuplicate = true)
+val txaqpb5 = Node("formal_parameter", isDuplicate = true)
+val sykyuc7 = Node("type_identifier", isDuplicate = true)
+val tixthu0 = Node("Reference")
+val tthoyx6 = Node("identifier", isDuplicate = true)
+val ujhyse1 = Node("userRef", isDuplicate = true)
+val fbhzpi5 = Node(")", isDuplicate = true)
+val wnccfw7 = Node("block")
+val pbrcvn9 = Node("{", isDuplicate = true)
+val opnvak3 = Node("local_variable_declaration")
+val pweimw3 = Node("type_identifier", isDuplicate = true)
+val txxouw5 = Node("Graph", isDuplicate = true)
+val cgjbat2 = Node("variable_declarator")
+val fobgmw0 = Node("identifier", isDuplicate = true)
+val vqvjxc9 = Node("graph", isDuplicate = true)
+val lowyyh0 = Node("=")
+val avhwnr7 = Node("object_creation_expression", isDuplicate = true)
+val ghbmzr4 = Node("new", isDuplicate = true)
+val bzkdfe4 = Node("type_identifier", isDuplicate = true)
+val ettqfc6 = Node("Graph", isDuplicate = true)
+val nwjitx1 = Node("argument_list", isDuplicate = true)
+val qxmvhm1 = Node("(", isDuplicate = true)
+val yocoba9 = Node(")", isDuplicate = true)
+val ewyzip8 = Node(";", isDuplicate = true)
+val qplfiv3 = Node("expression_statement")
+val zimavg3 = Node("method_invocation")
+val thutpo6 = Node("identifier", isDuplicate = true)
+val kqkxxo2 = Node("addFoaf")
+val ubtrvl7 = Node("argument_list", isDuplicate = true)
+val sielvs6 = Node("(", isDuplicate = true)
+val sbrlrc6 = Node("identifier", isDuplicate = true)
+val gxhmku3 = Node("graph", isDuplicate = true)
+val gucbli3 = Node(",", isDuplicate = true)
+val vqaysb6 = Node("identifier", isDuplicate = true)
+val kgmmct9 = Node("user", isDuplicate = true)
+val nbhqtd6 = Node(",", isDuplicate = true)
+val rdtdsa3 = Node("identifier", isDuplicate = true)
+val ccuris9 = Node("userRef", isDuplicate = true)
+val gpllfd2 = Node(")", isDuplicate = true)
+val xcpyyt4 = Node(";", isDuplicate = true)
+val qwxtop8 = Node("return_statement")
+val wzxzww6 = Node("return")
+val hgyaww5 = Node("object_creation_expression", isDuplicate = true)
+val ngexew3 = Node("new", isDuplicate = true)
+val czvwik4 = Node("type_identifier", isDuplicate = true)
+val uswulv4 = Node("RdfRepresentation")
+val jgbbem9 = Node("argument_list", isDuplicate = true)
+val jfdhgz1 = Node("(", isDuplicate = true)
+val dkysad3 = Node("identifier", isDuplicate = true)
+val tdengg2 = Node("graph", isDuplicate = true)
+val gmqksn8 = Node(",", isDuplicate = true)
+val rdvcoz1 = Node("field_access")
+val ypfyoi1 = Node("identifier", isDuplicate = true)
+val vxqpod2 = Node("MediaType")
+val ixllow2 = Node(".")
+val znucgz4 = Node("identifier", isDuplicate = true)
+val kfxqmf4 = Node("TEXT_XML")
+val cubrhg5 = Node(")", isDuplicate = true)
+val itoiqr8 = Node(";", isDuplicate = true)
+val znzfif3 = Node("}", isDuplicate = true)
+val mjyjdt9 = Node("}", isDuplicate = true)
+
+graph1 = Graph.from(
+	nodes = listOf(ekohmt9, hdqglm7, anenxw8, yuscph6, jmjdzq9, xzkrzk6, mczvix1, dewmgq6, gbmnuh0, tofcji5, wxuosk0, vobssl2, wcuynw2, fgrwuk1, qmcazc1, nmyskm6, imkecj8, vrotfd6, bvrhnq4, ozmkcq7, nxuurw2, yoaxev4, txaqpb5, sykyuc7, tixthu0, tthoyx6, ujhyse1, fbhzpi5, wnccfw7, pbrcvn9, opnvak3, pweimw3, txxouw5, cgjbat2, fobgmw0, vqvjxc9, lowyyh0, avhwnr7, ghbmzr4, bzkdfe4, ettqfc6, nwjitx1, qxmvhm1, yocoba9, ewyzip8, qplfiv3, zimavg3, thutpo6, kqkxxo2, ubtrvl7, sielvs6, sbrlrc6, gxhmku3, gucbli3, vqaysb6, kgmmct9, nbhqtd6, rdtdsa3, ccuris9, gpllfd2, xcpyyt4, qwxtop8, wzxzww6, hgyaww5, ngexew3, czvwik4, uswulv4, jgbbem9, jfdhgz1, dkysad3, tdengg2, gmqksn8, rdvcoz1, ypfyoi1, vxqpod2, ixllow2, znucgz4, kfxqmf4, cubrhg5, itoiqr8, znzfif3, mjyjdt9),
+	edges = mapOf(
+		ekohmt9 to listOf(hdqglm7),
+		hdqglm7 to listOf(anenxw8, yuscph6, xzkrzk6),
+		yuscph6 to listOf(jmjdzq9),
+		xzkrzk6 to listOf(mczvix1, dewmgq6, mjyjdt9),
+		dewmgq6 to listOf(gbmnuh0, wxuosk0, wcuynw2, qmcazc1, wnccfw7),
+		gbmnuh0 to listOf(tofcji5),
+		wxuosk0 to listOf(vobssl2),
+		wcuynw2 to listOf(fgrwuk1),
+		qmcazc1 to listOf(nmyskm6, imkecj8, yoaxev4, txaqpb5, fbhzpi5),
+		imkecj8 to listOf(vrotfd6, ozmkcq7),
+		vrotfd6 to listOf(bvrhnq4),
+		ozmkcq7 to listOf(nxuurw2),
+		txaqpb5 to listOf(sykyuc7, tthoyx6),
+		sykyuc7 to listOf(tixthu0),
+		tthoyx6 to listOf(ujhyse1),
+		wnccfw7 to listOf(pbrcvn9, opnvak3, qplfiv3, qwxtop8, znzfif3),
+		opnvak3 to listOf(pweimw3, cgjbat2, ewyzip8),
+		pweimw3 to listOf(txxouw5),
+		cgjbat2 to listOf(fobgmw0, lowyyh0, avhwnr7),
+		fobgmw0 to listOf(vqvjxc9),
+		avhwnr7 to listOf(ghbmzr4, bzkdfe4, nwjitx1),
+		bzkdfe4 to listOf(ettqfc6),
+		nwjitx1 to listOf(qxmvhm1, yocoba9),
+		qplfiv3 to listOf(zimavg3, xcpyyt4),
+		zimavg3 to listOf(thutpo6, ubtrvl7),
+		thutpo6 to listOf(kqkxxo2),
+		ubtrvl7 to listOf(sielvs6, sbrlrc6, gucbli3, vqaysb6, nbhqtd6, rdtdsa3, gpllfd2),
+		sbrlrc6 to listOf(gxhmku3),
+		vqaysb6 to listOf(kgmmct9),
+		rdtdsa3 to listOf(ccuris9),
+		qwxtop8 to listOf(wzxzww6, hgyaww5, itoiqr8),
+		hgyaww5 to listOf(ngexew3, czvwik4, jgbbem9),
+		czvwik4 to listOf(uswulv4),
+		jgbbem9 to listOf(jfdhgz1, dkysad3, gmqksn8, rdvcoz1, cubrhg5),
+		dkysad3 to listOf(tdengg2),
+		rdvcoz1 to listOf(ypfyoi1, ixllow2, znucgz4),
+		ypfyoi1 to listOf(vxqpod2),
+		znucgz4 to listOf(kfxqmf4),
+	)
+)

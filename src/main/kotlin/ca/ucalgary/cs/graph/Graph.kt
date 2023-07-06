@@ -1,5 +1,8 @@
 package ca.ucalgary.cs.graph
 
+import ca.ucalgary.cs.Config.DEBUG_MODE
+import ca.ucalgary.cs.Config.UNIQUE_LABELS
+import ca.ucalgary.cs.algorithm.StructuralMatchingAlgorithm
 import ca.ucalgary.cs.exceptions.IllegalEdgeException
 import ca.ucalgary.cs.utils.areListsEqual
 import ca.ucalgary.cs.utils.areListsSubset
@@ -8,6 +11,10 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
 
     val edgeVariables = mutableListOf<EdgeVariable>()
     val nodeVariables = mutableListOf<NodeVariable>()
+
+    private val parentsMapCache: MutableMap<Node, Set<Node>> = mutableMapOf()
+    private val nodeIndexMapCache: MutableMap<Node, Int> = mutableMapOf()
+    private val edgesMapCache: MutableMap<Node, List<Edge>> = mutableMapOf()
 
     init {
         val edgeNodes = edges.keys + edges.values.flatten().map { it.to }
@@ -27,8 +34,24 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         """.trimMargin()
     }
 
-    fun edgesOf(node: Node) = edges[node] ?: emptyList()
+    fun indexOf(node: Node) = nodeIndexMapCache.getOrPut(node) { nodes.indexOfFirst { node.isExactMatch(it) } }
+    fun getLeaves() = nodes.filter { node -> edgesOf(node).isEmpty() }
+    fun findParents(node: Node) = parentsMapCache.getOrPut(node) {
+        edges.filter { (_, edges) -> edges.any { it.to.isExactMatch(node) } }.keys
+    }
+
+    fun edgesOf(node: Node) = if (node.code == null)
+        edges[node] ?: edges.filter { (key, _) -> key == node }.values.flatten()
+    else
+        edgesMapCache.getOrPut(node) { edges.filter { (n, _) -> n.isExactMatch(node) }.values.flatten() }
+
+    fun edgeVariablesOf(leg: EdgeVariableLeg) = edgeVariables.filter { it.has(leg) }
     fun edgeCounts(): Int = edges.values.sumOf { it.size }
+    fun allInAndOutEdgesOf(node: Node) = edges.values.flatten().filter { edge -> edge.contain(node) }
+    fun degreeOf(node: Node): Int = allInAndOutEdgesOf(node).size
+    fun degreeOfMatchedNodes(node: Node): Int = getAllInAndOutNeighbors(node).filter { it.isCommon }.size
+    private fun getAllInAndOutNeighbors(node: Node) =
+        allInAndOutEdgesOf(node).map { edge -> if (edge.to.isExactMatch(node)) edge.from else edge.to }
 
     companion object {
         fun from(nodes: List<Node>, edges: Map<Node, List<Node>>) = Graph(
@@ -39,8 +62,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
         )
 
         fun compare(graph1: Graph, graph2: Graph): Triple<Graph, Graph, Graph> {
-            // TODO: Change variable names based on the structural similarities and then we have a ordinary generalization algorithm.
-            // TODO: Having a matching-threshold to ignore some of the similarities
+            markCommonNodes(graph1, graph2)
+            if (!UNIQUE_LABELS)
+                alterNamesOfSameNodes(graph1, graph2)
 
             val commonNodes = graph1.nodes.filter { it in graph2.nodes }
             val commonEdges = mutableMapOf<Node, List<Edge>>()
@@ -59,11 +83,15 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
                 val all = (g2Edges.size + g1Edges.size).toDouble() / 2
                 val nodeSimilarity = if (all != 0.0) commonNeighbors.size.toDouble() / all else 1.0
                 totalSimilarityScore += nodeSimilarity
-                println("${commonNode.name} -> #similarity: $nodeSimilarity")
+                if (DEBUG_MODE) {
+                    println("${commonNode.name} -> #similarity: $nodeSimilarity")
+                }
             }
 
-            (graph1.nodes + graph2.nodes).filter { it !in commonNodes }.forEach { node ->
-                println("${node.name} -> #similarity: 0.0 (NOT COMMON!)")
+            if (DEBUG_MODE) {
+                (graph1.nodes + graph2.nodes).filter { it !in commonNodes }.forEach { node ->
+                    println("${node.name} -> #similarity: 0.0 (NOT COMMON!)")
+                }
             }
 
             println("############################")
@@ -92,6 +120,23 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             val g2Diff = graph2 - commonGraph
 
             return Triple(commonGraph, g1Diff, g2Diff)
+        }
+
+        private fun markCommonNodes(graph1: Graph, graph2: Graph) {
+            graph1.nodes.filter { n1 -> graph2.nodes.any { n2 -> n1.isExactMatch(n2) } }.forEach { it.isCommon = true }
+            graph2.nodes.filter { n2 -> graph1.nodes.any { n1 -> n1.isExactMatch(n2) } }.forEach { it.isCommon = true }
+        }
+
+        private fun alterNamesOfSameNodes(graph1: Graph, graph2: Graph) {
+            StructuralMatchingAlgorithm.reset()
+            do {
+                StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = false)
+            } while (StructuralMatchingAlgorithm.nodesMatchingHappened)
+            StructuralMatchingAlgorithm.nodesMatchingHappened = false
+            do {
+                StructuralMatchingAlgorithm.matchSimilarNodes(graph1, graph2, ignoreDraw = true)
+            } while (StructuralMatchingAlgorithm.nodesMatchingHappened)
+            StructuralMatchingAlgorithm.alterNameOfDifferentNodes(graph1, graph2)
         }
 
         private fun mergeLonelyNodeVariable(
@@ -154,10 +199,8 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
 
                     edgeVariables.addAll(
                         EdgeVariable.merge(
-                            graph1EdgeVariables = graph1EdgeVariables.filter { it.has(mergedNodeVariable) }
-                                .toMutableList(),
-                            graph2EdgeVariables = graph2EdgeVariables.filter { it.has(mergedNodeVariable) }
-                                .toMutableList(),
+                            graph1EdgeVariables = graph1EdgeVariables.filter { it.has(mergedNodeVariable) }.toMutableList(),
+                            graph2EdgeVariables = graph2EdgeVariables.filter { it.has(mergedNodeVariable) }.toMutableList(),
                             commonNodeVariable = mergedNodeVariable
                         )
                     )
@@ -247,8 +290,9 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
                     val nodeVariable1 = nodeVariablesMap[node] ?: error("There is no NodeVariable for $node!")
                     val nodeVariable2 = nodeVariablesMap[edge.to] ?: error("There is no NodeVariable for ${edge.to}!")
 
-                    val mergedNodeVariable = nodeVariable1.merge(nodeVariable2)
-                    mergedNodeVariable.addEdge(edge, graphNumber)
+//                    val mergedNodeVariable = nodeVariable1.merge(nodeVariable2)
+//                    mergedNodeVariable.addEdge(edge, graphNumber)
+                    val mergedNodeVariable = nodeVariable1.mergeAndAddEdge(nodeVariable2, edge, graphNumber)
 
                     (nodeVariable1.getGraph(graphNumber).nodes + nodeVariable2.getGraph(graphNumber).nodes)
                         .distinct()
@@ -352,4 +396,5 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
             nodeVariables[i] = simplifiedNodeVariable
         }
     }
+
 }

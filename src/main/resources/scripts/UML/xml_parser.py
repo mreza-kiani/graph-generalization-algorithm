@@ -2,6 +2,8 @@ import xml.etree.ElementTree as ET
 
 from graph_creator import print_graph_initialization, convert_to_node_name, save_graph_in_file
 
+PRINTING_MODE = False
+
 
 def remove_package(package):
     return convert_to_node_name(package.split('.')[-1])
@@ -14,18 +16,21 @@ def normalize_packages(graph):
     return new_graph
 
 
-def main():
+def parse(xml_address, save_address=None):
     graph = {}
-    tree = ET.parse('uml.txt')
+    tree = ET.parse(xml_address)
     root = tree.getroot()
     for child in root:
         if child.tag == 'nodes':
-            print('-----' * 3 + ' NODES ' + '-----' * 3)
+            if PRINTING_MODE:
+                print('-----' * 3 + ' NODES ' + '-----' * 3)
             for node in child:
                 graph[node.text] = set()
-                print(node.text, remove_package(node.text))
+                if PRINTING_MODE:
+                    print(node.text, remove_package(node.text))
         elif child.tag == 'edges':
-            print('-----' * 3 + ' EDGES ' + '-----' * 3)
+            if PRINTING_MODE:
+                print('-----' * 3 + ' EDGES ' + '-----' * 3)
             for edge in child:
                 relationship = edge.attrib['relationship']
                 source = edge.attrib['source']
@@ -33,13 +38,17 @@ def main():
                 if relationship in ['DEPENDENCY', 'TO_MANY', 'TO_ONE', 'INNER_CLASS', 'CREATE', 'REALIZATION',
                                     'GENERALIZATION']:
                     graph[source].add(target)
-                    print('✓', edge.attrib)
+                    if PRINTING_MODE:
+                        print('✓', edge.attrib)
                 else:
-                    print('✖', edge.attrib)
+                    if PRINTING_MODE:
+                        print('✖', edge.attrib)
     graph = normalize_packages(graph)
-    print_graph_initialization(graph)
-    save_graph_in_file('v2.0-main', graph)
+    if PRINTING_MODE:
+        print_graph_initialization(graph)
+    if save_address is not None:
+        save_graph_in_file(save_address, graph)
 
 
 if __name__ == '__main__':
-    main()
+    parse(xml_address='uml.txt', save_address='v2.0-main')

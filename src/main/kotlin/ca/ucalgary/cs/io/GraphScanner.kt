@@ -29,4 +29,32 @@ object GraphScanner {
             .filter { it.isNotBlank() }
             .map { Node(it.capitalize()) }
     }
+
+    fun scanWithDefinition(path: String): Graph {
+        val lines = File(path).readLines()
+        val nodesMap = extractNodes(lines.filter { " = Node(" in it })
+        val edges = extractEdgesOf(nodesMap, lines.filter { " to listOf(" in it })
+
+        return Graph.from(nodesMap.values.toList(), edges)
+    }
+
+    private fun extractNodes(lines: List<String>): Map<String, Node> {
+        return lines
+            .map { it.split(" = Node(") }
+            .associate { parts ->
+                val nodeName = parts[0].split(" ").last()
+                val defParts = parts[1].substring(0, parts[1].length - 1).split(", isDuplicate = ")
+                val nodeValue = defParts[0].substring(1, defParts[0].length - 1)
+                val isDuplicated = !(defParts.size == 1 || defParts[1] == "false")
+
+                nodeName to Node(nodeValue, isDuplicated)
+            }
+    }
+
+    private fun extractEdgesOf(nodesMap: Map<String, Node>, lines: List<String>): Map<Node, List<Node>> {
+        return lines
+            .map { line -> line.trim().split(" to listOf")  }
+            .map { parts -> parts[0] to parts[1].substring(1, parts[1].length - 2).split(", ") }
+            .associate { (from, tos) -> nodesMap[from]!! to tos.map { nodesMap[it]!! } }
+    }
 }

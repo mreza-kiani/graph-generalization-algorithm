@@ -20,12 +20,16 @@ class NodeVariable(name: String) : Node(name) {
     }
 
     fun addEdge(edge: Edge, graphNumber: Int) {
-        addNode(edge.from, graphNumber)
-        addNode(edge.to, graphNumber)
         if (graphNumber == 1) {
-            graph1 = Graph(nodes = graph1.nodes, edges = graph1.edges + (edge.from to graph1.edgesOf(edge.from) + listOf(edge)))
+            graph1 = Graph(
+                nodes = (graph1.nodes + edge.from + edge.to).distinct(),
+                edges = graph1.edges + (edge.from to graph1.edgesOf(edge.from) + listOf(edge))
+            )
         } else {
-            graph2 = Graph(nodes = graph2.nodes, edges = graph2.edges + (edge.from to graph2.edgesOf(edge.from) + listOf(edge)))
+            graph2 = Graph(
+                nodes = (graph2.nodes + edge.from + edge.to).distinct(),
+                edges = graph2.edges + (edge.from to graph2.edgesOf(edge.from) + listOf(edge))
+            )
         }
     }
 
@@ -62,12 +66,38 @@ class NodeVariable(name: String) : Node(name) {
         return merged
     }
 
+    fun mergeAndAddEdge(other:NodeVariable, edge: Edge, graphNumber: Int): NodeVariable {
+        if (this.isSubGraphOf(other))
+            return other
+        if (other.isSubGraphOf(this))
+            return this
+
+        val parts = name.replace("{", "").replace("}", "").split("&")
+        val otherParts = other.name.replace("{", "").replace("}", "").split("&")
+
+        val merged = NodeVariable(name = "{${(parts + otherParts).sorted().distinct().joinToString("&")}}")
+        if (graphNumber == 1) {
+            merged.graph1 = Graph(
+                nodes = (graph1.nodes + edge.from + edge.to + other.graph1.nodes).distinct(),
+                edges = graph1.edges + (edge.from to graph1.edgesOf(edge.from) + listOf(edge)) + other.graph1.edges
+            )
+            merged.graph2 = Graph(nodes = (graph2.nodes + other.graph2.nodes).distinct(), edges = graph2.edges + other.graph2.edges)
+        } else {
+            merged.graph1 = Graph(nodes = (graph1.nodes + other.graph1.nodes).distinct(), edges = graph1.edges + other.graph1.edges)
+            merged.graph2 = Graph(
+                nodes = (graph2.nodes + edge.from + edge.to + other.graph2.nodes).distinct(),
+                edges = graph2.edges + (edge.from to graph2.edgesOf(edge.from) + listOf(edge)) + other.graph2.edges
+            )
+        }
+        return merged
+    }
+
     private fun neighborsIn(edgeVariables: List<EdgeVariable>) =
         edgeVariables.filter { it.has(this) }.map { it.otherLegThan(this) }.distinct()
 
     companion object {
         private var counter = 1
-        fun getUniqueName() = "E${counter++}"
+        fun getUniqueName() = "N${counter++}"
 
         fun extractNeighborsMap(edgeVariables: MutableList<EdgeVariable>) =
             edgeVariables

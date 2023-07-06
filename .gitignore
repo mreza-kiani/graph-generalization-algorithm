@@ -79,4 +79,8 @@ buildNumber.properties
 input.txt
 uml.txt
 data/
+Data/
+output/
 *.iml
+
+src/main/resources/scripts/ast_extractor/Test.java
