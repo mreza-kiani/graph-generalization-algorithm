@@ -71,7 +71,7 @@ fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Grap
         println("---------------------------------------------")
     }
 
-    ASTPrinter.from(commonGraph, fileName = "$baseName/Generalization", graph1, graph2)
+    ASTPrinter.from(commonGraph, fileName = "$baseName/Generalization_July7", graph1, graph2)
 
     if (DEBUG_MODE) {
         ASTPrinter.from(graph1, graphNumber = 1, fileName = "$baseName/G1_Generalized")
@@ -91,8 +91,8 @@ fun runGeneralizationAndMeasureTime(input1: String, input2: String, timeMap: Mut
     var key: String
     val duration = measureTime {
         val (commonGraph, graph1, graph2) = runGeneralization(input1, input2)
-        key =
-            "${extractCategory(input1)}, ${commonGraph.nodes.size}, ${commonGraph.edges.size}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edges.size}, ${graph2.nodes.size}, ${graph2.edges.size}"
+//        key = "${input1.split("/").last()}vs${input2.split("/").last()}, ${commonGraph.nodes.size}, ${commonGraph.edgeCounts()}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edgeCounts()}, ${graph2.nodes.size}, ${graph2.edgeCounts()}"
+        key = "${extractCategory(input1)}, ${commonGraph.nodes.size}, ${commonGraph.edgeCounts()}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edgeCounts()}, ${graph2.nodes.size}, ${graph2.edgeCounts()}"
     }
     timeMap[key] = duration.inWholeMilliseconds
 }

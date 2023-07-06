@@ -5,11 +5,11 @@ import sys
 
 from functions import read_inputs, raw_completeness, raw_compression, variable_ratio
 
-f = open("summary.csv", "a")
+f = open("codesearchnet_june16_00_unpretified.csv", "a")
 
 
 def compare(dir_name, input1_path, input2_path):
-    may, generalization = read_inputs(name1=f"{dir_name}/FinalAUAST.java", name2=f"{dir_name}/Generalization.java")
+    may, generalization = read_inputs(name1=f"{dir_name}/FinalAUAST.java", name2=f"{dir_name}/Generalization_June9.java")
     input1, input2 = read_inputs(name1=f"{input1_path}", name2=f"{input2_path}")
 
     print('---------------------------------------Distance------------------------------------------------')
