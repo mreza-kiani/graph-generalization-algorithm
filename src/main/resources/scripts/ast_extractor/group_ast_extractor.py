@@ -16,8 +16,8 @@ def save_kotlin_declaration_to_file(result, java_address):
 
 
 if __name__ == '__main__':
-    files = glob.glob("../../CodeSearchNet/*/*/*.java")
-    # files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNet/*/*/*/*.java")
+    # files = glob.glob("../../CodeSearchNet/*/*/*.java")
+    files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/RandomCodeSearchNet/*/*/*.java")
     for index, address in enumerate(files, start=1):
         try:
             print(f"{index}/{len(files)}. Converting: {address}")
