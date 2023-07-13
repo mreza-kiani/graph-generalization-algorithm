@@ -71,7 +71,7 @@ fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Grap
         println("---------------------------------------------")
     }
 
-    ASTPrinter.from(commonGraph, fileName = "$baseName/Generalization_July7", graph1, graph2)
+    ASTPrinter.from(commonGraph, fileName = "$baseName/Generalization_July21", graph1, graph2)
 
     if (DEBUG_MODE) {
         ASTPrinter.from(graph1, graphNumber = 1, fileName = "$baseName/G1_Generalized")
@@ -106,6 +106,16 @@ fun printExecutionTimeReport(timeMap: MutableMap<String, Long>) {
     println("-------------------------Done!--------------------------")
 }
 
+fun extractListOfFiles() = Files.walk(Paths.get(BASE_DIR))
+    .filter { it.name == "Data" }
+    .map { dir ->
+        Files.walk(Paths.get(dir.pathString))
+            .filter { ".txt" in it.name }
+            .map { "${dir.pathString}/${it.fileName}" }
+            .toList()
+    }.filter { it.size == 2 }
+    .toList()
+
 fun main() {
     DEBUG_MODE = false
     UNIQUE_LABELS = false
@@ -113,15 +123,7 @@ fun main() {
     VISUALIZATION = false
     BASE_DIR = "src/main/resources/CodeSearchNet"
 
-    val data = Files.walk(Paths.get(BASE_DIR))
-        .filter { it.name == "Data" }
-        .map { dir ->
-            Files.walk(Paths.get(dir.pathString))
-                .filter { ".txt" in it.name }
-                .map { "${dir.pathString}/${it.fileName}" }
-                .toList()
-        }.filter { it.size == 2 }
-        .toList()
+    val data = extractListOfFiles()
 
     val timeMap = mutableMapOf<String, Long>()
 

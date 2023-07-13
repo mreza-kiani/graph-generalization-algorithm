@@ -10,7 +10,7 @@ import java.nio.file.Paths
 import kotlin.io.path.pathString
 import kotlin.streams.toList
 
-private fun choose(n: Int, k: Int): Int {
+fun choose(n: Int, k: Int): Int {
     var numerator = 1
     var denominator = 1
     for (i in n downTo n - k + 1)
