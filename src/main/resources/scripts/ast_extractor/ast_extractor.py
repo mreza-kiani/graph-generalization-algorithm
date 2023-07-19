@@ -55,12 +55,12 @@ def process_the_tree(node: Node, parent_name=None):
     if len(node.children) == 0:
         if node.type in ['identifier', 'type_identifier', 'line_comment', 'block_comment'] or 'literal' in node.type:
             child_name = get_random_name()
-            child_def = node.text.decode('ascii').replace("\"", "\\\"").replace("\n", "\\n")
+            child_def = node.text.decode('utf-8').replace("\"", "\\\"").replace("\n", "\\n")
             edges_mapping[child_name] = child_def
             edges[variable_name] = [child_name]
     elif node.type == 'string_literal':
         child_name = get_random_name()
-        child_def = node.text.decode('ascii')
+        child_def = node.text.decode('utf-8')
         edges_mapping[child_name] = child_def
         edges[variable_name] = [child_name]
         return
@@ -120,4 +120,4 @@ def extract_kotlin_declaration(address):
 
 
 if __name__ == '__main__':
-    extract_kotlin_declaration('Test.java')
+    extract_kotlin_declaration('/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/RandomCodeSearchNet/1129/Data/2MapPositionSetterFactory.java')
