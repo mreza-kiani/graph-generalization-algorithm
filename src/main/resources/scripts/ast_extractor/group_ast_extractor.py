@@ -1,6 +1,7 @@
 import glob
+import os
 
-from ast_extractor import extract_kotlin_declaration
+from ast_extractor import extract_kotlin_declaration, COPY_MODE, PRINTING_MODE
 
 
 def create_kotlin_filename(address):
@@ -16,9 +17,14 @@ def save_kotlin_declaration_to_file(result, java_address):
 
 
 if __name__ == '__main__':
+    COPY_MODE = False
+    PRINTING_MODE = False
     # files = glob.glob("../../CodeSearchNet/*/*/*.java")
-    files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/RandomCodeSearchNet/*/*/*.java")
+    files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/RandomCodeSearchNet2/*/Data/*.java")
     for index, address in enumerate(files, start=1):
+        if os.path.isfile(address.replace('.java', '.txt')):
+            print(f"{index}/{len(files)}. Already Converted!")
+            continue
         try:
             print(f"{index}/{len(files)}. Converting: {address}")
             result = extract_kotlin_declaration(address)
