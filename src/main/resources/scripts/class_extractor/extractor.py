@@ -46,6 +46,21 @@ def extract_java_classes(text):
     for pattern in patterns:
         java_classes.add(pattern[0].split('.')[-1])
 
+    # <code>ClassName</code>
+    patterns = re.findall("<code>[A-Z]\w*</code>", text)
+    for pattern in patterns:
+        java_classes.add(pattern[6:-7])
+
+    # ClassName.methodName(args*)
+    patterns = re.findall("[A-Z]\w*\.\w*\(\w*\)", text)
+    for pattern in patterns:
+        java_classes.add(pattern.split(".")[0])
+
+    # new ClassName
+    patterns = re.findall("new [A-Z]\w*", text)
+    for pattern in patterns:
+        java_classes.add(pattern[4:])
+
     return java_classes
 
 
@@ -56,7 +71,9 @@ def extract_java_classes_from_url(url):
 
 if __name__ == '__main__':
     keywords = set()
-    url = input("Enter URL:")
+    # url = input("Enter URL:")
     # url = 'https://raw.githubusercontent.com/junit-team/junit4/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.4.md'
-    keywords.update(extract_java_classes_from_url(url))
+    urls = ["https://tomcat.apache.org/tomcat-8.5-doc/changelog.html", "https://tomcat.apache.org/tomcat-9.0-doc/changelog.html"]
+    for url in urls:
+        keywords.update(extract_java_classes_from_url(url))
     print(keywords)

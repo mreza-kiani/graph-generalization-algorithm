@@ -1,0 +1,21 @@
+{'EPOCH', 'UTC', 'Date', 'MutableDateTime', 'FromString', 'DateTimeUtils', 'PeriodFormatter', 'DateTime', 'MillisProvider', 'Interval', 'LocalDateTime', 'MonthDay', 'Property', 'Chronology', 'Period', 'DateTimeFormatter', 'LocalTime', 'MIN_VALUE', 'Duraton', 'Instant', 'Duration', 'PeriodFormat', 'TimeZone', 'Time', 'ThreadGroup', 'LocalDate', 'DateTimeField', 'Separator', 'SYSTEM_MILLIS_PROVIDER', 'DateTimeZone', 'ToString', 'MAX_VALUE'}
+
+urls = ["https://www.joda.org/joda-time/changes-report.html",
+        "https://www.joda.org/joda-time/upgradeto296.html",
+        "https://www.joda.org/joda-time/upgradeto295.html",
+        "https://www.joda.org/joda-time/upgradeto294.html",
+        "https://www.joda.org/joda-time/upgradeto293.html",
+        "https://www.joda.org/joda-time/upgradeto292.html",
+        "https://www.joda.org/joda-time/upgradeto291.html",
+        "https://www.joda.org/joda-time/upgradeto290.html",
+        "https://www.joda.org/joda-time/upgradeto282.html",
+        "https://www.joda.org/joda-time/upgradeto281.html",
+        "https://www.joda.org/joda-time/upgradeto280.html",
+        "https://www.joda.org/joda-time/upgradeto270.html",
+        "https://www.joda.org/joda-time/upgradeto260.html",
+        "https://www.joda.org/joda-time/upgradeto250.html",
+        "https://www.joda.org/joda-time/upgradeto240.html",
+        "https://www.joda.org/joda-time/upgradeto230.html",
+        "https://www.joda.org/joda-time/upgradeto220.html",
+        "https://www.joda.org/joda-time/upgradeto210.html",
+        "https://www.joda.org/joda-time/upgradeto200.html"]
