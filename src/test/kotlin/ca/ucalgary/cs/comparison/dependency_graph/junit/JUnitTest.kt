@@ -19,11 +19,11 @@ class JUnitTest : BaseCompareGraphTest() {
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {
-        graph1Diff.visualize("junit-4.12-differences")
+//        graph1Diff.visualize("junit-4.12-differences")
     }
 
     override fun checkGraph2Diff(graph2Diff: Graph) {
-        graph2Diff.visualize("junit-4.13-differences")
+//        graph2Diff.visualize("junit-4.13-differences")
     }
 }
 

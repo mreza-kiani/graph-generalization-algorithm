@@ -1,0 +1,996 @@
+org.junit.runner.notification.ConcurrentRunNotifierTest.AbstractConcurrentFailuresTest	3.5	4.0	7.0
+org.junit.internal.ComparisonCriteria	3.3333333333333335	5.0	10.0
+org.junit.experimental.max.MaxHistory.TestComparator	3.0	4.0	6.0
+org.junit.internal.runners.rules.RuleMemberValidator.MemberMustBeNonStaticOrAlsoClassRule	3.0	3.0	3.0
+org.junit.runners.parameterized.ParameterizedNamesTest	3.0	3.0	3.0
+org.junit.tests.running.methods.TimeoutTest.InfiniteLoopMultithreaded	3.0	3.0	3.0
+org.junit.validator.AnnotationValidatorFactory	3.0	3.0	3.0
+org.junit.experimental.theories.internal.SpecificDataPointsSupplier	2.6	3.0	13.0
+org.junit.experimental.theories.Theories	2.5555555555555554	1.0	23.0
+org.junit.experimental.categories.CategoryValidator	2.5	4.0	5.0
+org.junit.validator.AnnotationsValidator.AnnotatableValidator	2.5	3.0	5.0
+org.junit.internal.runners.statements.FailOnTimeout	2.4545454545454546	2.0	27.0
+org.junit.runners.model.NoGenericTypeParametersValidator	2.3333333333333335	5.0	14.0
+org.junit.experimental.categories.Categories.CategoryFilter	2.3157894736842106	8.0	44.0
+org.junit.internal.runners.MethodValidator	2.2857142857142856	8.0	16.0
+org.junit.ComparisonFailure.ComparisonCompactor	2.25	3.0	9.0
+org.junit.experimental.theories.internal.AllMembersSupplier	2.2	4.0	33.0
+junit.framework.ComparisonCompactor	2.125	3.0	17.0
+junit.samples.money.MoneyBag	2.1176470588235294	7.0	36.0
+org.junit.experimental.categories.Categories	2.1	3.0	21.0
+org.junit.internal.runners.JUnit38ClassRunner	2.0833333333333335	7.0	25.0
+org.junit.experimental.runners.Enclosed	2.0	3.0	4.0
+org.junit.experimental.theories.suppliers.TestedOnSupplier	2.0	2.0	2.0
+org.junit.internal.MethodSorter	2.0	3.0	10.0
+org.junit.internal.builders.IgnoredBuilder	2.0	2.0	2.0
+org.junit.internal.runners.ErrorReportingRunner	2.0	4.0	12.0
+org.junit.internal.runners.rules.RuleMemberValidator.FieldMustBeARule	2.0	2.0	2.0
+org.junit.internal.runners.rules.RuleMemberValidator.FieldMustBeATestRule	2.0	2.0	2.0
+org.junit.internal.runners.rules.RuleMemberValidator.MemberMustBePublic	2.0	2.0	2.0
+org.junit.internal.runners.rules.RuleMemberValidator.MemberMustBeStatic	2.0	2.0	2.0
+org.junit.internal.runners.rules.RuleMemberValidator.MethodMustBeARule	2.0	2.0	2.0
+org.junit.internal.runners.rules.RuleMemberValidator.MethodMustBeATestRule	2.0	2.0	2.0
+org.junit.internal.runners.statements.ExpectException	2.0	3.0	4.0
+org.junit.tests.experimental.rules.TempFolderRuleTest.CreatesRandomFiles	2.0	2.0	2.0
+org.junit.tests.experimental.rules.TempFolderRuleTest.CreatesRandomSubFolders	2.0	2.0	2.0
+org.junit.tests.experimental.theories.runner.WithNamedDataPoints	2.0	2.0	2.0
+org.junit.tests.experimental.theories.runner.WithOnlyTestAnnotations.HonorTimeout	2.0	2.0	2.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.SimpleSupplier	2.0	2.0	2.0
+org.junit.tests.internal.runners.statements.FailOnTimeoutTest.InfiniteLoopStatement	2.0	2.0	2.0
+org.junit.tests.internal.runners.statements.FailOnTimeoutTest.TestStatement	2.0	2.0	2.0
+org.junit.tests.running.core.SystemExitTest	2.0	2.0	2.0
+org.junit.tests.running.methods.TimeoutTest.InfiniteLoopMultithreaded.ThreadTest	2.0	3.0	4.0
+org.junit.validator.AnnotationsValidator	2.0	2.0	2.0
+org.junit.validator.PublicClassValidator	2.0	2.0	2.0
+org.junit.runners.model.TestClass	1.9583333333333333	4.0	47.0
+org.junit.internal.runners.TestClass	1.9166666666666667	5.0	23.0
+org.junit.tests.running.core.MainRunner.NoExitSecurityManager	1.9142857142857144	2.0	67.0
+org.junit.runner.JUnitCommandLineParseResult	1.9090909090909092	2.0	21.0
+org.junit.runners.parameterized.BlockJUnit4ClassRunnerWithParameters	1.8333333333333333	7.0	22.0
+org.junit.tests.experimental.theories.extendingwithstubs.Guesser.GuessMap	1.8333333333333333	3.0	11.0
+org.junit.rules.DisableOnDebug	1.8	4.0	9.0
+org.junit.runners.Parameterized	1.8	3.0	18.0
+junit.runner.BaseTestRunner	1.76	6.0	44.0
+junit.extensions.RepeatedTest	1.75	3.0	7.0
+junit.framework.JUnit4TestAdapterCache	1.75	3.0	14.0
+org.junit.internal.builders.AnnotatedBuilder	1.75	3.0	7.0
+org.junit.internal.runners.MethodRoadie	1.75	5.0	21.0
+org.junit.internal.runners.statements.FailOnTimeout.Builder	1.75	3.0	7.0
+org.junit.runners.model.MultipleFailureException	1.75	3.0	7.0
+org.junit.tests.experimental.theories.extendingwithstubs.StubbedTheories.StubbedTheoryAnchor	1.75	2.0	7.0
+org.junit.internal.AssumptionViolatedException	1.7142857142857142	5.0	12.0
+org.junit.internal.requests.ClassRequest	1.6666666666666667	3.0	5.0
+org.junit.runners.model.FrameworkMember	1.6666666666666667	3.0	5.0
+org.junit.tests.experimental.theories.extendingwithstubs.GuesserQueue	1.6666666666666667	2.0	5.0
+org.junit.tests.running.classes.ParentRunnerFilteringTest.CountingFilter	1.6666666666666667	2.0	5.0
+org.junit.experimental.max.MaxCore	1.6428571428571428	5.0	23.0
+org.junit.internal.matchers.TypeSafeMatcher	1.6	4.0	8.0
+org.junit.experimental.theories.ParameterSignature	1.5625	5.0	25.0
+junit.framework.TestSuite	1.5555555555555556	5.0	42.0
+org.junit.runners.model.FrameworkMethod	1.55	5.0	31.0
+org.junit.runners.ParentRunner	1.5454545454545454	4.0	51.0
+org.junit.experimental.theories.internal.Assignments	1.5333333333333334	3.0	23.0
+junit.tests.framework.ComparisonFailureTest	1.5	2.0	6.0
+junit.textui.TestRunner	1.5	8.0	27.0
+org.junit.experimental.categories.CategoryFilterFactory	1.5	2.0	3.0
+org.junit.experimental.results.FailureList	1.5	2.0	3.0
+org.junit.experimental.theories.internal.EnumSupplier	1.5	2.0	3.0
+org.junit.internal.ArrayComparisonFailure	1.5	3.0	6.0
+org.junit.internal.builders.JUnit3Builder	1.5	2.0	3.0
+org.junit.internal.builders.SuiteMethodBuilder	1.5	2.0	3.0
+org.junit.internal.runners.SuiteMethod	1.5	2.0	3.0
+org.junit.internal.runners.rules.RuleMemberValidator.DeclaringClassMustBePublic	1.5	2.0	3.0
+org.junit.internal.runners.statements.RunAfters	1.5	2.0	3.0
+org.junit.internal.runners.statements.RunBefores	1.5	2.0	3.0
+org.junit.rules.ExpectedException.ExpectedExceptionStatement	1.5	2.0	3.0
+org.junit.rules.TemporaryFolder	1.5	3.0	24.0
+org.junit.runner.notification.SynchronizedRunListenerTest.MethodSignature	1.5	3.0	6.0
+org.junit.runner.notification.SynchronizedRunListenerTest.NamedListener	1.5	3.0	6.0
+org.junit.runners.model.RunnerBuilder	1.5	3.0	9.0
+org.junit.runners.parameterized.TestWithParameters	1.5	4.0	12.0
+org.junit.tests.running.methods.TimeoutTest.ImpatientLoopTest	1.5	2.0	3.0
+org.junit.tests.running.methods.TimeoutTest.InfiniteLoopTest	1.5	2.0	3.0
+org.junit.tests.running.methods.TimeoutTest.WillTimeOut	1.5	2.0	3.0
+org.junit.runner.manipulation.Filter	1.4545454545454546	4.0	16.0
+org.junit.runners.BlockJUnit4ClassRunner	1.4411764705882353	3.0	49.0
+junit.framework.Assert	1.435897435897436	4.0	56.0
+org.junit.internal.builders.AllDefaultPossibilitiesBuilder	1.4285714285714286	3.0	10.0
+org.junit.runner.notification.ConcurrentRunNotifierTest	1.4285714285714286	3.0	10.0
+org.junit.internal.TextListener	1.4166666666666667	4.0	17.0
+org.junit.experimental.theories.Theories.TheoryAnchor	1.411764705882353	2.0	24.0
+org.junit.runner.Description	1.4074074074074074	3.0	38.0
+org.junit.Assert	1.4029850746268657	4.0	94.0
+org.junit.experimental.ParallelComputer	1.375	2.0	11.0
+org.junit.internal.runners.rules.RuleMemberValidator	1.375	1.0	11.0
+junit.samples.money.Money	1.3571428571428572	4.0	19.0
+junit.textui.ResultPrinter	1.3529411764705883	4.0	23.0
+org.junit.runner.notification.RunNotifier	1.35	3.0	27.0
+junit.framework.AssertionFailedError	1.3333333333333333	2.0	4.0
+junit.tests.runner.TextRunnerTest	1.3333333333333333	3.0	8.0
+org.junit.Assume	1.3333333333333333	2.0	12.0
+org.junit.ComparisonFailure.ComparisonCompactor.DiffExtractor	1.3333333333333333	2.0	8.0
+org.junit.experimental.theories.internal.ParameterizedAssertionError	1.3333333333333333	3.0	8.0
+org.junit.internal.InexactComparisonCriteria	1.3333333333333333	2.0	4.0
+org.junit.internal.runners.ClassRoadie	1.3333333333333333	2.0	8.0
+org.junit.rules.RunRules	1.3333333333333333	2.0	4.0
+org.junit.rules.StopwatchTest.Record	1.3333333333333333	2.0	4.0
+org.junit.runner.FilterFactoryParams	1.3333333333333333	2.0	4.0
+org.junit.runner.notification.ConcurrentRunNotifierTest.ExaminedListener	1.3333333333333333	2.0	4.0
+org.junit.runner.notification.RunNotifier.SafeNotifier	1.3333333333333333	2.0	4.0
+org.junit.tests.experimental.max.JUnit38SortingTest	1.3333333333333333	1.0	4.0
+org.junit.tests.experimental.rules.TimeoutRuleTest.AbstractTimeoutTest	1.3333333333333333	2.0	8.0
+org.junit.tests.internal.runners.statements.FailOnTimeoutTest.StuckStatement	1.3333333333333333	2.0	4.0
+org.junit.tests.internal.runners.statements.FailOnTimeoutTest	1.3	4.0	13.0
+org.junit.internal.MethodSorterTest	1.2857142857142858	1.0	9.0
+org.junit.internal.runners.model.EachTestNotifier	1.2857142857142858	2.0	9.0
+junit.framework.JUnit4TestAdapter	1.25	4.0	15.0
+junit.tests.runner.ResultTest	1.25	2.0	5.0
+org.junit.experimental.theories.PotentialAssignment	1.25	2.0	5.0
+org.junit.internal.runners.JUnit38ClassRunner.OldTestClassAdaptingListener	1.25	2.0	10.0
+org.junit.internal.runners.JUnit4ClassRunner	1.25	4.0	25.0
+org.junit.runner.manipulation.Sorter	1.25	2.0	5.0
+org.junit.tests.experimental.rules.TempFolderRuleTest.CreatesSubFolder	1.25	2.0	5.0
+org.junit.tests.experimental.theories.extendingwithstubs.MethodCall	1.25	2.0	10.0
+org.junit.tests.experimental.theories.extendingwithstubs.StringableObject	1.25	2.0	5.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest	1.25	2.0	10.0
+org.junit.internal.runners.TestMethod	1.2222222222222223	2.0	11.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest	1.2222222222222223	3.0	11.0
+junit.framework.TestResult	1.2105263157894737	2.0	23.0
+junit.tests.extensions.ActiveTestTest	1.2	2.0	6.0
+org.junit.rules.RuleChain	1.2	2.0	6.0
+org.junit.runner.FilterFactories	1.2	2.0	6.0
+org.junit.samples.ListTest	1.2	2.0	12.0
+org.junit.tests.experimental.rules.TempFolderRuleTest	1.2	1.0	12.0
+org.junit.rules.Stopwatch	1.1818181818181819	1.0	13.0
+org.junit.runner.notification.SynchronizedRunListener	1.1818181818181819	3.0	13.0
+org.junit.rules.ExpectedExceptionMatcherBuilder	1.1666666666666667	2.0	7.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityPrintingTest	1.1666666666666667	2.0	7.0
+org.junit.runner.notification.SynchronizedRunListenerTest	1.1428571428571428	1.0	8.0
+junit.samples.ListTest	1.125	2.0	9.0
+junit.extensions.ActiveTestSuite	1.1111111111111112	2.0	10.0
+org.junit.tests.experimental.rules.EventCollector	1.1071428571428572	3.0	31.0
+org.junit.runners.Suite	1.1	2.0	11.0
+org.junit.tests.experimental.theories.extendingwithstubs.Guesser	1.1	2.0	11.0
+org.junit.experimental.max.MaxHistory	1.0909090909090908	1.0	12.0
+org.junit.runners.model.FrameworkField	1.0909090909090908	2.0	12.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest	1.0909090909090908	1.0	12.0
+org.junit.rules.TestWatcher	1.0769230769230769	2.0	14.0
+org.junit.runner.JUnitCore	1.0769230769230769	2.0	14.0
+junit.tests.runner.TextFeedbackTest	1.0666666666666667	2.0	16.0
+org.junit.rules.ExpectedException	1.0666666666666667	2.0	16.0
+org.junit.tests.experimental.theories.internal.SpecificDataPointsSupplierTest	1.0666666666666667	2.0	16.0
+org.junit.tests.running.methods.TimeoutTest	1.0666666666666667	1.0	16.0
+junit.framework.TestCase	1.0588235294117647	3.0	54.0
+org.junit.tests.experimental.max.MaxStarterTest	1.0454545454545454	1.0	23.0
+junit.extensions.TestDecorator	1.0	1.0	6.0
+junit.extensions.TestSetup	1.0	1.0	5.0
+junit.framework.ComparisonFailure	1.0	1.0	4.0
+junit.framework.JUnit4TestCaseFacade	1.0	1.0	5.0
+junit.framework.TestFailure	1.0	1.0	7.0
+junit.runner.Version	1.0	1.0	3.0
+junit.samples.AllTests	1.0	1.0	2.0
+junit.samples.SimpleTest	1.0	1.0	6.0
+junit.samples.money.MoneyTest	1.0	1.0	24.0
+junit.tests.AllTests	1.0	1.0	2.0
+junit.tests.WasRun	1.0	1.0	1.0
+junit.tests.extensions.ActiveTestTest.SuccessTest	1.0	1.0	1.0
+junit.tests.extensions.AllTests	1.0	1.0	2.0
+junit.tests.extensions.ExtensionTest	1.0	1.0	9.0
+junit.tests.extensions.ExtensionTest.TornDown	1.0	1.0	2.0
+junit.tests.extensions.RepeatedTestTest	1.0	1.0	5.0
+junit.tests.extensions.RepeatedTestTest.SuccessTest	1.0	1.0	1.0
+junit.tests.framework.AllTests	1.0	1.0	2.0
+junit.tests.framework.AssertTest	1.0	1.0	16.0
+junit.tests.framework.AssertionFailedErrorTest	1.0	1.0	3.0
+junit.tests.framework.ComparisonCompactorTest	1.0	1.0	19.0
+junit.tests.framework.DoublePrecisionAssertTest	1.0	1.0	7.0
+junit.tests.framework.Failure	1.0	1.0	1.0
+junit.tests.framework.FloatAssertTest	1.0	1.0	8.0
+junit.tests.framework.InheritedTestCase	1.0	1.0	1.0
+junit.tests.framework.NoArgTestCaseTest	1.0	1.0	1.0
+junit.tests.framework.NoTestCaseClass	1.0	1.0	1.0
+junit.tests.framework.NoTestCases	1.0	1.0	1.0
+junit.tests.framework.NotPublicTestCase	1.0	1.0	2.0
+junit.tests.framework.NotVoidTestCase	1.0	1.0	2.0
+junit.tests.framework.OneTestCase	1.0	1.0	3.0
+junit.tests.framework.OverrideTestCase	1.0	1.0	1.0
+junit.tests.framework.Success	1.0	1.0	2.0
+junit.tests.framework.SuiteTest	1.0	1.0	14.0
+junit.tests.framework.TestCaseTest	1.0	1.0	30.0
+junit.tests.framework.TestCaseTest.TornDown	1.0	1.0	2.0
+junit.tests.framework.TestImplementorTest	1.0	1.0	3.0
+junit.tests.framework.TestImplementorTest.DoubleTestCase	1.0	1.0	4.0
+junit.tests.framework.TestListenerTest	1.0	1.0	11.0
+junit.tests.framework.ThreeTestCases	1.0	1.0	3.0
+junit.tests.runner.AllTests	1.0	1.0	3.0
+junit.tests.runner.BaseTestRunnerTest	1.0	1.0	2.0
+junit.tests.runner.BaseTestRunnerTest.DoesntExtendTestCase	1.0	1.0	1.0
+junit.tests.runner.BaseTestRunnerTest.MockRunner	1.0	1.0	4.0
+junit.tests.runner.BaseTestRunnerTest.NonStatic	1.0	1.0	1.0
+junit.tests.runner.ResultTest.ResultWithFixedRunTime	1.0	1.0	6.0
+junit.tests.runner.StackFilterTest	1.0	1.0	2.0
+junit.tests.runner.TextFeedbackTest.TestResultPrinter	1.0	1.0	2.0
+junit.tests.runner.TextRunnerSingleMethodTest	1.0	1.0	1.0
+junit.tests.runner.TextRunnerSingleMethodTest.InvocationTest	1.0	1.0	2.0
+org.junit.AssumptionViolatedException	1.0	1.0	4.0
+org.junit.AssumptionViolatedExceptionTest	1.0	1.0	9.0
+org.junit.ComparisonFailure	1.0	1.0	4.0
+org.junit.Test.None	1.0	1.0	1.0
+org.junit.experimental.categories.CategoryFilterFactoryTest	1.0	1.0	2.0
+org.junit.experimental.categories.CategoryFilterFactoryTest.CategoryFilterFactoryStub	1.0	1.0	1.0
+org.junit.experimental.categories.CategoryFilterFactoryTest.DummyFilter	1.0	1.0	2.0
+org.junit.experimental.categories.ExcludeCategories	1.0	1.0	1.0
+org.junit.experimental.categories.ExcludeCategories.ExcludesAny	1.0	1.0	3.0
+org.junit.experimental.categories.IncludeCategories	1.0	1.0	1.0
+org.junit.experimental.categories.IncludeCategories.IncludesAny	1.0	1.0	3.0
+org.junit.experimental.max.CouldNotReadCoreException	1.0	1.0	1.0
+org.junit.experimental.max.MaxHistory.RememberingListener	1.0	1.0	4.0
+org.junit.experimental.results.PrintableResult	1.0	1.0	6.0
+org.junit.experimental.results.ResultMatchers	1.0	1.0	10.0
+org.junit.experimental.theories.PotentialAssignment.CouldNotGenerateValueException	1.0	1.0	2.0
+org.junit.experimental.theories.internal.AllMembersSupplier.MethodParameterValue	1.0	1.0	3.0
+org.junit.experimental.theories.internal.BooleanSupplier	1.0	1.0	1.0
+org.junit.internal.Classes	1.0	1.0	1.0
+org.junit.internal.ExactComparisonCriteria	1.0	1.0	1.0
+org.junit.internal.MethodSorterTest.DummySortJvm	1.0	1.0	6.0
+org.junit.internal.MethodSorterTest.DummySortWithDefault	1.0	1.0	6.0
+org.junit.internal.MethodSorterTest.DummySortWithNameAsc	1.0	1.0	6.0
+org.junit.internal.MethodSorterTest.DummySortWithoutAnnotation	1.0	1.0	6.0
+org.junit.internal.MethodSorterTest.Sub	1.0	1.0	1.0
+org.junit.internal.MethodSorterTest.Super	1.0	1.0	1.0
+org.junit.internal.RealSystem	1.0	1.0	2.0
+org.junit.internal.Throwables	1.0	1.0	3.0
+org.junit.internal.builders.AnnotatedBuilderTest	1.0	1.0	6.0
+org.junit.internal.builders.AnnotatedBuilderTest.InnerRunner	1.0	1.0	2.0
+org.junit.internal.builders.AnnotatedBuilderTest.OuterClass.InnerClassWithOwnRunWith	1.0	1.0	1.0
+org.junit.internal.builders.AnnotatedBuilderTest.OuterClass.InnerClassWithOwnRunWith.MostInnerClass	1.0	1.0	1.0
+org.junit.internal.builders.AnnotatedBuilderTest.OuterClass.InnerClassWithoutOwnRunWith	1.0	1.0	1.0
+org.junit.internal.builders.AnnotatedBuilderTest.OuterClass.InnerClassWithoutOwnRunWith.MostInnerClass	1.0	1.0	1.0
+org.junit.internal.builders.IgnoredClassRunner	1.0	1.0	3.0
+org.junit.internal.builders.JUnit4Builder	1.0	1.0	1.0
+org.junit.internal.builders.NullBuilder	1.0	1.0	1.0
+org.junit.internal.matchers.StacktracePrintingMatcher	1.0	1.0	7.0
+org.junit.internal.matchers.StacktracePrintingMatcherTest	1.0	1.0	3.0
+org.junit.internal.matchers.ThrowableCauseMatcher	1.0	1.0	5.0
+org.junit.internal.matchers.ThrowableCauseMatcherTest	1.0	1.0	1.0
+org.junit.internal.matchers.ThrowableMessageMatcher	1.0	1.0	5.0
+org.junit.internal.requests.FilterRequest	1.0	1.0	2.0
+org.junit.internal.requests.SortingRequest	1.0	1.0	2.0
+org.junit.internal.runners.InitializationError	1.0	1.0	4.0
+org.junit.internal.runners.model.MultipleFailureException	1.0	1.0	1.0
+org.junit.internal.runners.model.ReflectiveCallable	1.0	1.0	1.0
+org.junit.internal.runners.rules.RuleMemberValidator.Builder	1.0	1.0	4.0
+org.junit.internal.runners.rules.ValidationError	1.0	1.0	1.0
+org.junit.internal.runners.statements.Fail	1.0	1.0	2.0
+org.junit.internal.runners.statements.FailOnTimeout.CallableStatement	1.0	1.0	2.0
+org.junit.internal.runners.statements.InvokeMethod	1.0	1.0	2.0
+org.junit.matchers.JUnitMatchers	1.0	1.0	10.0
+org.junit.rules.DisableOnDebugTest	1.0	1.0	8.0
+org.junit.rules.DisableOnDebugTest.AbstractDisableOnDebugTest	1.0	1.0	2.0
+org.junit.rules.DisableOnDebugTest.FailOnExecution	1.0	1.0	2.0
+org.junit.rules.DisableOnDebugTest.PostJava5DebugArgumentsTest	1.0	1.0	1.0
+org.junit.rules.DisableOnDebugTest.PreJava5DebugArgumentsReversedTest	1.0	1.0	1.0
+org.junit.rules.DisableOnDebugTest.PreJava5DebugArgumentsTest	1.0	1.0	1.0
+org.junit.rules.DisableOnDebugTest.WithoutDebugArgumentsTest	1.0	1.0	1.0
+org.junit.rules.ErrorCollector	1.0	1.0	6.0
+org.junit.rules.ExternalResource	1.0	1.0	5.0
+org.junit.rules.Stopwatch.Clock	1.0	1.0	1.0
+org.junit.rules.Stopwatch.InternalWatcher	1.0	1.0	5.0
+org.junit.rules.StopwatchTest	1.0	1.0	8.0
+org.junit.rules.StopwatchTest.AbstractStopwatchTest	1.0	1.0	7.0
+org.junit.rules.StopwatchTest.DurationAfterTestTest	1.0	1.0	2.0
+org.junit.rules.StopwatchTest.DurationDuringTestTest	1.0	1.0	1.0
+org.junit.rules.StopwatchTest.FailedTest	1.0	1.0	1.0
+org.junit.rules.StopwatchTest.SkippedTest	1.0	1.0	1.0
+org.junit.rules.StopwatchTest.SuccessfulTest	1.0	1.0	1.0
+org.junit.rules.TestName	1.0	1.0	2.0
+org.junit.rules.TestWatchman	1.0	1.0	6.0
+org.junit.rules.Timeout	1.0	1.0	11.0
+org.junit.rules.Timeout.Builder	1.0	1.0	7.0
+org.junit.rules.Verifier	1.0	1.0	3.0
+org.junit.runner.Computer	1.0	1.0	4.0
+org.junit.runner.FilterFactoriesTest	1.0	1.0	7.0
+org.junit.runner.FilterFactoriesTest.DummyFilter	1.0	1.0	4.0
+org.junit.runner.FilterFactoriesTest.DummyTest	1.0	1.0	1.0
+org.junit.runner.FilterFactoriesTest.FilterFactoryStub	1.0	1.0	1.0
+org.junit.runner.FilterFactoriesTest.NonInstantiableFilterFactory	1.0	1.0	2.0
+org.junit.runner.FilterFactory.FilterNotCreatedException	1.0	1.0	1.0
+org.junit.runner.FilterOptionIntegrationTest	1.0	1.0	8.0
+org.junit.runner.FilterOptionIntegrationTest.DummyTestClass	1.0	1.0	1.0
+org.junit.runner.FilterOptionIntegrationTest.DummyTestClass0	1.0	1.0	1.0
+org.junit.runner.FilterOptionIntegrationTest.DummyTestClass01	1.0	1.0	1.0
+org.junit.runner.FilterOptionIntegrationTest.DummyTestClass0TestMethod1	1.0	1.0	1.0
+org.junit.runner.FilterOptionIntegrationTest.DummyTestClass1	1.0	1.0	1.0
+org.junit.runner.FilterOptionIntegrationTest.TestListener	1.0	1.0	5.0
+org.junit.runner.JUnitCommandLineParseResult.CommandLineParserError	1.0	1.0	1.0
+org.junit.runner.JUnitCommandLineParseResultTest	1.0	1.0	10.0
+org.junit.runner.JUnitCommandLineParseResultTest.DummyTest	1.0	1.0	1.0
+org.junit.runner.JUnitCommandLineParseResultTest.FilterFactoryStub	1.0	1.0	1.0
+org.junit.runner.JUnitCoreTest	1.0	1.0	1.0
+org.junit.runner.Request	1.0	1.0	11.0
+org.junit.runner.Result	1.0	1.0	12.0
+org.junit.runner.Result.Listener	1.0	1.0	6.0
+org.junit.runner.Result.SerializedForm	1.0	1.0	4.0
+org.junit.runner.Runner	1.0	1.0	1.0
+org.junit.runner.RunnerSpy	1.0	1.0	6.0
+org.junit.runner.notification.ConcurrentRunNotifierTest.ConcurrentRunListener	1.0	1.0	1.0
+org.junit.runner.notification.Failure	1.0	1.0	7.0
+org.junit.runner.notification.RunListener	1.0	1.0	7.0
+org.junit.runner.notification.RunNotifierTest	1.0	1.0	8.0
+org.junit.runner.notification.RunNotifierTest.CorruptListener	1.0	1.0	2.0
+org.junit.runner.notification.RunNotifierTest.CountingListener	1.0	1.0	1.0
+org.junit.runner.notification.RunNotifierTest.FailureListener	1.0	1.0	1.0
+org.junit.runners.AllTests	1.0	1.0	1.0
+org.junit.runners.JUnit4	1.0	1.0	1.0
+org.junit.runners.MethodSorters	1.0	1.0	2.0
+org.junit.runners.model.FrameworkFieldTest	1.0	1.0	4.0
+org.junit.runners.model.FrameworkMethodTest	1.0	1.0	4.0
+org.junit.runners.model.FrameworkMethodTest.ClassWithDummyMethod	1.0	1.0	2.0
+org.junit.runners.model.InitializationError	1.0	1.0	4.0
+org.junit.runners.model.RunnerBuilderStub	1.0	1.0	1.0
+org.junit.runners.model.TestClass.FieldComparator	1.0	1.0	1.0
+org.junit.runners.model.TestClass.MethodComparator	1.0	1.0	1.0
+org.junit.runners.model.TestClassTest	1.0	1.0	19.0
+org.junit.runners.model.TestClassTest.MethodsAnnotated	1.0	1.0	3.0
+org.junit.runners.model.TestClassTest.TwoConstructors	1.0	1.0	2.0
+org.junit.runners.model.TestTimedOutException	1.0	1.0	3.0
+org.junit.runners.parameterized.BlockJUnit4ClassRunnerWithParametersFactory	1.0	1.0	1.0
+org.junit.runners.parameterized.ParameterizedNamesTest.ParametrizedWithSpecialCharsInName	1.0	1.0	3.0
+org.junit.runners.parameterized.TestWithParametersTest	1.0	1.0	12.0
+org.junit.samples.SimpleTest	1.0	1.0	4.0
+org.junit.samples.money.MoneyTest	1.0	1.0	25.0
+org.junit.tests.AllTests	1.0	1.0	1.0
+org.junit.tests.ObjectContractTest	1.0	1.0	3.0
+org.junit.tests.TestSystem	1.0	1.0	4.0
+org.junit.tests.assertion.AssertionTest	1.0	1.0	78.0
+org.junit.tests.assertion.ComparisonFailureTest	1.0	1.0	3.0
+org.junit.tests.assertion.MultipleFailureExceptionTest	1.0	1.0	4.0
+org.junit.tests.assertion.MultipleFailureExceptionTest.ExpectedException	1.0	1.0	1.0
+org.junit.tests.deprecated.JUnit4ClassRunnerTest	1.0	1.0	2.0
+org.junit.tests.deprecated.JUnit4ClassRunnerTest.Example	1.0	1.0	2.0
+org.junit.tests.deprecated.JUnit4ClassRunnerTest.UnconstructableExample	1.0	1.0	3.0
+org.junit.tests.description.AnnotatedDescriptionTest	1.0	1.0	9.0
+org.junit.tests.description.AnnotatedDescriptionTest.AnnotatedClass	1.0	1.0	1.0
+org.junit.tests.description.AnnotatedDescriptionTest.IgnoredClass	1.0	1.0	1.0
+org.junit.tests.description.AnnotatedDescriptionTest.ValueAnnotatedClass	1.0	1.0	1.0
+org.junit.tests.description.SuiteDescriptionTest	1.0	1.0	3.0
+org.junit.tests.description.TestDescriptionMethodNameTest	1.0	1.0	3.0
+org.junit.tests.description.TestDescriptionTest	1.0	1.0	3.0
+org.junit.tests.experimental.AssumptionTest	1.0	1.0	22.0
+org.junit.tests.experimental.AssumptionTest.AssumptionFailureInConstructor	1.0	1.0	2.0
+org.junit.tests.experimental.AssumptionTest.HasAssumeWithMessage	1.0	1.0	1.0
+org.junit.tests.experimental.AssumptionTest.HasAssumeWithMessageAndCause	1.0	1.0	1.0
+org.junit.tests.experimental.AssumptionTest.HasFailingAssumeInBefore	1.0	1.0	2.0
+org.junit.tests.experimental.AssumptionTest.HasFailingAssumeInBeforeClass	1.0	1.0	2.0
+org.junit.tests.experimental.AssumptionTest.HasFailingAssumption	1.0	1.0	1.0
+org.junit.tests.experimental.AssumptionTest.HasFailingAssumptionWithMessage	1.0	1.0	1.0
+org.junit.tests.experimental.AssumptionTest.HasPassingAssumption	1.0	1.0	1.0
+org.junit.tests.experimental.MatcherTest	1.0	1.0	2.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest	1.0	1.0	3.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.ParameterizedTestWithAttemptedMethodCategory	1.0	1.0	3.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.ParameterizedTestWithClassCategory	1.0	1.0	3.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.VanillaCategorizedJUnitTest	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.WellBehavedParameterizedTest	1.0	1.0	3.0
+org.junit.tests.experimental.categories.CategoryTest	1.0	1.0	23.0
+org.junit.tests.experimental.categories.CategoryTest.A	1.0	1.0	2.0
+org.junit.tests.experimental.categories.CategoryTest.AllIncludedMustMatched	1.0	1.0	2.0
+org.junit.tests.experimental.categories.CategoryTest.B	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.C	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.ExcludedTest1	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.ExcludedTest2	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.IgnoredTest	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.IncludedTest	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.Inherited	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.MultipleIncludesAndExcludeOnMethod	1.0	1.0	2.0
+org.junit.tests.experimental.categories.CategoryTest.NoIncludeCategoryAnnotationTest	1.0	1.0	2.0
+org.junit.tests.experimental.categories.CategoryTest.OneFast	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.OneFastOneSlow	1.0	1.0	2.0
+org.junit.tests.experimental.categories.CategoryTest.OneMoreTest	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.OneOfEach	1.0	1.0	3.0
+org.junit.tests.experimental.categories.CategoryTest.OneThatIsBothFastAndSlow	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.OneVerySlowTest	1.0	1.0	1.0
+org.junit.tests.experimental.categories.CategoryTest.SomeAreSlow	1.0	1.0	5.0
+org.junit.tests.experimental.categories.CategoryValidatorTest	1.0	1.0	6.0
+org.junit.tests.experimental.categories.CategoryValidatorTest.CategoryTest	1.0	1.0	5.0
+org.junit.tests.experimental.categories.JavadocTest	1.0	1.0	2.0
+org.junit.tests.experimental.categories.JavadocTest.A	1.0	1.0	3.0
+org.junit.tests.experimental.categories.JavadocTest.B	1.0	1.0	1.0
+org.junit.tests.experimental.categories.MultiCategoryTest	1.0	1.0	5.0
+org.junit.tests.experimental.categories.MultiCategoryTest.CategoriesTest	1.0	1.0	4.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAllAnyTest	1.0	1.0	7.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAllTest	1.0	1.0	7.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAnyAllTest	1.0	1.0	7.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAnyTest	1.0	1.0	7.0
+org.junit.tests.experimental.max.DescriptionTest	1.0	1.0	11.0
+org.junit.tests.experimental.max.DescriptionTest.Sweet	1.0	1.0	1.0
+org.junit.tests.experimental.max.JUnit38SortingTest.JUnit38Test	1.0	1.0	3.0
+org.junit.tests.experimental.max.JUnit38SortingTest.JUnit4Test	1.0	1.0	1.0
+org.junit.tests.experimental.max.MaxStarterTest.HalfMalformedJUnit38TestMethod	1.0	1.0	2.0
+org.junit.tests.experimental.max.MaxStarterTest.MalformedJUnit38Test	1.0	1.0	2.0
+org.junit.tests.experimental.max.MaxStarterTest.MalformedJUnit38TestMethod	1.0	1.0	1.0
+org.junit.tests.experimental.max.MaxStarterTest.TwoOldTests	1.0	1.0	2.0
+org.junit.tests.experimental.max.MaxStarterTest.TwoTests	1.0	1.0	2.0
+org.junit.tests.experimental.max.MaxStarterTest.TwoUnEqualTests	1.0	1.0	2.0
+org.junit.tests.experimental.parallel.ParallelClassTest	1.0	1.0	2.0
+org.junit.tests.experimental.parallel.ParallelClassTest.Example1	1.0	1.0	2.0
+org.junit.tests.experimental.parallel.ParallelClassTest.Example2	1.0	1.0	2.0
+org.junit.tests.experimental.parallel.ParallelMethodTest	1.0	1.0	2.0
+org.junit.tests.experimental.parallel.ParallelMethodTest.Example	1.0	1.0	3.0
+org.junit.tests.experimental.results.PrintableResultTest	1.0	1.0	3.0
+org.junit.tests.experimental.results.ResultMatchersTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.BlockJUnit4ClassRunnerOverrideTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.BlockJUnit4ClassRunnerOverrideTest.FlipBitRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.BlockJUnit4ClassRunnerOverrideTest.OverrideRulesRunner	1.0	1.0	2.0
+org.junit.tests.experimental.rules.BlockJUnit4ClassRunnerOverrideTest.OverrideRulesTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.BlockJUnit4ClassRunnerOverrideTest.OverrideTestRulesRunner	1.0	1.0	3.0
+org.junit.tests.experimental.rules.ClassRulesTest	1.0	1.0	8.0
+org.junit.tests.experimental.rules.ClassRulesTest.CallMethodOnlyOnceRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.ClassRulesTest.CallMethodOnlyOnceRule.Dummy	1.0	1.0	2.0
+org.junit.tests.experimental.rules.ClassRulesTest.Counter	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ClassRulesTest.CustomCounter	1.0	1.0	2.0
+org.junit.tests.experimental.rules.ClassRulesTest.ExampleTestWithClassRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.ClassRulesTest.ExampleTestWithCustomClassRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.ClassRulesTest.MethodExampleTestWithClassRule	1.0	1.0	3.0
+org.junit.tests.experimental.rules.ClassRulesTest.MethodExampleTestWithCustomClassRule	1.0	1.0	3.0
+org.junit.tests.experimental.rules.ClassRulesTest.OrderTestRule	1.0	1.0	3.0
+org.junit.tests.experimental.rules.ClassRulesTest.UsesFieldAndMethodRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.EmptyTestExpectingNoException	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ExpectAssertionErrorWhichIsNotThrown	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ExpectedMessageMatcherFails	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ExpectsMatcher	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ExpectsMessageMatcher	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ExpectsMultipleMatchers	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ExpectsSubstring	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ExpectsSubstringNullMessage	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.FailBeforeExpectingException	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.FailedAssumptionAndExpectException	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.HasWrongMessage	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ThrowExceptionWithExpectedPartOfMessage	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ThrowExceptionWithExpectedType	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ThrowExceptionWithMatchingCause	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ThrowExceptionWithWrongType	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ThrowExpectedNullCause	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ThrowNoExceptionButExpectExceptionWithType	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.ThrowUnexpectedCause	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.UseCustomMessageWithPlaceHolder	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.UseCustomMessageWithoutPlaceHolder	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.UseNoCustomMessage	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExpectedExceptionTest.WronglyExpectsExceptionMessage	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExternalResourceRuleTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.ExternalResourceRuleTest.UsesExternalResource	1.0	1.0	3.0
+org.junit.tests.experimental.rules.LoggingTestWatcher	1.0	1.0	6.0
+org.junit.tests.experimental.rules.MethodRulesTest	1.0	1.0	14.0
+org.junit.tests.experimental.rules.MethodRulesTest.BeforesAndAfters	1.0	1.0	6.0
+org.junit.tests.experimental.rules.MethodRulesTest.CallsMethodReturningRuleOnlyOnce	1.0	1.0	2.0
+org.junit.tests.experimental.rules.MethodRulesTest.CallsMethodReturningRuleOnlyOnce.Dummy	1.0	1.0	2.0
+org.junit.tests.experimental.rules.MethodRulesTest.CustomTestName	1.0	1.0	2.0
+org.junit.tests.experimental.rules.MethodRulesTest.ExampleTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.MethodRulesTest.HasMethodReturningMethodRule	1.0	1.0	4.0
+org.junit.tests.experimental.rules.MethodRulesTest.HasMultipleMethodsReturningMethodRule	1.0	1.0	3.0
+org.junit.tests.experimental.rules.MethodRulesTest.Increment	1.0	1.0	2.0
+org.junit.tests.experimental.rules.MethodRulesTest.MultipleRuleTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.MethodRulesTest.NoRulesTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.MethodRulesTest.OnFailureTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.MethodRulesTest.PrivateRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.MethodRulesTest.UsesCustomMethodRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.MethodRulesTest.WatchmanTest	1.0	1.0	4.0
+org.junit.tests.experimental.rules.MethodRulesTest.WrongTypedField	1.0	1.0	1.0
+org.junit.tests.experimental.rules.NameRulesTest.BeforeAndAfterTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.NameRulesTest.TestNames	1.0	1.0	2.0
+org.junit.tests.experimental.rules.RuleChainTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleChainTest.LoggingRule	1.0	1.0	3.0
+org.junit.tests.experimental.rules.RuleChainTest.UseRuleChain	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest	1.0	1.0	23.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.MethodTestWithArbitraryObjectWithRuleAnnotation	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.MethodTestWithMethodRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.MethodTestWithNonStaticClassRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.MethodTestWithProtectedClassRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.MethodTestWithStaticClassAndTestRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestMethodWithNonStaticTestRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestMethodWithStaticMethodRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestMethodWithStaticTestRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithClassRuleIsImplementationOfMethodRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithClassRuleMethodReturnsAnArbitraryObject	1.0	1.0	1.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithClassRuleMethodThatReturnsMethodRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithMethodRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TempFolderRuleTest.HasTempFolder	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TempFolderRuleTest.IncorrectUsage	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TempFolderRuleTest.NameClashes	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TemporaryFolderUsageTest	1.0	1.0	26.0
+org.junit.tests.experimental.rules.TestRuleTest	1.0	1.0	27.0
+org.junit.tests.experimental.rules.TestRuleTest.BeforesAndAfters	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TestRuleTest.BothKindsOfRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.CallMethodOnlyOnceRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.CallMethodOnlyOnceRule.Dummy	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.CustomTestName	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.ExampleTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodBeforesAndAfters	1.0	1.0	7.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodBothKindsOfRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodExampleTest	1.0	1.0	4.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodMultipleRuleTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodMultipleRuleTest.Increment	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodNoRulesTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodOnFailureTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodOnSkippedTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodOneFieldTwoKindsOfRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodPrivateRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodUsesCustomMethodRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodWatchmanTest	1.0	1.0	5.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodWrongTypedField	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.MultipleCallsTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestRuleTest.MultipleRuleTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestRuleTest.MultipleRuleTest.Increment	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.NoRulesTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestRuleTest.OnFailureTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.OneFieldTwoKindsOfRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestRuleTest.OrderTestRule	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TestRuleTest.PrivateRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestRuleTest.UsesCustomMethodRule	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestRuleTest.UsesFieldAndMethodRule	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestRuleTest.WatchmanTest	1.0	1.0	4.0
+org.junit.tests.experimental.rules.TestRuleTest.WrongTypedField	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestWatcherTest	1.0	1.0	7.0
+org.junit.tests.experimental.rules.TestWatcherTest.FailingTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestWatcherTest.InternalViolatedAssumptionTest	1.0	1.0	4.0
+org.junit.tests.experimental.rules.TestWatcherTest.TestWatcherFailedAndFinishedThrowsExceptionTest	1.0	1.0	3.0
+org.junit.tests.experimental.rules.TestWatcherTest.TestWatcherFailedThrowsExceptionTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestWatcherTest.TestWatcherSkippedThrowsExceptionTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestWatcherTest.TestWatcherStartingThrowsExceptionTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestWatcherTest.ViolatedAssumptionTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestWatchmanTest	1.0	1.0	2.0
+org.junit.tests.experimental.rules.TestWatchmanTest.FailingTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TestWatchmanTest.LoggingTestWatchman	1.0	1.0	4.0
+org.junit.tests.experimental.rules.TestWatchmanTest.ViolatedAssumptionTest	1.0	1.0	1.0
+org.junit.tests.experimental.rules.TimeoutRuleTest	1.0	1.0	5.0
+org.junit.tests.experimental.rules.TimeoutRuleTest.HasNullTimeUnit	1.0	1.0	1.0
+org.junit.tests.experimental.rules.VerifierRuleTest	1.0	1.0	6.0
+org.junit.tests.experimental.rules.VerifierRuleTest.UsesErrorCollector	1.0	1.0	1.0
+org.junit.tests.experimental.rules.VerifierRuleTest.UsesErrorCollectorCheckSucceeds	1.0	1.0	4.0
+org.junit.tests.experimental.rules.VerifierRuleTest.UsesErrorCollectorCheckSucceedsPasses	1.0	1.0	2.0
+org.junit.tests.experimental.rules.VerifierRuleTest.UsesErrorCollectorCheckThat	1.0	1.0	1.0
+org.junit.tests.experimental.rules.VerifierRuleTest.UsesErrorCollectorTwice	1.0	1.0	1.0
+org.junit.tests.experimental.rules.VerifierRuleTest.UsesVerifier	1.0	1.0	2.0
+org.junit.tests.experimental.theories.AssumingInTheoriesTest	1.0	1.0	2.0
+org.junit.tests.experimental.theories.AssumingInTheoriesTest.TheoryWithNoUnassumedParameters	1.0	1.0	1.0
+org.junit.tests.experimental.theories.ParameterSignatureTest	1.0	1.0	10.0
+org.junit.tests.experimental.theories.PotentialAssignmentTest	1.0	1.0	6.0
+org.junit.tests.experimental.theories.TestedOnSupplierTest	1.0	1.0	3.0
+org.junit.tests.experimental.theories.TheoryTestUtils	1.0	1.0	3.0
+org.junit.tests.experimental.theories.extendingwithstubs.GuesserQueue.ReguessableDecorator	1.0	1.0	4.0
+org.junit.tests.experimental.theories.extendingwithstubs.ReguessableValue	1.0	1.0	1.0
+org.junit.tests.experimental.theories.extendingwithstubs.StubbedTheories	1.0	1.0	2.0
+org.junit.tests.experimental.theories.extendingwithstubs.StubbedTheoriesTest	1.0	1.0	1.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointMethodWithOverlyGeneralTypes	1.0	1.0	2.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsArrayField	1.0	1.0	1.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsArrayWithMatchingButInaccurateTypes	1.0	1.0	1.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsFieldWithNullValue	1.0	1.0	1.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsListField	1.0	1.0	1.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsListFieldWithOverlyGenericTypes	1.0	1.0	1.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsListMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsMethodWithNullValue	1.0	1.0	2.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasDataPointsWithObjectParameter	1.0	1.0	1.0
+org.junit.tests.experimental.theories.internal.AllMembersSupplierTest.HasFailingDataPointsArrayMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.internal.ParameterizedAssertionErrorTest	1.0	1.0	8.0
+org.junit.tests.experimental.theories.internal.SpecificDataPointsSupplierTest.TestClassWithNamedDataPoints	1.0	1.0	4.0
+org.junit.tests.experimental.theories.runner.FailingDataPointMethods	1.0	1.0	6.0
+org.junit.tests.experimental.theories.runner.FailingDataPointMethods.HasFailingDataPointArrayMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.FailingDataPointMethods.HasFailingSingleDataPointMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.FailingDataPointMethods.HasIgnoredFailingMultipleDataPointMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.FailingDataPointMethods.HasIgnoredFailingSingleDataPointMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.FailingDataPointMethods.HasWronglyIgnoredFailingMultipleDataPointMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.FailingDataPointMethods.HasWronglyIgnoredFailingSingleDataPointMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.BeforeAndAfterEachTime	1.0	1.0	4.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.BeforeAndAfterOnSameInstance	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.DifferentTypesInConstructor	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.HasATwoParameterTheory	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.NewObjectEachTime	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.OneTestTwoAnnotations	1.0	1.0	3.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.PositiveInts	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.PositiveIntsWithMethodParams	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.PositiveIntsWithNegativeField	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields.StaticPublicNonDataPoints	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.TheoriesPerformanceTest	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.TheoriesPerformanceTest.UpToTen	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.TypeMatchingBetweenMultiDataPointsMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.TypeMatchingBetweenMultiDataPointsMethod.WithCorrectlyTypedDataPointsMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.TypeMatchingBetweenMultiDataPointsMethod.WithWrongfullyTypedDataPointsMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields	1.0	1.0	10.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.DataPointFieldsMustBePublic	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.DataPointFieldsMustBeStatic	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.DataPointMethodsMustBePublic	1.0	1.0	7.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.DataPointMethodsMustBeStatic	1.0	1.0	3.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.DoesntUseParams	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.HasAFailingTheory	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.NullsOK	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields.TheoriesMustBePublic	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WhenNoParametersMatch	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WhenNoParametersMatch.AssumptionsFail	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithAutoGeneratedDataPoints	1.0	1.0	4.0
+org.junit.tests.experimental.theories.runner.WithAutoGeneratedDataPoints.TheoryTestClassWithAutogeneratedParameterValues	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithAutoGeneratedDataPoints.TheoryTestClassWithSpecificBooleanDataPoint	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithAutoGeneratedDataPoints.TheoryTestClassWithSpecificEnumDataPoint	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithDataPointMethod	1.0	1.0	6.0
+org.junit.tests.experimental.theories.runner.WithDataPointMethod.DataPointMethodReturnsMutableObject	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithDataPointMethod.HasDataPointMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithDataPointMethod.HasDateMethod	1.0	1.0	5.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources	1.0	1.0	8.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.DataPointArrayMethod	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.DataPointArrayToBeUsedForWholeParameter	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.DataPointArrays	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.DataPointMalformedArrayMethods	1.0	1.0	4.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.ParameterAnnotations	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.ShouldFilterOutNullElementsFromDataPointArrays	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.ShouldFilterOutNullSingleDataPoints	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithExtendedParameterSources.ShouldRejectTheoriesWithOnlyDisallowedNullData	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithNamedDataPoints.HasSpecificDatapointsParameters	1.0	1.0	5.0
+org.junit.tests.experimental.theories.runner.WithOnlyTestAnnotations	1.0	1.0	4.0
+org.junit.tests.experimental.theories.runner.WithOnlyTestAnnotations.ErrorWhenTestHasParametersDespiteTheories	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithOnlyTestAnnotations.HonorExpectedException	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithOnlyTestAnnotations.HonorExpectedExceptionPasses	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier	1.0	1.0	4.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.SimplePotentialAssignment	1.0	1.0	3.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.SupplierWithTestClassConstructor	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.SupplierWithTwoConstructors	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.SupplierWithUnknownConstructor	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.TestClassUsingParameterSupplier	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.TestClassUsingSupplierWithTestClassConstructor	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.TestClassUsingSupplierWithTwoConstructors	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithParameterSupplier.TestClassUsingSupplierWithUnknownConstructor	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms	1.0	1.0	9.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnArrayTypeOnTheoryParm	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnComponentOfArrayTypeOnTheoryParm	1.0	1.0	2.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnParameterizedTheoryParm	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnTheoryClass	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnTheoryOnly	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnTheoryParm	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnWildcardLowerBoundOnTheoryParm	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariableOnWildcardUpperBoundOnTheoryParm	1.0	1.0	1.0
+org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms.TypeVariablesAbound	1.0	1.0	1.0
+org.junit.tests.internal.runners.ErrorReportingRunnerTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.AllTestsTest	1.0	1.0	5.0
+org.junit.tests.junit3compatibility.AllTestsTest.All	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.AllTestsTest.AllJUnit4	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.AllTestsTest.BadSuiteMethod	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.AllTestsTest.JUnit4Test	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.AllTestsTest.OneTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.ClassRequestTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.ClassRequestTest.PrivateSuiteMethod	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityPrintingTest.ATest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityPrintingTest.TestResultPrinter	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest	1.0	1.0	16.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.BeforeClassTest	1.0	1.0	6.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.ErrorTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.ExceptionInBeforeTest	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.ExpectedTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.InvalidMethodTest	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.MarkerRunner	1.0	1.0	4.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.NewTest	1.0	1.0	3.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.NoExceptionTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.UnExpectedExceptionTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.InitializationErrorForwardCompatibilityTest	1.0	1.0	4.0
+org.junit.tests.junit3compatibility.InitializationErrorForwardCompatibilityTest.CantInitialize	1.0	1.0	3.0
+org.junit.tests.junit3compatibility.InitializationErrorForwardCompatibilityTest.ErrorRememberingListener	1.0	1.0	5.0
+org.junit.tests.junit3compatibility.InitializationErrorForwardCompatibilityTest.InitializesWithError	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest.AnnotatedTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest.ClassWithInvalidMethod	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest.JUnit3ClassWithAnnotatedMethod	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest.MyTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest.OneTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest.RejectAllTestsFilter	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.OldTestClassAdaptingListenerTest	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.OldTests	1.0	1.0	1.0
+org.junit.tests.junit3compatibility.SuiteMethodTest	1.0	1.0	5.0
+org.junit.tests.junit3compatibility.SuiteMethodTest.CompatibilityTest	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.SuiteMethodTest.NewTest	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.SuiteMethodTest.NewTestSuiteFails	1.0	1.0	2.0
+org.junit.tests.junit3compatibility.SuiteMethodTest.NewTestSuiteNotUsed	1.0	1.0	3.0
+org.junit.tests.junit3compatibility.SuiteMethodTest.OldTest	1.0	1.0	3.0
+org.junit.tests.listening.ListenerTest	1.0	1.0	3.0
+org.junit.tests.listening.ListenerTest.OneTest	1.0	1.0	1.0
+org.junit.tests.listening.RunnerTest	1.0	1.0	4.0
+org.junit.tests.listening.RunnerTest.Example	1.0	1.0	1.0
+org.junit.tests.listening.RunnerTest.ExampleTest	1.0	1.0	1.0
+org.junit.tests.listening.RunnerTest.MyListener	1.0	1.0	1.0
+org.junit.tests.listening.RunnerTest.NewExample	1.0	1.0	1.0
+org.junit.tests.listening.TestListenerTest	1.0	1.0	3.0
+org.junit.tests.listening.TestListenerTest.ErrorListener	1.0	1.0	1.0
+org.junit.tests.listening.TestListenerTest.ExceptionListener	1.0	1.0	1.0
+org.junit.tests.listening.TestListenerTest.OneTest	1.0	1.0	1.0
+org.junit.tests.listening.TextListenerTest	1.0	1.0	5.0
+org.junit.tests.listening.TextListenerTest.ErrorTest	1.0	1.0	1.0
+org.junit.tests.listening.TextListenerTest.OneTest	1.0	1.0	1.0
+org.junit.tests.listening.TextListenerTest.Time	1.0	1.0	1.0
+org.junit.tests.listening.UserStopTest	1.0	1.0	3.0
+org.junit.tests.listening.UserStopTest.OneTest	1.0	1.0	1.0
+org.junit.tests.manipulation.FilterTest	1.0	1.0	3.0
+org.junit.tests.manipulation.FilterTest.NamedFilter	1.0	1.0	3.0
+org.junit.tests.manipulation.FilterableTest	1.0	1.0	1.0
+org.junit.tests.manipulation.FilterableTest.FilteredRunner	1.0	1.0	3.0
+org.junit.tests.manipulation.FilterableTest.FilteredTest	1.0	1.0	4.0
+org.junit.tests.manipulation.SingleMethodTest	1.0	1.0	10.0
+org.junit.tests.manipulation.SingleMethodTest.HasSuiteMethod	1.0	1.0	3.0
+org.junit.tests.manipulation.SingleMethodTest.OneTimeSetup	1.0	1.0	3.0
+org.junit.tests.manipulation.SingleMethodTest.ParameterizedOneTimeBeforeClass	1.0	1.0	4.0
+org.junit.tests.manipulation.SingleMethodTest.ParameterizedOneTimeSetup	1.0	1.0	3.0
+org.junit.tests.manipulation.SingleMethodTest.TestOne	1.0	1.0	2.0
+org.junit.tests.manipulation.SingleMethodTest.TestTwo	1.0	1.0	2.0
+org.junit.tests.manipulation.SortableTest	1.0	1.0	4.0
+org.junit.tests.manipulation.SortableTest.TestClassRunnerIsSortable	1.0	1.0	5.0
+org.junit.tests.manipulation.SortableTest.TestClassRunnerIsSortable.Enclosing.A	1.0	1.0	3.0
+org.junit.tests.manipulation.SortableTest.TestClassRunnerIsSortable.Enclosing.B	1.0	1.0	3.0
+org.junit.tests.manipulation.SortableTest.TestClassRunnerIsSortable.SortMe	1.0	1.0	3.0
+org.junit.tests.manipulation.SortableTest.TestClassRunnerIsSortableWithSuiteMethod	1.0	1.0	3.0
+org.junit.tests.manipulation.SortableTest.TestClassRunnerIsSortableWithSuiteMethod.SortMe	1.0	1.0	4.0
+org.junit.tests.manipulation.SortableTest.UnsortableRunnersAreHandledWithoutCrashing	1.0	1.0	1.0
+org.junit.tests.manipulation.SortableTest.UnsortableRunnersAreHandledWithoutCrashing.Unsortable	1.0	1.0	1.0
+org.junit.tests.manipulation.SortableTest.UnsortableRunnersAreHandledWithoutCrashing.UnsortableRunner	1.0	1.0	3.0
+org.junit.tests.running.classes.BlockJUnit4ClassRunnerTest	1.0	1.0	1.0
+org.junit.tests.running.classes.BlockJUnit4ClassRunnerTest.OuterClass.Enclosed	1.0	1.0	1.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest.AfterClassWithIgnoredTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest.BeforeClassWithFilteredTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest.BeforeClassWithIgnoredClass	1.0	1.0	2.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest.BeforeClassWithIgnoredTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest.BrokenRule	1.0	1.0	1.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest.ClassRuleWithIgnoredTest	1.0	1.0	1.0
+org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest.HasUnfilteredTest	1.0	1.0	1.0
+org.junit.tests.running.classes.EnclosedTest	1.0	1.0	3.0
+org.junit.tests.running.classes.EnclosedTest.Enclosing.A	1.0	1.0	2.0
+org.junit.tests.running.classes.EnclosedTest.Enclosing.B	1.0	1.0	3.0
+org.junit.tests.running.classes.EnclosedTest.Enclosing.C	1.0	1.0	1.0
+org.junit.tests.running.classes.IgnoreClassTest	1.0	1.0	1.0
+org.junit.tests.running.classes.IgnoreClassTest.IgnoreMe	1.0	1.0	2.0
+org.junit.tests.running.classes.ParameterizedTestTest	1.0	1.0	23.0
+org.junit.tests.running.classes.ParameterizedTestTest.BadIndexForAnnotatedFieldTest	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.BadNumberOfAnnotatedFieldTest	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.BeforeAndAfter	1.0	1.0	5.0
+org.junit.tests.running.classes.ParameterizedTestTest.EmptyTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ParameterizedTestTest.ExceptionThrowingRunnerFactory	1.0	1.0	1.0
+org.junit.tests.running.classes.ParameterizedTestTest.FibonacciTest	1.0	1.0	4.0
+org.junit.tests.running.classes.ParameterizedTestTest.FibonacciTestWithArray	1.0	1.0	4.0
+org.junit.tests.running.classes.ParameterizedTestTest.FibonacciWithParameterizedFieldTest	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.IncorrectTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ParameterizedTestTest.ParameterizedWithoutSpecialTestname	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.ParametersNotIterable	1.0	1.0	2.0
+org.junit.tests.running.classes.ParameterizedTestTest.PrivateConstructor	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.ProtectedParametersTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ParameterizedTestTest.SingleArgumentTestWithArray	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.SingleArgumentTestWithIterable	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.TestWithUseParametersRunnerFactoryAnnotation	1.0	1.0	3.0
+org.junit.tests.running.classes.ParameterizedTestTest.UseParameterizedFactoryAbstractTest	1.0	1.0	1.0
+org.junit.tests.running.classes.ParameterizedTestTest.UseParameterizedFactoryTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ParentRunnerFilteringTest	1.0	1.0	8.0
+org.junit.tests.running.classes.ParentRunnerFilteringTest.ExampleTest	1.0	1.0	1.0
+org.junit.tests.running.classes.ParentRunnerFilteringTest.SuiteWithUnmodifyableChildList	1.0	1.0	2.0
+org.junit.tests.running.classes.ParentRunnerTest	1.0	1.0	15.0
+org.junit.tests.running.classes.ParentRunnerTest.AssertionErrorAtParentLevelTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ParentRunnerTest.AssumptionViolatedAtParentLevelTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ParentRunnerTest.CountingRunListener	1.0	1.0	5.0
+org.junit.tests.running.classes.ParentRunnerTest.ExampleTest	1.0	1.0	3.0
+org.junit.tests.running.classes.ParentRunnerTest.Exclude	1.0	1.0	3.0
+org.junit.tests.running.classes.ParentRunnerTest.FruitTest	1.0	1.0	2.0
+org.junit.tests.running.classes.ParentRunnerTest.NonPublicTestClass	1.0	1.0	1.0
+org.junit.tests.running.classes.ParentRunnerTest.TestTest	1.0	1.0	4.0
+org.junit.tests.running.classes.RunWithTest	1.0	1.0	3.0
+org.junit.tests.running.classes.RunWithTest.BadRunner	1.0	1.0	2.0
+org.junit.tests.running.classes.RunWithTest.ExampleRunner	1.0	1.0	4.0
+org.junit.tests.running.classes.SuiteTest	1.0	1.0	13.0
+org.junit.tests.running.classes.SuiteTest.AllWithBeforeAndAfterClass	1.0	1.0	2.0
+org.junit.tests.running.classes.SuiteTest.TestA	1.0	1.0	1.0
+org.junit.tests.running.classes.SuiteTest.TestB	1.0	1.0	1.0
+org.junit.tests.running.classes.SuiteTest.WithoutDefaultConstructor	1.0	1.0	1.0
+org.junit.tests.running.classes.UseSuiteAsASuperclassTest	1.0	1.0	1.0
+org.junit.tests.running.classes.UseSuiteAsASuperclassTest.MySuite	1.0	1.0	1.0
+org.junit.tests.running.classes.UseSuiteAsASuperclassTest.TestA	1.0	1.0	1.0
+org.junit.tests.running.classes.UseSuiteAsASuperclassTest.TestB	1.0	1.0	1.0
+org.junit.tests.running.core.CommandLineTest	1.0	1.0	7.0
+org.junit.tests.running.core.CommandLineTest.Count	1.0	1.0	1.0
+org.junit.tests.running.core.CommandLineTest.Example	1.0	1.0	1.0
+org.junit.tests.running.core.JUnitCoreReturnsCorrectExitCodeTest	1.0	1.0	5.0
+org.junit.tests.running.core.JUnitCoreReturnsCorrectExitCodeTest.Fail	1.0	1.0	1.0
+org.junit.tests.running.core.JUnitCoreReturnsCorrectExitCodeTest.Succeed	1.0	1.0	1.0
+org.junit.tests.running.core.MainRunner	1.0	1.0	1.0
+org.junit.tests.running.core.MainRunner.ExitException	1.0	1.0	2.0
+org.junit.tests.running.core.SystemExitTest.Exit	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest	1.0	1.0	28.0
+org.junit.tests.running.methods.AnnotationTest.ErrorInAfterClass	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.ErrorInBeforeClass	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.ExceptionTest	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.FailureTest	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.NoExceptionTest	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.NonStaticOneTimeSetup	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.OldSuiteTest	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.OldTest	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.OneTimeSetup	1.0	1.0	3.0
+org.junit.tests.running.methods.AnnotationTest.OneTimeTeardown	1.0	1.0	3.0
+org.junit.tests.running.methods.AnnotationTest.OrderTest	1.0	1.0	5.0
+org.junit.tests.running.methods.AnnotationTest.RunAllAfterClasses	1.0	1.0	5.0
+org.junit.tests.running.methods.AnnotationTest.RunAllAfterClassesRegardless	1.0	1.0	3.0
+org.junit.tests.running.methods.AnnotationTest.RunAllAfters	1.0	1.0	5.0
+org.junit.tests.running.methods.AnnotationTest.RunAllAftersRegardless	1.0	1.0	3.0
+org.junit.tests.running.methods.AnnotationTest.SetupFailureTest	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.SetupTest	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.SimpleTest	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.SimpleTestWithFutureProofExplicitRunner	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.SubInheritance	1.0	1.0	5.0
+org.junit.tests.running.methods.AnnotationTest.SubShadowing	1.0	1.0	3.0
+org.junit.tests.running.methods.AnnotationTest.SubTest	1.0	1.0	1.0
+org.junit.tests.running.methods.AnnotationTest.SuperInheritance	1.0	1.0	4.0
+org.junit.tests.running.methods.AnnotationTest.SuperShadowing	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.SuperTest	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.TeardownAfterFailureTest	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.TeardownFailureTest	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.TeardownTest	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.TestAndTeardownFailureTest	1.0	1.0	2.0
+org.junit.tests.running.methods.AnnotationTest.TwoTests	1.0	1.0	2.0
+org.junit.tests.running.methods.ExpectedTest	1.0	1.0	4.0
+org.junit.tests.running.methods.ExpectedTest.ExpectSuperclass	1.0	1.0	1.0
+org.junit.tests.running.methods.ExpectedTest.Expected	1.0	1.0	1.0
+org.junit.tests.running.methods.ExpectedTest.NoneThrown	1.0	1.0	1.0
+org.junit.tests.running.methods.ExpectedTest.Unexpected	1.0	1.0	1.0
+org.junit.tests.running.methods.InheritedTestTest	1.0	1.0	2.0
+org.junit.tests.running.methods.InheritedTestTest.SubWithBefore	1.0	1.0	1.0
+org.junit.tests.running.methods.InheritedTestTest.Super	1.0	1.0	1.0
+org.junit.tests.running.methods.ParameterizedTestMethodTest	1.0	1.0	5.0
+org.junit.tests.running.methods.ParameterizedTestMethodTest.EverythingWrong	1.0	1.0	26.0
+org.junit.tests.running.methods.ParameterizedTestMethodTest.SubShadows	1.0	1.0	1.0
+org.junit.tests.running.methods.ParameterizedTestMethodTest.SubWrong	1.0	1.0	1.0
+org.junit.tests.running.methods.ParameterizedTestMethodTest.SuperWrong	1.0	1.0	1.0
+org.junit.tests.running.methods.TestMethodTest	1.0	1.0	9.0
+org.junit.tests.running.methods.TestMethodTest.Confused	1.0	1.0	2.0
+org.junit.tests.running.methods.TestMethodTest.ConstructorParameter	1.0	1.0	2.0
+org.junit.tests.running.methods.TestMethodTest.EverythingWrong	1.0	1.0	26.0
+org.junit.tests.running.methods.TestMethodTest.IgnoredTest	1.0	1.0	3.0
+org.junit.tests.running.methods.TestMethodTest.OnlyTestIsIgnored	1.0	1.0	1.0
+org.junit.tests.running.methods.TestMethodTest.SubShadows	1.0	1.0	1.0
+org.junit.tests.running.methods.TestMethodTest.SubWrong	1.0	1.0	1.0
+org.junit.tests.running.methods.TestMethodTest.SuperWrong	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.FailureWithTimeoutRunTimeExceptionTest	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.FailureWithTimeoutTest	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.InfiniteLoopStuckInMainThreadTest	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.InfiniteLoopWithStuckThreadTest	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.SuccessWithTimeoutTest	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.TimeOutOneSecond	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.TimeOutZero	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.TimeoutFailureTest	1.0	1.0	1.0
+org.junit.tests.running.methods.TimeoutTest.TimeoutSubclass	1.0	1.0	2.0
+org.junit.tests.validation.BadlyFormedClassesTest	1.0	1.0	4.0
+org.junit.tests.validation.BadlyFormedClassesTest.BadBeforeMethodWithLegacyRunner	1.0	1.0	2.0
+org.junit.tests.validation.BadlyFormedClassesTest.FaultyConstructor	1.0	1.0	2.0
+org.junit.tests.validation.FailedConstructionTest	1.0	1.0	1.0
+org.junit.tests.validation.FailedConstructionTest.CantConstruct	1.0	1.0	2.0
+org.junit.tests.validation.ValidationTest	1.0	1.0	2.0
+org.junit.tests.validation.ValidationTest.NonStaticBeforeClass	1.0	1.0	2.0
+org.junit.tests.validation.ValidationTest.WrongBeforeClass	1.0	1.0	1.0
+org.junit.tests.validation.anotherpackage.Super	1.0	1.0	1.0
+org.junit.validator.AnnotationValidator	1.0	1.0	3.0
+org.junit.validator.AnnotationValidatorFactoryTest	1.0	1.0	3.0
+org.junit.validator.AnnotationValidatorFactoryTest.ValidatorThatThrowsException	1.0	1.0	1.0
+org.junit.validator.AnnotationValidatorFactoryTest.ValidatorWithNullValue	1.0	1.0	2.0
+org.junit.validator.AnnotationsValidator.ClassValidator	1.0	1.0	2.0
+org.junit.validator.AnnotationsValidator.FieldValidator	1.0	1.0	2.0
+org.junit.validator.AnnotationsValidator.MethodValidator	1.0	1.0	2.0
+org.junit.validator.AnnotationsValidatorTest	1.0	1.0	4.0
+org.junit.validator.AnnotationsValidatorTest.AnnotationValidatorClassTest	1.0	1.0	1.0
+org.junit.validator.AnnotationsValidatorTest.AnnotationValidatorFieldTest	1.0	1.0	1.0
+org.junit.validator.AnnotationsValidatorTest.AnnotationValidatorMethodTest	1.0	1.0	1.0
+org.junit.validator.AnnotationsValidatorTest.ExampleAnnotationValidator	1.0	1.0	3.0
+org.junit.validator.PublicClassValidatorTest	1.0	1.0	2.0
+org.junit.experimental.theories.ParameterSupplier			0.0
+org.junit.internal.builders.AnnotatedBuilderTest.OuterClass			0.0
+org.junit.internal.runners.FailedBefore			0.0
+org.junit.rules.StopwatchTest.TestStatus			0.0
+org.junit.runner.FilterFactoriesTest.DummyCategory			0.0
+org.junit.runner.FilterFactoriesTest.DummySuite			0.0
+org.junit.runner.FilterFactoriesTest.NonFilterFactory			0.0
+org.junit.runner.manipulation.NoTestsRemainException			0.0
+org.junit.runner.notification.RunNotifierTest.ThreadSafeListener			0.0
+org.junit.runner.notification.StoppedByUserException			0.0
+org.junit.runners.model.FrameworkFieldTest.ClassWithDummyField			0.0
+org.junit.runners.model.Statement			0.0
+org.junit.runners.model.TestClassTest.AnnotatedClass			0.0
+org.junit.runners.model.TestClassTest.AnotherDummyClass			0.0
+org.junit.runners.model.TestClassTest.DummyClass			0.0
+org.junit.runners.model.TestClassTest.FieldAnnotated			0.0
+org.junit.runners.model.TestClassTest.NonPublicClass			0.0
+org.junit.runners.model.TestClassTest.OuterClass			0.0
+org.junit.runners.model.TestClassTest.OuterClass.NonStaticInnerClass			0.0
+org.junit.runners.model.TestClassTest.OuterClass2			0.0
+org.junit.runners.model.TestClassTest.OuterClass2.StaticInnerClass			0.0
+org.junit.runners.model.TestClassTest.PublicClass			0.0
+org.junit.runners.model.TestClassTest.SimpleClass			0.0
+org.junit.runners.model.TestClassTest.SubclassWithField			0.0
+org.junit.runners.model.TestClassTest.SuperclassWithField			0.0
+org.junit.runners.parameterized.TestWithParametersTest.AnotherDummyClass			0.0
+org.junit.runners.parameterized.TestWithParametersTest.DummyClass			0.0
+org.junit.tests.experimental.ExperimentalTests			0.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.ParameterTokenSuiteMalformed			0.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.ParameterTokenSuiteMalformedAndSwapped			0.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.ParameterTokenSuiteWellFormed			0.0
+org.junit.tests.experimental.categories.CategoriesAndParameterizedTest.Token			0.0
+org.junit.tests.experimental.categories.CategoryTest.AllIncludedMustBeMatchedSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.Ancestor			0.0
+org.junit.tests.experimental.categories.CategoryTest.Category1			0.0
+org.junit.tests.experimental.categories.CategoryTest.Category2			0.0
+org.junit.tests.experimental.categories.CategoryTest.ChooseSlowFromBoth			0.0
+org.junit.tests.experimental.categories.CategoryTest.ClassAsCategory			0.0
+org.junit.tests.experimental.categories.CategoryTest.EmptyCategoriesSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.IgnoredTestCategoriesSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.IncludeAndExcludeSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.IncludedExcludedSameSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.JustA			0.0
+org.junit.tests.experimental.categories.CategoryTest.MultiIncludeWithExcludeCategorySuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.NoIncludeCategoryAnnotationSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.NoTest			0.0
+org.junit.tests.experimental.categories.CategoryTest.OneFastSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.RunClassAsCategory			0.0
+org.junit.tests.experimental.categories.CategoryTest.RunSlowFromVerySlow			0.0
+org.junit.tests.experimental.categories.CategoryTest.SameAsNoIncludeCategoryAnnotationSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.SlowTestSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.SomeAreSlowSuite			0.0
+org.junit.tests.experimental.categories.CategoryTest.TestSuiteWithNoCategories			0.0
+org.junit.tests.experimental.categories.CategoryValidatorTest.SampleCategory			0.0
+org.junit.tests.experimental.categories.JavadocTest.FastOrSmokeTestSuite			0.0
+org.junit.tests.experimental.categories.JavadocTest.SlowTestSuite			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAll			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAllAny			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAny			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.InheritanceAnyAll			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.MultiCategorySuite			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.Q			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.W			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.X			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.Y			0.0
+org.junit.tests.experimental.categories.MultiCategoryTest.Z			0.0
+org.junit.tests.experimental.rules.BlockJUnit4ClassRunnerOverrideTest.OverrideTestRulesTest			0.0
+org.junit.tests.experimental.rules.ClassRulesTest.MethodSubclassOfTestWithClassRule			0.0
+org.junit.tests.experimental.rules.ClassRulesTest.SubclassOfTestWithClassRule			0.0
+org.junit.tests.experimental.rules.MethodRulesTest.SonOfExampleTest			0.0
+org.junit.tests.experimental.rules.MethodRulesTest.SonOfWrongTypedField			0.0
+org.junit.tests.experimental.rules.NameRulesTest			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.NonPublicTestWithClassRule			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithArbitraryObjectWithRuleAnnotation			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithClassRuleIsAnArbitraryObject			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithNonStaticClassRule			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithNonStaticTestRule			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithProtectedClassRule			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithStaticClassAndTestRule			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithStaticMethodRule			0.0
+org.junit.tests.experimental.rules.RuleMemberValidatorTest.TestWithStaticTestRule			0.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodSonOfExampleTest			0.0
+org.junit.tests.experimental.rules.TestRuleTest.MethodSonOfWrongTypedField			0.0
+org.junit.tests.experimental.rules.TestRuleTest.SonOfExampleTest			0.0
+org.junit.tests.experimental.rules.TestRuleTest.SonOfWrongTypedField			0.0
+org.junit.tests.experimental.rules.TimeoutRuleTest.HasGlobalLongTimeout			0.0
+org.junit.tests.experimental.rules.TimeoutRuleTest.HasGlobalTimeUnitTimeout			0.0
+org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields			0.0
+org.junit.tests.experimental.theories.runner.WithAutoGeneratedDataPoints.ENUM			0.0
+org.junit.tests.junit3compatibility.ForwardCompatibilityTest.NoTests			0.0
+org.junit.tests.junit3compatibility.InitializationErrorForwardCompatibilityTest.CantInitializeTests			0.0
+org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest.DerivedAnnotatedMethod			0.0
+org.junit.tests.manipulation.SingleMethodTest.OneTwoSuite			0.0
+org.junit.tests.manipulation.SortableTest.TestClassRunnerIsSortable.Enclosing			0.0
+org.junit.tests.running.classes.BlockJUnit4ClassRunnerTest.OuterClass			0.0
+org.junit.tests.running.classes.EnclosedTest.Enclosing			0.0
+org.junit.tests.running.classes.ParentRunnerFilteringTest.ExampleSuite			0.0
+org.junit.tests.running.classes.ParentRunnerFilteringTest.ExampleSuiteWithUnmodifyableChildList			0.0
+org.junit.tests.running.classes.RunWithTest.Empty			0.0
+org.junit.tests.running.classes.RunWithTest.ExampleTest			0.0
+org.junit.tests.running.classes.RunWithTest.SubExampleTest			0.0
+org.junit.tests.running.classes.SuiteTest.All			0.0
+org.junit.tests.running.classes.SuiteTest.AllWithOutAnnotation			0.0
+org.junit.tests.running.classes.SuiteTest.BiInfiniteLoop			0.0
+org.junit.tests.running.classes.SuiteTest.Hercules			0.0
+org.junit.tests.running.classes.SuiteTest.Hydra			0.0
+org.junit.tests.running.classes.SuiteTest.InfiniteLoop			0.0
+org.junit.tests.running.classes.SuiteTest.InheritsAll			0.0
+org.junit.tests.running.classes.SuiteTest.NoSuiteClassesAnnotation			0.0
+org.junit.tests.running.classes.UseSuiteAsASuperclassTest.AllWithMySuite			0.0
+org.junit.tests.running.methods.InheritedTestTest.Sub			0.0
+org.junit.tests.validation.BadlyFormedClassesTest.NoTests			0.0
+org.junit.tests.validation.anotherpackage.Sub			0.0
+org.junit.validator.AnnotationValidatorFactoryTest.SampleTestWithValidator			0.0
+org.junit.validator.AnnotationValidatorFactoryTest.SampleTestWithValidatorThatThrowsException			0.0
+org.junit.validator.AnnotationValidatorFactoryTest.Validator			0.0
+org.junit.validator.PublicClassValidatorTest.NonPublicClass			0.0
+org.junit.validator.PublicClassValidatorTest.PublicClass			0.0

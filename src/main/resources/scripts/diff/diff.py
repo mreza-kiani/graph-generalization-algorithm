@@ -3,13 +3,13 @@ import javalang
 import time
 import subprocess
 
-base_dir = "/home/mamareza/UofC/Thesis/Projects/Log4J"
-project1_name = "log4j2-rel-2.20.0"
-project2_name = "log4j1-1_2_17"
+base_dir = "/home/mamareza/UofC/Thesis/Projects/junit"
+project1_name = "junit4-r4.12"
+project2_name = "junit5"
 project1_path = f"{base_dir}/{project1_name}"
 project2_path = f"{base_dir}/{project2_name}"
 
-diff_info_file = "diff_info.txt"
+diff_info_file = "data/diff_info.txt"
 
 
 def get_diff_info():
@@ -83,9 +83,9 @@ if __name__ == '__main__':
     diff_info = get_diff_info()
     enriched_diff_info = enrich_diff_info(diff_info)
     sort_result_by(enriched_diff_info, field_name='size')
-    sort_result_by(enriched_diff_info, field_name='methods')
-    sort_result_by(enriched_diff_info, field_name='fields')
-    sort_result_by(enriched_diff_info, field_name='lines')
+    # sort_result_by(enriched_diff_info, field_name='methods')
+    # sort_result_by(enriched_diff_info, field_name='fields')
+    # sort_result_by(enriched_diff_info, field_name='lines')
     end = time.time()
     print(enriched_diff_info)
     print("Elapsed time: ", end - start)

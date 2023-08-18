@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 
 from graph_creator import print_graph_initialization, convert_to_node_name, save_graph_in_file
 
-PRINTING_MODE = False
+PRINTING_MODE = True
 
 
 def remove_package(package):
@@ -51,4 +51,4 @@ def parse(xml_address, save_address=None):
 
 
 if __name__ == '__main__':
-    parse(xml_address='uml.txt', save_address='v2.0-main')
+    parse(xml_address='4.1.96.uml', save_address='4.1.96')

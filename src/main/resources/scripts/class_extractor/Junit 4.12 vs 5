@@ -1,0 +1,15 @@
+{'FrameworkField', 'ErrorCollector', 'String', 'DeepInnerClass', 'RunNotifier', 'ClassName', 'Categories', 'ClassRule', 'ParameterSupplier', 'SlowTestSuite', 'JUnitSystem', 'C:\\cygwin\\usr\\local\\etc\\junit', 'Integer', 'InterruptedIOException', 'ClosedByInterruptException', 'TheoriesAndTestsTogether', 'CommonRuleTest', 'Callable', 'FilterFactoryParams', 'Iterable', 'FilterFactory', 'Callable<Object>', 'LICENSE', 'AssumptionViolatedException', 'RunWith', 'ValidateWith', 'Suite', 'Override', 'Assert', 'Runner', 'MyTest', 'ThreadGroupContext', 'DataPoint', 'Assume', 'Cat2', 'A', 'TestTimedOutException', 'BeforeClass', 'Arrays', 'Matcher', 'MICROSECONDS', 'List<T>', 'Timeout', 'Before', 'Object', 'FastAndSmokeTestSuite', 'StopwatchTest', 'TestFailedOnTimeoutException', 'Builder', 'TestClass', 'RunListener', 'MySetupResetAndTearDownRule', 'MILLISECONDS', 'AnnotationBuilder', 'SECONDS', 'IncludeCategories', 'AnnotatedBuilder', 'Object[]', 'MethodRule', 'MyMemberClass', 'NANOSECONDS', 'InitializationError', 'AnotherMemberClass', 'T', 'Inherited', 'FrameworkMethod', 'TestRule', 'Throwable', 'File', 'Theories', 'SlowTestSuiteWithoutFast', 'DataPoint(s)', 'Category', 'Rule', 'After', 'SuiteClasses', 'AfterClass', 'JUnitCore', 'Description', 'Exception', 'Theory', 'Thread#interrupt()', 'ParentRunner', 'Parameters', 'Cat1', 'RandomAccessFile', 'ThreadGroup', 'Thread', 'CategoryValidator', 'ThreadSafe', 'ExpectedException', 'AssertionError', 'M2_HOME', 'Parameterized', 'Stopwatch', 'Test', 'ExcludeCategory', 'Object[][]', 'TemporaryFolder', 'DeepInheritedClass', 'ExampleTestSuite', 'DisableOnDebug', 'ClassName=param', 'InterruptedException', 'Result', 'AnnotationValidator', 'UseParametersRunnerFactory', 'HasGlobalTimeout', 'FastOrSmokeTestSuite', 'DataPoints', 'LICENSE-junit', 'SuperTest', 'FromDataPoints', 'IncludeCategory'}
+
+urls = ["https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.12.md",
+        "https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.1.md",
+        "https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.2.md",
+        "https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.md",
+        "https://junit.org/junit5/docs/5.8.2/release-notes/",
+        "https://junit.org/junit5/docs/5.7.1/release-notes/",
+        "https://junit.org/junit5/docs/5.6.2/release-notes/",
+        "https://junit.org/junit5/docs/5.5.2/release-notes/",
+        "https://junit.org/junit5/docs/5.4.0/release-notes/",
+        "https://junit.org/junit5/docs/5.3.1/release-notes/",
+        "https://junit.org/junit5/docs/5.2.0/release-notes/",
+        "https://junit.org/junit5/docs/5.1.1/release-notes/",
+        "https://junit.org/junit5/docs/5.0.0/user-guide/#release-notes-5.0.0",]
