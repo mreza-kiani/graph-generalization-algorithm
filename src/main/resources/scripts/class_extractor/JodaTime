@@ -1,4 +1,4 @@
-{'EPOCH', 'UTC', 'Date', 'MutableDateTime', 'FromString', 'DateTimeUtils', 'PeriodFormatter', 'DateTime', 'MillisProvider', 'Interval', 'LocalDateTime', 'MonthDay', 'Property', 'Chronology', 'Period', 'DateTimeFormatter', 'LocalTime', 'MIN_VALUE', 'Duraton', 'Instant', 'Duration', 'PeriodFormat', 'TimeZone', 'Time', 'ThreadGroup', 'LocalDate', 'DateTimeField', 'Separator', 'SYSTEM_MILLIS_PROVIDER', 'DateTimeZone', 'ToString', 'MAX_VALUE'}
+['Date', 'MutableDateTime', 'FromString', 'DateTimeUtils', 'PeriodFormatter', 'DateTime', 'MillisProvider', 'Interval', 'LocalDateTime', 'MonthDay', 'Property', 'Chronology', 'Period', 'DateTimeFormatter', 'LocalTime', 'Duraton', 'Instant', 'Duration', 'PeriodFormat', 'TimeZone', 'Time', 'ThreadGroup', 'LocalDate', 'DateTimeField', 'Separator', 'DateTimeZone', 'ToString']
 
 urls = ["https://www.joda.org/joda-time/changes-report.html",
         "https://www.joda.org/joda-time/upgradeto296.html",

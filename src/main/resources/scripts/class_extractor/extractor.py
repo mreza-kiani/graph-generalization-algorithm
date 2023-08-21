@@ -69,25 +69,25 @@ def extract_java_classes_from_url(url):
     return extract_java_classes(response.text)
 
 
+def remove_wrong_ones(keywords):
+    result = []
+    for keyword in keywords:
+        if not keyword.isupper():
+            result.append(keyword)
+    return result
+
+
 if __name__ == '__main__':
     keywords = set()
     # url = input("Enter URL:")
     # url = 'https://raw.githubusercontent.com/junit-team/junit4/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.4.md'
 
     urls = [
-        "https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.12.md",
-        "https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.1.md",
-        "https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.2.md",
-        "https://github.com/junit-team/junit4/blob/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.md",
-        "https://junit.org/junit5/docs/5.8.2/release-notes/",
-        "https://junit.org/junit5/docs/5.7.1/release-notes/",
-        "https://junit.org/junit5/docs/5.6.2/release-notes/",
-        "https://junit.org/junit5/docs/5.5.2/release-notes/",
-        "https://junit.org/junit5/docs/5.4.0/release-notes/",
-        "https://junit.org/junit5/docs/5.3.1/release-notes/",
-        "https://junit.org/junit5/docs/5.2.0/release-notes/",
-        "https://junit.org/junit5/docs/5.1.1/release-notes/",
-        "https://junit.org/junit5/docs/5.0.0/user-guide/#release-notes-5.0.0", ]
+        "https://raw.githubusercontent.com/junit-team/junit4/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.md",
+        "https://raw.githubusercontent.com/junit-team/junit4/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.2.md",
+        "https://raw.githubusercontent.com/junit-team/junit4/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.13.1.md",
+        "https://raw.githubusercontent.com/junit-team/junit4/16228f3ccea3c6f1170488e0e268f3601d130f75/doc/ReleaseNotes4.12.md"]
     for url in urls:
         keywords.update(extract_java_classes_from_url(url))
+    keywords = remove_wrong_ones(keywords)
     print(keywords)
