@@ -3,9 +3,9 @@ import javalang
 import time
 import subprocess
 
-base_dir = "/home/mamareza/UofC/Thesis/Projects/junit"
-project1_name = "junit4-r4.12"
-project2_name = "junit5"
+base_dir = "/home/mamareza/UofC/Thesis/Projects/Redisson"
+project1_name = "redisson-redisson-2.9.0"
+project2_name = "redisson-redisson-3.23.4"
 project1_path = f"{base_dir}/{project1_name}"
 project2_path = f"{base_dir}/{project2_name}"
 
@@ -56,7 +56,7 @@ def enrich_diff_info(diff_info):
                     fill_version_info(result[key][file_path], file_path, project2_name, version=2)
                 if key != 'added':
                     fill_version_info(result[key][file_path], file_path, project1_name, version=1)
-            except Exception:
+            except Exception as e:
                 print(f"Problem in parsing {file_path}")
     return result
 

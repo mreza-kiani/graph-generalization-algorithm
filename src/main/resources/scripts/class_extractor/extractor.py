@@ -66,7 +66,8 @@ def extract_java_classes(text):
 
 def extract_java_classes_from_url(url):
     response = requests.get(url)
-    return extract_java_classes(response.text)
+    text = response.text.replace(" class=\"literal\"", "")
+    return extract_java_classes(text)
 
 
 def remove_wrong_ones(keywords):

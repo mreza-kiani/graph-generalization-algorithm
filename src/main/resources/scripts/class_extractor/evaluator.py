@@ -16,7 +16,7 @@ def similarity_score_based_on_common_individuals(change_log_class, find_class):
     global find_classes_map, change_log_classes_map
     individuals = find_classes_map[find_class]
     individuals2 = change_log_classes_map[change_log_class]
-    common_parts = len(list(filter(lambda item: item in individuals2, individuals)))
+    common_parts = len(set(filter(lambda item: item in individuals2, individuals)))
     return 2.0 * common_parts / (len(individuals) + len(individuals2))
 
 

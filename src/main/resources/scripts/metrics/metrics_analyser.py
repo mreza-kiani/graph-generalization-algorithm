@@ -67,8 +67,8 @@ def print_stats(nodes):
 
 
 if __name__ == '__main__':
-    metrics1 = extract_metrics('junit/junit4.12.txt')
-    metrics2 = extract_metrics('junit/junit5.txt')
+    metrics1 = extract_metrics('radisson/2.9.0.txt')
+    metrics2 = extract_metrics('radisson/3.23.4.txt')
 
     metrics = ['OCavg', 'OCmax', 'WMC']
     for m in metrics:

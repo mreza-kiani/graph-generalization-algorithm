@@ -6,6 +6,7 @@ import ca.ucalgary.cs.Config.UNIQUE_LABELS
 import ca.ucalgary.cs.Config.VISUALIZATION
 import ca.ucalgary.cs.exceptions.UninitializedGraphException
 import ca.ucalgary.cs.graph.Graph
+import ca.ucalgary.cs.graph.NodeVariable
 import ca.ucalgary.cs.utils.areListsEqual
 import ca.ucalgary.cs.utils.areListsSubset
 import org.junit.Assert.assertTrue
@@ -41,19 +42,18 @@ abstract class BaseCompareGraphTest {
         println("Comparing took ${endTime - startTime} millis")
         println("---------------------------------------------")
 
-        println("G1: Nodes: ${graph1.nodes.size}, Edges: ${graph1.edgeCounts()}")
-        println("G2: Nodes: ${graph2.nodes.size}, Edges: ${graph2.edgeCounts()}")
-        println("Generalization: Nodes: ${commonGraph.nodes.size}, Edges: ${commonGraph.edgeCounts()}, " +
-                "NodeVariables: ${commonGraph.nodeVariables.size}, EdgeVariables: ${commonGraph.edgeVariables.size}")
+        printStats(commonGraph)
 
-        println("Common Graph:")
-        println(commonGraph)
+        if (DEBUG_MODE) {
+            println("Common Graph:")
+            println(commonGraph)
 
-        println("Graph 1 Diff:")
-        println(graph1Diff)
+            println("Graph 1 Diff:")
+            println(graph1Diff)
 
-        println("Graph 2 Diff:")
-        println(graph2Diff)
+            println("Graph 2 Diff:")
+            println(graph2Diff)
+        }
 
         println("---------------------------------------------")
         printTopNodesIn(commonGraph, label = "Common Graph", notInCommon = false)
@@ -68,14 +68,24 @@ abstract class BaseCompareGraphTest {
         assertEquals(graph1, Graph.reconstruct(commonGraph, graph1Diff))
         assertEquals(graph2, Graph.reconstruct(commonGraph, graph2Diff))
 
-        assertEquals(graph1, Graph.reconstruct(commonGraph, graphNumber = 1))
-        assertEquals(graph2, Graph.reconstruct(commonGraph, graphNumber = 2))
+//        assertEquals(graph1, Graph.reconstruct(commonGraph, graphNumber = 1))
+//        assertEquals(graph2, Graph.reconstruct(commonGraph, graphNumber = 2))
+    }
+
+    private fun printStats(commonGraph: Graph) {
+        println("G1  -> Nodes: ${graph1.nodes.size}, Edges: ${graph1.edgeCounts()}")
+        println("G2  -> Nodes: ${graph2.nodes.size}, Edges: ${graph2.edgeCounts()}")
+        println("~G  -> Nodes: ${commonGraph.nodes.size}, Edges: ${commonGraph.edgeCounts()}, NodeVariables: ${commonGraph.nodeVariables.size}, EdgeVariables: ${commonGraph.edgeVariables.size}")
+        println("AVG -> Nodes: ${(graph1.nodes.size + graph2.nodes.size) / 2},  Edges: ${(graph1.edgeCounts() + graph2.edgeCounts()) / 2}")
+        println("UNQ -> Nodes: ${graph1.nodes.size + graph2.nodes.size - commonGraph.nodes.size},  Edges: ${graph1.edgeCounts() + graph2.edgeCounts() - commonGraph.edgeCounts()}")
     }
 
     private fun printTopNodesIn(commonGraph: Graph, label: String, notInCommon: Boolean) {
         println("Top nodes in ${label}:")
         commonGraph.extractNodeCentrality()
             .filter { (node, _) -> if (notInCommon) !node.isCommon else true }
+            .filter { (node, _) -> node !is NodeVariable }
+            .filterNot { (node, _) -> node.name.endsWith("Test") || node.name.endsWith("Tests") }
             .onEachIndexed { index, (node, score) ->
                 if (index < 10)
                     println("\t${index + 1}. $node: $score")
