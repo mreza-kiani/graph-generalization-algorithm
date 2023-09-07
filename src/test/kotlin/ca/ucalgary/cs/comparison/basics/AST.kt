@@ -1,13 +1,17 @@
-package ca.ucalgary.cs.comparison.ast
+package ca.ucalgary.cs.comparison.basics
 
+import ca.ucalgary.cs.Config.CONTEXT
+import ca.ucalgary.cs.Context
 import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Edge
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import ca.ucalgary.cs.io.visualize
 
-class AST1: BaseCompareGraphTest() {
+class AST: BaseCompareGraphTest() {
     override fun initializeGraphs() {
+        CONTEXT = Context.AST
+
         val a = Node("A")
         val b1 = Node("B", isDuplicate = true)
         val b2 = Node("B", isDuplicate = true)

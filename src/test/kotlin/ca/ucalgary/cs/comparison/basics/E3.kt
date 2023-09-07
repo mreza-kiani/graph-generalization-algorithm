@@ -1,5 +1,6 @@
-package ca.ucalgary.cs.comparison
+package ca.ucalgary.cs.comparison.basics
 
+import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import kotlin.test.assertEquals

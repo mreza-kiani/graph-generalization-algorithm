@@ -1,5 +1,7 @@
-package ca.ucalgary.cs.comparison.ast
+package ca.ucalgary.cs.comparison.basics
 
+import ca.ucalgary.cs.Config
+import ca.ucalgary.cs.Context
 import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
@@ -8,6 +10,8 @@ import ca.ucalgary.cs.io.visualize
 
 class AST2 : BaseCompareGraphTest() {
     override fun initializeGraphs() {
+        Config.CONTEXT = Context.AST
+
         val lsxug3 = Node("program")
         val ggfxm2 = Node("class_declaration", isDuplicate = true)
         val cqook5 = Node("class", isDuplicate = true)

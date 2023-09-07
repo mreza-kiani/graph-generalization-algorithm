@@ -1,4 +1,4 @@
-package ca.ucalgary.cs.comparison.ast
+package ca.ucalgary.cs.comparison.basics
 
 import ca.ucalgary.cs.comparison.BaseCompareGraphTest
 import ca.ucalgary.cs.graph.Graph
