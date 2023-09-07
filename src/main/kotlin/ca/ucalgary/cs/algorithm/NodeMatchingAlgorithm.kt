@@ -1,5 +1,7 @@
 package ca.ucalgary.cs.algorithm
 
+import ca.ucalgary.cs.Config.CONTEXT
+import ca.ucalgary.cs.Context
 import ca.ucalgary.cs.graph.Node
 
 object NodeMatchingAlgorithm {
@@ -15,7 +17,10 @@ object NodeMatchingAlgorithm {
     }
 
     fun similarityScoreOf(a: String, b: String): Double {
-        return longestCommonSubstring(a, b).toDouble() / maxOf(a.length, b.length)
+        return if (CONTEXT == Context.AST)
+            longestCommonSubstring(a, b).toDouble() / maxOf(a.length, b.length)
+        else
+            if (a == b) 1.0 else 0.0
     }
 
     private fun longestCommonSubstring(a: String, b: String): Int {

@@ -325,4 +325,26 @@ object ASTPrinter {
     private fun findParent(child: Node, graph: Graph): Node? {
         return graph.findParents(child).firstOrNull()
     }
+
+    fun printDifferences(generalizedGraph: Graph, fileName: String, graph1: Graph, graph2: Graph) {
+        val g1Leaves = graph1.getLeaves()
+        val g2Leaves = graph2.getLeaves()
+
+        val g1DiffLeaves = generalizedGraph.nodeVariables
+            .flatMap { nv -> nv.graph1.getLeaves() }
+            .filter { n -> n in g1Leaves }
+
+        val g2DiffLeaves = generalizedGraph.nodeVariables
+            .flatMap { nv -> nv.graph2.getLeaves() }
+            .filter { n -> n in g2Leaves }
+
+        val json = JSONObject()
+        json.put("New", g1DiffLeaves.map { it.getRealName() }.groupingBy { it }.eachCount())
+        json.put("Old", g2DiffLeaves.map { it.getRealName() }.groupingBy { it }.eachCount())
+
+        val file = File("$fileName.json")
+        file.parentFile.mkdirs()
+        file.createNewFile()
+        file.printWriter().use { out -> out.print(json.toString()) }
+    }
 }
