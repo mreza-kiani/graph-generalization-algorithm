@@ -8,5 +8,5 @@ for d in /home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNetMi
     if [ ! -d "$d"/../Output ]; then
         mkdir "$d"/../Output
     fi
-    diffsitter -c ~/diffsitter-config.json "${files[0]}" "${files[1]}" > "$d"/../Output/DiffSitter.json
+    diffsitter -c ./diffsitter-config.json "${files[0]}" "${files[1]}" > "$d"/../Output/DiffSitter.json
 done
