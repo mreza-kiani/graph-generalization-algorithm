@@ -22,8 +22,8 @@ fun main() {
     DEBUG_MODE = false
     CONTEXT = Context.AST_DIFF
     VISUALIZATION = false
-    BASE_DIR = "src/main/resources/Mays"
-//    BASE_DIR = "/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/RandomCodeSearchNet2"
+//    BASE_DIR = "src/main/resources/Mays"
+    BASE_DIR = "/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNetMine"
 
     val data = extractListOfFiles()
 

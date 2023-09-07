@@ -102,39 +102,49 @@ def swap_base_keys(data):
     data['Old'] = tmp
 
 
+def changes(data):
+    count = 0
+    for base_key in ["New", "Old"]:
+        count += len(data[base_key])
+    return count
+
+
 if __name__ == '__main__':
     files = glob.glob("/home/mamareza/UofC/Thesis/new-approach/src/main/resources/Mays/*/*/Output/*.json")
+    # files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNetMine/*/*/Output/*.json")
     diff_sitter = None
     gga_diff = None
     success = 0
     failed = 0
 
-    for index, address in enumerate(files, start=1):
-        if index % 2 == 1:
-            diff_sitter_plain = read_json_file(address)
-            diff_sitter = fix_bad_characters(extract_diff_sitter_content(diff_sitter_plain))
+    addresses = set()
+    for address in files:
+        addresses.add(address[:address.rfind('/')])
+
+    for index, address in enumerate(addresses, start=1):
+        diff_sitter_plain = read_json_file(f'{address}/DiffSitter.json')
+        diff_sitter = fix_bad_characters(extract_diff_sitter_content(diff_sitter_plain))
+        gga_diff = fix_bad_characters(read_json_file(f'{address}/GGADifferences.json'))
+
+        dc_gga_diff = copy.deepcopy(gga_diff)
+        dc_diff_sitter = copy.deepcopy(diff_sitter)
+
+        if is_match(diff_sitter, gga_diff):
+            print(f"{index}: ✓")
+            success += 1
         else:
-            line_number = f"{int(index/2)}/{int(len(files)/2)}"
-            gga_diff = fix_bad_characters(read_json_file(address))
-
-            dc_gga_diff = copy.deepcopy(gga_diff)
-            dc_diff_sitter = copy.deepcopy(diff_sitter)
-
-            if is_match(diff_sitter, gga_diff):
-                print(f"{line_number}: ✓ {address}")
+            swap_base_keys(dc_diff_sitter)
+            if is_match(dc_diff_sitter, dc_gga_diff):
+                print(f"{index}: ✓")
                 success += 1
             else:
-                swap_base_keys(dc_diff_sitter)
-                if is_match(dc_diff_sitter, dc_gga_diff):
-                    print(f"{line_number}: ✓ {address}")
-                    success += 1
-                else:
-                    print(f"{line_number}: X {address}")
-                    print(f'Generalization: {gga_diff}')
-                    print(f'DiffSitter    : {diff_sitter}')
-                    print("-------------------------------")
-                    print(f'Generalization: {dc_gga_diff}')
-                    print(f'DiffSitter    : {dc_diff_sitter}')
-                    failed += 1
+                print(f"{index}: X {address}")
+                if changes(gga_diff) + changes(diff_sitter) > changes(dc_gga_diff) + changes(dc_diff_sitter):
+                    gga_diff = dc_gga_diff
+                    diff_sitter = dc_diff_sitter
+                print(f'Generalization: {gga_diff}')
+                print(f'DiffSitter    : {diff_sitter}')
+                print("-------------------------------")
+                failed += 1
 
     print(f"Success: {success}, Failed: {failed}")

@@ -8,7 +8,7 @@ nodes = []
 edges = {}
 edges_mapping = {}
 PRINTING_MODE = False
-COPY_MODE = True
+COPY_MODE = False
 
 
 def configure_tree_sitter():
@@ -42,6 +42,8 @@ def extract_variable_def(node):
     variable_def = node.type
     if variable_def == "void_type":
         variable_def = "void"
+    if variable_def == "boolean_type":
+        variable_def = "boolean"
     return variable_def
 
 
