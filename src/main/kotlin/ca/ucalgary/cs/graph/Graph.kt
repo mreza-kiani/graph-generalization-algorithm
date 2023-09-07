@@ -1,7 +1,7 @@
 package ca.ucalgary.cs.graph
 
+import ca.ucalgary.cs.Config.CONTEXT
 import ca.ucalgary.cs.Config.DEBUG_MODE
-import ca.ucalgary.cs.Config.UNIQUE_LABELS
 import ca.ucalgary.cs.algorithm.StructuralMatchingAlgorithm
 import ca.ucalgary.cs.exceptions.IllegalEdgeException
 import ca.ucalgary.cs.utils.areListsEqual
@@ -63,7 +63,7 @@ open class Graph(val nodes: List<Node>, val edges: Map<Node, List<Edge>>) : Edge
 
         fun compare(graph1: Graph, graph2: Graph): Triple<Graph, Graph, Graph> {
             markCommonNodes(graph1, graph2)
-            if (!UNIQUE_LABELS)
+            if (CONTEXT.needsUniqueLabels())
                 alterNamesOfSameNodes(graph1, graph2)
 
             val commonNodes = graph1.nodes.filter { it in graph2.nodes }

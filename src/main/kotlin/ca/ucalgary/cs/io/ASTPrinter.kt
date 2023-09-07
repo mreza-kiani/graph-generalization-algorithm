@@ -1,11 +1,13 @@
 package ca.ucalgary.cs.io
 
-import ca.ucalgary.cs.Config.AST_CONTEXT
+import ca.ucalgary.cs.Config.CONTEXT
+import ca.ucalgary.cs.Context
 import ca.ucalgary.cs.algorithm.StructuralMatchingAlgorithm
 import ca.ucalgary.cs.graph.EdgeVariable
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.Node
 import ca.ucalgary.cs.graph.NodeVariable
+import org.json.JSONObject
 import java.io.File
 
 object ASTPrinter {
@@ -16,7 +18,7 @@ object ASTPrinter {
     }
 
     fun from(generalizedGraph: Graph, fileName: String, graph1: Graph, graph2: Graph) {
-        if (!AST_CONTEXT)
+        if (CONTEXT == Context.AST)
             return
         val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(generalizedGraph)
         val graph1OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph1)
@@ -153,7 +155,7 @@ object ASTPrinter {
     private fun getTemplateNodeName(node: Node, counter: Int): String = "T${counter}_${node.getRealName().uppercase()}"
 
     fun from(graph: Graph, graphNumber: Int, fileName: String) {
-        if (!AST_CONTEXT)
+        if (CONTEXT == Context.AST)
             return
         val graphDepthMap = StructuralMatchingAlgorithm.getGraphDepthMap(graph, graphNumber)
 

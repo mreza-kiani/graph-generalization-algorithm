@@ -1,9 +1,9 @@
 package ca.ucalgary.cs.comparison
 
-import ca.ucalgary.cs.Config.AST_CONTEXT
+import ca.ucalgary.cs.Config.CONTEXT
 import ca.ucalgary.cs.Config.DEBUG_MODE
-import ca.ucalgary.cs.Config.UNIQUE_LABELS
 import ca.ucalgary.cs.Config.VISUALIZATION
+import ca.ucalgary.cs.Context
 import ca.ucalgary.cs.exceptions.UninitializedGraphException
 import ca.ucalgary.cs.graph.Graph
 import ca.ucalgary.cs.graph.NodeVariable
@@ -23,9 +23,8 @@ abstract class BaseCompareGraphTest {
 
     @Before
     fun initialization() {
-        DEBUG_MODE = true
-        UNIQUE_LABELS = true
-        AST_CONTEXT = false
+        DEBUG_MODE = false
+        CONTEXT = Context.CLASS_DIAGRAM
         VISUALIZATION = true
         initializeGraphs()
         if (!this::graph1.isInitialized || !this::graph2.isInitialized)

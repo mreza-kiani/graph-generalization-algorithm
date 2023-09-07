@@ -1,9 +1,8 @@
 package ca.ucalgary.cs
 
-import ca.ucalgary.cs.Config.AST_CONTEXT
 import ca.ucalgary.cs.Config.BASE_DIR
+import ca.ucalgary.cs.Config.CONTEXT
 import ca.ucalgary.cs.Config.DEBUG_MODE
-import ca.ucalgary.cs.Config.UNIQUE_LABELS
 import ca.ucalgary.cs.Config.VISUALIZATION
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -22,8 +21,7 @@ fun choose(n: Int, k: Int): Int {
 
 fun main() {
     DEBUG_MODE = false
-    UNIQUE_LABELS = true
-    AST_CONTEXT = false
+    CONTEXT = Context.CLASS_DIAGRAM
     VISUALIZATION = false
     BASE_DIR = "src/main/resources/Selenium/Graph"
 
