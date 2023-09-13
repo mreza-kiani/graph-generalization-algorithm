@@ -21,7 +21,7 @@ object GraphScanner {
 
     private fun extractNodes(line: String): List<Node> {
         val startOfNodes = line.indexOfFirst { it == '(' }
-        val endOfNodes = line.indexOfFirst { it == ')' }
+        val endOfNodes = line.indexOfLast { it == ')' }
         return line
             .substring(startIndex = startOfNodes + 1, endIndex = endOfNodes)
             .split(",")

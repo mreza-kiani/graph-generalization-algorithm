@@ -5,7 +5,7 @@ import copy
 
 def read_json_file(address):
     with open(address, "r") as read_file:
-        content = read_file.read()
+        content = read_file.read().replace('boolean_type', 'boolean')
         data = json.loads(content)
         # data = json.load(read_file)
     return data
@@ -28,7 +28,7 @@ def extract_diff_sitter_content(plain_content):
 
 
 def fix_bad_characters(data):
-    bad_characters = ['\\n', '\\"', '\\t']
+    bad_characters = ['\\n', '\\"', '\\t', '\r']
     result = copy.deepcopy(data)
     for base_key in ["New", "Old"]:
         for key, value in data[base_key].items():
@@ -43,8 +43,6 @@ def fix_bad_characters(data):
 
 def is_match(diff_sitter, gga_diff):
     match_terms(diff_sitter, gga_diff)
-    remove_zero_terms(diff_sitter)
-    remove_zero_terms(gga_diff)
     match_symmetrical_keys(diff_sitter)
     match_symmetrical_keys(gga_diff)
     remove_zero_terms(diff_sitter)
@@ -110,8 +108,8 @@ def changes(data):
 
 
 if __name__ == '__main__':
-    files = glob.glob("/home/mamareza/UofC/Thesis/new-approach/src/main/resources/Mays/*/*/Output/*.json")
-    # files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNetMine/*/*/Output/*.json")
+    # files = glob.glob("/home/mamareza/UofC/Thesis/new-approach/src/main/resources/Mays/*/*/Output/*.json")
+    files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNet/*/Output/*.json")
     diff_sitter = None
     gga_diff = None
     success = 0

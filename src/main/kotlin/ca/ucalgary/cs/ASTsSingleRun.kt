@@ -71,7 +71,7 @@ fun runGeneralization(input1: String, input2: String): Triple<Graph, Graph, Grap
     }
 
     if (CONTEXT == Context.AST)
-        ASTPrinter.from(commonGraph, fileName = "$baseName/Generalization_July21", graph1, graph2)
+        ASTPrinter.from(commonGraph, fileName = "$baseName/Generalization_Sep12", graph1, graph2)
     else if (CONTEXT == Context.AST_DIFF)
         ASTPrinter.printDifferences(commonGraph, fileName = "$baseName/GGADifferences", graph1, graph2)
 

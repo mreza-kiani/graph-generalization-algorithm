@@ -11,13 +11,7 @@ class EdgeVariable(
     fun has(leg: EdgeVariableLeg) = leg1 == leg || leg2 == leg
     fun getGraphEdges(graphNumber: Int) = if (graphNumber == 1) graph1Edges else graph2Edges
 
-    fun addEdge(edge: Edge, graphNumber: Int) = addEdgeTo(graphOf(graphNumber), edge)
-
-    private fun graphOf(graphNumber: Int) = when (graphNumber) {
-        1 -> graph1Edges
-        2 -> graph2Edges
-        else -> error("graphNumber should be 1 or 2")
-    }
+    fun addEdge(edge: Edge, graphNumber: Int) = addEdgeTo(getGraphEdges(graphNumber), edge)
 
     private fun addEdgeTo(edges: MutableMap<Node, MutableList<Edge>>, edge: Edge) {
         if (edges[edge.from] == null)
@@ -108,11 +102,11 @@ class EdgeVariable(
         }
 
         private fun mergeGraphEdges(edgeVariables: List<EdgeVariable>, graphNumber: Int) = edgeVariables
-            .map { it.graphOf(graphNumber) }
+            .map { it.getGraphEdges(graphNumber) }
             .flatMap { it.keys }
             .distinct()
             .associateWith { node ->
-                edgeVariables.map { it.graphOf(graphNumber)[node] ?: emptyList() }.flatten().toMutableList()
+                edgeVariables.map { it.getGraphEdges(graphNumber)[node] ?: emptyList() }.flatten().toMutableList()
             }.toMutableMap()
 
         fun updateNodeVariablesOf(
