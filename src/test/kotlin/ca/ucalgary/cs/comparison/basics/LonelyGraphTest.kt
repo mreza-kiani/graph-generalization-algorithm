@@ -45,7 +45,7 @@ class LonelyGraphTest : BaseCompareGraphTest() {
         val nv1 = commonGraph.nodeVariables.first {
             it.graph1 == Graph.from(nodes = listOf(g1d, g1e, g1f), edges = mapOf(g1d to listOf(g1e)))
         }
-        assertEquals(nv1.graph2, Graph(nodes = listOf(g2d, g2e), edges = mapOf()))
+        assertEquals(nv1.graph2, Graph.from(nodes = listOf(g2d, g2e), edges = mapOf()))
     }
 
     override fun checkGraph1Diff(graph1Diff: Graph) {}

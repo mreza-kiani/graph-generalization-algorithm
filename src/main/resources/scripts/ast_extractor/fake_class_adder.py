@@ -25,3 +25,4 @@ if __name__ == '__main__':
         if not content.startswith('class B {'):
             new_content = f"class B {{\n {content} \n}}"
             save_file(new_content, address)
+            print("✓")

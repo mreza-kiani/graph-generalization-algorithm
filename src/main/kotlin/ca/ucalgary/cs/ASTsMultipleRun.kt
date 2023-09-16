@@ -15,12 +15,16 @@ fun extractDirectoryNumber(input: String): String {
     return input.split("/")[9]
 }
 
+fun extractTNumber(input: String): String {
+    return input.split("/")[10]
+}
+
 @OptIn(ExperimentalTime::class)
 fun runGeneralizationAndMeasureTime(input1: String, input2: String, timeMap: MutableMap<String, Long>, infoMap: MutableMap<String, String>) {
     var key: String
     val duration = measureTime {
         val (commonGraph, graph1, graph2) = runGeneralization(input1, input2)
-        key = extractDirectoryNumber(input1)
+        key = "${extractDirectoryNumber(input1)}-${extractTNumber(input1).replace("Template", "")}"
         val info = "${commonGraph.nodes.size}, ${commonGraph.edgeCounts()}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edgeCounts()}, ${graph2.nodes.size}, ${graph2.edgeCounts()},"
         if (infoMap[key] == null)
             infoMap[key] = info
@@ -51,7 +55,7 @@ fun main() {
     CONTEXT = Context.AST
     VISUALIZATION = false
 //    BASE_DIR = "src/main/resources/Mays"
-    BASE_DIR = "/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/RandomCodeSearchNet2"
+    BASE_DIR = "/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNetMine"
 
     val data = extractListOfFiles()
 
@@ -73,5 +77,5 @@ fun main() {
             timeMap.forEach { (key, value) -> finalTimeMap[key]?.add(value) }
     }
 
-    saveAggregatedExecutionTimeReport("$BASE_DIR/../RandomCSNAggregatedData2.csv", finalTimeMap, infoMap)
+    saveAggregatedExecutionTimeReport("$BASE_DIR/../CSNMineV2.csv", finalTimeMap, infoMap)
 }

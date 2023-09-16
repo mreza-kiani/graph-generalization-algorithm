@@ -1,6 +1,23 @@
+import glob
+
+
 def read_file(address):
     file = open(address, "r")
     return file.readlines()
+
+
+def remove_package_names(phrase):
+    if phrase.startswith('java.'):
+        return None
+    # return phrase
+    parts = phrase.split("(")
+    result = parts[0].split('.')[-1] + '('
+    arguments = parts[1][:-1].split('-')
+    short_args = []
+    for arg in arguments:
+        short_args.append(arg.split('.')[-1])
+    result += '-'.join(short_args) + ')'
+    return result
 
 
 def extract_graph(lines):
@@ -9,14 +26,16 @@ def extract_graph(lines):
     for line in lines:
         if line.startswith('M:'):
             parts = line.split(' ')
-            tail = parts[0][2:].strip().replace(',', '-')
-            head = parts[1][3:].strip().replace(',', '-')
+            tail = remove_package_names(parts[0][2:].strip().replace(',', '-'))
+            head = remove_package_names(parts[1][3:].strip().replace(',', '-'))
             if tail not in edges:
                 edges[tail] = []
-            edges[tail].append(head)
+                vertices.add(tail)
+            if head is not None:
+                edges[tail].append(head)
+                vertices.add(head)
+    edges = {k: v for k, v in edges.items() if len(v) != 0}
 
-            vertices.add(head)
-            vertices.add(tail)
     return vertices, edges
 
 
@@ -37,9 +56,9 @@ def save_graph_in_file(path, vertices, edges):
 
 
 if __name__ == '__main__':
-    input_path = 'data/junit-5.txt'
-    output_path = 'junit-5.txt'
-
-    lines = read_file(input_path)
-    vertices, edges = extract_graph(lines)
-    save_graph_in_file(output_path, vertices, edges)
+    files = glob.glob("data/*.txt")
+    for index, address in enumerate(files, start=1):
+        file_name = address.split('/')[-1]
+        lines = read_file(address)
+        vertices, edges = extract_graph(lines)
+        save_graph_in_file(file_name, vertices, edges)

@@ -18,7 +18,7 @@ object ASTPrinter {
     }
 
     fun from(generalizedGraph: Graph, fileName: String, graph1: Graph, graph2: Graph) {
-        if (CONTEXT == Context.AST)
+        if (CONTEXT != Context.AST)
             return
         val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(generalizedGraph)
         val graph1OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph1)
