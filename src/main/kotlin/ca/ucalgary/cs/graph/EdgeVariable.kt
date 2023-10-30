@@ -2,13 +2,13 @@ package ca.ucalgary.cs.graph
 
 class EdgeVariable(
     val name: String,
-    var leg1: EdgeVariableLeg,
-    var leg2: EdgeVariableLeg,
+    var leg1: Node,
+    var leg2: Node,
     val graph1Edges: MutableMap<Node, MutableList<Edge>> = mutableMapOf(),
     val graph2Edges: MutableMap<Node, MutableList<Edge>> = mutableMapOf()
 ) {
-    fun has(l1: EdgeVariableLeg, l2: EdgeVariableLeg) = (leg1 == l1 && leg2 == l2) || (leg1 == l2 && leg2 == l1)
-    fun has(leg: EdgeVariableLeg) = leg1 == leg || leg2 == leg
+    fun has(l1: Node, l2: Node) = (leg1 == l1 && leg2 == l2) || (leg1 == l2 && leg2 == l1)
+    fun has(leg: Node) = leg1 == leg || leg2 == leg
     fun getGraphEdges(graphNumber: Int) = if (graphNumber == 1) graph1Edges else graph2Edges
 
     fun addEdge(edge: Edge, graphNumber: Int) = addEdgeTo(getGraphEdges(graphNumber), edge)
@@ -32,8 +32,8 @@ class EdgeVariable(
 
     fun simpleNodeLeg(): Node {
         return when {
-            leg1 is Node && leg1 !is NodeVariable -> leg1 as Node
-            leg2 is Node && leg2 !is NodeVariable -> leg2 as Node
+            leg1 !is NodeVariable -> leg1
+            leg2 !is NodeVariable -> leg2
             else -> error("Couldn't find simple node as a leg in $name edge variable!")
         }
     }
@@ -45,7 +45,7 @@ class EdgeVariable(
         }
     }
 
-    fun otherLegThan(leg: Node): EdgeVariableLeg {
+    fun otherLegThan(leg: Node): Node {
         return when (leg) {
             leg1 -> leg2
             leg2 -> leg1
@@ -61,7 +61,7 @@ class EdgeVariable(
         private var counter = 1
         fun getUniqueName() = "E${counter++}"
 
-        fun merge(edgeVariables: List<EdgeVariable>, commonLeg: EdgeVariableLeg): EdgeVariable {
+        fun merge(edgeVariables: List<EdgeVariable>, commonLeg: Node): EdgeVariable {
             if (edgeVariables.any { !it.has(commonLeg) })
                 error("Can not merge edge variables without common leg!")
 

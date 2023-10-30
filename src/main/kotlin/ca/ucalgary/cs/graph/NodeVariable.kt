@@ -39,7 +39,7 @@ class NodeVariable(name: String) : Node(name) {
         return name == other.name || (graph1 == other.graph1 && graph2 == other.graph2)
     }
 
-    private fun isSubGraphOf(other: NodeVariable) : Boolean {
+    private fun isSubGraphOf(other: NodeVariable): Boolean {
         return graph1.isSubGraphOf(other.graph1) && graph2.isSubGraphOf(other.graph2)
     }
 

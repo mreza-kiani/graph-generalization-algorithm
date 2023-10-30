@@ -5,7 +5,7 @@ open class Node(
     isDuplicate: Boolean = false,
     var code: Int? = null,
     var isCommon: Boolean = false
-) : EdgeVariableLeg {
+) {
 
     init {
         if (isDuplicate)
