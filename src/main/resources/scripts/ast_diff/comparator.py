@@ -109,7 +109,7 @@ def changes(data):
 
 if __name__ == '__main__':
     # files = glob.glob("/home/mamareza/UofC/Thesis/new-approach/src/main/resources/Mays/*/*/Output/*.json")
-    files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNet/*/Output/*.json")
+    files = glob.glob("/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/CodeSearchNetMine/*/*/Output/*.json")
     diff_sitter = None
     gga_diff = None
     success = 0
@@ -120,29 +120,32 @@ if __name__ == '__main__':
         addresses.add(address[:address.rfind('/')])
 
     for index, address in enumerate(addresses, start=1):
-        diff_sitter_plain = read_json_file(f'{address}/DiffSitter.json')
-        diff_sitter = fix_bad_characters(extract_diff_sitter_content(diff_sitter_plain))
-        gga_diff = fix_bad_characters(read_json_file(f'{address}/GGADifferences.json'))
+        try:
+            diff_sitter_plain = read_json_file(f'{address}/DiffSitter.json')
+            diff_sitter = fix_bad_characters(extract_diff_sitter_content(diff_sitter_plain))
+            gga_diff = fix_bad_characters(read_json_file(f'{address}/GGADifferences.json'))
 
-        dc_gga_diff = copy.deepcopy(gga_diff)
-        dc_diff_sitter = copy.deepcopy(diff_sitter)
+            dc_gga_diff = copy.deepcopy(gga_diff)
+            dc_diff_sitter = copy.deepcopy(diff_sitter)
 
-        if is_match(diff_sitter, gga_diff):
-            print(f"{index}: ✓")
-            success += 1
-        else:
-            swap_base_keys(dc_diff_sitter)
-            if is_match(dc_diff_sitter, dc_gga_diff):
+            if is_match(diff_sitter, gga_diff):
                 print(f"{index}: ✓")
                 success += 1
             else:
-                print(f"{index}: X {address}")
-                if changes(gga_diff) + changes(diff_sitter) > changes(dc_gga_diff) + changes(dc_diff_sitter):
-                    gga_diff = dc_gga_diff
-                    diff_sitter = dc_diff_sitter
-                print(f'Generalization: {gga_diff}')
-                print(f'DiffSitter    : {diff_sitter}')
-                print("-------------------------------")
-                failed += 1
+                swap_base_keys(dc_diff_sitter)
+                if is_match(dc_diff_sitter, dc_gga_diff):
+                    print(f"{index}: ✓")
+                    success += 1
+                else:
+                    print(f"{index}: X {address}")
+                    if changes(gga_diff) + changes(diff_sitter) > changes(dc_gga_diff) + changes(dc_diff_sitter):
+                        gga_diff = dc_gga_diff
+                        diff_sitter = dc_diff_sitter
+                    print(f'Generalization: {gga_diff}')
+                    print(f'DiffSitter    : {diff_sitter}')
+                    print("-------------------------------")
+                    failed += 1
+        except Exception as e:
+            print(e)
 
     print(f"Success: {success}, Failed: {failed}")

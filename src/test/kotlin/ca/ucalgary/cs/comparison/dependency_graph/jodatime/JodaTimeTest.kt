@@ -7,8 +7,8 @@ import ca.ucalgary.cs.io.visualize
 
 class JodaTimeTest : BaseCompareGraphTest() {
     override fun initializeGraphs() {
-        graph1 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/jodatime/v2.0-main.txt")
-        graph2 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/jodatime/v2.10-main.txt")
+        graph1 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/jodatime/v2.0.txt")
+        graph2 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/jodatime/v2.10.txt")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {

@@ -38,7 +38,7 @@ class EdgeVariable(
         }
     }
 
-    fun updateNodeVariable(newNodeVariable: NodeVariable) {
+    fun updateRelatedLeg(newNodeVariable: NodeVariable) {
         when {
             leg1 is NodeVariable -> leg1 = newNodeVariable
             leg2 is NodeVariable -> leg2 = newNodeVariable
@@ -117,7 +117,7 @@ class EdgeVariable(
             edgeVariables
                 .filter { it.hasNodeVariableLeg() }
                 .filter { it.nodeVariableLeg() in previousVariables }
-                .forEach { it.updateNodeVariable(newVariable) }
+                .forEach { it.updateRelatedLeg(newVariable) }
         }
 
         fun removeDuplicates(edgeVariables: MutableList<EdgeVariable>) =

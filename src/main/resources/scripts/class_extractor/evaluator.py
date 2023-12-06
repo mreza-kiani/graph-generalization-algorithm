@@ -20,46 +20,69 @@ def similarity_score_based_on_common_individuals(change_log_class, find_class):
     return 2.0 * common_parts / (len(individuals) + len(individuals2))
 
 
-def LCS(t1, t2):
+def longest_common_substring(t1, t2):
     max = 0
     result = [[0 for j in range(len(t2) + 1)] for i in range(len(t1) + 1)]
     for i1, ch1 in enumerate(t1):
         for i2, ch2 in enumerate(t2):
             if ch1 == ch2:
-                result[i1][i2] = result[i1-1][i2-1] + 1
+                result[i1][i2] = result[i1 - 1][i2 - 1] + 1
                 if result[i1][i2] > max:
                     max = result[i1][i2]
     return max
 
 
+def LCS(t1, t2):
+    max_value = 0
+    result = [[0] * (len(t2) + 1) for _ in range(len(t1) + 1)]
+    for i in range(len(t1) + 1):
+        for j in range(len(t2) + 1):
+            if i == 0 or j == 0:
+                result[i][j] = 0
+            elif t1[i - 1] == t2[j - 1]:
+                result[i][j] = result[i - 1][j - 1] + 1
+                if result[i][j] > max_value:
+                    max_value = result[i][j]
+            else:
+                result[i][j] = max(result[i - 1][j], result[i][j - 1])
+
+    return max_value
+
+
+def similarity_score_based_on_longest_common_substring(change_log_class, find_class):
+    return 2.0 * longest_common_substring(change_log_class, find_class) / (len(change_log_class) + len(find_class))
+
+
 def similarity_score_based_on_LCS(change_log_class, find_class):
-    lcs = LCS(change_log_class, find_class)
-    return 2.0 * lcs / (len(change_log_class) + len(find_class))
+    return 2.0 * LCS(change_log_class, find_class) / (len(change_log_class) + len(find_class))
 
 
-# ALGORITHM = 'LCS'
+ALGORITHM = 'LCS'
+# ALGORITHM = 'Longest Common Substring'
 ALGORITHM = 'Common Parts'
 STEP = 3
 
+
 def extract_find_classes():
     data = """
-Assert	ExperimentalTests	AllRulesTests
-Test	ParameterTokenSuiteWellFormed	StackTracesTest
-AnnotationTest	ParameterTokenSuiteMalformedAndSwapped	Callbacks
-TestRuleTest	ParameterizedTestWithAttemptedMethodCategory	AllTheoriesRunnerTests
-ParentRunner	ParameterizedTestWithClassCategory	AllClassesTests
-BlockJUnit4ClassRunner	ParameterTokenSuiteMalformed	AllJUnit3CompatibilityTests
-ExpectedExceptionTest	MethodBeforesAndAfters	AllInternalTests
-RunWith	FibonacciWithParameterizedFieldTest	CallbackArguments
-TestRule	FibonacciTestWithArray	RunnersFactory
-ParameterizedTestTest	FibonacciTest	AllExperimentalTests
+FlywayAutoConfigurationTests	ConfigFileApplicationListenerTests	BindableRuntimeHintsRegistrarTests
+TaskExecutionAutoConfigurationTests	OAuth2ClientPropertiesRegistrationAdapterTests	OAuth2ClientPropertiesMapperTests
+Saml2RelyingPartyAutoConfigurationTests	ReactiveElasticsearchRestClientAutoConfigurationTests	ThreadPoolTaskExecutorBuilder
+LogbackLoggingSystemTests	ImageBanner	SpringBootAotPlugin
+KafkaAutoConfigurationTests	ReactiveElasticsearchRestClientAutoConfiguration	SimpleAsyncTaskExecutorBuilder
+SessionAutoConfiguration	MetricsRestTemplateCustomizerTests	ThreadPoolTaskSchedulerBuilder
+Log4J2LoggingSystemTests	AnsiColors	MeterRegistryPostProcessorTests
+RedisAutoConfigurationTests	MetricsWebClientFilterFunctionTests	ConfigurationPropertiesBeanFactoryInitializationAotProcessorTests
+SpringBootContextLoaderTests	PrivateKeyParser	ClientHttpRequestFactoriesTests
+SslBuilderCustomizer	ImageBannerTests	AotTests
 """
     parts = data.split()
     return parts[::STEP] + parts[1::STEP] + parts[2::STEP]
 
 
 if __name__ == '__main__':
-    change_log_classes = ['AnotherMemberClass', 'DisableOnDebug', 'Target', 'SlowTestSuiteWithoutFast', 'Arrays', 'ExcludeCategory', 'FastAndSmokeTestSuite', 'AssertionError', 'FromDataPoints', 'ClosedByInterruptException', 'StopwatchTest', 'HasGlobalTimeout', 'IllegalArgumentException', 'DeepInnerClass', 'Thread#interrupt()', 'ParentRunner', 'After', 'DataPoint', 'CategoryValidator', 'MethodRule', 'Result#getFailureCount', 'NullPointerException', 'RunListener', 'AfterParam', 'TestRule', 'ThreadSafe', 'Test', 'FrameworkField', 'TestTimedOutException', 'ClassRule', 'AnnotatedBuilder', 'Parameter', 'CommonRuleTest', 'SlowTestSuite', 'Callable<Object>', 'Iterable', 'Assert', 'ParameterSupplier', 'TheoriesAndTestsTogether', 'IOException', 'ValidateWith', 'MyMemberClass', 'Matcher', 'Assume', 'RuleChain', 'MySetupResetAndTearDownRule', 'Categories', 'MyTest', 'Fail', 'ExampleTestSuite', 'Object', 'OrderWith', 'LICENSE-junit', 'Throwable#initCause()', 'String', 'Override', 'BlockJUnit4ClassRunner', 'Callable', 'InterruptedException', 'Integer', 'CoreMatchers', 'InitializationError', 'Throwable#cause', 'File', 'Description', 'Thread', 'Cat1', 'TestName', 'ClassName=param', 'Matcher<?>', 'SuiteClasses', 'RandomAccessFile', 'RunNotifier', 'Rule', 'ClassName', 'Object[][]', 'InvalidTestClassError', 'Theories', 'Cat2', 'DataPoints', 'JUnitSystem', 'StopWatch', 'AssumptionViolatedException', 'Request', 'Throwable', 'Statement', 'Theory', 'TestClass', 'Category', 'AfterClass', 'Inherited', 'ThreadGroup', 'Suite', 'UseParametersRunnerFactory', 'IncludeCategory', 'InterruptedIOException', 'MatcherAssert', 'BlockJUnit4ClassRunner#createTest', 'Stopwatch', 'Class', 'TestFailedOnTimeoutException', 'Runner', 'ThreadGroupContext', 'ResultMatchers', 'List<T>', 'Exception', 'FixMethodOrder', 'DeepInheritedClass', 'ErrorCollector', 'Object[]', 'AnnotationBuilder', 'Result', 'BeforeClass', 'FilterFactory', 'Builder', 'IncludeCategories', 'RunWith', 'Before', 'AnnotationValidator', 'List<String>', 'Parameters', 'Parameterized', 'Timeout', 'ExpectedException', 'ArrayAssertionFailure', 'MultipleFailureException', 'SuperTest', 'FrameworkMethod', 'TemporaryFolder', 'JUnitCore', 'BeforeParam', 'FilterFactoryParams', 'FastOrSmokeTestSuite', 'DataPoint']
+    change_log_classes = ['AutoConfigureMetrics', 'ConnectionTypeDefinitionConfigurer', 'IllegalStateException', 'ApplicationListener', 'StitzL', 'RestClientTest', 'JsonComponents', 'NestedConfigurationProperty', 'ConnectionDetails', 'AuthTokenManager', 'GlobalObservationConvention', 'DataSourceBuilder', 'SdkLoggerProvider', 'TheHound', 'FilterRegistrationBean', 'Enable', 'JwkSetUriReactiveJwtDecoderBuilderCustomizer', 'LoggingSystemProperties', 'ReentrantLock', 'Neo4jConnectionDetails', 'ClientHttpRequestFactorySettings', 'Testcontainers', 'ImportTestcontainers', 'DependsOnDatabaseInitializationPostProcessor', 'MockServerRestTemplateCustomizer', 'ServletComponentScan', 'InputFile', 'RestControllerEndpoint', 'Input', 'DataFetcher', 'ApplicationContextInitializer', 'SpringBootApplication', 'AliasFor', 'SenderConfiguration', 'WebDriver', 'InfluxDB', 'ConditionalOnEnabledTracing', 'Mapper', 'JsonMixin', 'PostConstruct', 'SecurityManager', 'EricGao888', 'ElasticsearchClient', 'Resource', 'PropertySource', 'SimpleAsyncTaskExecutor', 'UninitializedPropertyAccessException', 'ScheduledBeanLazyInitializationExcludeFilter', 'ConcurrentKafkaListenerContainerFactory', 'WebSocketServerSpec', 'ObservedAspect', 'JwkSetUriJwtDecoderBuilderCustomizer', 'DataAccessStrategy', 'StandardMongoClientSettingsBuilderCustomizer', 'Abhijeetmishr', 'Container', 'Dialect', 'JdbcCustomConversions', 'RestTemplate', 'DefaultTestExecutionListenersPostProcessor', 'AutoConfigureTestDatabase', 'ConfigurationPropertiesReflectionHintsProcessor', 'RegisterReflectionForBinding', 'HealthContributor', 'DiskSpaceHealthIndicator', 'GraphQlExceptionHandler', 'Builder', 'RohanGoyal17', 'DynamicPropertySource', 'IDJack', 'SpanExporters', 'SimpleAsyncTaskSchedulerCustomizer', 'RabbitTemplate', 'ObservationPredicate', 'SimpleAsyncTaskExecutorCustomizer', 'JdbcClient', 'KafkaListenerContainerFactory', 'SimpleAsyncTaskExecutorBuilder', 'SslStoreProvider', 'SpringBootConfiguration', 'Log4jBridgeHandler', 'ConditionalOnClass', 'WebClient', 'SpringBootTest', 'GracefulShutdown', 'SeasonPanPan', 'DataJpaTest', 'ConditionalOnThreading', 'SpanExporter', 'ServiceConnection', 'Ferioney', 'ClientHttpRequestFactories', 'TheCK', 'WebDriverTestExecutionListener', 'ThreadPoolTaskSchedulerBuilder', 'CommonsMultipartResolver', 'TaskSchedulerBuilder', 'OtlpMeterRegistry', 'Scheduled', 'RabbitTemplateCustomizer', 'OpenTelemetry', 'JvmCompilationMetrics', 'DynamicPropertyRegistry', 'StreamReadConstraints', 'Maven', 'ValidationConfigurationCustomizer', 'DataSource', 'ObservationConvention', 'ConstructorBinding', 'EnableBatchProcessing', 'OAuth2ClientPropertiesMapper', 'Elasticsearch', 'ObservationHandler', 'SanitizableData', 'Kalpesh', 'OperationParameter', 'Pengfei', 'Anubhav', 'GenericContainer', 'Dieken', 'SpanProcessors', 'Ckram', 'ExceptionHandler', 'Observation', 'JettyClientHttpRequestFactory', 'OnSuorce', 'AutoConfiguration', 'Callable', 'JwtDecoder', 'ReactiveElasticsearchClient', 'EnableAsync', 'OtlpProperties', 'JdbcMappingContext', 'SimpleAsyncTaskScheduler', 'SdkTracerProviderBuilderCustomizer', 'EndpointCloudFoundryExtension', 'RelationalManagedTypes', 'OtlpHttpSpanExporter', 'SdkTracerProviderBuilder', 'ConditionalOnVirtualThreads', 'SpyBean', 'RabbitStreamTemplate', 'Deprecated', 'SpanHandler', 'JdkClientHttpConnector', 'SpanContextSupplier', 'Res', 'ConfigurationProperties', 'Jackson2ObjectMapperBuilderCustomizer', 'EnableWebMvc', 'ObservationRegistryCustomizer', 'SdkMeterProvider', 'SpanCustomizer', 'EntityScan', 'Reporter', 'GraphQlSource', 'SdkTracerProvider', 'NersesAM', 'BatchConversionServiceCustomizer', 'JunJaBoy', 'ThomazPassarelli', 'RestClient', 'SpanProcessor', 'TaskExecutorBuilder', 'QueryDslDataFetcher', 'AutoConfigureObservability', 'RobertRad', 'SpringBootDependencyInjectionTestExecutionListener', 'ContainerCustomizer', 'YuanHao97', 'TheoCaldas', 'TraceContext', 'WebDriverScope', 'ObservationConfig', 'Ch4ni', 'WebClientExchangeTagsProvider', 'BatchSpanProcessor', 'Configuration', 'LocalServerPort', 'PemSslStoreBundle', 'HttpClient', 'Tracer', 'SpringApplication', 'LogbackLoggingSystemProperties', 'CloudPlaform', 'ImageReference', 'Always', 'Loki4jAppender', 'JsonMixinModule', 'TimeUnit', 'KitBolourchi', 'JoranConfigurators', 'Observed', 'JdbcAggregateTemplate', 'ConditionalOnProperty', 'NamedParameterJdbcTemplate', 'BatchInterceptor', 'SimpleAsyncTaskSchedulerBuilder', 'ControllerAdvice', 'ObservationRegistry', 'StefanBratanov', 'MongoPropertiesClientSettingsBuilderCustomizer', 'WebMvcTagsProvider', 'DataR2dbcTest', 'ReactiveJwtDecoder', 'ThomasKasene', 'Import', 'ClientHttpRequestFactorySupplier', 'DeprecatedConfigurationProperty', 'ThreadPoolTaskExecutorBuilder', 'Environment', 'ExtendWith', 'DelegatingOAuth2TokenValidator', 'Async', 'DefaultValue', 'RestTemplateBuilder', 'TaskDecorator', 'MeterBinder', 'OAuth2ClientPropertiesRegistrationAdapter', 'RestControllerAdvice', 'JsonComponent', 'Bea', 'EvaristeGalois11', 'Timed', 'UseMainMethod', 'Bean', 'MeterProvider', 'ServletRegistrationBean', 'TestRestTemplate', 'WebFluxTagsProvider', 'BartR96', 'MahatmaFatalError', 'DefaultMeterObservationHandler', 'Autowired', 'JdkClientHttpRequestFactory', 'Created', 'QueryByExampleDataFetcher', 'ApplicationContextFailureProcessor', 'ConfigurationPropertiesBinding', 'Artur', 'AsyncTaskExecutor', 'RestTemplateExchangeTagsProvider', 'ContextHierarchy', 'JdbcConverter']
+
     change_log_classes_map = extract_individual_map(change_log_classes)
     find_classes = extract_find_classes()
     find_classes_map = extract_individual_map(find_classes)
@@ -78,6 +101,8 @@ if __name__ == '__main__':
         for change_log_class in change_log_classes:
             if ALGORITHM == 'LCS':
                 ratings[change_log_class] = similarity_score_based_on_LCS(change_log_class, find_class)
+            elif ALGORITHM == 'Longest Common Substring':
+                ratings[change_log_class] = similarity_score_based_on_longest_common_substring(change_log_class, find_class)
             else:
                 ratings[change_log_class] = similarity_score_based_on_common_individuals(change_log_class, find_class)
 
@@ -98,8 +123,8 @@ if __name__ == '__main__':
 
         if counter % 10 == 0:
             print("---------------------------------------------------------------------------")
-            print(f"Top 10 = Precision/Recall: {'%.3f'%(top_10_points/10.0)}/{'%.3f'%(top_10_points / len(change_log_classes))}")
-            print(f"Top 5 = Precision/Recall: {'%.3f'%(top_5_points/5.0)}/{'%.3f'%(top_5_points / len(change_log_classes))}")
+            # print(f"Top 10 = Precision/Recall: {'%.3f' % (top_10_points / 10.0)}/{'%.3f' % (top_10_points / len(change_log_classes))}")
+            print(f"Top 5 = Precision/Recall: {'%.3f' % (top_5_points / 5.0)}/{'%.3f' % (top_5_points / len(change_log_classes))}")
             print("---------------------------------------------------------------------------")
             total_top_10_points += top_10_points
             total_top_5_points += top_5_points
@@ -109,6 +134,6 @@ if __name__ == '__main__':
         counter += 1
 
     print("########################################################################")
-    print(f"Total Top 10 = Precision/Recall: {'%.3f'%(total_top_10_points / (STEP*10.0))}/{'%.3f'%(total_top_10_points / len(change_log_classes))}")
-    print(f"Total Top 5 = Precision/Recall: {'%.3f'%(total_top_5_points / (STEP*5.0))}/{'%.3f'%(total_top_5_points / len(change_log_classes))}")
+    # print(f"Total Top 10 = Precision/Recall: {'%.3f' % (total_top_10_points / (STEP * 10.0))}/{'%.3f' % (total_top_10_points / len(change_log_classes))}")
+    print(f"Total Top 5 = Precision/Recall: {'%.3f' % (total_top_5_points / (STEP * 5.0))}/{'%.3f' % (total_top_5_points / len(change_log_classes))}")
     print("########################################################################")

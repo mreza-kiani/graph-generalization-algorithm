@@ -8,7 +8,7 @@ import ca.ucalgary.cs.io.visualize
 class NettyTest : BaseCompareGraphTest() {
     override fun initializeGraphs() {
         graph1 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/netty/4.0.0.txt")
-        graph2 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/netty/4.1.96.txt")
+        graph2 = GraphScanner.scan("src/test/kotlin/ca/ucalgary/cs/comparison/dependency_graph/netty/5.0.0.txt")
     }
 
     override fun checkCommonGraph(commonGraph: Graph) {
