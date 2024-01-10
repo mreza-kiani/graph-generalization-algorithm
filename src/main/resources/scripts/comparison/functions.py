@@ -1,4 +1,5 @@
 from Levenshtein import distance
+import re
 
 
 def read_inputs(name1, name2) -> (str, str):
@@ -42,6 +43,22 @@ def is_generalization_variable(term):
 
 def raw_completeness(file1, file2):
     return 1 - float(distance(file1, file2)) / max(len(file1), len(file2))
+
+
+def remove_may_variables(file):
+    pattern = r'[VT]([0-9]+)\w+'
+
+    def replacement(match):
+        return f'{match.group(0)[0]}{match.group(1)}'
+
+    updated_file = re.sub(pattern, replacement, file)
+
+    return updated_file
+
+
+def raw_completeness_without_variables(generalized, file1, file2):
+    generalized = remove_may_variables(generalized)
+    return (raw_completeness(generalized, file1) + raw_completeness(generalized, file2)) / 2
 
 
 def raw_compression(file):
