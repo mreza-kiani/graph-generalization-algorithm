@@ -5,11 +5,11 @@ from Levenshtein import *
 from functions import read_inputs, raw_completeness, raw_compression, variable_ratio, raw_completeness_without_variables
 
 f = open("random_codesearchnet_july21_00_unpretified.csv", "a")
-LOGGING = False
+LOGGING = True
 
 
 def compare(dir_name, input1_path, input2_path):
-    may, generalization = read_inputs(name1=f"{dir_name}/FinalAUAST.java", name2=f"{dir_name}/Generalization_July21.java")
+    may, generalization = read_inputs(name1=f"{dir_name}/FinalAUAST.java", name2=f"{dir_name}/Generalization.java")
     input1, input2 = read_inputs(name1=f"{input1_path}", name2=f"{input2_path}")
 
     if LOGGING:
@@ -41,6 +41,8 @@ def compare(dir_name, input1_path, input2_path):
         print('-------------------------------------Variable Ratio----------------------------------------------')
         print('\tInput1 - AUAST vs Generalization:', variable_ratio(may, input1), 'vs', variable_ratio(generalization, input1))
         print('\tInput2 - AUAST vs Generalization:', variable_ratio(may, input2), 'vs', variable_ratio(generalization, input2))
+        print('\t         AUAST vs Generalization:', (variable_ratio(may, input1) + variable_ratio(may, input2)) / 2, 'vs',
+              (variable_ratio(generalization, input1) + variable_ratio(generalization, input2)) / 2)
 
     category = dir_name.split('/')[3]
     template = dir_name.split('/')[4]

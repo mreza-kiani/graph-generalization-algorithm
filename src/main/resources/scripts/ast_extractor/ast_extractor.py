@@ -122,4 +122,4 @@ def extract_kotlin_declaration(address):
 
 
 if __name__ == '__main__':
-    extract_kotlin_declaration('/home/mamareza/UofC/Thesis/CodeSearchNet/notebooks/java/RandomCodeSearchNet/1129/Data/2MapPositionSetterFactory.java')
+    extract_kotlin_declaration('./file.java')

@@ -30,7 +30,7 @@ object StructuralMatchingAlgorithm {
             matchSimilarNodesEvenIfDraw(similarities, graph1, graph2)
         else
             matchOnlySimilarNodes(similarities, graph1, graph2)
-        println("----------------------------------iteration:${iteration++}${if (ignoreDraw) "[D]" else "---" }-----------------------------------")
+        println("----------------------------------iteration:${iteration++}${if (ignoreDraw) "[D]" else "---"}-----------------------------------")
     }
 
     private fun compareLeaves(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph) {
@@ -86,7 +86,11 @@ object StructuralMatchingAlgorithm {
     private fun similarityOf(nodesSimilarity: Double, parentsSimilarity: Double, childrenSimilarity: Double): Double =
         nodesSimilarity * NODE_SIMILARITY_FACTOR + parentsSimilarity * PARENT_SIMILARITY_FACTOR + childrenSimilarity * CHILDREN_SIMILARITY_FACTOR
 
-    private fun extractPriorityQueue(similarities: List<MutableList<Double>>, graph1: Graph, graph2: Graph): PriorityQueue<Pair<String, Double>> {
+    private fun extractPriorityQueue(
+        similarities: List<MutableList<Double>>,
+        graph1: Graph,
+        graph2: Graph
+    ): PriorityQueue<Pair<String, Double>> {
         val compareBySimilarity: Comparator<Pair<String, Double>> = compareByDescending { it.second }
         val queue = PriorityQueue(compareBySimilarity)
 
@@ -205,8 +209,14 @@ object StructuralMatchingAlgorithm {
             queue.addAll(drawMap.toList())
             drawList.forEach { priorityQueueSkippedNodes[it] = true }
 
-            val g1DrawList = drawList.filter { it.endsWith("#") }.map { key -> key.filter { it != '#' } }.sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
-            val g2DrawList = drawList.filter { it.startsWith("#") }.map { key -> key.filter { it != '#' } }.sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
+            val g1DrawList = drawList
+                .filter { it.endsWith("#") }
+                .map { key -> key.filter { it != '#' } }
+                .sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
+            val g2DrawList = drawList
+                .filter { it.startsWith("#") }
+                .map { key -> key.filter { it != '#' } }
+                .sortedBy { key -> try { key.filter { it.isDigit() }.toInt() } catch (e: Exception) { 0 } }
 
             if (g1DrawList.size == g2DrawList.size) {
                 if (DEBUG_MODE)
@@ -289,22 +299,31 @@ object StructuralMatchingAlgorithm {
             .filterIsInstance<NodeVariable>()
             .associateWith { nv -> graph.edgeVariablesOf(nv).map { it.otherLegThan(nv) } }
             .filter { (_, list) -> list.size == 1 }
-            .map { (nv, list) -> nv to list.first() as Node }
+            .map { (nv, list) -> nv to list.first() }
             .filter { (_, node) -> node !in (result[0] ?: emptyList()) }
             .map { (nv, _) -> nv }
         return result.toSortedMap()
     }
 
-    private fun dfsWithNodeVariables(node: Node, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, extraSeenLeaves: MutableList<Node>, graph: Graph): Int {
+    private fun dfsWithNodeVariables(
+        node: Node,
+        depth: MutableMap<Node, Int>,
+        seenNodes: MutableList<Node>,
+        extraSeenLeaves: MutableList<Node>,
+        graph: Graph
+    ): Int {
         val edges = graph.edgesOf(node).filter { it.to !in seenNodes }
-        val edgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
+        val edgeVariables = graph.edgeVariablesOf(node)
+            .filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
 
         val seenEdges = graph.edgesOf(node).filter { it.to in seenNodes }
         seenEdges.forEach { edge -> extraSeenLeaves.add(edge.to) }
 
         if (node !in extraSeenLeaves) {
-            val seenEdgeVariables = graph.edgeVariablesOf(node).filter { it.leg1 in seenNodes && it.leg2 in seenNodes }
-            seenEdgeVariables.map { it.otherLegThan(node) }.forEach { if (it !is NodeVariable && it is Node) extraSeenLeaves.add(it) }
+            graph.edgeVariablesOf(node)
+                .filter { it.leg1 in seenNodes && it.leg2 in seenNodes }
+                .map { it.otherLegThan(node) }
+                .forEach { if (it !is NodeVariable) extraSeenLeaves.add(it) }
         }
 
         if (edges.isEmpty() && edgeVariables.isEmpty()) {
@@ -313,14 +332,14 @@ object StructuralMatchingAlgorithm {
         }
 
         seenNodes.addAll(edges.map { it.to })
-        seenNodes.addAll(edgeVariables.map { it.otherLegThan(node) }.map { if (it is NodeVariable) it else if(it is Node) it else error("WTF!") })
+        seenNodes.addAll(edgeVariables.map { it.otherLegThan(node) })
 
-        val maximumEdgeDepth = edges.maxOfOrNull { edge -> dfsWithNodeVariables(node = edge.to, depth, seenNodes, extraSeenLeaves, graph) }
+        val maximumEdgeDepth =
+            edges.maxOfOrNull { edge -> dfsWithNodeVariables(node = edge.to, depth, seenNodes, extraSeenLeaves, graph) }
         val maximumEdgeVariableDepth = edgeVariables.maxOfOrNull { edge ->
             when (val otherLeg = edge.otherLegThan(node)) {
                 is NodeVariable -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
-                is Node -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
-                else -> error("WTF!")
+                else -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
             }
         }
         var maximumDepth = maximumEdgeVariableDepth ?: 0
@@ -330,22 +349,26 @@ object StructuralMatchingAlgorithm {
         return maximumDepth + 1
     }
 
-    private fun dfsWithNodeVariables(nodeVariable: NodeVariable, depth: MutableMap<Node, Int>, seenNodes: MutableList<Node>, extraSeenLeaves: MutableList<Node>, graph: Graph): Int {
-        val edgeVariables = graph.edgeVariablesOf(nodeVariable).filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
+    private fun dfsWithNodeVariables(
+        nodeVariable: NodeVariable,
+        depth: MutableMap<Node, Int>,
+        seenNodes: MutableList<Node>,
+        extraSeenLeaves: MutableList<Node>,
+        graph: Graph
+    ): Int {
+        val edgeVariables =
+            graph.edgeVariablesOf(nodeVariable).filter { it.leg1 !in seenNodes || it.leg2 !in seenNodes }
         if (edgeVariables.isEmpty()) {
             depth[nodeVariable] = -1
             return -1
         }
 
-        // TODO: Should we add seenEdgeVariables to extraSeenLeaves?
-
-        seenNodes.addAll(edgeVariables.map { it.otherLegThan(nodeVariable) }.map { if (it is NodeVariable) it else if(it is Node) it else error("WTF!") })
+        seenNodes.addAll(edgeVariables.map { it.otherLegThan(nodeVariable) })
 
         val maximumDepth = edgeVariables.maxOfOrNull { edge ->
             when (val otherLeg = edge.otherLegThan(nodeVariable)) {
                 is NodeVariable -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
-                is Node -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
-                else -> error("WTF!")
+                else -> dfsWithNodeVariables(otherLeg, depth, seenNodes, extraSeenLeaves, graph)
             }
         } ?: 0
 

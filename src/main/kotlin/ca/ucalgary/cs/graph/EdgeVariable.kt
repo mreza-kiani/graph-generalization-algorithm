@@ -121,7 +121,8 @@ class EdgeVariable(
         }
 
         fun removeDuplicates(edgeVariables: MutableList<EdgeVariable>) =
-            edgeVariables.groupBy { it.simpleNodeLeg() to it.nodeVariableLeg() }
+            edgeVariables
+                .groupBy { it.simpleNodeLeg() to it.nodeVariableLeg() }
                 .map { (_, list) -> list }
                 .filter { list -> list.size > 1 }
                 .forEach { list ->

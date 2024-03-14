@@ -38,12 +38,12 @@ fun Graph.visualize(name: String, commonGraph: Graph? = null) {
     nodeVariables.forEach { nodeVariable -> edgeVariableMap[nodeVariable] = mutableListOf() }
     nodes.forEach { node -> edgeVariableMap[node] = mutableListOf() }
     edgeVariables.forEach { edgeVariable ->
-        if (edgeVariable.leg1 is NodeVariable && edgeVariable.leg2 is Node)
-            edgeVariableMap[edgeVariable.leg1 as NodeVariable]?.add(edgeVariable.leg2 as Node)
-        else if (edgeVariable.leg1 is Node && edgeVariable.leg2 is NodeVariable)
-            edgeVariableMap[edgeVariable.leg2 as NodeVariable]?.add(edgeVariable.leg1 as Node)
+        if (edgeVariable.leg1 is NodeVariable)
+            edgeVariableMap[edgeVariable.leg1 as NodeVariable]?.add(edgeVariable.leg2)
+        else if (edgeVariable.leg2 is NodeVariable)
+            edgeVariableMap[edgeVariable.leg2 as NodeVariable]?.add(edgeVariable.leg1)
         else
-            edgeVariableMap[edgeVariable.leg1 as Node]?.add(edgeVariable.leg2 as Node)
+            edgeVariableMap[edgeVariable.leg1]?.add(edgeVariable.leg2)
     }
 
     edgeVariableMap.forEach { (node, neighbors) ->

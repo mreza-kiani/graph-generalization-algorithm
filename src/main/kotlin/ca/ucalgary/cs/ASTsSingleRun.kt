@@ -93,7 +93,6 @@ fun runGeneralizationAndMeasureTime(input1: String, input2: String, timeMap: Mut
     var key: String
     val duration = measureTime {
         val (commonGraph, graph1, graph2) = runGeneralization(input1, input2)
-//        key = "${input1.split("/").last()}vs${input2.split("/").last()}, ${commonGraph.nodes.size}, ${commonGraph.edgeCounts()}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edgeCounts()}, ${graph2.nodes.size}, ${graph2.edgeCounts()}"
         key = "${extractCategory(input1)}, ${commonGraph.nodes.size}, ${commonGraph.edgeCounts()}, ${commonGraph.nodeVariables.size}, ${commonGraph.edgeVariables.size}, ${graph1.nodes.size}, ${graph1.edgeCounts()}, ${graph2.nodes.size}, ${graph2.edgeCounts()}"
     }
     timeMap[key] = duration.inWholeMilliseconds
@@ -131,8 +130,6 @@ fun main() {
     data.forEachIndexed { index, (input1, input2) ->
         println("${index + 1} / ${data.size}")
         runGeneralizationAndMeasureTime(input1, input2, timeMap)
-//        timeMap[extractCategory(input1)] = (timeMap[extractCategory(input1)] ?: 0) + duration.inWholeMilliseconds
-//        timeMap["${extractCategory(input1)}/${extractTemplateNumber(input1)}"] = duration.inWholeMilliseconds
     }
 
     printExecutionTimeReport(timeMap)

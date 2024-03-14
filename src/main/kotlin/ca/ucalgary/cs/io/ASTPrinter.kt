@@ -23,7 +23,6 @@ object ASTPrinter {
         val graphDepthMap = StructuralMatchingAlgorithm.extractGraphDepthMapWithNodeVariables(generalizedGraph)
         val graph1OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph1)
         val graph2OrderedLeaves = StructuralMatchingAlgorithm.extractNodesWithOrder(graph2)
-//        val combinedGraphsOrderedLeaves = combineOrderedLeaves(graph1OrderedLeaves, graph2OrderedLeaves)
         val commonNodes = graph2OrderedLeaves.filter { it.isCommon }
 
         val conflictNodes = graphDepthMap[-2] ?: emptyList()
@@ -33,10 +32,11 @@ object ASTPrinter {
         val edgeVariableRepMap = mutableMapOf<Node, EdgeVariable>()
         val fixingNodePositionMap = nodeVariablesWithoutRep
             .associateWith { nv -> generalizedGraph.edgeVariablesOf(nv) }
+            .asSequence()
             .filter { (_, list) -> list.size == 1 }
             .map { (nv, list) -> nv to list.first() }
             .map { (nv, ev) -> ev to nv }
-            .map { (ev, nv) -> ev to ev.otherLegThan(nv) as Node }
+            .map { (ev, nv) -> ev to ev.otherLegThan(nv) }
             .map { (ev, n) ->
                 val g1UncommonNodes = (ev.graph1Edges[n]?.map { it.to } ?: emptyList()) +
                         ev.graph1Edges.filter { (_, list) -> n in list.map { it.to } }.keys
@@ -58,9 +58,10 @@ object ASTPrinter {
                 edgeVariableRepMap[n] = ev
 
                 mergeMaps(map1, map2)
-//                mergeMapsToKeepOneResultPerKey(map1, map2, graph1, graph2)
             }.fold(mapOf<Node, List<Node>>()) { acc, curr -> mergeMaps(acc, curr) }
-            .map { (key, list) -> key to IONode.from(list, graph1, graph2) }.toMap()
+            .map { (key, list) -> key to IONode.from(list, graph1, graph2) }
+            .toList()
+            .toMap()
 
         val conflictNodePositionMap =
             extractFixingNodePositionMap(graph2OrderedLeaves, targetNodes = conflictNodes, eligibleNodes = commonNodes)
@@ -72,11 +73,7 @@ object ASTPrinter {
                 conflictNodePositionMap[node]?.let { orderedLeaves.addAll(it) }
             if (node in leaves)
                 orderedLeaves.add(node)
-//            if (node in conflictNodes)
-//                orderedLeaves.add(Node("//${node.completeName()}", isCommon = true))
         }
-
-//        filterRepeatedUselessLeaves(orderedLeaves)
 
         from(graph1, graph2, orderedLeaves, conflictNodes, fileName, edgeVariableRepMap)
     }

@@ -26,7 +26,9 @@ object NodeMatchingAlgorithm {
     private fun longestCommonSubstring(a: String, b: String): Int {
         if (LCSMap["$a#$b"] != null)
             return LCSMap["$a#$b"] ?: 0
-        val lcs = extractLongestCommonSubstringTable(a, b).mapNotNull { list -> list.maxOrNull() }.maxOrNull() ?: 0
+        val lcs = extractLongestCommonSubstringTable(a, b)
+            .mapNotNull { list -> list.maxOrNull() }
+            .maxOrNull() ?: 0
         LCSMap["$a#$b"] = lcs
         return lcs
     }
@@ -85,8 +87,9 @@ object NodeMatchingAlgorithm {
     fun similarityScoreOf(nodes1: Set<Node>, nodes2: Set<Node>): Double {
         if (nodes1.isEmpty() || nodes2.isEmpty())
             return 0.0
-        return 2.0 * nodes1.sumOf { node1 -> nodes2.maxOf { node2 -> similarityScoreOf(node1, node2) } } /
-                (nodes1.size + nodes2.size)
+        return 2.0 * nodes1.sumOf { node1 ->
+            nodes2.maxOf { node2 -> similarityScoreOf(node1, node2) }
+        } / (nodes1.size + nodes2.size)
     }
 
     fun reset() {

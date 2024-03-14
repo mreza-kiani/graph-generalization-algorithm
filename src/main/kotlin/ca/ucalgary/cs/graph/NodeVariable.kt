@@ -61,34 +61,14 @@ class NodeVariable(name: String) : Node(name) {
         val otherParts = other.name.replace("{", "").replace("}", "").split("&")
 
         val merged = NodeVariable(name = "{${(parts + otherParts).sorted().distinct().joinToString("&")}}")
-        merged.graph1 = Graph(nodes = (graph1.nodes + other.graph1.nodes).distinct(), edges = graph1.edges + other.graph1.edges)
-        merged.graph2 = Graph(nodes = (graph2.nodes + other.graph2.nodes).distinct(), edges = graph2.edges + other.graph2.edges)
-        return merged
-    }
-
-    fun mergeAndAddEdge(other:NodeVariable, edge: Edge, graphNumber: Int): NodeVariable {
-        if (this.isSubGraphOf(other))
-            return other
-        if (other.isSubGraphOf(this))
-            return this
-
-        val parts = name.replace("{", "").replace("}", "").split("&")
-        val otherParts = other.name.replace("{", "").replace("}", "").split("&")
-
-        val merged = NodeVariable(name = "{${(parts + otherParts).sorted().distinct().joinToString("&")}}")
-        if (graphNumber == 1) {
-            merged.graph1 = Graph(
-                nodes = (graph1.nodes + edge.from + edge.to + other.graph1.nodes).distinct(),
-                edges = graph1.edges + (edge.from to graph1.edgesOf(edge.from) + listOf(edge)) + other.graph1.edges
-            )
-            merged.graph2 = Graph(nodes = (graph2.nodes + other.graph2.nodes).distinct(), edges = graph2.edges + other.graph2.edges)
-        } else {
-            merged.graph1 = Graph(nodes = (graph1.nodes + other.graph1.nodes).distinct(), edges = graph1.edges + other.graph1.edges)
-            merged.graph2 = Graph(
-                nodes = (graph2.nodes + edge.from + edge.to + other.graph2.nodes).distinct(),
-                edges = graph2.edges + (edge.from to graph2.edgesOf(edge.from) + listOf(edge)) + other.graph2.edges
-            )
-        }
+        merged.graph1 = Graph(
+            nodes = (graph1.nodes + other.graph1.nodes).distinct(),
+            edges = graph1.edges + other.graph1.edges
+        )
+        merged.graph2 = Graph(
+            nodes = (graph2.nodes + other.graph2.nodes).distinct(),
+            edges = graph2.edges + other.graph2.edges
+        )
         return merged
     }
 
