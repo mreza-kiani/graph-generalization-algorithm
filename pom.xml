@@ -5,11 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ca.ucalgary.cs</groupId>
-    <artifactId>new-approach</artifactId>
+    <artifactId>graph_generalization_algorithm</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>ca.ucalgary.cs.new-approach</name>
+    <name>ca.ucalgary.cs.graph_generalization_algorithm</name>
+
+    <licenses>
+        <license>
+            <name>GNU General Public License v3.0</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
